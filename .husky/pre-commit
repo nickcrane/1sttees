@@ -1,0 +1,5 @@
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks protect --staged --redact -v
+else
+  echo "WARNING: gitleaks not installed -- skipping secret scan. Install with: brew install gitleaks" >&2
+fi
