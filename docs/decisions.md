@@ -67,12 +67,17 @@ choice made during scaffolding that isn't obvious from the diff.
   round-trip itself was verified manually against a real Postgres instance
   (`pnpm ae:authorize --code ...`, confirmed the row landed encrypted) rather
   than in the unit suite.
-- **Per-SKU fields on `aliexpress.ds.product.get`'s response
-  (`sku_id`, `sku_attr`) are provisional**, not yet confirmed by any live
-  call this project has made — modeled from what `aliexpress.ds.order.create`'s
-  own docs imply about `sku_attr`'s shape. Flagged in `schemas.ts`'s comments
-  and `docs/aliexpress-api-notes.md`'s "Open items"; re-check against a real
-  response once the new AliExpress app exists.
+- ~~Per-SKU fields on `aliexpress.ds.product.get`'s response are
+  provisional~~ — **confirmed live 2026-09-17** against real bamboo golf
+  tee listings (`sku_attr` values like `"14:10#100pcs 83mm"`). Also found
+  and fixed two real bugs this way: the endpoint-URL shape the official
+  docs describe for auth calls doesn't match what the gateway actually
+  accepts (`IncompleteSignature`, fixed to match `python-aliexpress-api`'s
+  proven request construction exactly), and `text.search`'s `products` /
+  `product.get`'s SKU and video lists all arrive wrapped in a single-key
+  object rather than as a bare array (ported aliexpress-dashboard's
+  `extract_list` fix as `schemas.ts`'s `extractList`/`extractValidItems`).
+  See `docs/aliexpress-api-notes.md` for the full detail.
 - **Reversed: reusing aliexpress-dashboard's AliExpress app, not a new
   dedicated one (2026-09-17).** The original plan (a fresh app, to keep a
   research tool's blast radius separate from something placing real orders)

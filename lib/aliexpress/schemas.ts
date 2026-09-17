@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { logger } from "@/lib/logger";
 
 /**
  * Raw response shapes, kept deliberately loose (`.passthrough()`, most
@@ -45,7 +46,12 @@ export type RawSearchProduct = z.infer<typeof rawSearchProductSchema>;
 
 export const searchResponseDataSchema = z
   .object({
-    products: z.union([z.array(rawSearchProductSchema), rawSearchProductSchema]).optional(),
+    // Confirmed live: NOT a bare array despite the docs -- arrives one
+    // level deeper, wrapped in a single-key object whose inner key varies
+    // (`{"selection_search_product": [...]}` seen so far). `z.unknown()`
+    // here deliberately -- see `extractList` for how this actually gets
+    // unwrapped, and `docs/aliexpress-api-notes.md`.
+    products: z.unknown().optional(),
     pageIndex: z.union([z.string(), z.number()]).optional(),
     totalCount: z.union([z.string(), z.number()]).optional(),
   })
@@ -82,11 +88,15 @@ export const rawProductDetailResultSchema = z
       })
       .passthrough()
       .optional(),
-    ae_item_sku_info_dtos: z.union([z.array(rawSkuSchema), rawSkuSchema]).optional(),
+    // Same single-key-wrapped-list quirk as text.search's `products` --
+    // confirmed live for this field too (`{"ae_item_sku_info_d_t_o": [...]}`).
+    // See extractList.
+    ae_item_sku_info_dtos: z.unknown().optional(),
     ae_multimedia_info_dto: z
       .object({
         image_urls: z.string().optional(), // semicolon-separated, not an array -- confirmed live
-        ae_video_dtos: z.union([z.array(z.object({ media_url: z.string().optional() }).passthrough()), z.object({ media_url: z.string().optional() }).passthrough()]).optional(),
+        // Same wrapped-list quirk again (`{"ae_video_d_t_o": [...]}`).
+        ae_video_dtos: z.unknown().optional(),
       })
       .passthrough()
       .optional(),
@@ -182,6 +192,47 @@ function leafCategoryId(cateId: unknown): string | null {
   return segments.length > 0 ? segments[segments.length - 1] : null;
 }
 
+/**
+ * Several confirmed-live ds.* response fields that "should" be a bare array
+ * per the docs actually arrive one level deeper, wrapped in a single-key
+ * object -- `data.products` as `{"selection_search_product": [...]}`,
+ * `ae_item_sku_info_dtos` as `{"ae_item_sku_info_d_t_o": [...]}`,
+ * `ae_video_dtos` as `{"ae_video_d_t_o": [...]}`. Confirmed against a real
+ * live call (see docs/aliexpress-api-notes.md) and ported from
+ * aliexpress-dashboard's own `extract_list`, which hit the same thing. The
+ * exact inner key varies (and may vary further by call type in ways not yet
+ * confirmed), so this takes the first list-valued entry found rather than
+ * hardcoding each one.
+ */
+export function extractList(value: unknown): unknown[] {
+  if (value === null || value === undefined) return [];
+  if (Array.isArray(value)) return value;
+  if (typeof value === "object") {
+    for (const inner of Object.values(value)) {
+      if (Array.isArray(inner)) return inner;
+    }
+    return [value]; // a single (non-wrapped) item -- keep prior single-object fallback
+  }
+  return [];
+}
+
+/** Extracts a list field, validates each item, and logs+drops anything that doesn't fit rather than failing the whole batch. */
+export function extractValidItems<T>(value: unknown, schema: z.ZodType<T>, context: { method: string; field: string }): T[] {
+  const items: T[] = [];
+  for (const raw of extractList(value)) {
+    const parsed = schema.safeParse(raw);
+    if (parsed.success) {
+      items.push(parsed.data);
+    } else {
+      logger.warn(
+        { method: context.method, field: context.field, issues: parsed.error.issues, raw },
+        `dropped one ${context.field} item that didn't match the expected shape`
+      );
+    }
+  }
+  return items;
+}
+
 export function normalizeSearchProduct(raw: RawSearchProduct, targetCurrency: string): NormalizedSearchProduct {
   const { count: salesVolume, display: salesVolumeDisplay } = toBucketedCount(raw.orders);
   return {
@@ -199,20 +250,26 @@ export function normalizeSearchProduct(raw: RawSearchProduct, targetCurrency: st
   };
 }
 
+const rawVideoSchema = z.object({ media_url: z.string().optional() }).passthrough();
+
 export function normalizeProductDetail(raw: RawProductDetailResult, targetCurrency: string): NormalizedProduct {
   const base = raw.ae_item_base_info_dto;
   if (!base || base.product_id === undefined) {
     throw new Error("product detail payload is missing ae_item_base_info_dto.product_id");
   }
-  const skusRaw = raw.ae_item_sku_info_dtos;
-  const skus = skusRaw === undefined ? [] : Array.isArray(skusRaw) ? skusRaw : [skusRaw];
+  const skus = extractValidItems(raw.ae_item_sku_info_dtos, rawSkuSchema, {
+    method: "aliexpress.ds.product.get",
+    field: "ae_item_sku_info_dtos",
+  });
 
   const multimedia = raw.ae_multimedia_info_dto;
   const imageUrls = multimedia?.image_urls
     ? multimedia.image_urls.split(";").filter(Boolean)
     : [];
-  const videosRaw = multimedia?.ae_video_dtos;
-  const videos = videosRaw === undefined ? [] : Array.isArray(videosRaw) ? videosRaw : [videosRaw];
+  const videos = extractValidItems(multimedia?.ae_video_dtos, rawVideoSchema, {
+    method: "aliexpress.ds.product.get",
+    field: "ae_video_dtos",
+  });
   const videoUrl = videos[0]?.media_url ?? null;
 
   const { count: salesVolume, display: salesVolumeDisplay } = toBucketedCount(base.sales_count);

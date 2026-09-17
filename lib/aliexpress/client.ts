@@ -6,9 +6,11 @@ import { signRequest } from "./sign";
 import { checkEnvelopeSuccess, unwrapEnvelope } from "./envelope";
 import { AliExpressApiError, isRetryableGatewayCode, isRetryableHttpStatus } from "./errors";
 import {
+  extractValidItems,
   normalizeProductDetail,
   normalizeSearchProduct,
   rawProductDetailResultSchema,
+  rawSearchProductSchema,
   searchResponseDataSchema,
   tokenResponseSchema,
   type NormalizedProduct,
@@ -58,7 +60,7 @@ export class AliExpressClient {
     const envelope =
       env.ALIEXPRESS_MODE === "fixture"
         ? await this.loadFixture(["auth", "token_create.json"])
-        : await this.callSystemInterface("/auth/token/create", { code });
+        : await this.withRetries(() => this.callApi("/auth/token/create", { code }, { attachToken: false }));
     const parsed = tokenResponseSchema.parse(envelope);
     return this.tokenStore.save(parsed);
   }
@@ -71,7 +73,9 @@ export class AliExpressClient {
     const envelope =
       env.ALIEXPRESS_MODE === "fixture"
         ? await this.loadFixture(["auth", "token_refresh.json"])
-        : await this.callSystemInterface("/auth/token/refresh", { refresh_token: current.refreshToken });
+        : await this.withRetries(() =>
+            this.callApi("/auth/token/refresh", { refresh_token: current.refreshToken }, { attachToken: false })
+          );
     const parsed = tokenResponseSchema.parse(envelope);
     return this.tokenStore.save(parsed);
   }
@@ -81,12 +85,16 @@ export class AliExpressClient {
       env.ALIEXPRESS_MODE === "fixture"
         ? await this.loadFixture(["product_detail", `${productId}.json`])
         : await this.withRetries(() =>
-            this.callBusinessInterface("aliexpress.ds.product.get", {
-              product_id: String(productId),
-              ship_to_country: env.ALIEXPRESS_SHIP_TO_COUNTRY,
-              target_currency: env.ALIEXPRESS_TARGET_CURRENCY,
-              target_language: env.ALIEXPRESS_TARGET_LANGUAGE,
-            })
+            this.callApi(
+              "aliexpress.ds.product.get",
+              {
+                product_id: String(productId),
+                ship_to_country: env.ALIEXPRESS_SHIP_TO_COUNTRY,
+                target_currency: env.ALIEXPRESS_TARGET_CURRENCY,
+                target_language: env.ALIEXPRESS_TARGET_LANGUAGE,
+              },
+              { attachToken: true }
+            )
           );
 
     const result = (envelope as { result?: unknown }).result;
@@ -110,16 +118,20 @@ export class AliExpressClient {
       env.ALIEXPRESS_MODE === "fixture"
         ? await this.loadFixture(["text_search", `${fixtureNameFor(params)}.json`])
         : await this.withRetries(() =>
-            this.callBusinessInterface("aliexpress.ds.text.search", {
-              keyWord: params.keywords,
-              local: env.ALIEXPRESS_TARGET_LANGUAGE,
-              countryCode: params.shipToCountry ?? env.ALIEXPRESS_SHIP_TO_COUNTRY,
-              categoryId: params.categoryId,
-              sortBy: params.sort,
-              pageSize: String(params.pageSize ?? 20),
-              pageIndex: String(pageNo),
-              currency: env.ALIEXPRESS_TARGET_CURRENCY,
-            })
+            this.callApi(
+              "aliexpress.ds.text.search",
+              {
+                keyWord: params.keywords,
+                local: env.ALIEXPRESS_TARGET_LANGUAGE,
+                countryCode: params.shipToCountry ?? env.ALIEXPRESS_SHIP_TO_COUNTRY,
+                categoryId: params.categoryId,
+                sortBy: params.sort,
+                pageSize: String(params.pageSize ?? 20),
+                pageIndex: String(pageNo),
+                currency: env.ALIEXPRESS_TARGET_CURRENCY,
+              },
+              { attachToken: true }
+            )
           );
 
     const data = (envelope as { data?: unknown }).data;
@@ -134,8 +146,10 @@ export class AliExpressClient {
         raw: data,
       });
     }
-    const productsRaw = parsedData.data.products;
-    const products = productsRaw === undefined ? [] : Array.isArray(productsRaw) ? productsRaw : [productsRaw];
+    const products = extractValidItems(parsedData.data.products, rawSearchProductSchema, {
+      method: "aliexpress.ds.text.search",
+      field: "products",
+    });
 
     return {
       products: products.map((p) => normalizeSearchProduct(p, env.ALIEXPRESS_TARGET_CURRENCY)),
@@ -159,26 +173,31 @@ export class AliExpressClient {
 
   // -- live request construction -----------------------------------------
 
-  private async callSystemInterface(apiPath: string, businessParams: Record<string, string>): Promise<Record<string, unknown>> {
-    const systemParams = this.buildSystemParams();
-    const allParams = { ...systemParams, ...businessParams };
-    const sign = signRequest(this.requireAppSecret(), allParams);
-
-    const url = new URL(env.ALIEXPRESS_GATEWAY_URL);
-    url.pathname = `/rest${apiPath}`;
-    for (const [key, value] of Object.entries(systemParams)) url.searchParams.set(key, value);
-    url.searchParams.set("sign", sign);
-
-    return this.post(url, businessParams);
-  }
-
-  private async callBusinessInterface(method: string, businessParams: Record<string, string | undefined>): Promise<Record<string, unknown>> {
+  /**
+   * Every call -- whether the docs call it a "Business interface" (a dotted
+   * `aliexpress.*` name) or a "System interface" (a path like
+   * `/auth/token/create`) -- goes to the same `/sync` endpoint with `method`
+   * as a normal signed param. The docs describe a second URL shape
+   * (`/rest{path}` for system interfaces, no `method` param, the path
+   * prepended into the signed string instead) that turned out not to be
+   * what this gateway actually accepts: confirmed by a live 401
+   * "IncompleteSignature" using that shape, then success once rebuilt to
+   * match python-aliexpress-api's proven, live-working request construction
+   * exactly. See docs/aliexpress-api-notes.md.
+   */
+  private async callApi(
+    method: string,
+    businessParams: Record<string, string | undefined>,
+    options: { attachToken: boolean }
+  ): Promise<Record<string, unknown>> {
     const cleanParams = Object.fromEntries(
       Object.entries(businessParams).filter((entry): entry is [string, string] => entry[1] !== undefined)
     );
-    const token = await this.getValidAccessToken();
     const systemParams: Record<string, string> = { ...this.buildSystemParams(), method };
-    if (token) systemParams.session = token;
+    if (options.attachToken) {
+      const token = await this.getValidAccessToken();
+      if (token) systemParams.session = token;
+    }
     const allParams = { ...systemParams, ...cleanParams };
     const sign = signRequest(this.requireAppSecret(), allParams);
 

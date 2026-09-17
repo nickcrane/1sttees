@@ -163,13 +163,21 @@ describe("AliExpressClient (live mode, fetch mocked)", () => {
     expect(calls).toBe(3);
   });
 
-  it("signs and sends a system-interface call (token exchange) to /rest{path}", async () => {
+  it("signs and sends a token-exchange call to /sync with method=/auth/token/create (confirmed live -- see docs/aliexpress-api-notes.md)", async () => {
     const AliExpressClient = await importLiveClient();
     const fetchMock = vi.fn(async (input: RequestInfo | URL) => {
       const url = new URL(input as string);
-      expect(url.pathname).toBe("/rest/auth/token/create");
+      expect(url.pathname).toBe("/sync");
+      expect(url.searchParams.get("method")).toBe("/auth/token/create");
       expect(url.searchParams.get("sign")).toBeTruthy();
-      return jsonResponse({ access_token: "new-token", refresh_token: "new-refresh", expires_in: 86400, refresh_expires_in: 172800 });
+      return jsonResponse({
+        "/auth/token/create_response": {
+          access_token: "new-token",
+          refresh_token: "new-refresh",
+          expires_in: 86400,
+          refresh_expires_in: 172800,
+        },
+      });
     });
     vi.stubGlobal("fetch", fetchMock);
 

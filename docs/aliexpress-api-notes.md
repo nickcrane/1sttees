@@ -6,12 +6,15 @@ gateway/signing mechanics) on 2026-09-17, cross-checked against the sibling
 [aliexpress-dashboard](../../aliexpress-dashboard) project's own live-confirmed
 findings (Python, same `aliexpress.ds.*` family, real credentials, running since
 September 2026 — see that repo's README and `docs/aliexpress_ds_api_confirmed_facts`
-in this account's Claude memory). Where the two disagreed, that's called out
-explicitly rather than silently picking one. Per this project's Rule 1, nothing
-here is invented — every claim below has a doc URL or a "confirmed live by
-aliexpress-dashboard" note next to it. Nothing in this document has been
-confirmed live *by this project* yet — no AliExpress app exists for 1stees
-yet (see [Open items](#open-items-that-need-you)).
+in this account's Claude memory), and **since 2026-09-17, against 1stees's own
+live calls** (reusing aliexpress-dashboard's AliExpress app — see
+`docs/decisions.md`; AliExpress caps the Drop Shipping permission to one app
+per account, so a separate one wasn't possible). Per this project's Rule 1,
+nothing here is invented — every claim has a doc URL or a "confirmed live"
+note next to it, and a couple of things the docs themselves got wrong were
+caught exactly this way (see the endpoint-URL and response-shape corrections
+below) — build against what's proven working, not against what the docs say,
+whenever the two disagree.
 
 ## Business model (read this first)
 
@@ -27,21 +30,29 @@ Source: [Beginner's Guide For Dropshipping](https://openservice.aliexpress.com/d
 
 ## Gateway and endpoint conventions
 
-Confirmed from [API endpoint URLs](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1388) (updated 2024-05-07):
+**The docs are wrong about this one — confirmed live, correct yourself if you
+go looking.** [API endpoint URLs](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1388) (updated 2024-05-07) describes two URL shapes — `/sync?method=...`
+for "Business interfaces" (dotted `aliexpress.*` names) and `/rest{path}` for
+"System interfaces" (the path-style auth endpoints). Building the client
+against exactly that got a real `IncompleteSignature` error from the live
+gateway on `/auth/token/create`. The actual, working shape (confirmed live,
+and matching `python-aliexpress-api`'s proven `RestApi.getResponse()` exactly)
+is simpler: **everything, auth included, goes to `/sync`, and `method` is
+always a normal signed+sent parameter** — for an auth call, `method`'s value
+is the path itself (e.g. `/auth/token/create`), not omitted:
 
-All APIs split into two categories, each with its own URL shape:
+```
+POST https://api-sg.aliexpress.com/sync?method={method}&{system params}&sign={sign}
+Body: {business params, form-urlencoded}
+```
 
-- **Business interfaces** — every dotted `aliexpress.*` method (`aliexpress.ds.product.get`, `aliexpress.ds.text.search`, `aliexpress.ds.order.create`, `aliexpress.ds.freight.query`, `aliexpress.ds.order.tracking.get`, `aliexpress.trade.ds.order.get`, etc.):
-  ```
-  POST https://api-sg.aliexpress.com/sync?method={api_path}&{query}
-  ```
-- **System interfaces** — the path-style auth endpoints, listed under "System Tool":
-  ```
-  POST https://api-sg.aliexpress.com/rest{api_path}?{query}
-  ```
-  e.g. `https://api-sg.aliexpress.com/rest/auth/token/create`
+There is no second URL shape in what this project actually uses. The
+`/rest{path}` form may be real for some other calling convention this
+project hasn't touched — just confirmed it isn't what `/sync`-family clients
+should use.
 
-- **OAuth authorize (browser redirect, not a signed API call)**:
+- **OAuth authorize (browser redirect, not a signed API call)** — this part
+  of the docs matches live behaviour:
   ```
   https://api-sg.aliexpress.com/oauth/authorize?response_type=code&force_auth=true&redirect_uri={callback_url}&client_id={app_key}
   ```
@@ -142,6 +153,29 @@ this platform's own docs matches the one-level `{"aliexpress_ds_order_create_res
 client to auto-detect the wrapper (as aliexpress-dashboard's `_unwrap_envelope`
 already does), not hardcode one shape.
 
+**Confirmed live by this project (2026-09-17):** the wrapper key for a
+**System-interface-style call** (`/auth/token/create`, called via `/sync`
+per the corrected endpoint section above) is literally the raw path plus
+`_response` — `{"/auth/token/create_response": {...}}`, slashes and all.
+`unwrapEnvelope`'s "single key ending in `_response`" check still strips
+this correctly without any special-casing needed.
+
+**Also confirmed live: another single-key-wrapped-list quirk, this time
+inside the payload, not the envelope.** Several fields the docs describe as
+a bare array actually arrive one level deeper, wrapped in an object whose
+one key varies by field:
+- `aliexpress.ds.text.search`'s `data.products` arrives as
+  `{"selection_search_product": [...]}`, not `[...]` directly.
+- `aliexpress.ds.product.get`'s `ae_item_sku_info_dtos` and
+  `ae_multimedia_info_dto.ae_video_dtos` do the same
+  (`{"ae_item_sku_info_d_t_o": [...]}`, `{"ae_video_d_t_o": [...]}`) —
+  matches a pattern aliexpress-dashboard's `raw.py` already documented and
+  named `extract_list` for exactly this reason. Ported the same fix here as
+  `schemas.ts`'s `extractList`/`extractValidItems`: take the first
+  list-valued entry from the wrapper (name varies, don't hardcode it), then
+  validate each item individually and drop (log, don't crash) any that
+  don't fit, rather than failing the whole batch over one bad entry.
+
 ## OAuth flow and token lifetime
 
 1. Browser redirect to the `/oauth/authorize` URL above; user logs in and
@@ -171,8 +205,8 @@ Source: [Authorize your APP](https://openservice.aliexpress.com/doc/doc.htm#/?do
 
 | Purpose | Method (confirmed current) | Mission brief guessed |
 |---|---|---|
-| Product detail | `aliexpress.ds.product.get` | ✅ matches |
-| Keyword search | `aliexpress.ds.text.search` | ✅ matches |
+| Product detail | `aliexpress.ds.product.get` — **confirmed live by 1stees 2026-09-17** against real bamboo golf tee listings, including per-SKU `sku_id`/`sku_attr` (e.g. `"14:10#100pcs 83mm"`) that were previously only provisional | ✅ matches |
+| Keyword search | `aliexpress.ds.text.search` — **confirmed live by 1stees 2026-09-17**, 7,500+ real results for "bamboo golf tees" | ✅ matches |
 | Image search | `aliexpress.ds.image.searchV2` | (not in brief — bonus) |
 | Category tree | `aliexpress.ds.category.get`* | (not named in brief) |
 | Freight/shipping quote | `aliexpress.ds.freight.query` | ✅ matches |
@@ -298,15 +332,24 @@ is tuned — using a conservative default (aliexpress-dashboard's
 
 ## Open items that need you
 
-1. **Register the new dedicated AliExpress Open Platform app** (per the
-   earlier decision to not reuse aliexpress-dashboard's). Needs: a buyer
-   account, the DS Center agreement signed, an app created under the "Drop
-   Shipping" category, and the "Drop Shipping" + "System Tool" permission
-   groups granted.
-2. Until that exists, Phase 1's CLI (`pnpm ae:product <id>`) can only be
-   verified in fixture mode — I'll build it to work either way, but actually
-   checking it against a real bamboo tee listing needs your `app_key`/
-   `app_secret` and a completed OAuth authorization.
+1. ~~Register a new dedicated AliExpress Open Platform app~~ — **not
+   possible**: AliExpress caps the Drop Shipping permission group to one app
+   per developer account, confirmed live (a "Reach Limit" message trying to
+   grant it to a second app). Reusing aliexpress-dashboard's app instead —
+   see `docs/decisions.md`. 1stees runs its own independent OAuth
+   authorization against that same app, so it holds its own token pair.
+2. ~~Verify the CLI against a real listing~~ — **done, 2026-09-17**:
+   `aliexpress.ds.product.get` and `aliexpress.ds.text.search` both
+   confirmed live against real bamboo golf tee listings (see the two
+   "confirmed live" notes above). Two real bugs found and fixed this way —
+   the wrong endpoint shape, and the wrapped-list response quirk — neither
+   would have surfaced from fixtures alone.
 3. **Auto-pay whitelist application** (email to `ds-api@aliexpress.com` +
    a PayPal account bound to the AliExpress buyer account) — not needed
    until Phase 4, but worth starting given the unknown review turnaround.
+4. **`aliexpress.ds.order.create`, `aliexpress.ds.freight.query`, and
+   `aliexpress.ds.order.tracking.get` are still unconfirmed against a real
+   call** — only product detail and text search have been exercised live so
+   far. Confirm these before relying on them in Phase 4; the "IncompleteSignature"-shaped
+   and wrapped-list surprises found in this pass suggest more undocumented
+   quirks are plausible in the methods not yet touched.
