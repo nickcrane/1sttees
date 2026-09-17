@@ -36,6 +36,43 @@ choice made during scaffolding that isn't obvious from the diff.
   pre-commit hook warns (doesn't block) if it's missing locally so a
   contributor without Homebrew isn't hard-blocked from committing, but CI
   always runs it, so nothing unscanned reaches `main`.
+- **dotenv** — Next.js loads `.env` on its own, but plain `tsx` entrypoints
+  (the AliExpress CLI scripts, `prisma/seed.ts`) don't; confirmed by hitting
+  a real "DATABASE_URL: undefined" crash running `pnpm ae:product` before
+  adding this. One explicit `loadDotenv({ quiet: true })` at the top of
+  `lib/env.ts` fixes every entrypoint at once rather than special-casing each
+  script; harmless under Next.js since dotenv never overwrites an
+  already-set value.
+- **pino-pretty** — human-readable dev-mode log formatting for `pino`
+  (spec-pinned); only loaded when `NODE_ENV=development`.
+
+## Phase 1 (AliExpress client) decisions
+
+- **MD5 signing (the classic "secret-wrap" scheme), not the platform's
+  documented HMAC-SHA256** — see `docs/aliexpress-api-notes.md`'s "Signing
+  algorithm" section. Chosen because it's the one with an actual working
+  reference implementation (`python-aliexpress-api`, run live daily by the
+  sibling aliexpress-dashboard project) to port and cross-check test vectors
+  against, not just docs pseudocode with no worked example.
+- **`AliExpressClient` takes an injectable `TokenStore`** (defaults to a
+  real Postgres-backed one) rather than calling Prisma directly. Lets the
+  OAuth-flow tests (`exchangeCodeForToken`, `refreshAccessToken`) run against
+  an in-memory double, keeping the whole `tests/unit/aliexpress/*` suite
+  free of any database dependency — consistent with the project rule that
+  the test suite must run offline and deterministically.
+- **`lib/aliexpress/prismaTokenStore.ts` split out from `tokens.ts` and
+  excluded from the coverage gate**, same rationale as `lib/prisma.ts` in
+  Phase 0: it's a thin Prisma wrapper around already-unit-tested logic
+  (`resolveTokenToPersist`, `encryptSecret`/`decryptSecret`); the DB
+  round-trip itself was verified manually against a real Postgres instance
+  (`pnpm ae:authorize --code ...`, confirmed the row landed encrypted) rather
+  than in the unit suite.
+- **Per-SKU fields on `aliexpress.ds.product.get`'s response
+  (`sku_id`, `sku_attr`) are provisional**, not yet confirmed by any live
+  call this project has made — modeled from what `aliexpress.ds.order.create`'s
+  own docs imply about `sku_attr`'s shape. Flagged in `schemas.ts`'s comments
+  and `docs/aliexpress-api-notes.md`'s "Open items"; re-check against a real
+  response once the new AliExpress app exists.
 
 ## Architecture decisions (confirmed with the client, 2026-09-17)
 

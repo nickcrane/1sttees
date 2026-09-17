@@ -15,3 +15,15 @@ model HealthCheck {
   message   String
   createdAt DateTime @default(now())
 }
+
+// The AliExpress OAuth token, singleton row (id is always "default").
+// access/refresh token values are AES-256-GCM encrypted at rest (see
+// lib/aliexpress/crypto.ts) -- never stored or logged in plaintext.
+model AliExpressToken {
+  id                  String   @id @default("default")
+  encryptedAccessToken  String
+  encryptedRefreshToken String
+  expiresAt           DateTime
+  refreshExpiresAt     DateTime
+  updatedAt           DateTime @updatedAt
+}

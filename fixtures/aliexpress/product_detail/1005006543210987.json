@@ -1,0 +1,34 @@
+{
+  "result": {
+    "ae_item_base_info_dto": {
+      "product_id": 1005006543210987,
+      "subject": "Natural Bamboo Golf Tees 83mm Biodegradable Eco-Friendly Golf Tee Set",
+      "sales_count": "500+",
+      "category_id": 200003655,
+      "evaluation_count": 128,
+      "avg_evaluation_rating": "4.8"
+    },
+    "ae_item_sku_info_dtos": [
+      {
+        "sku_id": 12000031234567,
+        "sku_attr": "14:200000led#83mm",
+        "sku_price": "6.99",
+        "offer_sale_price": "4.29",
+        "currency_code": "GBP"
+      },
+      {
+        "sku_id": 12000031234568,
+        "sku_attr": "14:200000led#70mm",
+        "sku_price": "5.99",
+        "offer_sale_price": "3.79",
+        "currency_code": "GBP"
+      }
+    ],
+    "ae_multimedia_info_dto": {
+      "image_urls": "https://ae01.alicdn.com/kf/bamboo-tee-1.jpg;https://ae01.alicdn.com/kf/bamboo-tee-2.jpg;https://ae01.alicdn.com/kf/bamboo-tee-3.jpg",
+      "ae_video_dtos": []
+    }
+  },
+  "rsp_code": "200",
+  "rsp_msg": "success"
+}

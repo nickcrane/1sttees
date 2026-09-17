@@ -1,4 +1,24 @@
+import { config as loadDotenv } from "dotenv";
 import { z } from "zod";
+
+/**
+ * Next.js loads `.env` on its own before any app code runs, so this is a
+ * no-op there (dotenv never overwrites an already-set process.env value).
+ * Plain `tsx` entrypoints (the CLI scripts, prisma/seed.ts) have no such
+ * built-in loader -- confirmed by running `pnpm ae:product` without this
+ * line and getting "DATABASE_URL: expected string, received undefined"
+ * despite a populated `.env` sitting right there. Vitest's own test.env
+ * (vitest.config.ts) sets its values before this module ever loads, so
+ * they win here too, by the same not-already-set rule -- except under
+ * Vitest specifically (`process.env.VITEST`, set automatically), where
+ * skipping this keeps the suite deterministic regardless of what a
+ * developer's local `.env` happens to contain: confirmed a real bug this
+ * way -- a test asserting "TOKEN_ENCRYPTION_KEY unset" started silently
+ * picking up this machine's real .env key once dotenv-loading was added.
+ */
+if (!process.env.VITEST) {
+  loadDotenv({ quiet: true });
+}
 
 /**
  * Env vars are validated in full up front (see docs/decisions.md), but only
@@ -16,8 +36,20 @@ const envSchema = z.object({
   ALIEXPRESS_APP_KEY: z.string().optional(),
   ALIEXPRESS_APP_SECRET: z.string().optional(),
   ALIEXPRESS_CALLBACK_URL: z.url().optional(),
-  ALIEXPRESS_GATEWAY_URL: z.url().optional(),
+  ALIEXPRESS_GATEWAY_URL: z.url().default("https://api-sg.aliexpress.com"),
   TOKEN_ENCRYPTION_KEY: z.string().optional(),
+  // fixture: reads recorded JSON from ALIEXPRESS_FIXTURES_DIR, no network,
+  // no credentials needed -- default, and what CI always runs. live: real
+  // calls, needs ALIEXPRESS_APP_KEY/SECRET and an authorized token on file.
+  ALIEXPRESS_MODE: z.enum(["fixture", "live"]).default("fixture"),
+  ALIEXPRESS_FIXTURES_DIR: z.string().default("./fixtures/aliexpress"),
+  ALIEXPRESS_TARGET_CURRENCY: z.string().default("GBP"),
+  ALIEXPRESS_TARGET_LANGUAGE: z.string().default("en_US"),
+  ALIEXPRESS_SHIP_TO_COUNTRY: z.string().default("GB"),
+  ALIEXPRESS_MIN_REQUEST_INTERVAL_MS: z.coerce.number().int().nonnegative().default(1000),
+  ALIEXPRESS_MAX_RETRIES: z.coerce.number().int().nonnegative().default(5),
+  ALIEXPRESS_BACKOFF_BASE_MS: z.coerce.number().int().positive().default(1000),
+  ALIEXPRESS_BACKOFF_MAX_MS: z.coerce.number().int().positive().default(60000),
 
   STRIPE_SECRET_KEY: z.string().optional(),
   STRIPE_PUBLISHABLE_KEY: z.string().optional(),
@@ -50,8 +82,27 @@ const envSchema = z.object({
 
 export type Env = z.infer<typeof envSchema>;
 
+/**
+ * A truly blank `KEY=` line in `.env` (the idiomatic way `.env.example`
+ * documents an optional, unset field) comes through `process.env` as an
+ * empty string, not `undefined` -- which `.optional()` doesn't treat as
+ * "not set". Strip blank strings before validating so an unset optional
+ * field behaves like it's actually unset, rather than "present but invalid"
+ * for anything typed as `.url()`/`.enum()`/etc. Confirmed this actually
+ * happens: importing Prisma triggers its own dotenv auto-load, merging
+ * `.env`'s blank optional fields into process.env even in a test run that
+ * never touched `.env` itself.
+ */
+function stripBlankValues(source: NodeJS.ProcessEnv): Record<string, string> {
+  const result: Record<string, string> = {};
+  for (const [key, value] of Object.entries(source)) {
+    if (value !== undefined && value !== "") result[key] = value;
+  }
+  return result;
+}
+
 function loadEnv(): Env {
-  const parsed = envSchema.safeParse(process.env);
+  const parsed = envSchema.safeParse(stripBlankValues(process.env));
   if (!parsed.success) {
     const issues = parsed.error.issues
       .map((issue) => `  - ${issue.path.join(".")}: ${issue.message}`)

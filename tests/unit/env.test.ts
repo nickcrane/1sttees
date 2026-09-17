@@ -35,8 +35,12 @@ describe("env", () => {
   });
 
   it("throws a readable error when DATABASE_URL is missing", async () => {
+    // vitest.config.ts bakes DATABASE_URL into every test's process.env (so
+    // merely importing lib/env.ts doesn't crash unrelated tests) -- an empty
+    // string is how this suite simulates "actually unset" (see env.ts's
+    // stripBlankValues, which treats a blank .env value the same way).
     await expect(
-      importEnvWith({ REDIS_URL: MINIMAL_VALID_ENV.REDIS_URL })
+      importEnvWith({ DATABASE_URL: "", REDIS_URL: MINIMAL_VALID_ENV.REDIS_URL })
     ).rejects.toThrow(/DATABASE_URL/);
   });
 

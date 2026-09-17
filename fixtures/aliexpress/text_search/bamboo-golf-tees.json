@@ -1,0 +1,42 @@
+{
+  "aliexpress_ds_text_search_response": {
+    "data": {
+      "products": [
+        {
+          "itemId": 1005006543210987,
+          "title": "Natural Bamboo Golf Tees 83mm Biodegradable Eco-Friendly Golf Tee Set",
+          "itemUrl": "//www.aliexpress.com/item/1005006543210987.html",
+          "itemMainPic": "https://ae01.alicdn.com/kf/bamboo-tee-1.jpg",
+          "cateId": "66,200000123,200003655",
+          "salePrice": "39.90",
+          "salePriceCurrency": "CNY",
+          "originalPrice": "59.90",
+          "originalPriceCurrency": "CNY",
+          "targetSalePrice": "4.29",
+          "discount": "33%",
+          "evaluateRate": "96.5%",
+          "orders": "500+"
+        },
+        {
+          "itemId": 1005006543210988,
+          "title": "Bamboo Golf Tees 70mm Pack of 50 Natural Wood Alternative",
+          "itemUrl": "//www.aliexpress.com/item/1005006543210988.html",
+          "itemMainPic": "https://ae01.alicdn.com/kf/bamboo-tee-2.jpg",
+          "cateId": "66,200000123,200003655",
+          "salePrice": "29.90",
+          "salePriceCurrency": "CNY",
+          "originalPrice": "45.90",
+          "originalPriceCurrency": "CNY",
+          "targetSalePrice": "3.19",
+          "discount": "35%",
+          "evaluateRate": "94.1%",
+          "orders": "1000+"
+        }
+      ],
+      "pageIndex": 1,
+      "totalCount": 2
+    },
+    "code": "00",
+    "msg": "success"
+  }
+}

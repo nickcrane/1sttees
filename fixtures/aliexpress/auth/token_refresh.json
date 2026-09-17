@@ -1,0 +1,10 @@
+{
+  "access_token": "fixture-access-token-refreshed-def456",
+  "refresh_token": "fixture-refresh-token-refreshed-uvw012",
+  "expires_in": 86400,
+  "refresh_expires_in": 172800,
+  "user_id": "fixture-user-id",
+  "account": "fixture@example.com",
+  "code": "0",
+  "request_id": "fixture-request-id-refresh"
+}

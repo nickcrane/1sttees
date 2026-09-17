@@ -49,53 +49,89 @@ All APIs split into two categories, each with its own URL shape:
 Matches `aliexpress-dashboard`'s confirmed-live `_DOMAIN = "api-sg.aliexpress.com"`,
 port 443, HTTPS-only.
 
-## Signing algorithm — two valid methods, pick MD5
+## Signing algorithm — MD5, the classic "secret-wrap" scheme, not HMAC
 
-This is the one place the two sources genuinely disagreed, and it's worth
-explaining rather than picking silently:
+Three sources here, and they don't all agree — resolved by going to actual
+working code rather than picking whichever doc reads most authoritative:
 
-- The platform's own [Signature algorithm](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1367) doc (updated 2024-03-29) documents **HMAC-SHA256** (`sign_method=sha256`) as *the* algorithm, with full pseudocode and a Java sample.
-- But the platform's own [[Important] Developers Notice](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1392) (updated 2025-05-06, migrating developers off the old Taobao Open Platform gateway) gives a worked "before → after" URL-migration example where **both** the old and new gateway URLs use `sign_method=md5` — i.e. AliExpress's own migration guide, written *after* the HMAC-SHA256 doc, still demonstrates MD5 against the current gateway.
-- `aliexpress-dashboard` confirmed MD5 works live against `aliexpress.ds.*` (reusing `python-aliexpress-api`'s affiliate-family signer, which is MD5).
+- The platform's own [Signature algorithm](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1367) doc (updated 2024-03-29) documents **HMAC-SHA256** (`sign_method=sha256`) with full pseudocode and a Java sample, but no worked numeric example (no sample secret/output to verify against).
+- The platform's own [[Important] Developers Notice](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1392) (updated 2025-05-06, migrating developers off the old Taobao Open Platform gateway) gives a worked "before → after" URL-migration example where **both** the old and new gateway URLs use `sign_method=md5`.
+- `python-aliexpress-api`'s `RestApi.getResponse()` — the exact code `aliexpress-dashboard` runs live, successfully, against `aliexpress.ds.*` today — has a real, readable `sign()` function. This is not a guess or a doc reading; it's the literal source of a working integration:
+  ```python
+  def sign(secret, parameters):
+      keys = sorted(parameters.keys())
+      parameters = "%s%s%s" % (
+          secret,
+          "".join("%s%s" % (key, parameters[key]) for key in keys),
+          secret,
+      )
+      return hashlib.md5(parameters.encode("utf-8")).hexdigest().upper()
+  ```
+  (`/Users/nick/Dev/aliexpress-dashboard/.venv/lib/python3.11/site-packages/aliexpress_api/skd/api/base.py`)
 
-Conclusion: **`sign_method` is a request parameter, not a fixed platform
-default** — both MD5 and HMAC-SHA256 are accepted; you declare which one you
-used. This project uses **MD5**, because it's the one with an actual
-production track record (aliexpress-dashboard) and appears in AliExpress's
-own current migration examples. The signer is written so `sign_method` is a
-single config point — switching to SHA-256 later is a one-line change if MD5
-is ever deprecated.
+**This project uses that exact scheme** — proven live, and the simpler of
+the two to reason about. It is **not** HMAC-MD5: the secret is concatenated
+directly before and after the sorted key-value string, then the whole thing
+is run through plain MD5. `sign_method` is a declared request parameter
+either way, so switching to the documented HMAC-SHA256 later (if MD5 is ever
+deprecated) only means swapping the hash step, not the surrounding request
+shape.
 
-**Algorithm** (from the platform's own doc, generalized to whichever hash is configured):
+**Algorithm actually implemented:**
 
-1. Take every request parameter — system params (`app_key`, `access_token`,
-   `timestamp`, `sign_method`) and business params — **except** `sign` itself
-   and any byte-array-typed param. For a **Business interface**, add `method`
-   (the dotted API name, e.g. `aliexpress.ds.product.get`) as one more param
-   to sort in. For a **System interface**, don't — the path gets prepended
-   in step 3 instead.
-2. Sort all these params by key, byte-wise ascending (ASCII order).
-3. Concatenate as `key1value1key2value2...` — no `=`, no `&`, no separators.
-   For a **System interface** only, prepend the raw API path (e.g.
-   `/auth/token/create`) to the front of this string before hashing.
-4. UTF-8 encode, then HMAC (key = `app_secret`) using the declared algorithm.
-5. Hex-encode the digest, **uppercase**. This is `sign`.
+1. Build one flat params object: all system params (see below) **plus** all
+   business params for this call, `method` included as a normal param (its
+   value is the dotted API name, e.g. `aliexpress.ds.product.get`) —
+   confirmed from the working source: `method` is just another entry in the
+   same dict that gets signed, not special-cased. Exclude only `sign` itself.
+2. Sort keys byte-wise ascending (plain `Array.sort()` on strings gives this
+   for the ASCII param names in use here).
+3. Concatenate as `secret + key1value1key2value2... + secret` (secret
+   wrapped around the front *and* back — easy to miss, confirmed from the
+   source above, not from any doc).
+4. UTF-8 encode, MD5 hash, hex-encode, **uppercase**. This is `sign`.
+
+**Cross-checked test vectors** (computed by literally running the Python
+`sign()` function above in this environment, so the TypeScript port has
+something real to assert against — see `tests/unit/aliexpress/sign.test.ts`):
+```
+sign("testsecret", {foo:"1", bar:"2", foo_bar:"3", foobar:"4"})
+  → "54C22189FE38F1B7E6E4D701FB82851E"
+
+sign("my_app_secret_123", {app_key:"12345678", method:"aliexpress.ds.product.get",
+  timestamp:"1700000000000", format:"json", v:"2.0", sign_method:"md5",
+  partner_id:"taobao-sdk-python-20200924", session:"test-access-token",
+  product_id:"1005001234567890", ship_to_country:"GB", target_currency:"GBP",
+  target_language:"en_US"})
+  → "3C285A05E7275C1E100E170EFA715F1E"
+```
 
 ## System parameters (every request)
 
-From [Calling parameters](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1369) (updated 2024-03-29):
+The current [Calling parameters](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1369) doc (updated 2024-03-29) only lists `app_key`,
+`access_token`, `timestamp`, `sign_method`, `sign` — but the actual working
+implementation sends a larger, TOP-legacy-compatible set, and **the docs page
+is the less reliable source here** (confirmed pattern: this platform's docs
+and live behavior disagree; go with what a real, currently-working
+integration sends). This project sends:
 
-| Param | Required | Notes |
+| Param | Value | Source |
 |---|---|---|
-| `app_key` | Yes | |
-| `access_token` | Conditional | Required for any call needing seller/buyer authorization (all `ds.*` calls do) |
-| `timestamp` | Yes | UTC, either `2017-11-11T12:00:00Z` or epoch-milliseconds. Server rejects if clock drift > 7200s |
-| `sign_method` | Yes | `md5` (this project) or `sha256` |
-| `sign` | Yes | see above |
+| `app_key` | your app key | both sources agree |
+| `method` | dotted API name, e.g. `aliexpress.ds.product.get` — omitted for System interfaces, which use the path-based URL instead | working impl |
+| `session` | the OAuth access token | working impl uses `session`, **not** `access_token` as the docs' table implies. `access_token` may also be the accepted name on the current gateway (untested) — send it as an alias too rather than trust one name until a real call confirms which one the gateway actually reads |
+| `timestamp` | epoch-milliseconds string, e.g. `"1700000000000"` | working impl. Current docs also allow this form (alongside `2017-11-11T12:00:00Z`), so no conflict |
+| `format` | `"json"` | working impl; not in the docs' trimmed table |
+| `v` | `"2.0"` | working impl; not in the docs' trimmed table |
+| `sign_method` | `"md5"` | see above |
+| `partner_id` | a free-text client identifier string (e.g. `"1stees-node"`) | working impl sends an SDK-version-style string here; gateway doesn't appear to validate its content, just that it's present |
+| `sign` | see signing section | both sources agree |
 
-No `format`/`v`/`partner_id` params were documented on the current calling-parameters
-page (those are legacy Taobao-era params visible only in the old-gateway side
-of the migration-notice example) — omit them unless a live call demands otherwise.
+**Request shape**: system params (incl. `sign`) go in the **URL query
+string**; business params go in the **POST body**, `application/
+x-www-form-urlencoded`. Both business-interface calls (`/sync?{system
+params}`) and system-interface calls (`/rest{path}?{system params}`) follow
+this split in the working implementation.
 
 ## Response envelope
 
