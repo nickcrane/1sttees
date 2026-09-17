@@ -73,6 +73,25 @@ choice made during scaffolding that isn't obvious from the diff.
   own docs imply about `sku_attr`'s shape. Flagged in `schemas.ts`'s comments
   and `docs/aliexpress-api-notes.md`'s "Open items"; re-check against a real
   response once the new AliExpress app exists.
+- **Reversed: reusing aliexpress-dashboard's AliExpress app, not a new
+  dedicated one (2026-09-17).** The original plan (a fresh app, to keep a
+  research tool's blast radius separate from something placing real orders)
+  hit a real platform constraint: AliExpress caps the
+  Drop Shipping permission group to **one app per developer account** —
+  confirmed live, "Reach Limit" shown when trying to grant Drop Shipping to
+  a second app on the same account aliexpress-dashboard's app already uses.
+  The options were a second AliExpress account (its own buyer identity, its
+  own DS Center agreement) or reusing the existing app; the client chose to
+  reuse it. `ALIEXPRESS_APP_KEY`/`ALIEXPRESS_APP_SECRET` in `.env` are now
+  the same values as `aliexpress-dashboard/.env`'s `AE_APP_KEY`/`AE_APP_SECRET`.
+  Consequence worth watching: both projects can call the API under the same
+  app identity, but each runs its own independent OAuth authorization (its
+  own `pnpm ae:authorize` / that project's `authorize` CLI), so each holds
+  its own access/refresh token pair — unconfirmed whether AliExpress allows
+  two live, independently-refreshed token pairs for the same (app, user)
+  at once, or whether one authorizing/refreshing can affect the other's
+  token. Watch for unexplained `IllegalRefreshToken`-type errors in either
+  project as a sign this assumption is wrong.
 
 ## Architecture decisions (confirmed with the client, 2026-09-17)
 
