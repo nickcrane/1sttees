@@ -37,6 +37,36 @@ choice made during scaffolding that isn't obvious from the diff.
   contributor without Homebrew isn't hard-blocked from committing, but CI
   always runs it, so nothing unscanned reaches `main`.
 
+## Architecture decisions (confirmed with the client, 2026-09-17)
+
+- **Auth: Auth.js + our own Postgres tables, not Firebase Auth.** Firebase
+  Auth was considered (already used for login in the sibling
+  `aliexpress-dashboard` project's `web-m3` dashboard) but rejected for this
+  project specifically because it can't meet several requirements the spec
+  states as non-negotiable: it hashes passwords with its own internal
+  scrypt, not a chosen algorithm, so the spec's "argon2id, never
+  bcrypt-with-defaults" can't be honoured; it has no webhook/trigger for a
+  plain sign-in event on the free tier (would need paid GCP Identity
+  Platform blocking functions), so a complete `SecurityEvent` audit trail
+  can't be built on top of it without extra infrastructure; and true
+  customer/admin realm isolation would rely on custom claims rather than
+  two genuinely separate session stores. Auth.js against `Customer`/
+  `PasswordResetToken`/`CustomerSession` (already in the domain model)
+  hits every one of these as specified, at the cost of owning more code.
+- **Hosting: Railway for both the Next.js web app and the BullMQ worker in
+  production — not the spec's original Vercel (web) + Railway (worker)
+  split, and not Firebase Hosting/App Hosting.** Firebase was ruled out
+  because it has no product that runs a persistent Node process (the
+  worker would need GCP Cloud Run regardless, new territory), so it
+  wouldn't actually reduce the number of platforms in play. Vercel was
+  dropped in favour of running the Next.js app on Railway too (`next
+  start` as a plain long-running process, not Vercel's edge/serverless
+  model) so the whole stack sits on one platform the client already
+  operates in production (aliexpress-dashboard's Postgres, Redis, volumes,
+  and cron patterns on Railway carry over directly). Trade-off: loses
+  Vercel's zero-config preview deployments, edge network, and built-in ISR
+  handling — acceptable for a single-region UK/EU store.
+
 ## Other Phase 0 decisions
 
 - **No `/src` directory.** The spec's REPO SHAPE lists `/app`, `/lib`,
