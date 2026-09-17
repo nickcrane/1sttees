@@ -49,8 +49,17 @@ export function checkEnvelopeSuccess(envelope: Record<string, unknown>): { succe
     const code = envelope[codeField];
     const success = codeField === "code" ? isAllZeros(code) : String(code) === "200" || isAllZeros(code);
     if (!success) {
-      const message = String(envelope[messageField] ?? envelope.sub_msg ?? "unknown error");
-      return { success: false, errorCode: String(code), message };
+      const message = String(envelope[messageField] ?? "unknown error");
+      // sub_code/sub_msg (seen on the `error_response` envelope shape, e.g.
+      // "isv.insufficient-permission") are far more diagnostic than the
+      // generic top-level message alone -- confirmed live querying
+      // aliexpress.trade.ds.order.get for an order this account doesn't
+      // own: top-level msg was just "Remote service error". Append rather
+      // than replace, since either field alone can be uninformative.
+      const subCode = envelope.sub_code;
+      const subMsg = envelope.sub_msg;
+      const detail = subCode || subMsg ? ` [${[subCode, subMsg].filter(Boolean).join(": ")}]` : "";
+      return { success: false, errorCode: String(code), message: `${message}${detail}` };
     }
   }
   return { success: true };

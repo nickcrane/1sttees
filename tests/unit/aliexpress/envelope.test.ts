@@ -49,8 +49,22 @@ describe("checkEnvelopeSuccess", () => {
     });
   });
 
-  it("falls back to sub_msg when the primary message field is absent", () => {
+  it("uses 'unknown error' when the primary message field is absent, still appending sub_msg if present", () => {
     const result = checkEnvelopeSuccess({ rsp_code: "500", sub_msg: "internal error" });
-    expect(result).toEqual({ success: false, errorCode: "500", message: "internal error" });
+    expect(result).toEqual({ success: false, errorCode: "500", message: "unknown error [internal error]" });
+  });
+
+  it("appends sub_code and sub_msg to the message -- confirmed live on the error_response shape, where the top-level msg alone is uninformative ('Remote service error')", () => {
+    const result = checkEnvelopeSuccess({
+      code: "15",
+      msg: "Remote service error",
+      sub_code: "isv.insufficient-permission",
+      sub_msg: "Insufficient permission.",
+    });
+    expect(result).toEqual({
+      success: false,
+      errorCode: "15",
+      message: "Remote service error [isv.insufficient-permission: Insufficient permission.]",
+    });
   });
 });

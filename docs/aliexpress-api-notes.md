@@ -209,11 +209,11 @@ Source: [Authorize your APP](https://openservice.aliexpress.com/doc/doc.htm#/?do
 | Keyword search | `aliexpress.ds.text.search` — **confirmed live by 1stees 2026-09-17**, 7,500+ real results for "bamboo golf tees" | ✅ matches |
 | Image search | `aliexpress.ds.image.searchV2` | (not in brief — bonus) |
 | Category tree | `aliexpress.ds.category.get`* | (not named in brief) |
-| Freight/shipping quote | `aliexpress.ds.freight.query` | ✅ matches |
+| Freight/shipping quote | `aliexpress.ds.freight.query` — **confirmed live by 1stees 2026-09-17** against a real bamboo tee SKU | ✅ matches |
 | Ship-to address helper | `aliexpress.ds.address.get` | (not in brief) |
-| **Order placement** | **`aliexpress.ds.order.create`** | ❌ brief said `aliexpress.trade.buy.placeorder` — that name doesn't appear anywhere in current docs |
-| Order detail | `aliexpress.trade.ds.order.get` | brief guessed `aliexpress.ds.trade.order.get` — word order differs |
-| Tracking | `aliexpress.ds.order.tracking.get` | ✅ matches |
+| **Order placement** | **`aliexpress.ds.order.create`** — built, deliberately not yet called live (creates a real order; see "Order placement — status") | ❌ brief said `aliexpress.trade.buy.placeorder` — that name doesn't appear anywhere in current docs |
+| Order detail | `aliexpress.trade.ds.order.get` — **confirmed live by 1stees 2026-09-17** (error path: confirms order-ownership validation) | brief guessed `aliexpress.ds.trade.order.get` — word order differs |
+| Tracking | `aliexpress.ds.order.tracking.get` — **confirmed live by 1stees 2026-09-17** (not-found path only; success path needs a real shipped order) | ✅ matches |
 
 \* `aliexpress.ds.category.get` wasn't re-confirmed on the current docs site
 during this pass, but is confirmed live by aliexpress-dashboard, still exists
@@ -265,6 +265,58 @@ Full reference: `https://openservice.aliexpress.com/doc/api.htm#/api?cid=21038&p
   30-minute hold window is what makes cancellation *before* placement free;
   after placement, cancellation is a manual, human, per-order action, not
   something the worker can automate.
+- **Still not called live** (only `aliexpress.ds.product.get` and
+  `aliexpress.ds.text.search` have been) — see "Order placement — status"
+  below for why.
+
+## `aliexpress.ds.freight.query`, `aliexpress.ds.order.tracking.get`, `aliexpress.trade.ds.order.get` — confirmed 2026-09-17
+
+All three read-only. `freight.query` and (its error path) `order.get` are
+now confirmed live; `tracking.get`'s success path still needs a real order.
+
+- **`freight.query`** takes one param, `queryDeliveryReq`, a **JSON string**
+  (not nested form fields) of `{quantity, shipToCountry, productId,
+  provinceCode?, cityCode?, language, locale, selectedSkuId, currency}`.
+  **Confirmed live** against a real bamboo tee SKU: one delivery option
+  came back (`CAINIAO_FULFILLMENT_PRE`, £1.99, 5–9 days) — its `code` field
+  is exactly the `logistics_service_name` `aliexpress.ds.order.create`
+  needs. `delivery_options` has the same single-key-wrapped-list quirk as
+  everywhere else (`{"delivery_option_d_t_o": [...]}`).
+- **`order.tracking.get`** takes `ae_order_id` + `language`. A "not found"
+  response (`result.ret: false`, `result.code: "1001"`, no `result.data`
+  key at all) doesn't come back as a gateway-level error — it's a normal
+  `success` envelope with `ret: false` inside `result`. **Confirmed live**
+  against a made-up order id: the client currently returns `[]` rather than
+  throwing, which is the right default for "hasn't shipped yet" (the
+  expected case while polling) but means a genuinely wrong order id looks
+  identical to "no tracking yet" — worth revisiting if Phase 4's poller
+  needs to distinguish the two. Success-path shape (multiple nesting levels
+  of the same wrapped-list quirk: `tracking_detail_line_list` →
+  `detail_node_list` / `package_item_list`) is per the docs, not yet
+  confirmed against a real shipped order.
+- **`trade.ds.order.get`** takes `single_order_query`, also a **JSON
+  string**, of `{order_id}`. Money fields are all `{amount, currency_code}`
+  objects, not flat numbers. **Confirmed live** (error path): querying an
+  order id this account doesn't own returns the `error_response` envelope
+  shape (top-level, not nested in `result`) with `sub_code:
+  "isv.insufficient-permission"` — i.e. this endpoint validates order
+  ownership, and a bad id looks like a permission error, not a 404. The
+  generic single-key-`_response`-suffix envelope unwrapping already handled
+  this shape with no special-casing needed. `envelope.ts`'s error-message
+  building was extended to append `sub_code`/`sub_msg` to the surfaced
+  message — the top-level `msg` alone was just "Remote service error",
+  useless on its own; `sub_code`/`sub_msg` carried the actual diagnosis.
+
+## Order placement — status: built, not yet called live
+
+`aliexpress.ds.order.create` is fully implemented (`AliExpressClient.placeOrder`,
+fixtures for both the plain-success and created-but-payment-failed cases) but
+**has deliberately never been called against the live gateway**. Unlike the
+five read-only methods above, this one creates a real order against a real
+seller, and — since the auto-pay whitelist isn't in place yet (see below) —
+it would sit unpaid with no API-based way to cancel it. That's real-world
+state affecting a third party (the seller), not something to trigger without
+the client's explicit go-ahead each time, not a one-time blanket approval.
 
 ## Automatic payment — requires a manual application + a funded PayPal account (flagging per Rule 2)
 
@@ -347,9 +399,13 @@ is tuned — using a conservative default (aliexpress-dashboard's
 3. **Auto-pay whitelist application** (email to `ds-api@aliexpress.com` +
    a PayPal account bound to the AliExpress buyer account) — not needed
    until Phase 4, but worth starting given the unknown review turnaround.
-4. **`aliexpress.ds.order.create`, `aliexpress.ds.freight.query`, and
-   `aliexpress.ds.order.tracking.get` are still unconfirmed against a real
-   call** — only product detail and text search have been exercised live so
-   far. Confirm these before relying on them in Phase 4; the "IncompleteSignature"-shaped
-   and wrapped-list surprises found in this pass suggest more undocumented
-   quirks are plausible in the methods not yet touched.
+4. ~~`freight.query`, `order.tracking.get`, `trade.ds.order.get` unconfirmed
+   live~~ — **done, 2026-09-17**: `freight.query` confirmed on the success
+   path, the other two on their error paths only (no real order exists to
+   test their success paths against). See the new section above.
+5. **`aliexpress.ds.order.create` remains the one method never called live**
+   — deliberately. It creates a real order against a real seller, and won't
+   auto-pay until the whitelist above is in place, meaning it would sit
+   unpaid with no API-based cancellation. Only place a real (even a cheap,
+   single-item) test order with your explicit go-ahead each time — this
+   isn't a one-time approval to automate away.

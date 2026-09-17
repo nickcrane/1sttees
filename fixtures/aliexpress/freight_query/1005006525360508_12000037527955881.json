@@ -1,0 +1,48 @@
+{
+  "aliexpress_ds_freight_query_response": {
+    "result": {
+      "msg": "Call succeeds",
+      "code": 200,
+      "success": true,
+      "delivery_options": {
+        "delivery_option_d_t_o": [
+          {
+            "code": "CAINIAO_STANDARD",
+            "shipping_fee_currency": "GBP",
+            "free_shipping": false,
+            "mayHavePFS": false,
+            "guaranteed_delivery_days": "30",
+            "max_delivery_days": 24,
+            "tracking": true,
+            "shipping_fee_format": "£3.99",
+            "delivery_date_desc": "Oct 05 - 20",
+            "company": "AliExpress standard shipping",
+            "ship_from_country": "CN",
+            "min_delivery_days": 12,
+            "available_stock": "999",
+            "ddpIncludeVATTax": "true",
+            "shipping_fee_cent": "3.99"
+          },
+          {
+            "code": "CAINIAO_ECONOMY",
+            "shipping_fee_currency": "GBP",
+            "free_shipping": true,
+            "mayHavePFS": true,
+            "guaranteed_delivery_days": "45",
+            "max_delivery_days": 35,
+            "tracking": false,
+            "shipping_fee_format": "Free",
+            "delivery_date_desc": "Oct 15 - 30",
+            "company": "AliExpress economy shipping",
+            "ship_from_country": "CN",
+            "min_delivery_days": 20,
+            "available_stock": "999",
+            "ddpIncludeVATTax": "false",
+            "shipping_fee_cent": "0"
+          }
+        ]
+      }
+    },
+    "request_id": "fixture-request-id-freight"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "aliexpress_ds_order_tracking_get_response": {
+    "result": {
+      "ret": true,
+      "msg": "",
+      "code": "",
+      "data": {
+        "tracking_detail_line_list": {
+          "tracking_detail": [
+            {
+              "detail_node_list": {
+                "detail_node": [
+                  {
+                    "time_stamp": 1739928180000,
+                    "tracking_detail_desc": "Your package arrived at local Facility.",
+                    "tracking_name": "Delivery update"
+                  },
+                  {
+                    "time_stamp": 1739841780000,
+                    "tracking_detail_desc": "Departed from AliExpress facility.",
+                    "tracking_name": "Shipped"
+                  }
+                ]
+              },
+              "package_item_list": {
+                "package_item": [
+                  {
+                    "sku_desc": "83mm",
+                    "quantity": 1,
+                    "item_id": 1005006525360508,
+                    "item_title": "Golf Bamboo Golf Tees 54mm 70mm 83mm Pack of 100"
+                  }
+                ]
+              },
+              "carrier_name": "AliExpress standard shipping",
+              "mail_no": "4209795192144903600008220012159992",
+              "eta_time_stamps": 1740273780000
+            }
+          ]
+        }
+      }
+    },
+    "request_id": "fixture-request-id-tracking"
+  }
+}

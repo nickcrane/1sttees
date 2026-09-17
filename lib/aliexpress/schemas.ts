@@ -104,6 +104,129 @@ export const rawProductDetailResultSchema = z
   .passthrough();
 export type RawProductDetailResult = z.infer<typeof rawProductDetailResultSchema>;
 
+// aliexpress.ds.freight.query: confirmed live (2026-09-17) against a real
+// bamboo golf tee product/SKU. `delivery_options` has the same
+// single-key-wrapped-list quirk as everything else in this family
+// (`{"delivery_option_d_t_o": [...]}`) -- see extractList.
+export const rawDeliveryOptionSchema = z
+  .object({
+    code: z.string().optional(), // delivery service code -- needed at order placement time
+    company: z.string().optional(),
+    shipping_fee_format: z.string().optional(),
+    shipping_fee_cent: z.union([z.string(), z.number()]).optional(),
+    shipping_fee_currency: z.string().optional(),
+    free_shipping: z.boolean().optional(),
+    delivery_date_desc: z.string().optional(),
+    min_delivery_days: z.union([z.string(), z.number()]).optional(),
+    max_delivery_days: z.union([z.string(), z.number()]).optional(),
+    ship_from_country: z.string().optional(),
+    tracking: z.boolean().optional(),
+  })
+  .passthrough();
+export type RawDeliveryOption = z.infer<typeof rawDeliveryOptionSchema>;
+
+export const rawFreightResultSchema = z
+  .object({
+    success: z.boolean().optional(),
+    code: z.union([z.string(), z.number()]).optional(),
+    msg: z.string().optional(),
+    delivery_options: z.unknown().optional(),
+  })
+  .passthrough();
+export type RawFreightResult = z.infer<typeof rawFreightResultSchema>;
+
+export const normalizedFreightOptionSchema = z.object({
+  code: z.string().nullable(), // pass verbatim as logistics_service_name at order placement
+  company: z.string().nullable(),
+  shippingFeeFormatted: z.string().nullable(),
+  shippingFeeCents: z.number().nullable(),
+  shippingFeeCurrency: z.string().nullable(),
+  freeShipping: z.boolean().nullable(),
+  deliveryDateDesc: z.string().nullable(),
+  minDeliveryDays: z.number().nullable(),
+  maxDeliveryDays: z.number().nullable(),
+  shipFromCountry: z.string().nullable(),
+  trackingAvailable: z.boolean().nullable(),
+});
+export type NormalizedFreightOption = z.infer<typeof normalizedFreightOptionSchema>;
+
+// aliexpress.ds.order.tracking.get: confirmed shape per current docs, not
+// yet exercised live (needs a real order id, which doesn't exist yet).
+// Triple-nested wrapped-list quirk, same pattern as everywhere else --
+// tracking_detail_line_list -> detail_node_list -> package_item_list.
+export const rawTrackingDetailNodeSchema = z
+  .object({
+    tracking_name: z.string().optional(),
+    tracking_detail_desc: z.string().optional(),
+    time_stamp: z.union([z.string(), z.number()]).optional(),
+  })
+  .passthrough();
+
+export const rawTrackingPackageItemSchema = z
+  .object({
+    item_id: z.union([z.string(), z.number()]).optional(),
+    item_title: z.string().optional(),
+    sku_desc: z.string().optional(),
+    quantity: z.union([z.string(), z.number()]).optional(),
+  })
+  .passthrough();
+
+export const rawTrackingDetailLineSchema = z
+  .object({
+    mail_no: z.string().optional(),
+    carrier_name: z.string().optional(),
+    eta_time_stamps: z.union([z.string(), z.number()]).optional(),
+    detail_node_list: z.unknown().optional(),
+    package_item_list: z.unknown().optional(),
+  })
+  .passthrough();
+
+export const rawTrackingResultSchema = z
+  .object({
+    ret: z.boolean().optional(),
+    code: z.string().optional(),
+    msg: z.string().optional(),
+    data: z
+      .object({ tracking_detail_line_list: z.unknown().optional() })
+      .passthrough()
+      .optional(),
+  })
+  .passthrough();
+export type RawTrackingResult = z.infer<typeof rawTrackingResultSchema>;
+
+export const normalizedTrackingLineSchema = z.object({
+  mailNo: z.string().nullable(),
+  carrierName: z.string().nullable(),
+  etaTimestamp: z.number().nullable(),
+  events: z.array(
+    z.object({
+      name: z.string().nullable(),
+      description: z.string().nullable(),
+      timestamp: z.number().nullable(),
+    })
+  ),
+});
+export type NormalizedTrackingLine = z.infer<typeof normalizedTrackingLineSchema>;
+
+// aliexpress.trade.ds.order.get: confirmed shape per current docs, not yet
+// exercised live (needs a real order id). Money fields are `{amount,
+// currency_code}` objects throughout, not flat numbers -- confirmed
+// pattern from the docs' own worked example.
+const rawMoneySchema = z.object({ amount: z.union([z.string(), z.number()]).optional(), currency_code: z.string().optional() }).passthrough();
+
+export const rawOrderDetailResultSchema = z
+  .object({
+    gmt_create: z.string().optional(),
+    order_status: z.string().optional(),
+    logistics_status: z.string().optional(),
+    user_order_amount: rawMoneySchema.optional(),
+    logistics_info_list: z.unknown().optional(),
+    store_info: z.unknown().optional(),
+    child_order_list: z.unknown().optional(),
+  })
+  .passthrough();
+export type RawOrderDetailResult = z.infer<typeof rawOrderDetailResultSchema>;
+
 // -- Normalized, domain-facing shapes --------------------------------------
 
 export const normalizedProductSchema = z.object({
@@ -300,4 +423,47 @@ export function normalizeProductDetail(raw: RawProductDetailResult, targetCurren
       currency: sku.currency_code ?? null,
     })),
   };
+}
+
+export function normalizeFreightOptions(raw: RawFreightResult, method: string): NormalizedFreightOption[] {
+  const options = extractValidItems(raw.delivery_options, rawDeliveryOptionSchema, {
+    method,
+    field: "delivery_options",
+  });
+  return options.map((option) => ({
+    code: option.code ?? null,
+    company: option.company ?? null,
+    shippingFeeFormatted: option.shipping_fee_format ?? null,
+    shippingFeeCents: toNumber(option.shipping_fee_cent),
+    shippingFeeCurrency: option.shipping_fee_currency ?? null,
+    freeShipping: option.free_shipping ?? null,
+    deliveryDateDesc: option.delivery_date_desc ?? null,
+    minDeliveryDays: toNumber(option.min_delivery_days),
+    maxDeliveryDays: toNumber(option.max_delivery_days),
+    shipFromCountry: option.ship_from_country ?? null,
+    trackingAvailable: option.tracking ?? null,
+  }));
+}
+
+export function normalizeTrackingLines(raw: RawTrackingResult, method: string): NormalizedTrackingLine[] {
+  const lines = extractValidItems(raw.data?.tracking_detail_line_list, rawTrackingDetailLineSchema, {
+    method,
+    field: "tracking_detail_line_list",
+  });
+  return lines.map((line) => {
+    const nodes = extractValidItems(line.detail_node_list, rawTrackingDetailNodeSchema, {
+      method,
+      field: "detail_node_list",
+    });
+    return {
+      mailNo: line.mail_no ?? null,
+      carrierName: line.carrier_name ?? null,
+      etaTimestamp: toNumber(line.eta_time_stamps),
+      events: nodes.map((node) => ({
+        name: node.tracking_name ?? null,
+        description: node.tracking_detail_desc ?? null,
+        timestamp: toNumber(node.time_stamp),
+      })),
+    };
+  });
 }

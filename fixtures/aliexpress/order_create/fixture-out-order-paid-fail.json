@@ -1,0 +1,12 @@
+{
+  "aliexpress_ds_order_create_response": {
+    "result": {
+      "error_msg": "OrderCreated, autoPay fail:APIPayFail",
+      "is_success": true,
+      "order_list": {
+        "number": [8190439416163295]
+      }
+    },
+    "request_id": "fixture-request-id-order-create-payfail"
+  }
+}

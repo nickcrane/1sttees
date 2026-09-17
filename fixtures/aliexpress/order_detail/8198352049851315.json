@@ -1,0 +1,43 @@
+{
+  "aliexpress_trade_ds_order_get_response": {
+    "result": {
+      "gmt_create": "2026-09-17 21:00:03",
+      "order_status": "WAIT_SELLER_SEND_GOODS",
+      "logistics_info_list": {
+        "aeop_order_logistics_info": [
+          {
+            "logistics_service": "CAINIAO_STANDARD",
+            "logistics_no": "LP00675700340000"
+          }
+        ]
+      },
+      "store_info": {
+        "store_id": 1103800006,
+        "store_name": "Bamboo Golf Supplies Store"
+      },
+      "user_order_amount": {
+        "amount": "4.71",
+        "currency_code": "GBP"
+      },
+      "child_order_list": {
+        "aeop_child_order_info": [
+          {
+            "product_count": 1,
+            "sku_id": "12000037527955881",
+            "product_name": "Golf Bamboo Golf Tees 54mm 70mm 83mm Pack of 100",
+            "shipping_fee": {
+              "amount": "3.99",
+              "currency_code": "GBP"
+            },
+            "actual_fee": {
+              "amount": "4.71",
+              "currency_code": "GBP"
+            }
+          }
+        ]
+      },
+      "logistics_status": "WAIT_SELLER_SEND_GOODS"
+    },
+    "request_id": "fixture-request-id-order-detail"
+  }
+}

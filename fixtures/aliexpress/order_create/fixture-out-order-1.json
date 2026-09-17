@@ -1,0 +1,11 @@
+{
+  "aliexpress_ds_order_create_response": {
+    "result": {
+      "is_success": true,
+      "order_list": {
+        "number": [8198352049851315]
+      }
+    },
+    "request_id": "fixture-request-id-order-create"
+  }
+}
