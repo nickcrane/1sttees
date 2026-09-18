@@ -448,3 +448,26 @@ different serif vs. sans at a glance in a screenshot taken in passing.
   general hazard of pairing a custom `--text-*` theme token with a
   component whose variant classes already set a `text-*` color, through
   `cn()`/tailwind-merge.
+
+## Real bug: order-confirmation page conflated "not PAID" with "not paid"
+
+Found live: Nick placed a real Stripe test-mode order, the payment
+genuinely succeeded (confirmed directly against Stripe's API -- card
+charged, `paidAt`/brand/last4 all set), but the *fulfilment* step then
+failed and moved the order to `NEEDS_MANUAL_REVIEW` (expected in local
+dev -- `ALIEXPRESS_MODE=fixture` has no canned response for a real,
+randomly-generated order number; `ALIEXPRESS_MODE=live` wouldn't hit
+this). The order-confirmation page's logic was `if (status !== "PAID")
+{ show "wasn't paid, no charge was made" }` -- which is simply false for
+every status *after* `PAID` in the lifecycle (`SUPPLIER_ORDER_QUEUED`,
+`SHIPPED`, `NEEDS_MANUAL_REVIEW`, etc. all mean the customer *was*
+charged; only fulfilment had a problem). Telling a paying customer their
+card wasn't charged when it was is the kind of mistake that could
+plausibly make them try to pay again. Fixed by only showing the "not
+paid" message for `CANCELLED` specifically (the one status
+`applyPaymentEvent` actually uses for a genuine payment failure) and
+treating every other non-`PENDING_PAYMENT` status as "confirmed, thanks"
+-- fulfilment problems belong on `/admin/orders`, not surfaced to the
+customer as a failed payment. Re-verified live against the real order
+after the fix: correctly showed "Thank you for your order" with the
+real item/address details.

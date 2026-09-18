@@ -28,7 +28,7 @@ export default async function OrderConfirmationPage({ params }: OrderConfirmatio
     );
   }
 
-  if (order.status !== "PAID") {
+  if (order.status === "CANCELLED") {
     return (
       <div className="mx-auto flex w-full max-w-lg flex-col items-center gap-3 px-4 py-20 text-center">
         <h1 className="font-heading text-2xl font-semibold">We couldn&rsquo;t complete this order</h1>
@@ -38,6 +38,16 @@ export default async function OrderConfirmationPage({ params }: OrderConfirmatio
       </div>
     );
   }
+
+  // Every other status (PAID and everything past it in the fulfilment
+  // lifecycle -- SUPPLIER_ORDER_QUEUED, SHIPPED, NEEDS_MANUAL_REVIEW,
+  // etc.) means the customer WAS charged. Confirmed live: this page used
+  // to only special-case PAID and treated every later status as "not
+  // paid, no charge was made" -- factually wrong (the card was charged;
+  // only fulfilment had a problem) and the kind of mistake that could
+  // make a paying customer try to pay again. Fulfilment problems belong
+  // on the admin orders view, not surfaced to the customer as a failed
+  // payment.
 
   const shippingAddress = order.shippingAddress as unknown as AddressInput;
 
