@@ -39,13 +39,27 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
   ],
   events: {
-    // Google verifies the email on our behalf, which is what makes this
-    // safe: link any guest orders placed under this exact email (still
-    // unclaimed) to the now-signed-in account. Runs on every sign-in, not
-    // just account creation, so an order placed as a guest after the
-    // account already existed still gets claimed on the next sign-in.
-    async signIn({ user }) {
+    // Auth.js's OAuth flow hard-codes emailVerified: null when it creates
+    // a user, regardless of what a provider's profile() callback returns
+    // (confirmed by reading @auth/core's handle-login.js -- it spreads
+    // profile() first, then explicitly overwrites emailVerified: null
+    // right after; the customary fix is exactly this, a post-creation
+    // update). A profile() override is not enough on its own -- confirmed
+    // live: it left User.emailVerified null despite Google's email_verified
+    // claim being true. Trusting Google's claim here is what backs the
+    // guest-order-claiming update below (runs on every sign-in, not just
+    // account creation, so an order placed as a guest after the account
+    // already existed still gets claimed on the next sign-in).
+    async signIn({ user, account, profile }) {
       if (!user.email || !user.id) return;
+
+      if (account?.provider === "google" && profile?.email_verified) {
+        await prisma.user.updateMany({
+          where: { id: user.id, emailVerified: null },
+          data: { emailVerified: new Date() },
+        });
+      }
+
       await prisma.order.updateMany({
         where: { email: user.email, customerId: null },
         data: { customerId: user.id },

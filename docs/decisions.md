@@ -284,3 +284,43 @@ import test data), not an application defect -- it'll resolve once real
 imported product images are in place. Not wired into CI (no Chrome
 available there without extra setup); re-run manually before each
 release-worthy checkpoint instead.
+
+## Phase 3.5 (customer accounts)
+
+### Real bugs found running a live Google sign-in
+
+- **Auth.js's OAuth flow hard-codes `emailVerified: null` on user
+  creation, regardless of what a provider's `profile()` callback
+  returns.** Read `@auth/core`'s `handle-login.js` directly to confirm:
+  `createUser({ ...profile, emailVerified: null })` -- it spreads the
+  `profile()` return first, then explicitly overwrites `emailVerified`
+  back to `null` immediately after, a deliberate "don't trust any OAuth
+  provider's claim by default" choice (its own comment explains why:
+  providers don't always require email verification in practice). First
+  attempt was a custom `profile()` callback mapping Google's
+  `email_verified` claim -- confirmed live via a real sign-in that this
+  has no effect, `User.emailVerified` stayed `null` in Postgres despite
+  Google having verified the email as part of the OAuth handshake itself.
+  Fixed by moving the mapping into `events.signIn` (`account?.provider ===
+  "google" && profile?.email_verified` -> update the row), which runs
+  *after* Auth.js's internal creation logic. This isn't cosmetic: the
+  guest-order-claiming feature (linking a guest `Order.email` to the
+  signed-in account) trusts `user.email`, and an honest `emailVerified`
+  flag is what makes that trust well-founded rather than accidental.
+- The Google Cloud Console OAuth client's secret was retyped/copied
+  incorrectly the first time -- Google's token exchange failed with
+  `invalid_client: The provided client secret is invalid`, surfaced to
+  the browser as a generic "Server error / problem with the server
+  configuration" with the real reason only in the server logs. Fixed by
+  re-copying the secret from the Console; worth remembering as the first
+  thing to check for that generic error message.
+
+### Verified live
+
+- A real Google sign-in end to end: OAuth redirect to Google's real
+  consent screen (no `redirect_uri_mismatch`/`invalid_client`), successful
+  callback, `User`/`Account`/`Session` rows created correctly,
+  `emailVerified` set (after the fix above). Two guest orders placed
+  under the same email were correctly linked (`Order.customerId` set) on
+  sign-in. Did not verify the addresses CRUD or order history page's
+  rendering live yet.
