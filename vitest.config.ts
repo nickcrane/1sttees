@@ -60,6 +60,13 @@ export default defineConfig({
         // a request context this suite doesn't have. Exercised by the e2e
         // add-to-cart/drawer flow instead.
         "lib/cart/actions.ts",
+        // Prisma orchestration (order creation, payment-event application) --
+        // same rationale as lib/cart/cart.ts above. The pure amount
+        // recomputation it delegates to (calculate-totals.ts,
+        // order-number.ts) is unit tested directly; the rest needs a real
+        // database and is exercised by the e2e checkout flow.
+        "lib/orders/create-order.ts",
+        "lib/orders/confirm-payment.ts",
       ],
       thresholds: {
         lines: 80,

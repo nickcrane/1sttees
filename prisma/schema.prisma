@@ -291,6 +291,11 @@ model Order {
   orderNumber        String               @unique
   customerId         String?
   customer           Customer?            @relation(fields: [customerId], references: [id])
+  // The guest cart this order was created from -- not a relation (the Cart
+  // row itself is disposable and may already be gone), just enough to find
+  // and clear it once payment is confirmed. No onDelete needed since
+  // there's no FK.
+  cartId             String?
   email              String
   status             OrderStatus          @default(PENDING_PAYMENT)
   currency           String               @default("GBP")
@@ -311,6 +316,7 @@ model Order {
 
   items OrderItem[]
 
+  @@unique([paymentProviderRef])
   @@index([customerId])
   @@index([email])
   @@index([status])
