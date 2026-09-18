@@ -67,6 +67,11 @@ export default defineConfig({
         // database and is exercised by the e2e checkout flow.
         "lib/orders/create-order.ts",
         "lib/orders/confirm-payment.ts",
+        "lib/orders/checkout-actions.ts",
+        // Route-handler glue (dedup check, WebhookEvent write, delegate) --
+        // no branching logic of its own; exercised by the e2e checkout flow
+        // once real Stripe/PayPal test credentials are wired in.
+        "lib/payments/handle-webhook.ts",
       ],
       thresholds: {
         lines: 80,
