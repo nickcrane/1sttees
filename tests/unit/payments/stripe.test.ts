@@ -139,15 +139,26 @@ describe("stripeProvider.parseWebhookEvent", () => {
     expect(result).toMatchObject({ type: "payment_succeeded", providerRef: "pi_123", providerEventId: "evt_1" });
   });
 
-  it("parses a verified payment_intent.payment_failed event", async () => {
+  it("parses a verified payment_intent.canceled event as payment_failed", async () => {
     mocks.constructEvent.mockReturnValue({
       id: "evt_2",
-      type: "payment_intent.payment_failed",
+      type: "payment_intent.canceled",
       data: { object: { id: "pi_456" } },
     });
 
     const result = await stripeProvider.parseWebhookEvent("{}", headersWith("t=1,v1=good"));
     expect(result).toMatchObject({ type: "payment_failed", providerRef: "pi_456", providerEventId: "evt_2" });
+  });
+
+  it("classifies payment_intent.payment_failed as 'other', not terminal -- the same intent can still be retried and succeed", async () => {
+    mocks.constructEvent.mockReturnValue({
+      id: "evt_5",
+      type: "payment_intent.payment_failed",
+      data: { object: { id: "pi_789" } },
+    });
+
+    const result = await stripeProvider.parseWebhookEvent("{}", headersWith("t=1,v1=good"));
+    expect(result).toMatchObject({ type: "other", providerEventId: "evt_5" });
   });
 
   it("classifies an unrecognized event type as 'other'", async () => {

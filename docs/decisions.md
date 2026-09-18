@@ -226,3 +226,49 @@ not just a green build.
   cleanly (asked, got a clear "yes, go ahead", proceeded with
   `PRISMA_USER_CONSENT_FOR_DANGEROUS_AI_ACTION` set to that exact text) --
   noted here as confirmation the guardrail works as intended, not as a bug.
+
+## Phase 3 (storefront, cart, checkout, payments)
+
+### Real bugs found running a live Stripe test-mode checkout
+
+- **`payment_intent.payment_failed` is not a terminal Stripe event, and
+  treating it as one broke a real checkout.** The webhook handler
+  originally mapped `payment_intent.payment_failed` straight to the order
+  lifecycle's `CANCELLED` state. Confirmed live: abandoning a 3DS
+  challenge on Stripe's test card (`4000 0027 6000 3184`) fires
+  `payment_intent.payment_failed` for that attempt, but the *same*
+  PaymentIntent (same `clientSecret`, same Payment Element on the page)
+  can still be retried with a different card and succeed -- which is
+  exactly what happened: the retry with `4242 4242 4242 4242` succeeded on
+  Stripe's side and fired `payment_intent.succeeded`, but the order was
+  already `CANCELLED` from the first event, so `applyPaymentEvent`'s own
+  `PENDING_PAYMENT`-only guard (correctly) ignored the real success and
+  left a paid order stuck cancelled. Fixed by listening for
+  `payment_intent.canceled` instead (Stripe's actual "this intent is dead"
+  signal) and letting `payment_intent.payment_failed` fall through to
+  "other" (still recorded via `WebhookEvent` for audit, just not
+  state-changing) -- see `lib/payments/stripe.ts`. A truly abandoned
+  `PENDING_PAYMENT` order (customer never returns at all) is left for a
+  Phase 4 expiry/cleanup job, not this webhook.
+
+### Verified live, Stripe test mode
+
+- A full checkout with `4242 4242 4242 4242` (no 3DS required) end to end:
+  order created with server-recomputed totals, `payment_intent.succeeded`
+  webhook received and verified (signature via the Stripe CLI's
+  `stripe listen` forwarding), order flipped to `PAID` with the correct
+  card brand/last4, cart cleared, confirmation page rendered correctly.
+- The SCA challenge itself: `4000 0027 6000 3184` correctly triggers
+  Stripe's 3D Secure 2 interstitial (right business name, right context)
+  via `stripe.confirmPayment`'s `automatic_payment_methods` handling --
+  confirming our integration correctly hands the challenge off to Stripe.
+  Completing Stripe's own test-mode 3DS interstitial itself (a
+  doubly-nested cross-origin iframe) hit a browser-automation tooling
+  limit in this environment and couldn't be clicked/keyboard-activated
+  through; the non-3DS path above exercises the identical
+  confirm→webhook→PAID→confirmation code path a completed 3DS payment
+  would also go through. Worth a manual click-through in a real browser
+  before shipping, since the interstitial itself was never actually
+  dismissed successfully end to end.
+- PayPal sandbox is still unverified -- `PAYPAL_CLIENT_ID`/
+  `PAYPAL_CLIENT_SECRET`/`PAYPAL_WEBHOOK_ID` aren't in `.env` yet.

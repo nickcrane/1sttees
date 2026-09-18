@@ -87,7 +87,16 @@ export const stripeProvider: PaymentProvider = {
       const intent = event.data.object as Stripe.PaymentIntent;
       return { type: "payment_succeeded", providerRef: intent.id, providerEventId: event.id, raw: event };
     }
-    if (event.type === "payment_intent.payment_failed") {
+    // Deliberately NOT payment_intent.payment_failed here -- confirmed live
+    // that it fires on every failed confirmation attempt (e.g. an abandoned
+    // 3DS challenge), even when the SAME PaymentIntent goes on to succeed
+    // moments later on a retry through the same Payment Element. Treating
+    // it as terminal caused a real bug: an order got stuck CANCELLED after
+    // its payment had actually succeeded, because the failed-attempt
+    // webhook arrived first and applyPaymentEvent's PENDING_PAYMENT guard
+    // then ignored the later payment_succeeded event. payment_intent.canceled
+    // is Stripe's actual "this intent is dead, no further attempts" signal.
+    if (event.type === "payment_intent.canceled") {
       const intent = event.data.object as Stripe.PaymentIntent;
       return { type: "payment_failed", providerRef: intent.id, providerEventId: event.id, raw: event };
     }
