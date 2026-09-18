@@ -397,3 +397,54 @@ produced the identical `SUPPLIER_ORDER_PLACED` result. Not yet verified:
 a real placement against the live AliExpress gateway (ALIEXPRESS_MODE=live)
 under Phase 4's actual trigger path, and the "delivered" heuristic (no
 delivered-status fixture exists to exercise it against).
+
+## Design system: Material Design 3
+
+Adopted Material 3 (color roles, elevation, shape, and type scale) as
+tokens in `app/globals.css`'s `@theme`, on top of the existing shadcn/
+base-ui component layer rather than swapping in an MD component library
+-- the existing Button/Card/Sheet/Select components already work and are
+wired through the app; re-theming them was far lower-risk than replacing
+them. Brand seed is a bamboo/fairway green (~145° hue in OKLCH); M3
+surfaces are subtly hue-tinted rather than pure gray, which is part of
+what actually reads as "Material" rather than just rounded corners.
+
+### Two real, previously invisible bugs found doing this
+
+Both existed since Phase 0's scaffold -- the whole site's headings and
+body text have been silently falling back to the browser's serif default
+(Times) this entire time; nobody had looked closely enough at rendered
+type to notice, since body copy at normal sizes doesn't look dramatically
+different serif vs. sans at a glance in a screenshot taken in passing.
+
+- **`--font-sans: var(--font-sans)` was self-referential.** next/font
+  actually generates `--font-geist-sans` (`app/layout.tsx`'s
+  `Geist({ variable: "--font-geist-sans" })`), not `--font-sans` -- the
+  theme token was pointing at itself, which resolves to nothing.
+- **Even after fixing that, `html { @apply font-sans }` still didn't
+  work** -- next/font's variable is set via a class on `<body>`, not
+  `<html>` (`app/layout.tsx`'s `<body className={geistSans.variable}>`).
+  CSS custom properties only flow from an element to its *descendants*;
+  `<html>` is `<body>`'s *ancestor*, so a rule on `html` can never see a
+  variable scoped to `body`. Confirmed by walking `document.styleSheets`
+  live in the browser and checking `getComputedStyle` before/after --
+  the rule was present and syntactically fine, just structurally unable
+  to resolve. Fixed by moving `font-sans` onto the existing `body { }`
+  rule instead of a separate `html { }` one.
+- **A custom Tailwind type-scale token silently ate a Button's text
+  color.** `<Button className="... text-title-md text-primary-foreground ...">`
+  (product page's "Add to cart") -- `text-title-md` is one of this
+  project's own `@theme` font-size tokens, not a Tailwind built-in, and
+  `cn()`'s tailwind-merge conflict resolution doesn't recognize it as
+  distinct from a text-*color* utility. It treated `text-title-md` and
+  Button's own base `text-primary-foreground` as conflicting and kept
+  only one, dropping the color -- Lighthouse's color-contrast audit
+  caught it (2.61 vs. the required 4.5, near-black text on the dark-green
+  button). Not something a screenshot alone would obviously flag at a
+  glance. Worked around by repeating `text-primary-foreground` after
+  `text-title-md` in the same className so it wins the merge; the custom
+  font-size still gets silently dropped in favour of Button's own default
+  size, which was an acceptable trade here but worth remembering as a
+  general hazard of pairing a custom `--text-*` theme token with a
+  component whose variant classes already set a `text-*` color, through
+  `cn()`/tailwind-merge.

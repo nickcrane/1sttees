@@ -1,5 +1,7 @@
+import { LeafIcon, PackageIcon, TruckIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductVariantPicker } from "@/components/storefront/product-variant-picker";
 import { getPublishedProductBySlug } from "@/lib/catalog/products";
@@ -27,6 +29,12 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   };
 }
 
+const FEATURES = [
+  { icon: LeafIcon, label: "Biodegradable bamboo" },
+  { icon: PackageIcon, label: "Plastic-free packaging" },
+  { icon: TruckIcon, label: "Ships from the UK & EU" },
+];
+
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
   const product = await getPublishedProductBySlug(slug);
@@ -53,27 +61,55 @@ export default async function ProductPage({ params }: ProductPageProps) {
   };
 
   return (
-    <div className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-10 px-4 py-12 md:grid-cols-2">
+    <div className="mx-auto w-full max-w-5xl px-4 py-8 sm:py-12">
       {/* Static JSON-LD generated server-side from our own DB, not user input. */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div className="relative aspect-square overflow-hidden rounded-xl bg-muted">
-        {product.images[0] && (
-          <Image
-            src={product.images[0]}
-            alt={product.title}
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover"
-            priority
-          />
-        )}
-      </div>
+      <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-1.5 text-label-lg text-muted-foreground">
+        <Link href="/" className="hover:text-foreground">
+          Home
+        </Link>
+        <span aria-hidden>/</span>
+        <Link href="/products" className="hover:text-foreground">
+          Shop
+        </Link>
+        <span aria-hidden>/</span>
+        <span className="text-foreground">{product.title}</span>
+      </nav>
 
-      <div className="flex flex-col gap-4">
-        <h1 className="font-heading text-2xl font-semibold">{product.title}</h1>
-        <p className="text-sm text-muted-foreground">{product.description}</p>
-        <ProductVariantPicker variants={variants} />
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
+        <div className="relative aspect-square overflow-hidden rounded-xl bg-muted shadow-el2">
+          {product.images[0] && (
+            <Image
+              src={product.images[0]}
+              alt={product.title}
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+              priority
+            />
+          )}
+        </div>
+
+        <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-2">
+            <h1 className="text-headline-lg font-heading text-foreground">{product.title}</h1>
+            <p className="text-body-lg text-muted-foreground">{product.description}</p>
+          </div>
+
+          <ul className="flex flex-col gap-2">
+            {FEATURES.map((feature) => (
+              <li key={feature.label} className="flex items-center gap-2 text-label-lg text-muted-foreground">
+                <feature.icon className="size-4 text-primary" />
+                {feature.label}
+              </li>
+            ))}
+          </ul>
+
+          <div className="h-px bg-border" />
+
+          <ProductVariantPicker variants={variants} />
+        </div>
       </div>
     </div>
   );

@@ -7,7 +7,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  /* Was `var(--font-sans)` -- self-referential (next/font actually
+     generates `--font-geist-sans`, per app/layout.tsx's Geist({variable:
+     "--font-geist-sans"})), so this resolved to nothing and every
+     font-heading/font-sans element silently fell back to the browser's
+     serif default. Confirmed live: the whole site's headings were
+     rendering in Times. */
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -39,82 +45,136 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Material 3 extra roles -- tonal containers, not part of shadcn's base
+     palette, used for chip/badge fills and the "tonal" button variant. */
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+
+  /* Material 3 shape scale (M3 spec: none/xs/sm/md/lg/xl/full). Components
+     pick the step that matches their size, not one global --radius. */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.75rem;
+  --radius-full: 999px;
+
+  /* Material 3 elevation -- two-shadow (key + ambient) per level, values
+     from the M3 spec. Surface tint (the tonal-overlay half of M3
+     elevation) is handled separately via --surface-container-* rather
+     than baked into these. */
+  --shadow-el1: 0px 1px 2px 0px rgb(0 0 0 / 0.3), 0px 1px 3px 1px rgb(0 0 0 / 0.15);
+  --shadow-el2: 0px 1px 2px 0px rgb(0 0 0 / 0.3), 0px 2px 6px 2px rgb(0 0 0 / 0.15);
+  --shadow-el3: 0px 1px 3px 0px rgb(0 0 0 / 0.3), 0px 4px 8px 3px rgb(0 0 0 / 0.15);
+  --shadow-el4: 0px 2px 3px 0px rgb(0 0 0 / 0.3), 0px 6px 10px 4px rgb(0 0 0 / 0.15);
+  --shadow-el5: 0px 4px 4px 0px rgb(0 0 0 / 0.3), 0px 8px 12px 6px rgb(0 0 0 / 0.15);
+
+  /* Material 3 type scale (the steps this project actually uses -- not
+     the full 15-step spec table). Sizes/line-heights/weights straight
+     from the M3 type scale tokens. */
+  --text-display-md: 2.8125rem;
+  --text-display-md--line-height: 3.25rem;
+  --text-display-md--font-weight: 400;
+  --text-headline-lg: 2rem;
+  --text-headline-lg--line-height: 2.5rem;
+  --text-headline-lg--font-weight: 400;
+  --text-headline-sm: 1.5rem;
+  --text-headline-sm--line-height: 2rem;
+  --text-headline-sm--font-weight: 400;
+  --text-title-lg: 1.375rem;
+  --text-title-lg--line-height: 1.75rem;
+  --text-title-lg--font-weight: 500;
+  --text-title-md: 1rem;
+  --text-title-md--line-height: 1.5rem;
+  --text-title-md--font-weight: 500;
+  --text-body-lg: 1rem;
+  --text-body-lg--line-height: 1.5rem;
+  --text-body-lg--font-weight: 400;
+  --text-label-lg: 0.875rem;
+  --text-label-lg--line-height: 1.25rem;
+  --text-label-lg--font-weight: 500;
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Seed hue ~145 (a bamboo/fairway green) drives every neutral too --
+     M3 surfaces are subtly hue-tinted, not pure gray, which is what
+     actually reads as "Material" rather than just "rounded corners". */
+  --background: oklch(0.985 0.006 145);
+  --foreground: oklch(0.19 0.014 145);
+  --card: oklch(0.97 0.009 145);
+  --card-foreground: oklch(0.19 0.014 145);
+  --popover: oklch(0.99 0.004 145);
+  --popover-foreground: oklch(0.19 0.014 145);
+  --primary: oklch(0.45 0.13 145);
+  --primary-foreground: oklch(0.99 0.004 145);
+  --primary-container: oklch(0.92 0.045 145);
+  --on-primary-container: oklch(0.24 0.06 145);
+  --secondary: oklch(0.55 0.075 85);
+  --secondary-foreground: oklch(0.99 0.004 85);
+  --secondary-container: oklch(0.92 0.035 85);
+  --on-secondary-container: oklch(0.3 0.05 85);
+  --muted: oklch(0.94 0.012 145);
+  --muted-foreground: oklch(0.46 0.02 145);
+  --accent: oklch(0.92 0.045 145);
+  --accent-foreground: oklch(0.24 0.06 145);
+  --destructive: oklch(0.55 0.22 25);
+  --border: oklch(0.87 0.015 145);
+  --input: oklch(0.87 0.015 145);
+  --ring: oklch(0.45 0.13 145 / 0.55);
+  --chart-1: oklch(0.45 0.13 145);
+  --chart-2: oklch(0.55 0.075 85);
+  --chart-3: oklch(0.6 0.1 200);
+  --chart-4: oklch(0.65 0.15 40);
+  --chart-5: oklch(0.5 0.1 300);
+  --sidebar: oklch(0.97 0.009 145);
+  --sidebar-foreground: oklch(0.19 0.014 145);
+  --sidebar-primary: oklch(0.45 0.13 145);
+  --sidebar-primary-foreground: oklch(0.99 0.004 145);
+  --sidebar-accent: oklch(0.92 0.045 145);
+  --sidebar-accent-foreground: oklch(0.24 0.06 145);
+  --sidebar-border: oklch(0.87 0.015 145);
+  --sidebar-ring: oklch(0.45 0.13 145 / 0.55);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: oklch(0.16 0.012 145);
+  --foreground: oklch(0.93 0.01 145);
+  --card: oklch(0.21 0.015 145);
+  --card-foreground: oklch(0.93 0.01 145);
+  --popover: oklch(0.23 0.015 145);
+  --popover-foreground: oklch(0.93 0.01 145);
+  --primary: oklch(0.78 0.12 145);
+  --primary-foreground: oklch(0.17 0.03 145);
+  --primary-container: oklch(0.32 0.06 145);
+  --on-primary-container: oklch(0.9 0.05 145);
+  --secondary: oklch(0.75 0.08 85);
+  --secondary-foreground: oklch(0.17 0.03 85);
+  --secondary-container: oklch(0.34 0.045 85);
+  --on-secondary-container: oklch(0.88 0.04 85);
+  --muted: oklch(0.27 0.015 145);
+  --muted-foreground: oklch(0.72 0.015 145);
+  --accent: oklch(0.32 0.06 145);
+  --accent-foreground: oklch(0.9 0.05 145);
+  --destructive: oklch(0.7 0.19 22);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.78 0.12 145 / 0.6);
+  --chart-1: oklch(0.78 0.12 145);
+  --chart-2: oklch(0.75 0.08 85);
+  --chart-3: oklch(0.7 0.1 200);
+  --chart-4: oklch(0.72 0.15 40);
+  --chart-5: oklch(0.65 0.1 300);
+  --sidebar: oklch(0.21 0.015 145);
+  --sidebar-foreground: oklch(0.93 0.01 145);
+  --sidebar-primary: oklch(0.78 0.12 145);
+  --sidebar-primary-foreground: oklch(0.17 0.03 145);
+  --sidebar-accent: oklch(0.32 0.06 145);
+  --sidebar-accent-foreground: oklch(0.9 0.05 145);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.78 0.12 145 / 0.6);
 }
 
 @layer base {
@@ -122,9 +182,11 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
+    /* Not on `html` -- next/font's variable (--font-geist-sans) is set via
+       a class on <body> (app/layout.tsx), so it's only in scope for body
+       and its descendants. A rule on `html` (body's ancestor) can't see
+       it -- confirmed live: font-family resolved to nothing there and
+       fell back to the browser's serif default across the whole site. */
+    @apply bg-background text-foreground font-sans;
   }
 }
