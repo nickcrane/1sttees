@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { clearCart } from "@/lib/cart/cart";
 import { getPaymentProvider } from "@/lib/payments";
 import type { CapturedPayment, ParsedPaymentEvent } from "@/lib/payments/types";
+import { enqueuePlaceSupplierOrder } from "@/lib/queue/fulfilment-queue";
 
 async function markOrderPaid(order: Order, captured: CapturedPayment): Promise<void> {
   await prisma.order.update({
@@ -16,6 +17,11 @@ async function markOrderPaid(order: Order, captured: CapturedPayment): Promise<v
   });
 
   if (order.cartId) await clearCart(order.cartId);
+
+  // Fire-and-forget: placing the AliExpress order is a slow external API
+  // call that has no business blocking the webhook/return-page response.
+  // The worker (worker/index.ts) picks this up separately.
+  await enqueuePlaceSupplierOrder(order.id);
 }
 
 /**

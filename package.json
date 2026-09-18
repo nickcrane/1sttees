@@ -17,6 +17,8 @@
     "db:seed": "tsx prisma/seed.ts",
     "ae:product": "tsx scripts/ae-product.ts",
     "ae:authorize": "tsx scripts/ae-authorize.ts",
+    "worker": "tsx worker/index.ts",
+    "worker:dev": "tsx watch worker/index.ts",
     "prepare": "husky"
   },
   "dependencies": {
@@ -26,6 +28,7 @@
     "@stripe/react-stripe-js": "^6.10.0",
     "@stripe/stripe-js": "^9.16.0",
     "argon2": "^0.45.1",
+    "bullmq": "^6.3.6",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.3.0",
     "dotenv": "^17.4.2",

@@ -365,32 +365,48 @@ enum PaymentProviderKind {
 // to a saved address -- spec: "editing a saved address must not rewrite
 // the shipping address of a past order."
 model Order {
-  id                 String               @id @default(cuid())
-  orderNumber        String               @unique
-  customerId         String?
-  customer           User?                @relation(fields: [customerId], references: [id])
+  id                    String               @id @default(cuid())
+  orderNumber           String               @unique
+  customerId            String?
+  customer              User?                @relation(fields: [customerId], references: [id])
   // The guest cart this order was created from -- not a relation (the Cart
   // row itself is disposable and may already be gone), just enough to find
   // and clear it once payment is confirmed. No onDelete needed since
   // there's no FK.
-  cartId             String?
-  email              String
-  status             OrderStatus          @default(PENDING_PAYMENT)
-  currency           String               @default("GBP")
-  subtotalMinor      Int
-  shippingMinor      Int                  @default(0)
-  vatMinor           Int                  @default(0)
-  vatRateBps         Int                  @default(0) // 2000 = 20%; 0 under VAT_MODE=NOT_REGISTERED
-  totalMinor         Int
-  shippingAddress    Json
-  billingAddress     Json?
-  paymentProvider    PaymentProviderKind?
-  paymentProviderRef String? // Stripe PaymentIntent id / PayPal order id
-  paymentMethodBrand String? // e.g. "visa" -- never PAN data (SAQ-A)
-  paymentMethodLast4 String?
-  paidAt             DateTime?
-  createdAt          DateTime             @default(now())
-  updatedAt          DateTime             @updatedAt
+  cartId                String?
+  email                 String
+  status                OrderStatus          @default(PENDING_PAYMENT)
+  currency              String               @default("GBP")
+  subtotalMinor         Int
+  shippingMinor         Int                  @default(0)
+  vatMinor              Int                  @default(0)
+  vatRateBps            Int                  @default(0) // 2000 = 20%; 0 under VAT_MODE=NOT_REGISTERED
+  totalMinor            Int
+  shippingAddress       Json
+  billingAddress        Json?
+  paymentProvider       PaymentProviderKind?
+  paymentProviderRef    String? // Stripe PaymentIntent id / PayPal order id
+  paymentMethodBrand    String? // e.g. "visa" -- never PAN data (SAQ-A)
+  paymentMethodLast4    String?
+  paidAt                DateTime?
+  // Fulfilment (Phase 4) -- aliexpress.ds.order.create can return more than
+  // one order id for a single placement, so this stays an array even
+  // though this store's current catalog (single supplier) only ever
+  // produces one.
+  supplierOrderIds      String[]             @default([])
+  supplierOrderPlacedAt DateTime?
+  // Best-effort from aliexpress.ds.order.tracking.get -- AliExpress's
+  // tracking event text, not a confirmed enum (see docs/decisions.md).
+  trackingNumber        String?
+  trackingCarrier       String?
+  shippedAt             DateTime?
+  deliveredAt           DateTime?
+  // Set on a terminal placement failure (NEEDS_MANUAL_REVIEW /
+  // SUPPLIER_ORDER_FAILED) -- last AliExpressApiError message, for the
+  // admin orders view. Cleared on a successful retry.
+  fulfilmentError       String?
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
 
   items OrderItem[]
 

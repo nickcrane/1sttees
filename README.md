@@ -22,6 +22,7 @@ pnpm install
 pnpm prisma:migrate         # applies migrations, generates the client
 pnpm db:seed
 pnpm dev                    # http://localhost:3000
+pnpm worker                 # separate terminal -- fulfilment queue consumer
 ```
 
 ## Quality gates
@@ -38,15 +39,20 @@ the build is considered done.
 ## Project layout
 
 ```
-/app                  Next.js App Router (storefront + /admin, once built)
+/app                  Next.js App Router: storefront, /account, /admin
 /lib
-  /aliexpress         AliExpress DS API client, signing, DTOs (Phase 1+)
-  /pricing            Landed-cost + margin + VAT engine (Phase 2+)
-  /orders             Order state machine + fulfilment orchestration (Phase 4+)
-  /payments           Stripe/PayPal wrappers + webhook handlers (Phase 3+)
+  /aliexpress         AliExpress DS API client, signing, DTOs
+  /pricing            Landed-cost + margin + VAT engine
+  /cart               Signed guest-cart cookie + DB-backed cart ops
+  /orders             Order creation, payment confirmation, fulfilment
+  /payments           Stripe/PayPal wrappers + webhook handlers
+  /customer-auth      Auth.js customer realm (Google OAuth, database sessions)
+  /admin-auth         Auth.js admin realm (argon2id + mandatory TOTP)
+  /queue              BullMQ queue + connection (producer side)
   env.ts              Zod-validated environment config
   prisma.ts           Shared PrismaClient singleton
-/worker               BullMQ workers, separate entrypoint (Phase 4+)
+/worker               BullMQ worker (pnpm worker) -- fulfilment queue consumer,
+                      separate long-running process from the Next.js web app
 /prisma               schema.prisma, migrations, seed.ts
 /tests
   /unit               Vitest

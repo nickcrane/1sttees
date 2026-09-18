@@ -39,9 +39,14 @@ export default async function AdminDashboardPage() {
         </Card>
       </div>
 
-      <Link href="/admin/products/import" className="text-sm underline">
-        Import a product from AliExpress &rarr;
-      </Link>
+      <div className="flex flex-col gap-2">
+        <Link href="/admin/products/import" className="text-sm underline">
+          Import a product from AliExpress &rarr;
+        </Link>
+        <Link href="/admin/orders" className="text-sm underline">
+          Orders &rarr;
+        </Link>
+      </div>
     </main>
   );
 }

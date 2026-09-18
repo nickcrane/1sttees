@@ -83,6 +83,17 @@ export default defineConfig({
         // FormData, delegate, revalidatePath); same rationale as
         // lib/cart/actions.ts above.
         "lib/customer/actions.ts",
+        // Prisma + AliExpress-client orchestration (same rationale as
+        // lib/orders/create-order.ts above) -- needs a real database and
+        // (for a true end-to-end check) the AliExpress gateway; exercised
+        // against ALIEXPRESS_MODE=fixture manually, see docs/decisions.md.
+        "lib/orders/place-supplier-order.ts",
+        "lib/orders/sync-tracking.ts",
+        // Thin BullMQ/ioredis wrappers -- nothing to unit test without a
+        // real Redis connection; exercised by the worker running against
+        // a real queue.
+        "lib/queue/connection.ts",
+        "lib/queue/fulfilment-queue.ts",
       ],
       thresholds: {
         lines: 80,

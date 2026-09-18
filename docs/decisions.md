@@ -322,5 +322,78 @@ release-worthy checkpoint instead.
   callback, `User`/`Account`/`Session` rows created correctly,
   `emailVerified` set (after the fix above). Two guest orders placed
   under the same email were correctly linked (`Order.customerId` set) on
-  sign-in. Did not verify the addresses CRUD or order history page's
-  rendering live yet.
+  sign-in. Nick separately confirmed the order-history and addresses
+  pages render correctly live too.
+
+## Phase 4 (fulfilment automation)
+
+**Dependencies:** `bullmq` -- the spec's own stack pin ("BullMQ + Redis
+for background jobs"); a dedicated `ioredis` connection
+(`lib/queue/connection.ts`), separate from `lib/redis.ts`'s
+general-purpose client, since BullMQ's Worker holds blocking commands
+open and shouldn't share a connection with unrelated rate-limiting code.
+
+**Design:** `lib/orders/confirm-payment.ts`'s `markOrderPaid` enqueues a
+`place-supplier-order` job (fire-and-forget -- the webhook/return-page
+response shouldn't block on a slow external API call) rather than calling
+AliExpress synchronously. `worker/index.ts` is the separate long-running
+consumer the spec calls for (`pnpm worker`), processing that queue plus a
+repeatable `sync-tracking` job every 4 hours. `tryToPay` stays `false` --
+the auto-pay whitelist still isn't confirmed (see the Phase 1 notes in
+[[aliexpress_ds_api_confirmed_facts]]), so `SUPPLIER_ORDER_PLACED` means
+"placed with the supplier", not "paid to the supplier"; a human still has
+to pay it manually on AliExpress, which is why `/admin/orders` surfaces
+those orders explicitly under "needs attention" alongside
+`NEEDS_MANUAL_REVIEW`. "Delivered" tracking status is a best-effort
+regex over `aliexpress.ds.order.tracking.get`'s free-text event
+descriptions (`/delivered/i`) -- that API has no dedicated delivered
+boolean/enum; `order_status` on `aliexpress.ds.order.get` is a candidate
+for a more reliable signal but wasn't confirmed live against a real
+shipped order as of this phase.
+
+### Real bugs found running this against a real queue and a real build
+
+- **BullMQ v6 rejects a colon in a custom Job Id** (`Error: Custom Id
+  cannot contain :`) -- confirmed live enqueuing a real job with
+  `place-supplier-order:${orderId}` as the id, a convention several older
+  BullMQ examples use. Fixed by switching to `-` as the separator
+  (`place-supplier-order-${orderId}`). Doesn't apply to BullMQ's own
+  auto-generated ids (e.g. its `repeat:sync-tracking:...` naming for
+  scheduled jobs) -- only to ids a caller supplies explicitly via the
+  `jobId` option.
+- **`bullmq`'s webpack bundling breaks `next build`/`next start`
+  entirely**, not just at the one call site -- confirmed live:
+  `Module not found: Can't resolve '@valkey/valkey-glide'`, an optional
+  alternative backend to the ioredis one this project actually uses, that
+  webpack still tries to statically resolve. Same class of bug as the
+  Phase 2 `pino-pretty`/worker-thread finding -- fixed the same way, via
+  `serverExternalPackages` in `next.config.ts`, so `bullmq` is required
+  natively by Node at runtime instead of bundled.
+- BullMQ v6 moved repeatable jobs off `Queue#add`'s old `{ repeat }`
+  option onto a dedicated `upsertJobScheduler(jobSchedulerId, repeatOpts)`
+  API -- caught by TypeScript (`'repeat' does not exist in type
+  'JobsOptions'`) before it ever ran, not a live bug, but worth noting
+  since most BullMQ tutorials/examples still show the old `{ repeat }`
+  form.
+- `app/admin/orders/page.tsx` doesn't call `auth()` itself (middleware
+  already gates `/admin/:path*`), which gave Next.js no signal to treat
+  it as dynamic -- confirmed via `pnpm build`'s route table that it got
+  prerendered as a **static** route (`○`), which would have served
+  build-time-stale order data forever. Fixed with an explicit
+  `export const dynamic = "force-dynamic"`.
+
+### Verified live (ALIEXPRESS_MODE=fixture)
+
+Ran the real pipeline end to end against a throwaway order built from the
+actual published product's variant data: `placeSupplierOrder` correctly
+moved `PAID -> SUPPLIER_ORDER_QUEUED -> SUPPLIER_ORDER_PLACED` and stored
+the fixture's AliExpress order id; `syncTracking` then correctly picked
+up the matching tracking fixture (keyed by that same order id) and moved
+the order to `SHIPPED` with the right tracking number/carrier. Separately
+verified the actual production trigger path: started `pnpm worker`,
+called `enqueuePlaceSupplierOrder` for a second throwaway order, and
+confirmed the worker picked the job up off a real Redis queue and
+produced the identical `SUPPLIER_ORDER_PLACED` result. Not yet verified:
+a real placement against the live AliExpress gateway (ALIEXPRESS_MODE=live)
+under Phase 4's actual trigger path, and the "delivered" heuristic (no
+delivered-status fixture exists to exercise it against).

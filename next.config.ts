@@ -11,7 +11,14 @@ const nextConfig: NextConfig = {
   // worker-thread pattern for hashing) rather than re-discovering this one
   // package at a time. Excluding them from bundling and requiring them
   // natively via Node at runtime is the standard fix.
-  serverExternalPackages: ["argon2", "pino", "pino-pretty", "thread-stream"],
+  // "bullmq": webpack tries to resolve its optional @valkey/valkey-glide
+  // backend (an alternative to the ioredis backend we actually use) and
+  // fails the whole build since that package isn't installed -- confirmed
+  // live ("Module not found: Can't resolve '@valkey/valkey-glide'"),
+  // breaking `next build`/`next start` entirely even though nothing calls
+  // that code path. Excluding it from bundling avoids webpack ever trying
+  // to statically resolve that branch.
+  serverExternalPackages: ["argon2", "pino", "pino-pretty", "thread-stream", "bullmq"],
   // Product images are imported verbatim from AliExpress (lib/catalog/import.ts),
   // served from whichever of their many CDN subdomains the listing used.
   images: {
