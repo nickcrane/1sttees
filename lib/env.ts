@@ -78,6 +78,17 @@ const envSchema = z.object({
   MIN_MARGIN_PCT: z.coerce.number().default(20),
   PRICE_DRIFT_TOLERANCE_PCT: z.coerce.number().default(10),
   FX_BUFFER_PCT: z.coerce.number().default(3),
+  // Stripe UK card rate as of this writing (~1.5% + 20p) -- kept
+  // configurable rather than hardcoded since processor rates change and
+  // this feeds straight into the landed-cost calculation.
+  PAYMENT_PROCESSING_PCT: z.coerce.number().default(1.5),
+  PAYMENT_PROCESSING_FIXED_PENCE: z.coerce.number().default(20),
+  // Not given a number by the spec (just "configurable %") -- 2% is a
+  // conservative estimate for a cheap, low-fragility, low-return-rate
+  // product line (golf tees); tune via admin once real return data exists.
+  RETURNS_RESERVE_PCT: z.coerce.number().default(2),
+
+  ADMIN_TOTP_ISSUER: z.string().default("1st Tees Admin"),
 });
 
 export type Env = z.infer<typeof envSchema>;

@@ -23,6 +23,7 @@ import {
   type NormalizedSearchProduct,
   type NormalizedTrackingLine,
   type RawOrderDetailResult,
+  type RawProductDetailResult,
 } from "./schemas";
 import { prismaTokenStore } from "./prismaTokenStore";
 import type { TokenSet, TokenStore } from "./tokens";
@@ -136,6 +137,19 @@ export class AliExpressClient {
   }
 
   async getProductDetail(productId: string | number): Promise<NormalizedProduct> {
+    const { product } = await this.getProductDetailWithRaw(productId);
+    return product;
+  }
+
+  /**
+   * Same call as getProductDetail, but also returns the raw (schema-
+   * validated, not normalized) payload -- the import pipeline stores this
+   * verbatim on SupplierProduct.raw so a normalization gap discovered later
+   * can be backfilled from real data instead of needing a fresh API call.
+   */
+  async getProductDetailWithRaw(
+    productId: string | number
+  ): Promise<{ product: NormalizedProduct; raw: RawProductDetailResult }> {
     const envelope =
       env.ALIEXPRESS_MODE === "fixture"
         ? await this.loadFixture(["product_detail", `${productId}.json`])
@@ -164,7 +178,7 @@ export class AliExpressClient {
         raw: result,
       });
     }
-    return normalizeProductDetail(parsedResult.data, env.ALIEXPRESS_TARGET_CURRENCY);
+    return { product: normalizeProductDetail(parsedResult.data, env.ALIEXPRESS_TARGET_CURRENCY), raw: parsedResult.data };
   }
 
   async searchProducts(params: SearchParams): Promise<SearchResult> {

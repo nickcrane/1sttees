@@ -156,3 +156,73 @@ choice made during scaffolding that isn't obvious from the diff.
   singleton wrapper with no branching logic, more honestly exercised by
   integration/e2e tests against a real database than by a unit test that
   would just mock Prisma to prove the mock works.
+
+## Phase 2 (data model, pricing engine, import pipeline, admin auth)
+
+### Dependencies
+
+- **next-auth@5 beta (Auth.js), not the "latest"-tagged v4.** The spec
+  names "Auth.js (NextAuth)" specifically — Auth.js is the v5 rebrand, and
+  v5 is edge-middleware-native in a way v4's App Router support (bolted on
+  later) isn't. The beta label is misleading here: it's been the de facto
+  standard for new Next.js App Router projects for a long time, with far
+  more current documentation/community usage than pinning v4 would buy in
+  exchange for a "stable" tag.
+- **argon2**, not bcrypt — the spec is explicit ("argon2id, never
+  bcrypt-with-defaults") for customer auth; applied the same standard to
+  admin auth for one consistent security posture rather than two.
+- **otpauth** — RFC 6238 TOTP, no legacy baggage, the library
+  `docs/aliexpress-api-notes.md`'s own TOTP code already depended on
+  conceptually (this is its first real use: admin 2FA).
+- **qrcode** — server-side QR code generation for TOTP enrollment; avoids
+  a client-side QR library and keeps the raw secret server-only until it's
+  rendered into an image.
+- **ioredis** — the spec already pins Redis for BullMQ (Phase 4); brought
+  forward now for admin auth's rate-limiting/lockout counters rather than
+  inventing a separate mechanism, and it's the client BullMQ itself expects.
+
+### Real bugs found running this against an actual browser, not just tests
+
+All four below were invisible to `pnpm build`/unit tests and only surfaced
+running a real sign-in through the browser — worth internalizing as a
+pattern: Edge Runtime and cookie behavior specifically need a live check,
+not just a green build.
+
+- **Edge Runtime can't bundle Node built-ins, and this bites twice.**
+  `middleware.ts` runs in the Edge runtime by default. (1) The full admin
+  auth config (argon2, ioredis, `node:crypto` via `lib/crypto.ts`) can't be
+  bundled there at all -- fixed by splitting `lib/admin-auth/edge-config.ts`
+  (Edge-safe, no providers, used only by middleware) from
+  `lib/admin-auth/config.ts` (the full config, Node-only, used everywhere
+  else) -- the standard Auth.js pattern for exactly this problem. (2)
+  `lib/env.ts`'s `dotenv.config()` call uses `process.cwd()` internally,
+  which Edge also disallows -- `edge-config.ts` reads `process.env`
+  directly instead of importing `@/lib/env`, since Next.js already
+  populates `process.env` for Edge middleware without needing dotenv at all.
+- **`pino-pretty`'s worker-thread transport (via `thread-stream`) doesn't
+  survive webpack bundling in Next.js API routes** -- `Cannot find module
+  '.../vendor-chunks/lib/worker.js'`, which crashed the entire dev server
+  on the very first sign-in attempt (not a request-scoped error -- an
+  uncaught exception that killed the process). First suspected argon2
+  (same worker-thread pattern, same symptom class) and excluded it too
+  from bundling via `serverExternalPackages` in `next.config.ts`
+  preemptively -- turned out to be pino-pretty, but argon2 was excluded on
+  correct suspicion anyway.
+- **A `__Host-` prefixed cookie requires `Secure: true`, or the browser
+  silently refuses to set it at all -- no error, nothing in server logs.**
+  The admin session cookie was hardcoded to `__Host-admin-session`
+  unconditionally; in dev (plain `http://localhost`, `secure: false`)
+  every sign-in "succeeded" server-side (`authorize()` returned a user, a
+  JWT was issued) but the browser never stored the cookie, so the very
+  next request looked signed-out again -- looked exactly like an
+  authentication failure and cost real debugging time to trace to the
+  cookie layer instead. Fixed by only using the `__Host-`/`Secure`
+  combination in production, a plain cookie name otherwise -- matches
+  NextAuth's own default convention, which this custom cookie config had
+  deviated from without realizing why that convention exists.
+- **`prisma migrate dev`/`reset` are non-interactive-hostile, and Prisma
+  itself now hard-blocks an AI agent from running `migrate reset` without
+  the user's own explicit, message-quoted consent.** Ran into this
+  cleanly (asked, got a clear "yes, go ahead", proceeded with
+  `PRISMA_USER_CONSENT_FOR_DANGEROUS_AI_ACTION` set to that exact text) --
+  noted here as confirmation the guardrail works as intended, not as a bug.

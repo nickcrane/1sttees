@@ -2,9 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { Button } from "@/components/ui/button";
 
 export default async function Home() {
-  const healthCheck = await prisma.healthCheck.findFirst({
-    orderBy: { createdAt: "desc" },
-  });
+  const publishedCount = await prisma.product.count({ where: { status: "PUBLISHED" } });
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-4 p-8 text-center">
@@ -13,9 +11,9 @@ export default async function Home() {
         Sustainable bamboo golf tees. Storefront under construction.
       </p>
       <p className="text-sm text-muted-foreground">
-        {healthCheck
-          ? `Database says: "${healthCheck.message}"`
-          : "Database connected, but not seeded yet -- run pnpm db:seed."}
+        {publishedCount > 0
+          ? `${publishedCount} product${publishedCount === 1 ? "" : "s"} published.`
+          : "No products published yet -- import one from /admin."}
       </p>
       <Button>Coming soon</Button>
     </main>

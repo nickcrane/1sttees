@@ -19,7 +19,7 @@ describe("AliExpressClient (fixture mode) — freight, tracking, order detail, o
       code: "CAINIAO_STANDARD",
       company: "AliExpress standard shipping",
       shippingFeeFormatted: "£3.99",
-      shippingFeeCents: 3.99,
+      shippingFeeMajor: 3.99,
       shippingFeeCurrency: "GBP",
       freeShipping: false,
       deliveryDateDesc: "Oct 05 - 20",

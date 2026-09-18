@@ -139,7 +139,7 @@ export const normalizedFreightOptionSchema = z.object({
   code: z.string().nullable(), // pass verbatim as logistics_service_name at order placement
   company: z.string().nullable(),
   shippingFeeFormatted: z.string().nullable(),
-  shippingFeeCents: z.number().nullable(),
+  shippingFeeMajor: z.number().nullable(),
   shippingFeeCurrency: z.string().nullable(),
   freeShipping: z.boolean().nullable(),
   deliveryDateDesc: z.string().nullable(),
@@ -434,7 +434,7 @@ export function normalizeFreightOptions(raw: RawFreightResult, method: string): 
     code: option.code ?? null,
     company: option.company ?? null,
     shippingFeeFormatted: option.shipping_fee_format ?? null,
-    shippingFeeCents: toNumber(option.shipping_fee_cent),
+    shippingFeeMajor: toNumber(option.shipping_fee_cent),
     shippingFeeCurrency: option.shipping_fee_currency ?? null,
     freeShipping: option.free_shipping ?? null,
     deliveryDateDesc: option.delivery_date_desc ?? null,

@@ -26,7 +26,21 @@ export default defineConfig({
       // test in isolation (the logic worth testing -- resolveTokenToPersist,
       // encryption -- already is, elsewhere); exercised by the e2e suite
       // against a real database instead.
-      exclude: ["lib/prisma.ts", "lib/aliexpress/prismaTokenStore.ts"],
+      exclude: [
+        "lib/prisma.ts",
+        "lib/aliexpress/prismaTokenStore.ts",
+        // Orchestration heavily coupled to Prisma (many sequential
+        // upserts/finds) -- the pure logic it calls out to (slug.ts,
+        // parse-product-id.ts, pricing/calculate.ts) is unit tested;
+        // import.ts/pricing-rules.ts themselves are verified against a
+        // real database instead of a mocked Prisma client, which wouldn't
+        // exercise real upsert/unique-constraint semantics anyway.
+        "lib/catalog/import.ts",
+        "lib/catalog/pricing-rules.ts",
+        "lib/admin-auth/config.ts",
+        "lib/admin-auth/setup.ts",
+        "lib/admin-auth/security-events.ts",
+      ],
       thresholds: {
         lines: 80,
         functions: 80,

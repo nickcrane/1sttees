@@ -7,23 +7,210 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// Placeholder model so `prisma migrate dev` has something to migrate and
-// Phase 0's "hello store" page has something to read. Replaced by the real
-// domain model in Phase 2.
-model HealthCheck {
-  id        String   @id @default(cuid())
-  message   String
-  createdAt DateTime @default(now())
-}
-
 // The AliExpress OAuth token, singleton row (id is always "default").
 // access/refresh token values are AES-256-GCM encrypted at rest (see
 // lib/aliexpress/crypto.ts) -- never stored or logged in plaintext.
 model AliExpressToken {
-  id                  String   @id @default("default")
+  id                    String   @id @default("default")
   encryptedAccessToken  String
   encryptedRefreshToken String
-  expiresAt           DateTime
-  refreshExpiresAt     DateTime
-  updatedAt           DateTime @updatedAt
+  expiresAt             DateTime
+  refreshExpiresAt      DateTime
+  updatedAt             DateTime @updatedAt
+}
+
+// -- Supplier side (raw AliExpress data) -------------------------------
+
+enum SupplierProductStatus {
+  ACTIVE
+  UNAVAILABLE
+  DELISTED
+}
+
+// One row per AliExpress product we've imported. `raw` keeps the full
+// last-fetched aliexpress.ds.product.get payload verbatim (JSONB) so a
+// field this project hasn't mapped yet is never lost, and so schema drift
+// investigations have the actual response to look at.
+model SupplierProduct {
+  id           String                @id @default(cuid())
+  aeProductId  String                @unique
+  title        String
+  raw          Json
+  imageUrls    String[]
+  supplierUrl  String?
+  status       SupplierProductStatus @default(ACTIVE)
+  lastSyncedAt DateTime              @default(now())
+  createdAt    DateTime              @default(now())
+  updatedAt    DateTime              @updatedAt
+
+  variants SupplierVariant[]
+
+  @@index([status])
+}
+
+// One row per AliExpress SKU. `skuAttrs` is stored exactly as returned by
+// aliexpress.ds.product.get -- required verbatim at order-placement time
+// (aliexpress.ds.order.create), never reconstructed from parsed fields.
+model SupplierVariant {
+  id                 String   @id @default(cuid())
+  supplierProductId  String
+  supplierProduct    SupplierProduct @relation(fields: [supplierProductId], references: [id], onDelete: Cascade)
+  aeSkuId            String
+  skuAttrs           String
+  supplierPriceMinor Int
+  currency           String
+  stock              Int?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  productVariant ProductVariant?
+
+  @@unique([supplierProductId, aeSkuId])
+}
+
+// -- Merchandised storefront listing (independent of supplier data) ----
+
+enum ProductStatus {
+  DRAFT
+  PUBLISHED
+  UNPUBLISHED
+}
+
+// Our own listing: our title, copy, images, price -- deliberately
+// independent of SupplierProduct so a supplier-side title/description
+// change never touches what's shown in the storefront. One Product has
+// many ProductVariants, each backed by exactly one SupplierVariant.
+model Product {
+  id          String        @id @default(cuid())
+  slug        String        @unique
+  title       String
+  description String
+  images      String[]
+  status      ProductStatus @default(DRAFT)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  variants   ProductVariant[]
+  priceRules PriceRule[]
+
+  @@index([status])
+}
+
+model ProductVariant {
+  id                String   @id @default(cuid())
+  productId         String
+  product           Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  supplierVariantId String   @unique
+  supplierVariant   SupplierVariant @relation(fields: [supplierVariantId], references: [id])
+  title             String
+  priceMinor        Int
+  currency          String   @default("GBP")
+  images            String[]
+  position          Int      @default(0)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+// -- Pricing ------------------------------------------------------------
+
+enum PriceRuleScope {
+  GLOBAL
+  PRODUCT
+}
+
+enum RoundingRule {
+  NONE
+  PSYCHOLOGICAL_99
+}
+
+// GLOBAL rules apply store-wide (productId null); PRODUCT rules override
+// for one product. See lib/pricing for how these combine.
+model PriceRule {
+  id               String         @id @default(cuid())
+  scope            PriceRuleScope @default(GLOBAL)
+  productId        String?
+  product          Product?       @relation(fields: [productId], references: [id], onDelete: Cascade)
+  costMultiplier   Float
+  fixedUpliftMinor Int            @default(0)
+  floorMarginPct   Float
+  roundingRule     RoundingRule   @default(PSYCHOLOGICAL_99)
+  maxPriceMinor    Int?
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+
+  @@index([scope, productId])
+}
+
+// -- Sync / audit ---------------------------------------------------------
+
+model SyncRun {
+  id                  String    @id @default(cuid())
+  startedAt           DateTime  @default(now())
+  finishedAt          DateTime?
+  productsScanned     Int       @default(0)
+  productsUpdated     Int       @default(0)
+  productsUnpublished Int       @default(0)
+  errors              Json?
+}
+
+enum AuditActorType {
+  ADMIN
+  SYSTEM
+}
+
+// Every admin mutation and every automated action worth a trail (Rule:
+// spec requires this for admin actions and, later, automated order
+// placement). `before`/`after` are partial snapshots, not full rows.
+model AuditLog {
+  id         String         @id @default(cuid())
+  actorType  AuditActorType
+  actorId    String?
+  action     String
+  entityType String
+  entityId   String
+  before     Json?
+  after      Json?
+  ip         String?
+  createdAt  DateTime       @default(now())
+
+  @@index([entityType, entityId])
+  @@index([createdAt])
+}
+
+// -- Admin auth (separate realm from the not-yet-built customer one) ---
+
+// Argon2id password hash, TOTP mandatory (spec: "magic link or password
+// plus mandatory TOTP 2FA"). totpSecret is AES-256-GCM encrypted at rest
+// via the same lib/aliexpress/crypto.ts primitives (generalized, see
+// lib/crypto.ts). No admin can sign in until totpEnabledAt is set.
+model AdminUser {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  passwordHash  String?
+  encryptedTotpSecret String?
+  totpEnabledAt DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  securityEvents AdminSecurityEvent[]
+}
+
+enum AdminSecurityEventType {
+  SIGN_IN_SUCCESS
+  SIGN_IN_FAILURE
+  TOTP_ENROLLED
+  TOTP_FAILURE
+  SIGN_OUT
+}
+
+model AdminSecurityEvent {
+  id          String                  @id @default(cuid())
+  adminUserId String?
+  adminUser   AdminUser?              @relation(fields: [adminUserId], references: [id], onDelete: SetNull)
+  email       String
+  type        AdminSecurityEventType
+  ip          String?
+  createdAt   DateTime                @default(now())
+
+  @@index([email, createdAt])
 }

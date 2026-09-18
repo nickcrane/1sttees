@@ -1,11 +1,18 @@
 import { prisma } from "../lib/prisma";
 
 async function main() {
-  await prisma.healthCheck.upsert({
-    where: { id: "hello-store" },
-    update: {},
-    create: { id: "hello-store", message: "1st Tees is up." },
-  });
+  const existingGlobalRule = await prisma.priceRule.findFirst({ where: { scope: "GLOBAL" } });
+  if (!existingGlobalRule) {
+    await prisma.priceRule.create({
+      data: {
+        scope: "GLOBAL",
+        costMultiplier: 2.5,
+        fixedUpliftMinor: 0,
+        floorMarginPct: 20,
+        roundingRule: "PSYCHOLOGICAL_99",
+      },
+    });
+  }
 }
 
 main()
