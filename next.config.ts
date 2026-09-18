@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
   // package at a time. Excluding them from bundling and requiring them
   // natively via Node at runtime is the standard fix.
   serverExternalPackages: ["argon2", "pino", "pino-pretty", "thread-stream"],
+  // Product images are imported verbatim from AliExpress (lib/catalog/import.ts),
+  // served from whichever of their many CDN subdomains the listing used.
+  images: {
+    remotePatterns: [{ protocol: "https", hostname: "*.alicdn.com" }],
+  },
 };
 
 export default nextConfig;

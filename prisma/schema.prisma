@@ -52,7 +52,7 @@ model SupplierProduct {
 // aliexpress.ds.product.get -- required verbatim at order-placement time
 // (aliexpress.ds.order.create), never reconstructed from parsed fields.
 model SupplierVariant {
-  id                 String   @id @default(cuid())
+  id                 String          @id @default(cuid())
   supplierProductId  String
   supplierProduct    SupplierProduct @relation(fields: [supplierProductId], references: [id], onDelete: Cascade)
   aeSkuId            String
@@ -60,8 +60,8 @@ model SupplierVariant {
   supplierPriceMinor Int
   currency           String
   stock              Int?
-  createdAt          DateTime @default(now())
-  updatedAt          DateTime @updatedAt
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
 
   productVariant ProductVariant?
 
@@ -97,18 +97,21 @@ model Product {
 }
 
 model ProductVariant {
-  id                String   @id @default(cuid())
+  id                String          @id @default(cuid())
   productId         String
-  product           Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
-  supplierVariantId String   @unique
+  product           Product         @relation(fields: [productId], references: [id], onDelete: Cascade)
+  supplierVariantId String          @unique
   supplierVariant   SupplierVariant @relation(fields: [supplierVariantId], references: [id])
   title             String
   priceMinor        Int
-  currency          String   @default("GBP")
+  currency          String          @default("GBP")
   images            String[]
-  position          Int      @default(0)
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
+  position          Int             @default(0)
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  cartItems  CartItem[]
+  orderItems OrderItem[]
 }
 
 // -- Pricing ------------------------------------------------------------
@@ -184,13 +187,13 @@ model AuditLog {
 // via the same lib/aliexpress/crypto.ts primitives (generalized, see
 // lib/crypto.ts). No admin can sign in until totpEnabledAt is set.
 model AdminUser {
-  id            String    @id @default(cuid())
-  email         String    @unique
-  passwordHash  String?
+  id                  String    @id @default(cuid())
+  email               String    @unique
+  passwordHash        String?
   encryptedTotpSecret String?
-  totpEnabledAt DateTime?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  totpEnabledAt       DateTime?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
 
   securityEvents AdminSecurityEvent[]
 }
@@ -204,13 +207,143 @@ enum AdminSecurityEventType {
 }
 
 model AdminSecurityEvent {
-  id          String                  @id @default(cuid())
+  id          String                 @id @default(cuid())
   adminUserId String?
-  adminUser   AdminUser?              @relation(fields: [adminUserId], references: [id], onDelete: SetNull)
+  adminUser   AdminUser?             @relation(fields: [adminUserId], references: [id], onDelete: SetNull)
   email       String
   type        AdminSecurityEventType
   ip          String?
-  createdAt   DateTime                @default(now())
+  createdAt   DateTime               @default(now())
 
   @@index([email, createdAt])
+}
+
+// -- Customer (minimal stub -- Phase 3.5 adds passwordHash, sessions,
+// verification, addresses, etc.) Exists now only so Order.customerId has
+// something to point at for the "guest orders are first-class, claimable
+// later by an account with the same verified email" design.
+// ------------------------------------------------------------------------
+
+model Customer {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+
+  orders Order[]
+}
+
+// -- Cart (guest, keyed by a signed cookie; customerId fills in once a
+// guest cart merges into a signed-in account in Phase 3.5) --------------
+
+model Cart {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  items CartItem[]
+}
+
+model CartItem {
+  id               String         @id @default(cuid())
+  cartId           String
+  cart             Cart           @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  productVariantId String
+  productVariant   ProductVariant @relation(fields: [productVariantId], references: [id])
+  quantity         Int
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+
+  @@unique([cartId, productVariantId])
+}
+
+// -- Orders ---------------------------------------------------------------
+
+// The full lifecycle per the mission spec's order-orchestration design.
+// Phase 3 only ever produces PENDING_PAYMENT -> PAID (or leaves an order in
+// PENDING_PAYMENT if an SCA challenge is abandoned) -- the rest exist now
+// so the enum doesn't need a churny migration when Phase 4 builds the
+// actual state machine and fulfilment queue on top of it.
+enum OrderStatus {
+  PENDING_PAYMENT
+  PAID
+  HOLD
+  SUPPLIER_ORDER_QUEUED
+  SUPPLIER_ORDER_PLACED
+  SHIPPED
+  DELIVERED
+  SUPPLIER_ORDER_FAILED
+  CANCELLED
+  REFUNDED
+  NEEDS_MANUAL_REVIEW
+}
+
+enum PaymentProviderKind {
+  STRIPE
+  PAYPAL
+}
+
+// Money in integer minor units throughout, never floats (project rule).
+// Addresses are snapshotted as JSON directly on the order, never a live FK
+// to a saved address -- spec: "editing a saved address must not rewrite
+// the shipping address of a past order."
+model Order {
+  id                 String               @id @default(cuid())
+  orderNumber        String               @unique
+  customerId         String?
+  customer           Customer?            @relation(fields: [customerId], references: [id])
+  email              String
+  status             OrderStatus          @default(PENDING_PAYMENT)
+  currency           String               @default("GBP")
+  subtotalMinor      Int
+  shippingMinor      Int                  @default(0)
+  vatMinor           Int                  @default(0)
+  vatRateBps         Int                  @default(0) // 2000 = 20%; 0 under VAT_MODE=NOT_REGISTERED
+  totalMinor         Int
+  shippingAddress    Json
+  billingAddress     Json?
+  paymentProvider    PaymentProviderKind?
+  paymentProviderRef String? // Stripe PaymentIntent id / PayPal order id
+  paymentMethodBrand String? // e.g. "visa" -- never PAN data (SAQ-A)
+  paymentMethodLast4 String?
+  paidAt             DateTime?
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+
+  items OrderItem[]
+
+  @@index([customerId])
+  @@index([email])
+  @@index([status])
+}
+
+// Snapshotted at purchase time -- spec: "Snapshot price ... and supplier
+// cost at the moment of purchase" -- never recomputed from the live
+// ProductVariant/SupplierVariant, which can change after the order is placed.
+model OrderItem {
+  id                        String         @id @default(cuid())
+  orderId                   String
+  order                     Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productVariantId          String
+  productVariant            ProductVariant @relation(fields: [productVariantId], references: [id])
+  titleSnapshot             String
+  variantTitleSnapshot      String
+  skuAttrsSnapshot          String
+  unitPriceMinor            Int
+  quantity                  Int
+  supplierCostMinorSnapshot Int
+  createdAt                 DateTime       @default(now())
+}
+
+// Raw inbound provider events, deduplicated by provider event id --
+// idempotent by construction, replaying any event is a no-op (spec rule).
+model WebhookEvent {
+  id              String              @id @default(cuid())
+  provider        PaymentProviderKind
+  providerEventId String
+  type            String
+  payload         Json
+  processedAt     DateTime?
+  createdAt       DateTime            @default(now())
+
+  @@unique([provider, providerEventId])
 }

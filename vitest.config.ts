@@ -17,6 +17,7 @@ export default defineConfig({
       DATABASE_URL: "postgresql://test:test@localhost:5432/test",
       REDIS_URL: "redis://localhost:6379",
       TOKEN_ENCRYPTION_KEY: "HrTN3HKhsNkkt2F0uNGjltc94fVAfCda5cGlkiemUSs=", // gitleaks:allow -- fake, test-only, not a real secret
+      CART_COOKIE_SECRET: "test-only-cart-cookie-secret-not-a-real-value-x", // gitleaks:allow -- fake, test-only, not a real secret
       ALIEXPRESS_MODE: "fixture",
     },
     coverage: {
@@ -37,9 +38,28 @@ export default defineConfig({
         // exercise real upsert/unique-constraint semantics anyway.
         "lib/catalog/import.ts",
         "lib/catalog/pricing-rules.ts",
+        // Thin Prisma query wrappers (findMany/findFirst with a fixed
+        // include/where) -- no branching logic of their own; exercised by
+        // the e2e storefront-browsing flow against a real database.
+        "lib/catalog/products.ts",
         "lib/admin-auth/config.ts",
         "lib/admin-auth/setup.ts",
         "lib/admin-auth/security-events.ts",
+        // Thin next/headers cookies() wrapper -- nothing to unit test without
+        // a request context; covered by the e2e cart flow instead.
+        "lib/cart/cookie.ts",
+        // Prisma orchestration (get-or-create, upsert/update/delete by
+        // cartId+id) -- same rationale as catalog/import.ts above. The pure
+        // logic it doesn't own (signed-cart-id.ts, calculateCartTotals) is
+        // unit tested directly; the rest is verified against a real
+        // database via the e2e checkout flow.
+        "lib/cart/cart.ts",
+        // "use server" mutations -- thin wrappers around lib/cart/cart.ts
+        // (validate FormData, delegate, revalidatePath); no branching logic
+        // of their own to unit test, and next/cache's revalidatePath needs
+        // a request context this suite doesn't have. Exercised by the e2e
+        // add-to-cart/drawer flow instead.
+        "lib/cart/actions.ts",
       ],
       thresholds: {
         lines: 80,

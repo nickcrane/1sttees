@@ -54,6 +54,16 @@ const envSchema = z.object({
   STRIPE_SECRET_KEY: z.string().optional(),
   STRIPE_PUBLISHABLE_KEY: z.string().optional(),
   STRIPE_WEBHOOK_SECRET: z.string().optional(),
+  // Test-mode Stripe values, not sandbox/prod -- see docs/decisions.md.
+  STORE_BASE_URL: z.url().default("http://localhost:3000"),
+
+  // HMAC key for the guest-cart cookie (spec: "signed cookie") -- separate
+  // from TOKEN_ENCRYPTION_KEY (that's AES for values this server needs to
+  // read back; this is HMAC for a cookie the browser holds and presents
+  // back to us) and from ADMIN_AUTH_SECRET/AUTH_SECRET (unrelated realms).
+  // Required, no default -- Phase 3 makes the cart a hard dependency, and a
+  // silently-reused placeholder secret is worse than a boot-time failure.
+  CART_COOKIE_SECRET: z.string().min(32),
 
   PAYPAL_CLIENT_ID: z.string().optional(),
   PAYPAL_CLIENT_SECRET: z.string().optional(),
