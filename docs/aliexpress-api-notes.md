@@ -318,6 +318,33 @@ it would sit unpaid with no API-based way to cancel it. That's real-world
 state affecting a third party (the seller), not something to trigger without
 the client's explicit go-ahead each time, not a one-time blanket approval.
 
+### There's a proper test facility for exactly this — use it instead
+
+[AliExpress Open Platform Borrowing Test Account & Mock Order Function Instructions](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1829)
+(App Console → Common Tools → **Loan Test Account** / **Order Testing**):
+
+- Borrow a **test seller account and a test buyer account** (valid 30 days,
+  one per country+business-type combination at a time) — no need to touch
+  the real `nic.crane@gmail.com` buyer identity or a real seller at all.
+- Authorize normally (same OAuth flow, `/auth/token/create`) but logged in
+  as the **borrowed test buyer account** — gets its own token, entirely
+  separate from the production authorization already on file.
+- "Mock create" a real order via the App Console UI against a product ID
+  listed under the **borrowed test seller's** store (must be a real,
+  in-stock listing under that test store — not an arbitrary real product).
+  The resulting order number is real and every `aliexpress.ds.*` order/
+  tracking API can be exercised against it.
+- **The mock order is unpaid by default and auto-closes after ~12 days if
+  never paid** — no manual cancellation needed, and no consequence for a
+  real seller, since the seller is a test account too.
+
+This is the right way to confirm `aliexpress.ds.order.create` (and the
+success paths of `order.tracking.get`/`trade.ds.order.get`, which also still
+need a real order) end-to-end, rather than either skipping live verification
+entirely or using the real production account/a real seller for a test.
+Noted here as the plan for whenever order placement is actually verified —
+see "Open items."
+
 ## Automatic payment — requires a manual application + a funded PayPal account (flagging per Rule 2)
 
 This is the biggest new finding, and it's an operational/business dependency,
@@ -404,8 +431,15 @@ is tuned — using a conservative default (aliexpress-dashboard's
    path, the other two on their error paths only (no real order exists to
    test their success paths against). See the new section above.
 5. **`aliexpress.ds.order.create` remains the one method never called live**
-   — deliberately. It creates a real order against a real seller, and won't
-   auto-pay until the whitelist above is in place, meaning it would sit
-   unpaid with no API-based cancellation. Only place a real (even a cheap,
-   single-item) test order with your explicit go-ahead each time — this
-   isn't a one-time approval to automate away.
+   — deliberately, and by client decision (2026-09-18): rather than place a
+   real order against a real seller, use AliExpress's own **Borrow Test
+   Account & Mock Order** facility instead (docId 1829, see the section
+   above) — a test buyer + test seller, a mock order that's unpaid by
+   default and auto-closes after ~12 days, no consequence for anyone real.
+   **Needs you to borrow the test accounts via App Console** (Common Tools
+   → Loan Test Account) — that's a human decision/agreement-acceptance
+   step, not something to do on your behalf without asking. Once borrowed,
+   I can authorize against the test buyer account and mock-order against
+   the test seller's own listing to verify `order.create`, and the
+   still-unconfirmed success paths of `order.tracking.get`/
+   `trade.ds.order.get`, end-to-end.
