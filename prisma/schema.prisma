@@ -218,18 +218,96 @@ model AdminSecurityEvent {
   @@index([email, createdAt])
 }
 
-// -- Customer (minimal stub -- Phase 3.5 adds passwordHash, sessions,
-// verification, addresses, etc.) Exists now only so Order.customerId has
-// something to point at for the "guest orders are first-class, claimable
-// later by an account with the same verified email" design.
-// ------------------------------------------------------------------------
+// -- Customer accounts (Phase 3.5) ---------------------------------------
+//
+// Google OAuth only -- no password, nothing to hash or leak. Model names
+// (User/Account/Session/VerificationToken, and their exact field names)
+// follow Auth.js's own Prisma adapter schema so @auth/prisma-adapter works
+// unmodified; extending User directly with orders/addresses rather than
+// keeping a separate "Customer" table avoids a redundant 1:1 join for
+// every order/account lookup. Sessions are database-backed (a Session
+// row per sign-in), not JWTs -- Auth.js already needs the adapter/tables
+// to link a Google account to a User, so a Session table alongside them
+// is effectively free, and it buys instant server-side revocation (ban a
+// user, "sign out everywhere") that a JWT-only session can't do without
+// extra infrastructure.
+//
+// Google verifies the email on our behalf (emailVerified is always set
+// for a Google sign-in), which is what makes "guest orders are claimable
+// by an account with the same verified email" safe: events.signIn in
+// lib/customer-auth/config.ts links any existing Order rows matching the
+// signed-in email (customerId still null) to this User on every sign-in.
 
-model Customer {
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts  Account[]
+  sessions  Session[]
+  orders    Order[]
+  addresses Address[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// A customer's saved shipping address book -- distinct from an Order's own
+// snapshotted shippingAddress Json (spec: "editing a saved address must
+// not rewrite the shipping address of a past order").
+model Address {
   id        String   @id @default(cuid())
-  email     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  label     String? // e.g. "Home" -- optional, user-chosen
+  name      String
+  line1     String
+  line2     String?
+  city      String
+  postcode  String
+  country   String
+  isDefault Boolean  @default(false)
   createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
-  orders Order[]
+  @@index([userId])
 }
 
 // -- Cart (guest, keyed by a signed cookie; customerId fills in once a
@@ -290,7 +368,7 @@ model Order {
   id                 String               @id @default(cuid())
   orderNumber        String               @unique
   customerId         String?
-  customer           Customer?            @relation(fields: [customerId], references: [id])
+  customer           User?                @relation(fields: [customerId], references: [id])
   // The guest cart this order was created from -- not a relation (the Cart
   // row itself is disposable and may already be gone), just enough to find
   // and clear it once payment is confirmed. No onDelete needed since

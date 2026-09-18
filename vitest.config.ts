@@ -72,6 +72,17 @@ export default defineConfig({
         // no branching logic of its own; exercised by the e2e checkout flow
         // once real Stripe/PayPal test credentials are wired in.
         "lib/payments/handle-webhook.ts",
+        // NextAuth config object (adapter wiring, providers, the
+        // events.signIn guest-order-claiming callback) -- same rationale as
+        // lib/admin-auth/config.ts above; needs a real Google OAuth round
+        // trip and database to exercise meaningfully, not a unit test.
+        "lib/customer-auth/config.ts",
+        // Prisma CRUD (same rationale as lib/cart/cart.ts above).
+        "lib/customer/addresses.ts",
+        // "use server" mutations -- thin wrappers (auth check, validate
+        // FormData, delegate, revalidatePath); same rationale as
+        // lib/cart/actions.ts above.
+        "lib/customer/actions.ts",
       ],
       thresholds: {
         lines: 80,

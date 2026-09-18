@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { CartDrawer, type CartDrawerItem } from "@/components/storefront/cart-drawer";
 import { calculateCartTotals, getCart } from "@/lib/cart/cart";
+import { auth } from "@/lib/customer-auth/config";
 
 export async function Header() {
-  const cart = await getCart();
+  const [cart, session] = await Promise.all([getCart(), auth()]);
 
   const items: CartDrawerItem[] =
     cart?.items.map((item) => ({
@@ -26,6 +27,9 @@ export async function Header() {
         <nav className="flex items-center gap-4">
           <Link href="/products" className="text-sm text-muted-foreground hover:text-foreground">
             Shop
+          </Link>
+          <Link href="/account" className="text-sm text-muted-foreground hover:text-foreground">
+            {session ? "My account" : "Sign in"}
           </Link>
           <CartDrawer
             items={items}

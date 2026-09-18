@@ -72,6 +72,10 @@ const envSchema = z.object({
 
   AUTH_SECRET: z.string().optional(),
   CUSTOMER_AUTH_SECRET: z.string().optional(),
+  // Google OAuth is the only customer sign-in method (no password) --
+  // see docs/decisions.md for why.
+  GOOGLE_CLIENT_ID: z.string().optional(),
+  GOOGLE_CLIENT_SECRET: z.string().optional(),
   ADMIN_AUTH_SECRET: z.string().optional(),
   ADMIN_EMAILS: z.string().optional(),
   ENABLE_SOCIAL_LOGIN: z.enum(["true", "false"]).default("false"),
