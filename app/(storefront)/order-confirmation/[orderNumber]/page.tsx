@@ -5,7 +5,7 @@ import { formatMinor } from "@/lib/money";
 import type { AddressInput } from "@/lib/orders/types";
 import { prisma } from "@/lib/prisma";
 
-export const metadata: Metadata = { title: "Order confirmation | 1st Tees" };
+export const metadata: Metadata = { title: "Order confirmation" };
 
 interface OrderConfirmationPageProps {
   params: Promise<{ orderNumber: string }>;

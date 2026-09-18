@@ -6,7 +6,7 @@ import { leadPriceMinor, listPublishedProducts } from "@/lib/catalog/products";
 import { formatMinor } from "@/lib/money";
 
 export const metadata: Metadata = {
-  title: "Shop | 1st Tees",
+  title: "Shop",
   description: "Sustainable bamboo golf tees, shipped to the UK and EU.",
 };
 

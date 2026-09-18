@@ -14,8 +14,16 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   if (!product) return {};
 
   return {
-    title: `${product.title} | 1st Tees`,
+    title: product.title,
     description: product.description,
+    alternates: { canonical: `/products/${product.slug}` },
+    openGraph: {
+      type: "website",
+      title: product.title,
+      description: product.description,
+      url: `/products/${product.slug}`,
+      images: product.images[0] ? [{ url: product.images[0] }] : undefined,
+    },
   };
 }
 

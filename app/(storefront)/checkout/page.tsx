@@ -5,7 +5,7 @@ import { calculateCartTotals, getCart } from "@/lib/cart/cart";
 import { env } from "@/lib/env";
 import { formatMinor } from "@/lib/money";
 
-export const metadata: Metadata = { title: "Checkout | 1st Tees" };
+export const metadata: Metadata = { title: "Checkout" };
 
 export default async function CheckoutPage({
   searchParams,
