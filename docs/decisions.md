@@ -272,3 +272,15 @@ not just a green build.
   dismissed successfully end to end.
 - PayPal sandbox is still unverified -- `PAYPAL_CLIENT_ID`/
   `PAYPAL_CLIENT_SECRET`/`PAYPAL_WEBHOOK_ID` aren't in `.env` yet.
+
+### Lighthouse (spec: "Lighthouse ≥90")
+
+Ran `npx lighthouse` against a production build (`pnpm build && pnpm start`)
+for `/`, `/products`, and a product detail page. All four categories score
+≥90 on every page (mostly 96-100); the one dip to 96 on best-practices is
+solely the known fixture-data image 404 (`ae01.alicdn.com/kf/bamboo-tee-*
+.jpg` isn't a real, resolvable AliExpress CDN URL -- it's fixture-mode
+import test data), not an application defect -- it'll resolve once real
+imported product images are in place. Not wired into CI (no Chrome
+available there without extra setup); re-run manually before each
+release-worthy checkpoint instead.
