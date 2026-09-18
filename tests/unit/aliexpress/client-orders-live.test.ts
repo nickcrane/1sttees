@@ -134,6 +134,49 @@ describe("AliExpressClient (live mode, fetch mocked) — freight, tracking, orde
     expect(result.orderIds).toEqual(["111"]);
   });
 
+  it("placeOrder maps logisticsAddress's camelCase fields to the snake_case the gateway expects", async () => {
+    // Regression test: confirmed live 2026-09-18 that passing the camelCase
+    // object straight through silently drops every field the gateway
+    // doesn't recognize -- a request that DID include mobileNo came back
+    // B_DROPSHIPPER_DELIVERY_ADDRESS_VALIDATE_FAIL: "Please enter mobile
+    // phone number", because the gateway never saw `mobile_no`.
+    const AliExpressClient = await importLiveClient();
+    const fetchMock = vi.fn(async (_input: RequestInfo | URL, init?: RequestInit) => {
+      const body = new URLSearchParams(init?.body as string);
+      const order = JSON.parse(body.get("param_place_order_request4_open_api_d_t_o")!);
+      expect(order.logistics_address).toEqual({
+        address: "1 Test St",
+        city: "Cardiff",
+        province: "Wales",
+        country: "GB",
+        contact_person: "Test Buyer",
+        mobile_no: "07700900000",
+        phone_country: "+44",
+      });
+      expect(order.logistics_address.mobileNo).toBeUndefined();
+      expect(order.logistics_address.phoneCountry).toBeUndefined();
+      return jsonResponse({
+        aliexpress_ds_order_create_response: { result: { is_success: true, order_list: { number: [222] } } },
+      });
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const client = new AliExpressClient(createInMemoryTokenStore());
+    await client.placeOrder({
+      outOrderId: "order-2",
+      logisticsAddress: {
+        address: "1 Test St",
+        city: "Cardiff",
+        province: "Wales",
+        country: "GB",
+        contactPerson: "Test Buyer",
+        mobileNo: "07700900000",
+        phoneCountry: "+44",
+      },
+      items: [{ productId: 1, productCount: 1 }],
+    });
+  });
+
   it("placeOrder surfaces a non-retryable gateway error (e.g. bad address) as an AliExpressApiError, not a crash", async () => {
     const AliExpressClient = await importLiveClient();
     const { AliExpressApiError } = await import("@/lib/aliexpress/errors");

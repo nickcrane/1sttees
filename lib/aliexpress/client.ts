@@ -332,7 +332,7 @@ export class AliExpressClient {
                 }),
                 param_place_order_request4_open_api_d_t_o: JSON.stringify({
                   out_order_id: params.outOrderId,
-                  logistics_address: params.logisticsAddress,
+                  logistics_address: mapLogisticsAddress(params.logisticsAddress),
                   product_items: params.items.map((item) => ({
                     product_id: item.productId,
                     product_count: item.productCount,
@@ -500,6 +500,31 @@ export class AliExpressClient {
       }
     }
   }
+}
+
+/**
+ * Maps PlaceOrderParams.logisticsAddress's camelCase fields to the
+ * snake_case shape aliexpress.ds.order.create actually expects
+ * (`mobile_no`, `phone_country`, etc.) -- confirmed live 2026-09-18 that
+ * passing the camelCase object straight through, unmapped, silently drops
+ * every field the gateway doesn't recognize: a request that *did* include
+ * a mobile number came back `B_DROPSHIPPER_DELIVERY_ADDRESS_VALIDATE_FAIL:
+ * "Please enter mobile phone number"`, because the gateway never saw
+ * `mobileNo` as `mobile_no`.
+ */
+function mapLogisticsAddress(address: PlaceOrderParams["logisticsAddress"]): Record<string, string> {
+  const mapped: Record<string, string | undefined> = {
+    address: address.address,
+    city: address.city,
+    province: address.province,
+    country: address.country,
+    contact_person: address.contactPerson,
+    full_name: address.fullName,
+    zip: address.zip,
+    mobile_no: address.mobileNo,
+    phone_country: address.phoneCountry,
+  };
+  return Object.fromEntries(Object.entries(mapped).filter((entry): entry is [string, string] => entry[1] !== undefined));
 }
 
 function fixtureNameFor(params: SearchParams): string {

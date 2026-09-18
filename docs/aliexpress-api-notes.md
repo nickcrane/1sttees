@@ -211,9 +211,9 @@ Source: [Authorize your APP](https://openservice.aliexpress.com/doc/doc.htm#/?do
 | Category tree | `aliexpress.ds.category.get`* | (not named in brief) |
 | Freight/shipping quote | `aliexpress.ds.freight.query` — **confirmed live by 1stees 2026-09-17** against a real bamboo tee SKU | ✅ matches |
 | Ship-to address helper | `aliexpress.ds.address.get` | (not in brief) |
-| **Order placement** | **`aliexpress.ds.order.create`** — built, deliberately not yet called live (creates a real order; see "Order placement — status") | ❌ brief said `aliexpress.trade.buy.placeorder` — that name doesn't appear anywhere in current docs |
-| Order detail | `aliexpress.trade.ds.order.get` — **confirmed live by 1stees 2026-09-17** (error path: confirms order-ownership validation) | brief guessed `aliexpress.ds.trade.order.get` — word order differs |
-| Tracking | `aliexpress.ds.order.tracking.get` — **confirmed live by 1stees 2026-09-17** (not-found path only; success path needs a real shipped order) | ✅ matches |
+| **Order placement** | **`aliexpress.ds.order.create`** — **confirmed live by 1stees 2026-09-18** against a borrowed test seller/buyer pair; found and fixed a real address-field-mapping bug this way | ❌ brief said `aliexpress.trade.buy.placeorder` — that name doesn't appear anywhere in current docs |
+| Order detail | `aliexpress.trade.ds.order.get` — **confirmed live 2026-09-17 (error path) and 2026-09-18 (success path)**, both by 1stees | brief guessed `aliexpress.ds.trade.order.get` — word order differs |
+| Tracking | `aliexpress.ds.order.tracking.get` — **confirmed live 2026-09-17 (not-found path) and 2026-09-18 (success path, empty result for an unshipped order)**, both by 1stees | ✅ matches |
 
 \* `aliexpress.ds.category.get` wasn't re-confirmed on the current docs site
 during this pass, but is confirmed live by aliexpress-dashboard, still exists
@@ -307,43 +307,59 @@ now confirmed live; `tracking.get`'s success path still needs a real order.
   message — the top-level `msg` alone was just "Remote service error",
   useless on its own; `sub_code`/`sub_msg` carried the actual diagnosis.
 
-## Order placement — status: built, not yet called live
+## Order placement — confirmed live 2026-09-18, via a borrowed test account
 
-`aliexpress.ds.order.create` is fully implemented (`AliExpressClient.placeOrder`,
-fixtures for both the plain-success and created-but-payment-failed cases) but
-**has deliberately never been called against the live gateway**. Unlike the
-five read-only methods above, this one creates a real order against a real
-seller, and — since the auto-pay whitelist isn't in place yet (see below) —
-it would sit unpaid with no API-based way to cancel it. That's real-world
-state affecting a third party (the seller), not something to trigger without
-the client's explicit go-ahead each time, not a one-time blanket approval.
+`aliexpress.ds.order.create` is fully implemented (`AliExpressClient.placeOrder`)
+and has now been **confirmed against the real gateway** — safely, using
+[AliExpress's own test-account facility](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1829)
+(App Console → Common Tools → **Loan Test Account**), not the real production
+buyer account or a real seller:
 
-### There's a proper test facility for exactly this — use it instead
+1. Client borrowed a test buyer (`AECBopenplatformTestaccount@365fanyi.com`)
+   and test seller (id `6622029490`) account pair via App Console.
+2. Authorized as the test buyer through the normal OAuth flow — a second,
+   independent token, entirely separate from the production authorization
+   already on file (kept in-memory for this verification, never written to
+   the production `AliExpressToken` row).
+3. Looked up a real product in the test seller's store
+   (`aliexpress.ds.product.get` on `1005013161005801`, "A light blue
+   T-shirt"), got a real freight quote for it, then called
+   `aliexpress.ds.order.create` for real.
 
-[AliExpress Open Platform Borrowing Test Account & Mock Order Function Instructions](https://openservice.aliexpress.com/doc/doc.htm#/?docId=1829)
-(App Console → Common Tools → **Loan Test Account** / **Order Testing**):
+**One real bug found and fixed by this**: `PlaceOrderParams.logisticsAddress`
+uses camelCase field names (`mobileNo`, `phoneCountry`, etc., consistent
+with the rest of this TypeScript client) — but they were being passed
+straight through into the JSON request unmapped. AliExpress's gateway
+doesn't recognize camelCase keys, so `mobileNo` was silently invisible to
+it: the very first live attempt, address fully populated including a mobile
+number, came back `B_DROPSHIPPER_DELIVERY_ADDRESS_VALIDATE_FAIL: "Please
+enter mobile phone number"`. Fixed with an explicit `mapLogisticsAddress`
+that maps every field to the snake_case name the docs specify
+(`contact_person`, `full_name`, `mobile_no`, `phone_country`) — the kind of
+bug fixtures alone would never have caught, since a hand-written fixture
+would have used the right field names by construction.
 
-- Borrow a **test seller account and a test buyer account** (valid 30 days,
-  one per country+business-type combination at a time) — no need to touch
-  the real `nic.crane@gmail.com` buyer identity or a real seller at all.
-- Authorize normally (same OAuth flow, `/auth/token/create`) but logged in
-  as the **borrowed test buyer account** — gets its own token, entirely
-  separate from the production authorization already on file.
-- "Mock create" a real order via the App Console UI against a product ID
-  listed under the **borrowed test seller's** store (must be a real,
-  in-stock listing under that test store — not an arbitrary real product).
-  The resulting order number is real and every `aliexpress.ds.*` order/
-  tracking API can be exercised against it.
-- **The mock order is unpaid by default and auto-closes after ~12 days if
-  never paid** — no manual cancellation needed, and no consequence for a
-  real seller, since the seller is a test account too.
+After the fix, a real order was placed successfully: order id
+`3076660298669490`, and both follow-up reads worked as expected:
 
-This is the right way to confirm `aliexpress.ds.order.create` (and the
-success paths of `order.tracking.get`/`trade.ds.order.get`, which also still
-need a real order) end-to-end, rather than either skipping live verification
-entirely or using the real production account/a real seller for a test.
-Noted here as the plan for whenever order placement is actually verified —
-see "Open items."
+- `aliexpress.trade.ds.order.get` **success path now confirmed** (previously
+  only its error path was): `order_status: "PLACE_ORDER_SUCCESS"`,
+  `pay_timeout_second: "1036800"` — **exactly 12 days**, matching the
+  test-account doc's claim that an unpaid mock order auto-closes after ~12
+  days. Confirms that claim rather than just trusting it.
+- `aliexpress.ds.order.tracking.get` **success path confirmed to return `[]`
+  cleanly** (not an error) for an order that hasn't shipped yet
+  (`logistics_status: "NO_LOGISTICS"`) — validates the earlier assumption
+  that this is the right default for "nothing to report yet" in a tracking
+  poller, not something to treat as a failure.
+
+The order was placed with `tryToPay: false` (no auto-pay whitelist yet) —
+it will auto-close unpaid on its own; no manual cleanup needed, and no real
+seller was involved at any point.
+
+**Still not confirmed**: the auto-pay path itself (`try_to_pay: true`),
+which needs the whitelist application below regardless of test vs.
+production accounts.
 
 ## Automatic payment — requires a manual application + a funded PayPal account (flagging per Rule 2)
 
@@ -430,16 +446,14 @@ is tuned — using a conservative default (aliexpress-dashboard's
    live~~ — **done, 2026-09-17**: `freight.query` confirmed on the success
    path, the other two on their error paths only (no real order exists to
    test their success paths against). See the new section above.
-5. **`aliexpress.ds.order.create` remains the one method never called live**
-   — deliberately, and by client decision (2026-09-18): rather than place a
-   real order against a real seller, use AliExpress's own **Borrow Test
-   Account & Mock Order** facility instead (docId 1829, see the section
-   above) — a test buyer + test seller, a mock order that's unpaid by
-   default and auto-closes after ~12 days, no consequence for anyone real.
-   **Needs you to borrow the test accounts via App Console** (Common Tools
-   → Loan Test Account) — that's a human decision/agreement-acceptance
-   step, not something to do on your behalf without asking. Once borrowed,
-   I can authorize against the test buyer account and mock-order against
-   the test seller's own listing to verify `order.create`, and the
-   still-unconfirmed success paths of `order.tracking.get`/
-   `trade.ds.order.get`, end-to-end.
+5. ~~`aliexpress.ds.order.create` never called live~~ — **done, 2026-09-18**,
+   safely, via the borrowed test buyer/seller pair. Found and fixed a real
+   bug (address fields weren't mapped to the snake_case names the gateway
+   expects). Also confirmed the success paths of `order.tracking.get` and
+   `trade.ds.order.get` against the resulting real (test) order. See "Order
+   placement" above for the full account.
+6. **The only thing about order placement still unconfirmed is the
+   auto-pay path itself** (`try_to_pay: true`) — needs the whitelist
+   application in the section below regardless of test vs. production
+   accounts. Every other `aliexpress.ds.*`/`aliexpress.trade.ds.*` method
+   this project needs is now confirmed live.
