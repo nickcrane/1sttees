@@ -17,16 +17,23 @@ import {
   fulfilmentQueue,
   type PlaceSupplierOrderJobData,
 } from "../lib/queue/fulfilment-queue";
-import { CATALOG_QUEUE_NAME, DISCOVER_PRODUCTS_JOB, catalogQueue } from "../lib/queue/catalog-queue";
+import { CATALOG_QUEUE_NAME, CLASSIFY_PRODUCTS_JOB, DISCOVER_PRODUCTS_JOB, catalogQueue } from "../lib/queue/catalog-queue";
 import { placeSupplierOrder } from "../lib/orders/place-supplier-order";
 import { syncTracking } from "../lib/orders/sync-tracking";
 import { runDiscovery } from "../lib/catalog/discovery";
+import { classifyDiscoveredProducts } from "../lib/catalog/classify";
 import { logger } from "../lib/logger";
 
 const FOUR_HOURS_MS = 4 * 60 * 60 * 1000;
 // Nightly, 03:00 server time -- outside any UK/EU daytime traffic, and
 // clear of the 4-hourly tracking sync's own cadence.
-const NIGHTLY_CRON = "0 3 * * *";
+const DISCOVERY_CRON = "0 3 * * *";
+// 30 minutes after discovery -- gives that run room to finish finding/
+// storing SupplierProducts before classification looks for ones to
+// classify. Not a hard dependency (a slow discovery run just means
+// classification picks up whatever's landed so far, and catches the rest
+// next night), just a sensible offset.
+const CLASSIFY_CRON = "30 3 * * *";
 
 async function processFulfilmentJob(job: Job): Promise<void> {
   if (job.name === PLACE_SUPPLIER_ORDER_JOB) {
@@ -44,6 +51,10 @@ async function processFulfilmentJob(job: Job): Promise<void> {
 async function processCatalogJob(job: Job): Promise<void> {
   if (job.name === DISCOVER_PRODUCTS_JOB) {
     await runDiscovery();
+    return;
+  }
+  if (job.name === CLASSIFY_PRODUCTS_JOB) {
+    await classifyDiscoveredProducts();
     return;
   }
   logger.warn({ jobName: job.name }, "worker: unrecognized catalog job name, skipping");
@@ -76,7 +87,8 @@ async function main(): Promise<void> {
   // dedups by jobSchedulerId, so re-registering this on every worker
   // restart updates the one schedule rather than creating duplicates.
   await fulfilmentQueue.upsertJobScheduler(SYNC_TRACKING_JOB, { every: FOUR_HOURS_MS });
-  await catalogQueue.upsertJobScheduler(DISCOVER_PRODUCTS_JOB, { pattern: NIGHTLY_CRON });
+  await catalogQueue.upsertJobScheduler(DISCOVER_PRODUCTS_JOB, { pattern: DISCOVERY_CRON });
+  await catalogQueue.upsertJobScheduler(CLASSIFY_PRODUCTS_JOB, { pattern: CLASSIFY_CRON });
 
   logger.info("Fulfilment and catalog workers started");
 

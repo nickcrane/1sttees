@@ -49,6 +49,7 @@ model SupplierProduct {
   updatedAt       DateTime              @updatedAt
 
   variants SupplierVariant[]
+  product  Product?
 
   @@index([status])
 }
@@ -103,8 +104,19 @@ model Product {
   description String
   images      String[]
   status      ProductStatus @default(CANDIDATE)
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
+
+  // Which SupplierProduct this was classified from -- a direct pointer,
+  // not inferred by joining through ProductVariant/SupplierVariant, since
+  // a product the classifier rejected (or matched zero variants for)
+  // correctly has no ProductVariant rows at all, and Stage 2 still needs
+  // to find "the Product for this SupplierProduct" on every re-run so it
+  // updates that row instead of creating a duplicate every night. Nullable
+  // only because a future non-pipeline product-creation path shouldn't be
+  // forced to fabricate one; every pipeline-created Product sets it.
+  supplierProductId String?          @unique
+  supplierProduct   SupplierProduct? @relation(fields: [supplierProductId], references: [id])
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
 
   // -- Stage 2: LLM classification output (docs/product-flow.md) -- null
   // until a classification pass has run.

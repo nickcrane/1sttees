@@ -42,6 +42,14 @@ export default defineConfig({
         // by actually running it (see docs/decisions.md) than by mocking
         // both the AliExpress client and Prisma.
         "lib/catalog/discovery.ts",
+        // Same rationale as discovery.ts -- Prisma orchestration plus a
+        // call to Claude. The pure routing rule it delegates to
+        // (classify-decision.ts) is unit tested directly; this shell is
+        // verified live with a stubbed classifier response against the
+        // real database (see docs/decisions.md), since there's no
+        // "fixture mode" for the Anthropic call the way
+        // ALIEXPRESS_MODE=fixture covers discovery.ts.
+        "lib/catalog/classify.ts",
         // Thin Prisma query wrappers (findMany/findFirst with a fixed
         // include/where) -- no branching logic of their own; exercised by
         // the e2e storefront-browsing flow against a real database.
