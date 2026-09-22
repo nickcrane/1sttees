@@ -50,6 +50,12 @@ export default defineConfig({
         // "fixture mode" for the Anthropic call the way
         // ALIEXPRESS_MODE=fixture covers discovery.ts.
         "lib/catalog/classify.ts",
+        // Prisma + auth() orchestration ("use server" actions) -- same
+        // rationale as classify.ts. The pure transition table it
+        // validates against (curation-transitions.ts) is unit tested
+        // directly; this shell needs a real database and admin session to
+        // exercise meaningfully, verified live (see docs/decisions.md).
+        "lib/catalog/curation-actions.ts",
         // Thin Prisma query wrappers (findMany/findFirst with a fixed
         // include/where) -- no branching logic of their own; exercised by
         // the e2e storefront-browsing flow against a real database.

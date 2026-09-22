@@ -5,10 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default async function AdminDashboardPage() {
   const session = await auth();
-  const [supplierProductCount, productCount, publishedCount] = await Promise.all([
+  const [supplierProductCount, productCount, publishedCount, candidateCount, reviewCount] = await Promise.all([
     prisma.supplierProduct.count(),
     prisma.product.count(),
     prisma.product.count({ where: { status: "PUBLISHED" } }),
+    prisma.product.count({ where: { status: "CANDIDATE" } }),
+    prisma.product.count({ where: { status: "REVIEW" } }),
   ]);
 
   return (
@@ -40,6 +42,15 @@ export default async function AdminDashboardPage() {
       </div>
 
       <div className="flex flex-col gap-2">
+        <Link href="/admin/products/candidates" className="text-sm underline">
+          Candidates{candidateCount > 0 && ` (${candidateCount})`} &rarr;
+        </Link>
+        <Link href="/admin/products/review" className="text-sm underline">
+          Review queue{reviewCount > 0 && ` (${reviewCount})`} &rarr;
+        </Link>
+        <Link href="/admin/products/catalogue" className="text-sm underline">
+          Catalogue &rarr;
+        </Link>
         <Link href="/admin/orders" className="text-sm underline">
           Orders &rarr;
         </Link>

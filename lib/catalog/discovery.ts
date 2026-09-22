@@ -76,6 +76,13 @@ export async function runDiscovery(client: AliExpressClient = new AliExpressClie
 
 async function upsertSupplierProduct(client: AliExpressClient, aeProductId: string, discoverySource: string): Promise<void> {
   const { product, raw } = await client.getProductDetailWithRaw(aeProductId);
+  // aliexpress.ds.product.get's response has no URL field at all
+  // (confirmed: normalizeProductDetail always returns productUrl: null --
+  // that's only ever populated from a *search* result's itemUrl). The
+  // product page URL is a fixed, well-known pattern keyed on the id
+  // itself, so build it directly rather than storing a field that would
+  // otherwise never get set by this code path.
+  const supplierUrl = `https://www.aliexpress.com/item/${aeProductId}.html`;
 
   const supplierProduct = await prisma.supplierProduct.upsert({
     where: { aeProductId },
@@ -84,7 +91,7 @@ async function upsertSupplierProduct(client: AliExpressClient, aeProductId: stri
       title: product.title ?? `AliExpress product ${aeProductId}`,
       raw: raw as unknown as Prisma.InputJsonValue,
       imageUrls: product.imageUrls,
-      supplierUrl: product.productUrl,
+      supplierUrl,
       discoverySource,
       lastSyncedAt: new Date(),
     },
@@ -92,7 +99,7 @@ async function upsertSupplierProduct(client: AliExpressClient, aeProductId: stri
       title: product.title ?? `AliExpress product ${aeProductId}`,
       raw: raw as unknown as Prisma.InputJsonValue,
       imageUrls: product.imageUrls,
-      supplierUrl: product.productUrl,
+      supplierUrl,
       lastSyncedAt: new Date(),
       // discoverySource intentionally left alone on a re-sync -- keep
       // whichever keyword found the product first, not whichever
