@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/customer-auth/config";
 import { formatMinor } from "@/lib/money";
+import { customerOrderStatusLabel } from "@/lib/orders/status-label";
 import { prisma } from "@/lib/prisma";
 
 export const metadata: Metadata = { title: "Order history" };
@@ -36,7 +37,7 @@ export default async function OrderHistoryPage() {
             <li key={order.id} className="flex flex-col gap-2 rounded-xl border border-border p-4">
               <div className="flex items-center justify-between text-sm">
                 <span className="font-medium">{order.orderNumber}</span>
-                <span className="text-muted-foreground">{order.status.replace(/_/g, " ")}</span>
+                <span className="text-muted-foreground">{customerOrderStatusLabel(order.status)}</span>
               </div>
               <p className="text-xs text-muted-foreground">
                 {order.createdAt.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}

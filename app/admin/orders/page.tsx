@@ -11,11 +11,13 @@ import { prisma } from "@/lib/prisma";
 // time otherwise, which would show build-time-stale order data forever.
 export const dynamic = "force-dynamic";
 
-const ATTENTION_STATUSES: OrderStatus[] = ["NEEDS_MANUAL_REVIEW", "SUPPLIER_ORDER_PLACED"];
+const ATTENTION_STATUSES: OrderStatus[] = ["NEEDS_MANUAL_REVIEW", "SUPPLIER_ORDER_FAILED", "SUPPLIER_ORDER_PLACED"];
 
 const STATUS_VARIANT: Record<string, "default" | "secondary" | "destructive" | "outline"> = {
   NEEDS_MANUAL_REVIEW: "destructive",
+  SUPPLIER_ORDER_FAILED: "destructive",
   SUPPLIER_ORDER_PLACED: "secondary",
+  HOLD: "outline",
   PAID: "outline",
   SHIPPED: "secondary",
   DELIVERED: "default",

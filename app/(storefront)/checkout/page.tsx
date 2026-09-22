@@ -53,6 +53,13 @@ export default async function CheckoutPage({
           <span>Total</span>
           <span>{formatMinor(totals.subtotalMinor, totals.currency)}</span>
         </div>
+        {/* Spec: "a checkout notice that items ship from overseas with
+            realistic delivery estimates" -- see the product page's FEATURES
+            comment for why this replaced an earlier, false "ships from the
+            UK & EU" claim. */}
+        <p className="rounded-lg bg-muted px-3 py-2 text-xs text-muted-foreground">
+          Items ship directly from our overseas supplier -- please allow 2-4 weeks for delivery.
+        </p>
       </div>
     </div>
   );

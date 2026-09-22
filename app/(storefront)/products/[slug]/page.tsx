@@ -29,10 +29,18 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   };
 }
 
+// "Ships from the UK & EU" (an earlier draft of this list) was simply
+// false -- fulfilment is AliExpress dropshipping, so items ship from the
+// supplier's own location, not the UK/EU. The spec is explicit that this
+// needs an honest overseas-shipping notice with a realistic delivery
+// estimate, not a claim implying local stock. 2-4 weeks is AliExpress's
+// own typical standard-shipping range to the UK/EU, not from a live
+// freight quote for this specific product yet (Phase 1's freight-quote
+// API isn't wired into the storefront) -- revisit once it is.
 const FEATURES = [
   { icon: LeafIcon, label: "Biodegradable bamboo" },
   { icon: PackageIcon, label: "Plastic-free packaging" },
-  { icon: TruckIcon, label: "Ships from the UK & EU" },
+  { icon: TruckIcon, label: "Ships from overseas -- 2-4 week delivery" },
 ];
 
 export default async function ProductPage({ params }: ProductPageProps) {

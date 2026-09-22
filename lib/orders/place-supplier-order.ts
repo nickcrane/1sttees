@@ -1,8 +1,10 @@
 import { AliExpressClient } from "@/lib/aliexpress/client";
 import { AliExpressApiError } from "@/lib/aliexpress/errors";
+import { env } from "@/lib/env";
 import { logger } from "@/lib/logger";
 import { prisma } from "@/lib/prisma";
 import type { AddressInput } from "@/lib/orders/types";
+import { findValidationFailure } from "@/lib/orders/validate-fulfilment";
 
 const aliExpressClient = new AliExpressClient();
 
@@ -31,32 +33,79 @@ function buildLogisticsAddress(shippingAddress: AddressInput) {
   };
 }
 
-/**
- * Places the AliExpress order(s) for a PAID order. `tryToPay` stays false
- * (the default) -- the auto-pay whitelist isn't confirmed yet (see
- * docs/decisions.md), so a successfully *placed* order still needs a
- * human to pay for it on AliExpress's own site. SUPPLIER_ORDER_PLACED
- * means "placed with the supplier", not "paid to the supplier" -- the
- * admin orders view is what surfaces "placed, needs manual payment".
- *
- * Idempotent by construction: outOrderId is the order's own orderNumber
- * (AliExpress's 24h dedup window on that field), and this function
- * no-ops if the order isn't still PAID (already placed, or in some other
- * state this shouldn't touch) rather than placing it twice.
- */
-export async function placeSupplierOrder(orderId: string): Promise<void> {
-  const order = await prisma.order.findUnique({
+function loadOrder(orderId: string) {
+  return prisma.order.findUnique({
     where: { id: orderId },
     include: {
-      items: { include: { productVariant: { include: { supplierVariant: { include: { supplierProduct: true } } } } } },
+      items: {
+        include: { productVariant: { include: { product: true, supplierVariant: { include: { supplierProduct: true } } } } },
+      },
     },
   });
+}
+
+/**
+ * Places the AliExpress order(s) for an order that's past its
+ * cancellation hold. `tryToPay` stays false (the default) -- the
+ * auto-pay whitelist isn't confirmed yet (see docs/decisions.md), so a
+ * successfully *placed* order still needs a human to pay for it on
+ * AliExpress's own site. SUPPLIER_ORDER_PLACED means "placed with the
+ * supplier", not "paid to the supplier" -- the admin orders view is what
+ * surfaces "placed, needs manual payment".
+ *
+ * Idempotent and crash-safe: if supplierOrderIds is already populated,
+ * this is a no-op (a previous attempt succeeded; only the local status
+ * update might have failed to persist -- self-heals it instead of
+ * calling AliExpress again). Otherwise, HOLD *and* SUPPLIER_ORDER_QUEUED
+ * are both valid trigger states -- QUEUED covers a worker that crashed
+ * between setting that status and getting AliExpress's response, so the
+ * natural retry (BullMQ's stalled-job recovery, or a manual re-run) can
+ * still make progress instead of being silently skipped by a guard that
+ * only accepted the pre-attempt status.
+ */
+export async function placeSupplierOrder(orderId: string): Promise<void> {
+  const order = await loadOrder(orderId);
 
   if (!order) {
     throw new PlaceSupplierOrderError(`Order ${orderId} not found`, false);
   }
-  if (order.status !== "PAID") {
-    logger.info({ orderId, status: order.status }, "placeSupplierOrder: order is not PAID, skipping");
+
+  if (order.supplierOrderIds.length > 0) {
+    if (order.status !== "SUPPLIER_ORDER_PLACED") {
+      await prisma.order.update({ where: { id: order.id }, data: { status: "SUPPLIER_ORDER_PLACED" } });
+    }
+    logger.info({ orderId, supplierOrderIds: order.supplierOrderIds }, "placeSupplierOrder: already placed, skipping");
+    return;
+  }
+
+  if (order.status !== "HOLD" && order.status !== "SUPPLIER_ORDER_QUEUED") {
+    logger.info({ orderId, status: order.status }, "placeSupplierOrder: order is not HOLD/QUEUED, skipping");
+    return;
+  }
+
+  const validationFailure = findValidationFailure(
+    order.items.map((item) => ({
+      titleSnapshot: item.titleSnapshot,
+      productStatus: item.productVariant.product.status,
+      currentSupplierPriceMinor: item.productVariant.supplierVariant.supplierPriceMinor,
+      supplierCostMinorSnapshot: item.supplierCostMinorSnapshot,
+    })),
+    env.PRICE_DRIFT_TOLERANCE_PCT
+  );
+  if (validationFailure) {
+    await prisma.order.update({
+      where: { id: order.id },
+      data: { status: "NEEDS_MANUAL_REVIEW", fulfilmentError: validationFailure },
+    });
+    await prisma.auditLog.create({
+      data: {
+        actorType: "SYSTEM",
+        action: "SUPPLIER_ORDER_VALIDATION_FAILED",
+        entityType: "Order",
+        entityId: order.id,
+        after: { reason: validationFailure },
+      },
+    });
     return;
   }
 
@@ -108,8 +157,10 @@ export async function placeSupplierOrder(orderId: string): Promise<void> {
 
     await prisma.order.update({
       where: { id: order.id },
+      // Revert to HOLD (not PAID -- HOLD is the trigger status now) on a
+      // retryable failure, so the next attempt's guard above accepts it.
       data: {
-        status: retryable ? "PAID" : "NEEDS_MANUAL_REVIEW",
+        status: retryable ? "HOLD" : "NEEDS_MANUAL_REVIEW",
         fulfilmentError: message,
       },
     });

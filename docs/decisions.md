@@ -471,3 +471,98 @@ treating every other non-`PENDING_PAYMENT` status as "confirmed, thanks"
 customer as a failed payment. Re-verified live against the real order
 after the fix: correctly showed "Thank you for your order" with the
 real item/address details.
+
+## Money-safety gap closure (against docs/spec.md's explicit requirements)
+
+Reading the full original spec (`docs/spec.md`, pasted in after this
+session's context had already summarized past it) surfaced four gaps
+against its explicit money-safety requirements and acceptance criteria.
+All four fixed and verified live in one pass:
+
+- **Webhook amount verification.** Spec: "the webhook re-verifies that
+  the amount paid equals the order total before the order moves to
+  PAID." Wasn't implemented -- `applyPaymentEvent`/`capturePaypalReturn`
+  trusted whatever `capture()` returned. Added
+  `lib/payments/amount-matches.ts` (`capturedAmountMatchesOrder`, unit
+  tested) and wired it in before `markOrderPaid`; a mismatch now goes to
+  `NEEDS_MANUAL_REVIEW` with a clear `fulfilmentError` and an `AuditLog`
+  entry instead of being silently accepted.
+- **Cancellation hold window.** Spec state machine: `PAID -> HOLD
+  (cancellation window) -> SUPPLIER_ORDER_QUEUED`; acceptance criterion:
+  "produces an Order, waits out the hold window, places exactly one
+  supplier order." The old code enqueued the AliExpress placement
+  immediately on payment. Now `markOrderPaid` sets status `HOLD` (PAID is
+  a transient pass-through, never a lasting status) and calls
+  `enqueuePlaceSupplierOrder(orderId, env.ORDER_HOLD_MINUTES * 60_000)`
+  -- a genuinely delayed BullMQ job, not a fixed wait. Verified live with
+  a 3s test delay: the order stayed `HOLD` until almost exactly 3s after
+  enqueue, then the worker placed it.
+- **Price-drift / availability re-validation before placing.** Spec:
+  "re-validate: variant still available, supplier price hasn't moved
+  more than X%... On violation -> NEEDS_MANUAL_REVIEW + admin alert,
+  never auto-place." Wasn't implemented at all -- the hold window is
+  exactly the gap where this could go unnoticed. Added
+  `lib/orders/validate-fulfilment.ts` (`findValidationFailure`, unit
+  tested) checking each item's `Product.status === "PUBLISHED"` and
+  `SupplierVariant.supplierPriceMinor` drift against
+  `PRICE_DRIFT_TOLERANCE_PCT`, called before ever contacting AliExpress.
+  Verified live: bumping a supplier price 28.6% past the 10% tolerance
+  correctly blocked placement (confirmed via an order number with *no*
+  fixture file, so if the guard hadn't stopped it, it would have failed
+  with "no fixture" instead of the drift message it actually got).
+- **Crash-safe idempotent retry.** Acceptance criterion: "killing the
+  worker mid-placement and restarting produces exactly one supplier
+  order." The old guard only accepted `PAID` as the trigger status; once
+  `placeSupplierOrder` advanced an order to `SUPPLIER_ORDER_QUEUED`
+  (before calling AliExpress), a worker crash at that exact point left it
+  permanently stuck -- a retry's guard would see `SUPPLIER_ORDER_QUEUED`,
+  not the expected trigger status, and silently skip. Fixed with two
+  changes: (1) accept `HOLD` *or* `SUPPLIER_ORDER_QUEUED` as valid
+  trigger states, so a stalled-job retry can still make progress: (2) an
+  idempotent short-circuit at the top -- if `supplierOrderIds` is already
+  populated, self-heal the status and return rather than calling
+  AliExpress again (covers the case where placement actually succeeded
+  but the local status update was what failed to persist).
+  `outOrderId`/AliExpress's own 24h dedup on it is the second layer of
+  protection if this ever does call `placeOrder` twice for the same
+  order. Verified live: an order manually set to `SUPPLIER_ORDER_QUEUED`
+  (simulating exactly this crash point) was correctly picked back up and
+  completed by a fresh call, and calling `placeSupplierOrder` twice on an
+  already-placed order was a clean no-op both times.
+
+### A testing-environment lesson, not a code bug
+
+Multiple `pnpm worker` processes ended up running simultaneously several
+times this session (`pkill -f "tsx worker/index.ts"` pattern-matching
+didn't reliably kill every process spawned across a long session with
+many restarts) -- the *oldest* one, running stale pre-fix code from
+hours earlier (tsx doesn't hot-reload), silently claimed a test job and
+no-opped it against outdated logic, which looked exactly like a delay
+bug until traced to two live processes via `ps aux`. Kill worker
+processes by explicit PID when in doubt, not just by pattern, and
+double-check `ps aux | grep "worker/index.ts"` shows none left before
+trusting a fresh `pnpm worker` run's behavior.
+
+### Also fixed: misleading shipping copy
+
+The product page's feature list claimed "Ships from the UK & EU" --
+simply false for AliExpress-dropshipped fulfilment, and the opposite of
+what the spec explicitly asks for ("a checkout notice that items ship
+from overseas with realistic delivery estimates"). Replaced with an
+honest "Ships from overseas -- 2-4 week delivery" on the product page,
+plus a matching notice on the checkout page's order summary. The 2-4
+week estimate is AliExpress's typical standard-shipping range, not a
+live freight quote for this specific product -- Phase 1's freight-quote
+API isn't wired into the storefront yet; revisit once it is.
+
+### Still open from docs/spec.md (not part of this pass)
+
+Refunds + daily reconciliation, order tracking timeline UI, guest
+order lookup by email+order number, reorder button, PDF invoices,
+profile management, "sign out of all devices", GDPR export/delete, VAT
+display in cart/checkout/invoice, monthly accountant CSV export,
+returns/cancellation policy pages, cookie consent, admin
+revenue/margin dashboard and retry-fulfilment action. See the session
+summary for the full list -- these map to the spec's Phase 5
+(compliance/VAT/GDPR/SEO/analytics) and Phase 6 (hardening/observability/
+runbook/deploy) plus a few Phase 3.5/4 items not yet built.
