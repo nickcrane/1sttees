@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductVariantPicker } from "@/components/storefront/product-variant-picker";
 import { getPublishedProductBySlug } from "@/lib/catalog/products";
+import { listingSchema } from "@/lib/catalog/listing-schema";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -15,14 +16,18 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   const product = await getPublishedProductBySlug(slug);
   if (!product) return {};
 
+  const parsedListing = listingSchema.safeParse(product.listing);
+  const title = parsedListing.success ? parsedListing.data.name : product.title;
+  const description = parsedListing.success ? parsedListing.data.headline : product.description;
+
   return {
-    title: product.title,
-    description: product.description,
+    title,
+    description,
     alternates: { canonical: `/products/${product.slug}` },
     openGraph: {
       type: "website",
-      title: product.title,
-      description: product.description,
+      title,
+      description,
       url: `/products/${product.slug}`,
       images: product.images[0] ? [{ url: product.images[0] }] : undefined,
     },
@@ -55,11 +60,23 @@ export default async function ProductPage({ params }: ProductPageProps) {
     currency: variant.currency,
   }));
 
+  // A listing failing the Stage 4 validator (product.validatorErrors
+  // non-empty) still renders here rather than being hidden -- the
+  // validator gates what shows as "needs review" in the admin Catalogue
+  // view, not what's safe to show a customer; falling back to the plain
+  // title/description would be a worse customer experience than a
+  // slightly-off-spec but still coherent generated listing.
+  const parsedListing = listingSchema.safeParse(product.listing);
+  const listing = parsedListing.success ? parsedListing.data : null;
+
+  const displayTitle = listing?.name ?? product.title;
+  const displayDescription = listing?.headline ?? product.description;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: product.title,
-    description: product.description,
+    name: displayTitle,
+    description: displayDescription,
     offers: variants.map((variant) => ({
       "@type": "Offer",
       price: (variant.priceMinor / 100).toFixed(2),
@@ -82,7 +99,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           Shop
         </Link>
         <span aria-hidden>/</span>
-        <span className="text-foreground">{product.title}</span>
+        <span className="text-foreground">{displayTitle}</span>
       </nav>
 
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
@@ -90,7 +107,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           {product.images[0] && (
             <Image
               src={product.images[0]}
-              alt={product.title}
+              alt={displayTitle}
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover"
@@ -101,9 +118,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
         <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-2">
-            <h1 className="text-headline-lg font-heading text-foreground">{product.title}</h1>
-            <p className="text-body-lg text-muted-foreground">{product.description}</p>
+            <h1 className="text-headline-lg font-heading text-foreground">{displayTitle}</h1>
+            <p className="text-body-lg text-muted-foreground">{displayDescription}</p>
           </div>
+
+          {listing && (
+            <div className="flex flex-col gap-3 text-body-md text-muted-foreground">
+              <p>{listing.overview[0]}</p>
+              <p>{listing.overview[1]}</p>
+            </div>
+          )}
 
           <ul className="flex flex-col gap-2">
             {FEATURES.map((feature) => (
@@ -117,6 +141,27 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="h-px bg-border" />
 
           <ProductVariantPicker variants={variants} />
+
+          {listing && (
+            <>
+              <div className="h-px bg-border" />
+
+              <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-label-lg">
+                {Object.entries(listing.specification).map(([key, value]) => (
+                  <div key={key} className="contents">
+                    <dt className="text-muted-foreground capitalize">{key.replace(/([A-Z])/g, " $1").trim()}</dt>
+                    <dd className="text-foreground">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+
+              <p className="text-label-lg text-muted-foreground">{listing.inTheBox}</p>
+
+              {listing.sustainability && (
+                <p className="text-label-lg text-muted-foreground">{listing.sustainability}</p>
+              )}
+            </>
+          )}
         </div>
       </div>
     </div>

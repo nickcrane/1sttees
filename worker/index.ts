@@ -17,11 +17,18 @@ import {
   fulfilmentQueue,
   type PlaceSupplierOrderJobData,
 } from "../lib/queue/fulfilment-queue";
-import { CATALOG_QUEUE_NAME, CLASSIFY_PRODUCTS_JOB, DISCOVER_PRODUCTS_JOB, catalogQueue } from "../lib/queue/catalog-queue";
+import {
+  CATALOG_QUEUE_NAME,
+  CLASSIFY_PRODUCTS_JOB,
+  DISCOVER_PRODUCTS_JOB,
+  GENERATE_LISTINGS_JOB,
+  catalogQueue,
+} from "../lib/queue/catalog-queue";
 import { placeSupplierOrder } from "../lib/orders/place-supplier-order";
 import { syncTracking } from "../lib/orders/sync-tracking";
 import { runDiscovery } from "../lib/catalog/discovery";
 import { classifyDiscoveredProducts } from "../lib/catalog/classify";
+import { generateListingsForApprovedProducts } from "../lib/catalog/listing";
 import { logger } from "../lib/logger";
 
 const FOUR_HOURS_MS = 4 * 60 * 60 * 1000;
@@ -34,6 +41,11 @@ const DISCOVERY_CRON = "0 3 * * *";
 // classification picks up whatever's landed so far, and catches the rest
 // next night), just a sensible offset.
 const CLASSIFY_CRON = "30 3 * * *";
+// An hour after discovery -- listing generation only runs against
+// already-APPROVED products (an admin's own pace, not discovery's), so
+// this offset is really just "sometime after classify has had a chance
+// to run", not a hard dependency either.
+const GENERATE_LISTINGS_CRON = "0 4 * * *";
 
 async function processFulfilmentJob(job: Job): Promise<void> {
   if (job.name === PLACE_SUPPLIER_ORDER_JOB) {
@@ -55,6 +67,10 @@ async function processCatalogJob(job: Job): Promise<void> {
   }
   if (job.name === CLASSIFY_PRODUCTS_JOB) {
     await classifyDiscoveredProducts();
+    return;
+  }
+  if (job.name === GENERATE_LISTINGS_JOB) {
+    await generateListingsForApprovedProducts();
     return;
   }
   logger.warn({ jobName: job.name }, "worker: unrecognized catalog job name, skipping");
@@ -89,6 +105,7 @@ async function main(): Promise<void> {
   await fulfilmentQueue.upsertJobScheduler(SYNC_TRACKING_JOB, { every: FOUR_HOURS_MS });
   await catalogQueue.upsertJobScheduler(DISCOVER_PRODUCTS_JOB, { pattern: DISCOVERY_CRON });
   await catalogQueue.upsertJobScheduler(CLASSIFY_PRODUCTS_JOB, { pattern: CLASSIFY_CRON });
+  await catalogQueue.upsertJobScheduler(GENERATE_LISTINGS_JOB, { pattern: GENERATE_LISTINGS_CRON });
 
   logger.info("Fulfilment and catalog workers started");
 

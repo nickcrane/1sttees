@@ -56,6 +56,12 @@ export default defineConfig({
         // directly; this shell needs a real database and admin session to
         // exercise meaningfully, verified live (see docs/decisions.md).
         "lib/catalog/curation-actions.ts",
+        // Same rationale as classify.ts -- Prisma orchestration plus a
+        // call to Claude. The pure validator it calls out to
+        // (listing-validator.ts) is unit tested directly; this shell is
+        // verified live with a stubbed classifier response against the
+        // real database (see docs/decisions.md).
+        "lib/catalog/listing.ts",
         // Thin Prisma query wrappers (findMany/findFirst with a fixed
         // include/where) -- no branching logic of their own; exercised by
         // the e2e storefront-browsing flow against a real database.

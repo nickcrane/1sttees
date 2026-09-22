@@ -4,6 +4,7 @@ import { queueConnection } from "@/lib/queue/connection";
 export const CATALOG_QUEUE_NAME = "catalog";
 export const DISCOVER_PRODUCTS_JOB = "discover-products";
 export const CLASSIFY_PRODUCTS_JOB = "classify-products";
+export const GENERATE_LISTINGS_JOB = "generate-listings";
 
 export const catalogQueue = new Queue(CATALOG_QUEUE_NAME, {
   connection: queueConnection,

@@ -6,7 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatMinor } from "@/lib/money";
 import { prisma } from "@/lib/prisma";
-import { publishProductAction, retireProductAction, unpublishProductAction } from "@/lib/catalog/curation-actions";
+import { listingSchema } from "@/lib/catalog/listing-schema";
+import {
+  publishProductAction,
+  regenerateListingAction,
+  retireProductAction,
+  unpublishProductAction,
+} from "@/lib/catalog/curation-actions";
 
 export const dynamic = "force-dynamic";
 
@@ -46,8 +52,8 @@ export default async function AdminCataloguePage() {
       </nav>
 
       <p className="text-sm text-muted-foreground">
-        Approved products, live and not-yet-live. Generated listing copy and its validator (Stage 4) land here once
-        built -- for now this is title/images/price as classified.
+        Approved products, live and not-yet-live, with their generated listing copy (Stage 4) and its validator
+        status.
       </p>
 
       {products.length === 0 ? (
@@ -63,6 +69,10 @@ export default async function AdminCataloguePage() {
                 : Math.min(...prices) === Math.max(...prices)
                   ? formatMinor(Math.min(...prices))
                   : `${formatMinor(Math.min(...prices))} – ${formatMinor(Math.max(...prices))}`;
+
+            const parsedListing = listingSchema.safeParse(product.listing);
+            const listing = parsedListing.success ? parsedListing.data : null;
+            const hasValidatorErrors = product.validatorErrors.length > 0;
 
             return (
               <Card key={product.id}>
@@ -90,29 +100,67 @@ export default async function AdminCataloguePage() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="flex gap-2">
-                  {product.status === "APPROVED" && (
-                    <form action={publishProductAction}>
-                      <input type="hidden" name="productId" value={product.id} />
-                      <Button type="submit" size="sm">
-                        Publish
-                      </Button>
-                    </form>
+                <CardContent className="flex flex-col gap-3">
+                  {!product.listing && <Badge variant="outline">No listing generated yet</Badge>}
+                  {hasValidatorErrors && (
+                    <div className="flex flex-col gap-1">
+                      <Badge variant="destructive">Needs review -- failed validation</Badge>
+                      <ul className="list-inside list-disc text-xs text-muted-foreground">
+                        {product.validatorErrors.map((error) => (
+                          <li key={error}>{error}</li>
+                        ))}
+                      </ul>
+                    </div>
                   )}
-                  {product.status === "PUBLISHED" && (
-                    <form action={unpublishProductAction}>
+                  {listing && (
+                    <div className="flex flex-col gap-2 rounded-lg border border-border p-3 text-sm">
+                      <p className="font-medium">{listing.name}</p>
+                      <p className="text-muted-foreground">{listing.headline}</p>
+                      <p className="text-xs text-muted-foreground">{listing.overview[0]}</p>
+                      <p className="text-xs text-muted-foreground">{listing.overview[1]}</p>
+                      <dl className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-muted-foreground">
+                        {Object.entries(listing.specification).map(([key, value]) => (
+                          <div key={key} className="contents">
+                            <dt className="capitalize">{key.replace(/([A-Z])/g, " $1").trim()}</dt>
+                            <dd>{value}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                      <p className="text-xs text-muted-foreground">{listing.inTheBox}</p>
+                      {listing.sustainability && <p className="text-xs text-muted-foreground">{listing.sustainability}</p>}
+                    </div>
+                  )}
+
+                  <div className="flex gap-2">
+                    {product.status === "APPROVED" && (
+                      <form action={publishProductAction}>
+                        <input type="hidden" name="productId" value={product.id} />
+                        <Button type="submit" size="sm">
+                          Publish
+                        </Button>
+                      </form>
+                    )}
+                    {product.status === "PUBLISHED" && (
+                      <form action={unpublishProductAction}>
+                        <input type="hidden" name="productId" value={product.id} />
+                        <Button type="submit" variant="outline" size="sm">
+                          Unpublish
+                        </Button>
+                      </form>
+                    )}
+                    <form action={regenerateListingAction}>
                       <input type="hidden" name="productId" value={product.id} />
                       <Button type="submit" variant="outline" size="sm">
-                        Unpublish
+                        {product.listing ? "Regenerate listing" : "Generate listing"}
                       </Button>
                     </form>
-                  )}
-                  <form action={retireProductAction}>
-                    <input type="hidden" name="productId" value={product.id} />
-                    <Button type="submit" variant="destructive" size="sm">
-                      Retire
-                    </Button>
-                  </form>
+                    <form action={retireProductAction}>
+                      <input type="hidden" name="productId" value={product.id} />
+                      <Button type="submit" variant="destructive" size="sm">
+                        Retire
+                      </Button>
+                    </form>
+                  </div>
                 </CardContent>
               </Card>
             );

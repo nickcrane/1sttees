@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/admin-auth/config";
 import { PRODUCT_TRANSITIONS, isValidTransition, type CurationAction } from "./curation-transitions";
+import { regenerateListing } from "./listing";
 
 async function requireAdmin(): Promise<{ id: string }> {
   const session = await auth();
@@ -104,4 +105,32 @@ export async function retireProductAction(formData: FormData): Promise<void> {
   revalidatePath("/admin/products/catalogue");
   revalidatePath("/products");
   revalidatePath(`/products/${slug}`);
+}
+
+/** Catalogue view's "Regenerate listing" action -- doesn't change status, just re-runs Stage 4 for one product. */
+export async function regenerateListingAction(formData: FormData): Promise<void> {
+  const admin = await requireAdmin();
+  const productId = productIdFrom(formData);
+
+  const product = await prisma.product.findUnique({ where: { id: productId } });
+  if (!product) throw new Error("Product not found.");
+  if (product.status !== "APPROVED" && product.status !== "PUBLISHED") {
+    throw new Error(`Can't generate a listing for a product that's currently ${product.status}.`);
+  }
+
+  await regenerateListing(productId);
+
+  await prisma.auditLog.create({
+    data: {
+      actorType: "ADMIN",
+      actorId: admin.id,
+      action: "PRODUCT_LISTING_REGENERATED",
+      entityType: "Product",
+      entityId: productId,
+    },
+  });
+
+  revalidatePath("/admin/products/catalogue");
+  revalidatePath("/products");
+  revalidatePath(`/products/${product.slug}`);
 }
