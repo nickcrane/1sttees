@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
   // that code path. Excluding it from bundling avoids webpack ever trying
   // to statically resolve that branch.
   serverExternalPackages: ["argon2", "pino", "pino-pretty", "thread-stream", "bullmq"],
-  // Product images are imported verbatim from AliExpress (lib/catalog/import.ts),
+  // Product images are used verbatim from AliExpress supplier listings,
   // served from whichever of their many CDN subdomains the listing used.
   images: {
     remotePatterns: [{ protocol: "https", hostname: "*.alicdn.com" }],

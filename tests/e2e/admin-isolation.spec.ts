@@ -13,8 +13,8 @@ test.describe("admin route isolation", () => {
     await expect(page).toHaveURL(/\/admin\/login/);
   });
 
-  test("unauthenticated /admin/products/import redirects to the login page", async ({ page }) => {
-    await page.goto("/admin/products/import");
+  test("unauthenticated /admin/orders redirects to the login page", async ({ page }) => {
+    await page.goto("/admin/orders");
     await expect(page).toHaveURL(/\/admin\/login/);
   });
 
@@ -23,13 +23,6 @@ test.describe("admin route isolation", () => {
   }) => {
     const response = await request.post("/api/admin/pricing/preview", {
       data: { supplierPriceMinor: 699, supplierShippingMinor: 0 },
-    });
-    expect(response.status()).toBe(401);
-  });
-
-  test("unauthenticated API request to /api/admin/products/import is rejected with 401", async ({ request }) => {
-    const response = await request.post("/api/admin/products/import", {
-      data: { productIdOrUrl: "1005006543210987" },
     });
     expect(response.status()).toBe(401);
   });

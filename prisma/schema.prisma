@@ -32,16 +32,21 @@ enum SupplierProductStatus {
 // field this project hasn't mapped yet is never lost, and so schema drift
 // investigations have the actual response to look at.
 model SupplierProduct {
-  id           String                @id @default(cuid())
-  aeProductId  String                @unique
-  title        String
-  raw          Json
-  imageUrls    String[]
-  supplierUrl  String?
-  status       SupplierProductStatus @default(ACTIVE)
-  lastSyncedAt DateTime              @default(now())
-  createdAt    DateTime              @default(now())
-  updatedAt    DateTime              @updatedAt
+  id              String                @id @default(cuid())
+  aeProductId     String                @unique
+  title           String
+  raw             Json
+  imageUrls       String[]
+  supplierUrl     String?
+  status          SupplierProductStatus @default(ACTIVE)
+  // How this row was found -- a seed keyword (text.search) or "image"
+  // (image.search), per docs/product-flow.md Stage 1. Informational only
+  // (helps judge which seed keywords are actually finding products);
+  // nothing branches on it.
+  discoverySource String?
+  lastSyncedAt    DateTime              @default(now())
+  createdAt       DateTime              @default(now())
+  updatedAt       DateTime              @updatedAt
 
   variants SupplierVariant[]
 
@@ -70,10 +75,21 @@ model SupplierVariant {
 
 // -- Merchandised storefront listing (independent of supplier data) ----
 
+// The discovery-pipeline lifecycle (docs/product-flow.md), replacing the
+// old manual-import DRAFT/PUBLISHED/UNPUBLISHED set: a product arrives as
+// CANDIDATE (classifier accepted, confidence >= threshold) or REVIEW
+// (classifier rejected or low-confidence -- admin override needed, never
+// silently dropped), then an explicit admin action moves it to APPROVED/
+// REJECTED/PARKED; APPROVED products get a generated listing and can be
+// PUBLISHED; RETIRED covers both a manual retire and delisted-at-source.
 enum ProductStatus {
-  DRAFT
+  CANDIDATE
+  REVIEW
+  APPROVED
+  REJECTED
+  PARKED
   PUBLISHED
-  UNPUBLISHED
+  RETIRED
 }
 
 // Our own listing: our title, copy, images, price -- deliberately
@@ -86,9 +102,24 @@ model Product {
   title       String
   description String
   images      String[]
-  status      ProductStatus @default(DRAFT)
+  status      ProductStatus @default(CANDIDATE)
   createdAt   DateTime      @default(now())
   updatedAt   DateTime      @updatedAt
+
+  // -- Stage 2: LLM classification output (docs/product-flow.md) -- null
+  // until a classification pass has run.
+  material             String?
+  classifierConfidence Float?
+  rejectReason         String?
+
+  // -- Stage 4: LLM listing generation output -- a Zod-validated shape
+  // (lib/catalog/listing-schema.ts), stored as JSON rather than one
+  // column per field since it's regenerated wholesale, not edited
+  // field-by-field at the DB layer. validatorErrors is empty/absent once
+  // a listing passes; a non-empty array is what puts it in "needs review"
+  // in the Catalogue view.
+  listing         Json?
+  validatorErrors String[] @default([])
 
   variants   ProductVariant[]
   priceRules PriceRule[]
@@ -107,6 +138,13 @@ model ProductVariant {
   currency          String          @default("GBP")
   images            String[]
   position          Int             @default(0)
+  // Stage 2's normalized selectors -- kept as structured fields (not just
+  // parsed back out of `title`) since the storefront's Length/Colour/Pack
+  // size dropdowns and the Candidates view's filters both need to query
+  // on them directly.
+  lengthMm          Int?
+  colour            String?
+  packSize          Int?
   createdAt         DateTime        @default(now())
   updatedAt         DateTime        @updatedAt
 

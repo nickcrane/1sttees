@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { variantTitle } from "@/lib/catalog/import";
+import { variantTitle } from "@/lib/catalog/variant-title";
 
 describe("variantTitle", () => {
   it("takes the human-readable label after # for a single-group sku_attr (confirmed live shape for golf tees)", () => {

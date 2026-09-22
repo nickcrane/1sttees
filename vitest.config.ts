@@ -33,10 +33,9 @@ export default defineConfig({
         // Orchestration heavily coupled to Prisma (many sequential
         // upserts/finds) -- the pure logic it calls out to (slug.ts,
         // parse-product-id.ts, pricing/calculate.ts) is unit tested;
-        // import.ts/pricing-rules.ts themselves are verified against a
-        // real database instead of a mocked Prisma client, which wouldn't
-        // exercise real upsert/unique-constraint semantics anyway.
-        "lib/catalog/import.ts",
+        // pricing-rules.ts itself is verified against a real database
+        // instead of a mocked Prisma client, which wouldn't exercise real
+        // upsert/unique-constraint semantics anyway.
         "lib/catalog/pricing-rules.ts",
         // Thin Prisma query wrappers (findMany/findFirst with a fixed
         // include/where) -- no branching logic of their own; exercised by
@@ -49,7 +48,7 @@ export default defineConfig({
         // a request context; covered by the e2e cart flow instead.
         "lib/cart/cookie.ts",
         // Prisma orchestration (get-or-create, upsert/update/delete by
-        // cartId+id) -- same rationale as catalog/import.ts above. The pure
+        // cartId+id) -- same rationale as pricing-rules.ts above. The pure
         // logic it doesn't own (signed-cart-id.ts, calculateCartTotals) is
         // unit tested directly; the rest is verified against a real
         // database via the e2e checkout flow.
