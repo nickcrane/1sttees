@@ -37,6 +37,11 @@ export default defineConfig({
         // instead of a mocked Prisma client, which wouldn't exercise real
         // upsert/unique-constraint semantics anyway.
         "lib/catalog/pricing-rules.ts",
+        // Same rationale, and also owns retry/continue-on-error control
+        // flow across a whole discovery run that's more honestly verified
+        // by actually running it (see docs/decisions.md) than by mocking
+        // both the AliExpress client and Prisma.
+        "lib/catalog/discovery.ts",
         // Thin Prisma query wrappers (findMany/findFirst with a fixed
         // include/where) -- no branching logic of their own; exercised by
         // the e2e storefront-browsing flow against a real database.

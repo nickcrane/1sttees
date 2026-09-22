@@ -84,6 +84,14 @@ const envSchema = z.object({
   RESEND_API_KEY: z.string().optional(),
   SENTRY_DSN: z.url().optional(),
 
+  // Catalog discovery pipeline (docs/product-flow.md) -- classification
+  // (Stage 2) and listing generation (Stage 4) both call Claude for
+  // structured output. Optional for now so the app still boots without it;
+  // the pipeline's own code fails loudly if a call is attempted with none
+  // set, rather than this being a hard boot-time requirement everywhere.
+  ANTHROPIC_API_KEY: z.string().optional(),
+  ANTHROPIC_MODEL: z.string().default("claude-sonnet-5"),
+
   STORE_CURRENCY: z.string().default("GBP"),
   VAT_MODE: z.enum(["NOT_REGISTERED", "REGISTERED"]).default("NOT_REGISTERED"),
   VAT_NUMBER: z.string().optional(),
