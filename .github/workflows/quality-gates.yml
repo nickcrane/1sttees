@@ -71,9 +71,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # No `version:` input -- reads it from package.json's packageManager
+      # field instead, the single source of truth Railway's build also
+      # reads. Specifying both here and in packageManager is a hard error
+      # (pnpm/action-setup refuses to guess which one wins), confirmed live.
       - uses: pnpm/action-setup@v4
-        with:
-          version: 12
 
       - uses: actions/setup-node@v4
         with:
