@@ -69,9 +69,18 @@ Do this once per environment (`test`, then `production`):
      also means a broken migration fails the deploy loudly instead of
      shipping app code that expects a schema that isn't there.)
    - `worker`: `pnpm worker`
-   - Build command for both: `pnpm build` (Railway's default Node/pnpm
-     detection via Railpack should pick this up automatically; set it
-     explicitly if it doesn't).
+   - Build command for `web`: leave on Railpack's default (it runs
+     `pnpm build` = `next build` automatically).
+   - Build command for `worker`: override to
+     `echo "no build needed -- worker runs via tsx"` (Settings -> Build ->
+     Custom Build Command). Confirmed live: Railpack otherwise runs the
+     *full* `pnpm build` for every service that shares this repo/package.json,
+     regardless of whether that service's start command actually needs the
+     Next.js build output. `worker` runs via `tsx` directly and never reads
+     `.next/`, so the real build wastes 3-4 minutes and -- worse -- fails,
+     since `next build`'s page-data collection pulls in `lib/env.ts` and
+     demands `web`-only secrets (`CART_COOKIE_SECRET`, a valid `SENTRY_DSN`)
+     that `worker` has no reason to hold.
 5. **Environment variables.** Per service, set every var from
    [.env.example](../.env.example) that the app actually needs at runtime.
    Reference `DATABASE_URL`/`REDIS_URL` from the Postgres/Redis plugins you
@@ -93,8 +102,51 @@ Do this once per environment (`test`, then `production`):
    | Everything else in `.env.example` | same value is fine | same value is fine |
 
    `worker` needs the same AliExpress/Stripe/PayPal/pricing vars as `web` (it
-   places supplier orders and reads pricing config); it doesn't need the
-   auth secrets.
+   places supplier orders and reads pricing config). It does **not** use
+   the cart/auth secrets at runtime, but it still needs `CART_COOKIE_SECRET`
+   set to *some* valid string -- confirmed live: `lib/env.ts` validates its
+   entire schema up front on import (by design, see the comment in that
+   file), and `worker`'s own entrypoint pulls it in transitively via
+   `lib/queue/connection.ts`, so a missing `CART_COOKIE_SECRET` crash-loops
+   the worker container even though it never sets a cart cookie. Give
+   `worker` its own generated value (`openssl rand -base64 32`), same as
+   the other auth secrets -- don't reuse `web`'s.
+
+   **Any `CHANGE_ME` placeholder in a `z.url().optional()` field
+   (`SENTRY_DSN`, `ALIEXPRESS_CALLBACK_URL`) breaks the build**, not just
+   at runtime -- confirmed live, twice. Zod's `.optional()` only skips
+   validation for a truly *absent* value; `stripBlankValues()` in
+   `lib/env.ts` only strips genuinely empty strings, so a present-but-not-
+   a-URL placeholder like `CHANGE_ME` still fails `.url()` and fails the
+   whole `next build` (these fields are read during Next.js's static
+   page-data collection for several routes). Until you have the real
+   value, use a syntactically valid placeholder instead, e.g.
+   `https://sentry.invalid/not-configured-yet` -- not the literal string
+   `CHANGE_ME`.
+
+   **`package.json` pins `"packageManager": "pnpm@<version>"`**, and this
+   is load-bearing for Railway specifically, not just a nicety -- confirmed
+   live: without it, Railpack guessed pnpm 9.15.9 against a lockfile
+   written by pnpm 12, and `pnpm install --frozen-lockfile` failed with
+   `packages field missing or empty`. `packageManager` is the single
+   source of truth both CI and Railway read the version from; don't also
+   pass a `version:` input to `pnpm/action-setup@v4` in the workflows --
+   specifying it in both places is a hard error (the action refuses to
+   guess which one wins).
+
+   **Next.js prerenders metadata routes (`sitemap.ts`, and any page
+   without `generateStaticParams`) at build time by default** -- fine on
+   GitHub Actions, where `quality-gates.yml`'s Postgres/Redis service
+   containers give the build a real database to query, but Railway's
+   build runs in an isolated builder container with no access to the
+   private network. Confirmed live: `app/sitemap.ts`'s build-time
+   `prisma.product.findMany()` failed every Railway build with `Can't
+   reach database server at postgres.railway.internal:5432`. Fixed with
+   `export const dynamic = "force-dynamic"` on that route, which also
+   happens to be more correct than a build-time snapshot for a catalog
+   that changes over time. Any future route that queries the DB and isn't
+   already opted into dynamic rendering (via auth/cookies/etc.) needs the
+   same treatment.
 
 ## One-time GitHub setup
 
@@ -133,12 +185,56 @@ dashboard -> the service -> Deployments -> pick a previous successful
 deploy -> Redeploy. Equivalent from this pipeline: re-run "Deploy to live"
 with the `ref` of the last-known-good commit/tag.
 
-## Before relying on this for real
+## Custom domains
 
-The exact `railway` CLI flags above (`--service`, `--environment`,
-`--detach`, the `RAILWAY_TOKEN` env var) come from Railway's current CLI
-docs, cross-checked but not run against a live project by this session --
-CLI syntax has changed across Railway versions before. The first time you
-run `pnpm dlx @railway/cli up --help` (or let the workflow run and watch it
-fail if something's off), confirm the flags still match; update the two
-`railway up` lines in `deploy-test.yml`/`deploy-live.yml` if not.
+Registrar is GoDaddy (`1sttees.golf`). Both domains are on the `web`
+service's Custom Domain setting (Settings -> Networking), one per
+environment:
+
+- `test`: `test.1sttees.golf` -- ordinary subdomain, works as a plain
+  CNAME (+ Railway's verification TXT record).
+- `production`: **not** the bare `1sttees.golf` apex -- see below.
+
+**GoDaddy (like most registrars) won't allow a `CNAME` at the root/apex
+domain**, confirmed live (`1sttees.golf` -> "Invalid name added" in
+GoDaddy's DNS UI). This is a DNS-standard restriction (CNAME can't
+coexist with the NS/SOA records that must exist at the apex), not a
+GoDaddy bug, so it'll bite on any registrar without ALIAS/ANAME/CNAME-
+flattening support. Worked around by pointing `www.1sttees.golf` at
+Railway instead (an ordinary subdomain, no restriction) and using
+GoDaddy's **Domain Forwarding** feature to 301-redirect the bare
+`1sttees.golf` -> `https://www.1sttees.golf` (plain redirect, not
+"masked" -- masked forwarding keeps the apex in the address bar behind
+an iframe, which breaks TLS and looks broken to browsers). The
+alternative -- moving DNS hosting to Cloudflare for its apex CNAME-
+flattening -- was considered and declined for now: it adds a vendor and
+a slower nameserver-level propagation for a one-domain project at this
+scale; revisit if a second domain or stricter apex requirements show up.
+
+Per domain, Railway's "Add Custom Domain" flow generates two DNS
+records to add at the registrar: a `CNAME` (the domain/subdomain name
+-> a Railway-assigned `*.up.railway.app` target) and a `TXT` record
+(`_railway-verify[.subdomain]` -> a verification token) that Railway
+polls for before issuing a TLS certificate and marking the domain
+active. Verification isn't instant even once DNS has propagated --
+Railway checks on its own interval (took several minutes in practice) --
+so don't assume a domain is broken just because it still shows "Waiting
+for DNS update" right after adding the records.
+
+## Verified live
+
+Confirmed end-to-end against this actual pipeline, not just that the
+YAML validates: a real push to `main` running the full CI suite,
+auto-deploying to `test`, and both `web` and `worker` reaching a
+genuinely healthy running state (checked Railway's own Deploy Logs, not
+just GitHub Actions' "success" -- that only reflects that `railway up`
+was invoked, not that Railway's build/deploy actually succeeded). Also
+ran a full "Deploy to live" promotion through the required-reviewer
+approval gate to `production`, with the same healthy-service
+verification, plus both custom domains resolving with valid
+Railway-issued TLS certificates and the apex redirect working. The
+`railway` CLI flags in the workflows (`--service`, `--environment`,
+`--detach`, `RAILWAY_TOKEN`) are confirmed correct as of this pipeline's
+first real runs -- update the two `railway up` lines in
+`deploy-test.yml`/`deploy-live.yml` if a future Railway CLI version
+changes them.

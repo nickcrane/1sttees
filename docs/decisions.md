@@ -689,10 +689,78 @@ execution, so this stays correct even if `web` is ever scaled to
 multiple replicas, and a broken migration fails the deploy loudly
 instead of shipping app code against a schema that isn't there.
 
-Not yet done: the actual Railway dashboard setup (environments,
-services, plugins, env vars) and the GitHub secrets/Environments this
-depends on are all manual, one-time steps only the account owner can
-perform -- see `docs/deployment.md`'s checklist. The exact `railway`
-CLI flags used in the workflows are cross-checked against current docs
-but not yet run against a live project; verify them the first time this
-actually runs.
+### Real bugs found running this against a live Railway build, not just validating the YAML
+
+Six separate, genuinely invisible-until-run bugs surfaced by actually
+watching Railway's own build/deploy logs to completion (not trusting
+GitHub Actions' "success", which only reflects that `railway up` was
+invoked) -- full detail and fixes in `docs/deployment.md`:
+
+1. **pnpm version drift.** No `packageManager` field in `package.json`
+   meant Railpack guessed pnpm 9.15.9 against a lockfile written by pnpm
+   12, and `pnpm install --frozen-lockfile` failed outright. Fixed by
+   pinning `"packageManager": "pnpm@12.4.2"` -- now the single source of
+   truth both CI and Railway read from.
+2. **`pnpm/action-setup@v4` errors if given a version *and* a
+   `packageManager` field** -- the action refuses to guess which one
+   wins. Removed the redundant `version:` input from the workflow once
+   `packageManager` existed.
+3. **Railpack runs the full `pnpm build` (`next build`) for every
+   service sharing a repo, including `worker`**, which runs via `tsx`
+   and never touches `.next/`. This wasted minutes and then failed
+   outright, since `next build`'s page-data collection pulls in
+   `lib/env.ts` and demands `web`-only secrets `worker` has no reason to
+   hold. Fixed with a Custom Build Command override on `worker`
+   (`echo "no build needed -- worker runs via tsx"`), skipping the
+   Next.js build for that service entirely.
+4. **`lib/env.ts` validates its entire schema up front on import** (by
+   design -- see that file's own comment), and `worker`'s entrypoint
+   pulls it in transitively via `lib/queue/connection.ts`. So `worker`
+   crash-looped at *runtime* (not build time) on a missing
+   `CART_COOKIE_SECRET`, even though it never sets a cart cookie. Fixed
+   by giving `worker` its own generated value for that var too, same
+   pattern as the auth secrets it genuinely doesn't use.
+5. **A `CHANGE_ME` placeholder in a `z.url().optional()` field
+   (`SENTRY_DSN`, `ALIEXPRESS_CALLBACK_URL`) still fails validation and
+   breaks the build** -- confirmed live, twice, independently. Zod's
+   `.optional()` only skips a truly *absent* value; `stripBlankValues()`
+   only strips genuinely empty strings, so a present-but-malformed
+   placeholder still fails `.url()`. Fixed by using a syntactically
+   valid placeholder URL instead of the literal string `CHANGE_ME` for
+   any optional-but-URL-typed field until the real value is set.
+6. **Next.js prerenders metadata routes like `sitemap.ts` at build
+   time by default**, which works on GitHub Actions (service containers
+   give the build a real database) but not on Railway, whose build runs
+   in an isolated container with no private-network access to Postgres.
+   Fixed with `export const dynamic = "force-dynamic"` on
+   `app/sitemap.ts` -- also more correct than a build-time snapshot for
+   a catalog that changes over time.
+
+### Custom domains (2026-09-23)
+
+`1sttees.golf` (GoDaddy) for `production`, `test.1sttees.golf` for
+`test`, both as Custom Domains on the `web` service. **GoDaddy won't
+allow a `CNAME` at the apex/root domain** (confirmed live -- a DNS-
+standard restriction, not a GoDaddy-specific limitation, since CNAME
+can't coexist with the NS/SOA records required at the apex). Worked
+around with `www.1sttees.golf` -> Railway (an ordinary, unrestricted
+subdomain) plus GoDaddy's Domain Forwarding redirecting the bare
+`1sttees.golf` -> `https://www.1sttees.golf` (a plain 301, not masked
+forwarding, which breaks TLS behind an iframe). Considered moving DNS
+to Cloudflare for its apex CNAME-flattening support instead; declined
+for now as unnecessary extra vendor/complexity for a single domain at
+this scale. Full record-by-record detail in `docs/deployment.md`.
+
+### Verified live
+
+The full pipeline, not just the YAML: a real push to `main` through CI,
+auto-deploy to `test`, both `web` and `worker` reaching a genuinely
+healthy running state (checked via Railway's own Deploy Logs); a full
+"Deploy to live" promotion through the required-reviewer approval gate
+to `production` with the same verification; both custom domains
+resolving with valid Railway-issued TLS certificates and the apex
+redirect working; and `ANTHROPIC_API_KEY` live-tested end-to-end
+through the actual Stage 2 classification schema (`lib/catalog/
+classify.ts` -> `lib/llm/client.ts`) against the real Anthropic API.
+The `railway` CLI flags used in the workflows are confirmed correct as
+of these runs.
