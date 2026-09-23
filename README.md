@@ -36,6 +36,13 @@ All four (plus e2e) run in CI (`.github/workflows/ci.yml`) against Postgres
 and Redis service containers, and are expected to pass before any phase of
 the build is considered done.
 
+## Deployment
+
+Railway (`test` + `production` environments) via GitHub Actions -- push to
+`main` auto-deploys to `test`; going live is always a manual, re-validated
+`workflow_dispatch`. Full setup and rationale in
+[docs/deployment.md](docs/deployment.md).
+
 ## Project layout
 
 ```

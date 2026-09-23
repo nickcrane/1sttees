@@ -1,0 +1,38 @@
+name: Deploy to test
+
+# Triggered by CI finishing on main, not by the push itself -- this deploys
+# exactly the commit CI just validated (github.event.workflow_run.head_sha)
+# without running the whole quality-gates suite a second time in parallel
+# for every push. See deploy-live.yml for why live re-validates instead of
+# relying on this.
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  deploy:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment: test
+    concurrency:
+      group: deploy-test
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
+
+      - name: Deploy web service
+        run: railway up --service web --environment test --detach
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_TEST }}
+
+      - name: Deploy worker service
+        run: railway up --service worker --environment test --detach
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_TEST }}

@@ -566,3 +566,133 @@ revenue/margin dashboard and retry-fulfilment action. See the session
 summary for the full list -- these map to the spec's Phase 5
 (compliance/VAT/GDPR/SEO/analytics) and Phase 6 (hardening/observability/
 runbook/deploy) plus a few Phase 3.5/4 items not yet built.
+
+## Catalog discovery pipeline (2026-09-22), replacing manual product import
+
+Full plan in `docs/product-flow.md`. Four stages, each its own nightly
+BullMQ job in `worker/index.ts`, `SupplierProduct`/`SupplierVariant`
+(raw supplier data) kept deliberately separate from `Product`/
+`ProductVariant` (our own merchandised listing) throughout:
+
+1. **Discovery** (`lib/catalog/discovery.ts`, 03:00) -- searches a seed
+   keyword list via `aliexpress.ds.text.search`, dedupes product ids,
+   upserts each into `SupplierProduct`/`SupplierVariant`. A bad keyword
+   or product is logged and skipped, not fatal to the run.
+2. **Classification** (`lib/catalog/classify.ts`, 03:30) -- Claude
+   classifies material/suitability and normalises each SKU onto
+   length_mm/colour/pack_size, via `lib/llm/client.ts`'s
+   `callStructured()` (Anthropic tool-use forced to a Zod schema,
+   re-validated on this side rather than trusted). Routes to
+   `CANDIDATE` (suitable, confidence >= 0.8) or `REVIEW` (everything
+   else, never silently dropped) -- pure routing rule in
+   `lib/catalog/classify-decision.ts`, unit tested.
+3. **Admin curation** (`app/admin/products/{candidates,review,catalogue}`)
+   -- Approve/Reject/Park, Send-to-Candidates, Publish/Unpublish/Retire.
+   `lib/catalog/curation-transitions.ts` is a pure, unit-tested legality
+   table for every status move; an illegal one throws rather than
+   silently applying. Every mutation writes an `AuditLog` row.
+4. **Listing generation** (`lib/catalog/listing.ts`, 04:00) -- Claude
+   writes the fixed editorial structure (name/headline/overview/
+   specification/inTheBox/sustainability) for every `APPROVED`/
+   `PUBLISHED` product missing one; `lib/catalog/listing-validator.ts`
+   hard-fails word counts, the Name pattern, banned words/exclamation/
+   emoji/URLs, putting a failure in "needs review" in the Catalogue view
+   rather than blocking anything. Regenerating an already-valid listing
+   is only ever a deliberate admin action, never automatic.
+
+Two decisions from the client up front: **Claude/Anthropic** for both LLM
+calls (not another provider), and **no image pipeline** -- Stage 4 has no
+vision-based scoring/cropping/background-removal step; supplier images
+are used as-is. This also replaces `/admin/products/import` (the old
+manual single-URL import flow) entirely rather than keeping it alongside
+the new pipeline.
+
+Two real bugs found live, both while stubbing the Anthropic HTTP
+endpoint (there's no fixture mode for LLM calls the way
+`ALIEXPRESS_MODE=fixture` covers the AliExpress client) and re-running
+against the real local database:
+
+- Looking up "the Product for this SupplierProduct" by joining through
+  `ProductVariant` silently broke for a product correctly routed to
+  `REVIEW` with zero matched variants (it has no `ProductVariant` rows
+  at all) -- every re-classification pass created a **duplicate**
+  `Product` for it instead of updating the existing row. Fixed with a
+  direct `Product.supplierProductId` unique back-reference instead of
+  the indirect join, migration backfills it for anything created before
+  the column existed.
+- `aliexpress.ds.product.get`'s response has no URL field at all
+  (`normalizeProductDetail` always returns `productUrl: null` -- only a
+  *search* result's `itemUrl` ever populates it), so
+  `SupplierProduct.supplierUrl` would never actually have been set.
+  Fixed to build the product page URL from the id directly
+  (`https://www.aliexpress.com/item/<id>.html`, a fixed known pattern).
+
+Not yet built: the Sync log admin view (job run history, price/stock
+drift -- `SyncRun` exists in the schema, nothing writes to it yet).
+
+## CI/CD: Railway + GitHub Actions (2026-09-23)
+
+Two Railway environments (`test`, `production`), each with its own
+Postgres/Redis and `web`/`worker` services; GitHub Actions is the sole
+deploy trigger (Railway services are *not* connected to the repo
+directly) so the pipeline logic lives in one place, version-controlled,
+rather than split across two dashboards. Full setup runbook in
+`docs/deployment.md`.
+
+**Railway over GCP**, re-confirming the Phase 0 hosting decision above
+rather than assuming it still held: the deciding factor is the same one
+that drove that original choice -- the BullMQ worker needs a genuinely
+persistent process holding open Redis connections, which fights Cloud
+Run's scale-to-zero-by-default model, whereas it's Railway's native
+shape. GCP's Cloud SQL + Memorystore also carry real fixed monthly
+floors regardless of traffic (Memorystore's cheapest tier alone is
+~$35/mo), and running a second cloud for one related-but-separate
+project (`aliexpress-dashboard`, already on Railway in production) adds
+ongoing operational surface for a single technical operator with no
+corresponding benefit at this scale.
+
+**Push to `main` auto-deploys to `test`; going live is always a manual
+`workflow_dispatch`** (`deploy-live.yml`), gated by re-running the full
+quality-gate suite against the exact ref being promoted (not trusting
+whatever already ran on `main`) and, once configured, a required-reviewer
+approval on GitHub's `live` Environment. Matches the project's existing
+money-safety posture: nothing reaches real Stripe/PayPal/AliExpress
+credentials without a deliberate, auditable human action.
+
+`deploy-test.yml` triggers on CI's own completion (`workflow_run`), not
+on the push itself, deploying the exact SHA CI just validated --
+avoids running the full quality-gate suite twice in parallel on every
+push to `main`. `deploy-live.yml` re-runs it fully instead, since a
+promoted ref might not be the tip of `main` and re-validating a rare,
+deliberate production deploy is cheap insurance.
+
+**`railway.json`/`railway.toml` (Config as Code) is deprecated**,
+reads stop on 2026-12-01 in favour of a newer Infrastructure-as-Code
+format (`.railway/railway.ts`) -- confirmed via Railway's own docs while
+researching this. Given the imminent cutoff, this repo deliberately does
+not commit a `railway.json`; service build/start commands and env vars
+are set directly in the Railway dashboard instead (documented step by
+step in `docs/deployment.md`), which stays correct regardless of which
+config-as-code format is current. Worth migrating to the IaC format once
+it's settled, to get this fully into version control.
+
+**Railway Project Tokens are scoped to a single project+environment**,
+confirmed via docs -- `RAILWAY_TOKEN_TEST` genuinely cannot deploy to
+`production` even if a workflow were misconfigured, which is why each
+deploy job authenticates with a separate, narrowly-scoped token rather
+than one broad account-level token.
+
+Database migrations run via the `web` service's own start command
+(`pnpm exec prisma migrate deploy && pnpm start`) rather than a separate
+CI/CLI step -- `migrate deploy` is designed to be safe under concurrent
+execution, so this stays correct even if `web` is ever scaled to
+multiple replicas, and a broken migration fails the deploy loudly
+instead of shipping app code against a schema that isn't there.
+
+Not yet done: the actual Railway dashboard setup (environments,
+services, plugins, env vars) and the GitHub secrets/Environments this
+depends on are all manual, one-time steps only the account owner can
+perform -- see `docs/deployment.md`'s checklist. The exact `railway`
+CLI flags used in the workflows are cross-checked against current docs
+but not yet run against a live project; verify them the first time this
+actually runs.

@@ -1,0 +1,54 @@
+name: Deploy to live
+
+# Deliberately manual -- the one place code reaches real customers and
+# real payment/supplier credentials. workflow_dispatch means a human has
+# to actively choose to run this from the Actions tab; the `environment:
+# live` job below additionally requires a GitHub Environment approval if
+# one is configured (see docs/deployment.md -- set this up once in repo
+# Settings > Environments, it can't be expressed in this file).
+#
+# Re-runs the full quality-gates suite against the exact ref being
+# promoted rather than trusting an earlier CI run on main -- deploy-test's
+# workflow_run trigger can skip that re-check because it's deploying the
+# exact SHA CI *just* validated; here the ref could be an older commit or
+# one that was never the tip of main when CI last ran, so re-validating is
+# the only way to be sure what's being put in front of real customers.
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Git ref (branch, tag, or SHA) to deploy to live"
+        required: true
+        default: "main"
+
+jobs:
+  quality-gates:
+    uses: ./.github/workflows/quality-gates.yml
+    with:
+      ref: ${{ inputs.ref }}
+    secrets: inherit
+
+  deploy:
+    needs: quality-gates
+    runs-on: ubuntu-latest
+    environment: live
+    concurrency:
+      group: deploy-live
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
+
+      - name: Deploy web service
+        run: railway up --service web --environment production --detach
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_LIVE }}
+
+      - name: Deploy worker service
+        run: railway up --service worker --environment production --detach
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN_LIVE }}

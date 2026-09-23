@@ -5,77 +5,7 @@ on:
     branches: [main]
   pull_request:
 
-env:
-  DATABASE_URL: postgresql://1stees:1stees@localhost:5432/1stees
-  REDIS_URL: redis://localhost:6379
-
 jobs:
   quality-gates:
-    runs-on: ubuntu-latest
-
-    services:
-      postgres:
-        image: postgres:16-alpine
-        env:
-          POSTGRES_USER: 1stees
-          POSTGRES_PASSWORD: 1stees
-          POSTGRES_DB: 1stees
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U 1stees"
-          --health-interval 5s
-          --health-timeout 5s
-          --health-retries 10
-      redis:
-        image: redis:7-alpine
-        ports:
-          - 6379:6379
-        options: >-
-          --health-cmd "redis-cli ping"
-          --health-interval 5s
-          --health-timeout 5s
-          --health-retries 10
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Scan for secrets
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 12
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Prisma migrate
-        run: pnpm exec prisma migrate deploy
-
-      - name: Typecheck
-        run: pnpm typecheck
-
-      - name: Lint
-        run: pnpm lint
-
-      - name: Unit tests
-        run: pnpm exec vitest run --coverage
-
-      - name: Build
-        run: pnpm build
-
-      - name: Install Playwright browsers
-        run: pnpm exec playwright install --with-deps chromium
-
-      - name: E2E tests
-        run: pnpm test:e2e
-        env:
-          CI: true
+    uses: ./.github/workflows/quality-gates.yml
+    secrets: inherit

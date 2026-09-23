@@ -1,0 +1,93 @@
+name: Quality gates
+
+# Reusable workflow (workflow_call) -- the one place "passing" is defined
+# for this project. ci.yml calls it on every push/PR; deploy-test.yml and
+# deploy-live.yml call it again against the exact ref they're about to
+# deploy, rather than trusting that whatever already ran on `main` still
+# reflects that commit (belt-and-braces for a money-handling system: a
+# deploy should never rely on a check that ran against a different SHA).
+on:
+  workflow_call:
+    inputs:
+      ref:
+        description: "Git ref (branch, tag, or SHA) to check out and test"
+        required: false
+        type: string
+        default: ${{ github.sha }}
+
+env:
+  DATABASE_URL: postgresql://1stees:1stees@localhost:5432/1stees
+  REDIS_URL: redis://localhost:6379
+
+jobs:
+  quality-gates:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: 1stees
+          POSTGRES_PASSWORD: 1stees
+          POSTGRES_DB: 1stees
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U 1stees"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Scan for secrets
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Prisma migrate
+        run: pnpm exec prisma migrate deploy
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Unit tests
+        run: pnpm exec vitest run --coverage
+
+      - name: Build
+        run: pnpm build
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: E2E tests
+        run: pnpm test:e2e
+        env:
+          CI: true
