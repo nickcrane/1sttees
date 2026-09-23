@@ -51,6 +51,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ inputs.ref }}
+          # gitleaks-action diffs across the pushed commit range (e.g.
+          # `<before>^..<after>`) -- the default shallow, single-commit
+          # checkout has no parent history for it to resolve, which fails
+          # with "ambiguous argument ... unknown revision" on every
+          # multi-commit push. Confirmed live: this broke CI on the last
+          # two pushes to main, unnoticed until now. Full history needed.
+          fetch-depth: 0
 
       - name: Scan for secrets
         uses: gitleaks/gitleaks-action@v2
