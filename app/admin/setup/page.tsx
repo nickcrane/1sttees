@@ -25,38 +25,50 @@ export default function AdminSetupPage() {
     e.preventDefault();
     setSubmitting(true);
     setError(null);
-    const res = await fetch("/api/admin/setup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-    const body = await res.json();
-    setSubmitting(false);
-    if (!res.ok) {
-      setError(body.error ?? "Setup failed");
-      return;
+    try {
+      const res = await fetch("/api/admin/setup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      // A server-side crash (e.g. a misconfigured env var) returns Next's
+      // default HTML error page, not JSON -- res.json() throws on that.
+      // Confirmed live: without the try/catch below, that exception
+      // skipped setSubmitting(false) entirely, leaving the button stuck
+      // on "Starting..." forever with no error shown -- indistinguishable
+      // from a genuine hang to whoever's looking at it.
+      const body = await res.json().catch(() => ({ error: "Setup failed unexpectedly -- check server logs." }));
+      if (!res.ok) {
+        setError(body.error ?? "Setup failed");
+        return;
+      }
+      setQrCodeDataUrl(body.qrCodeDataUrl);
+      setSecretBase32(body.secretBase32);
+      setStep("totp");
+    } finally {
+      setSubmitting(false);
     }
-    setQrCodeDataUrl(body.qrCodeDataUrl);
-    setSecretBase32(body.secretBase32);
-    setStep("totp");
   }
 
   async function handleConfirmTotp(e: React.FormEvent) {
     e.preventDefault();
     setSubmitting(true);
     setError(null);
-    const res = await fetch("/api/admin/setup/confirm", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, code }),
-    });
-    const body = await res.json();
-    setSubmitting(false);
-    if (!res.ok) {
-      setError(body.error ?? "Confirmation failed");
-      return;
+    try {
+      const res = await fetch("/api/admin/setup/confirm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, code }),
+      });
+      const body = await res.json().catch(() => ({ error: "Confirmation failed unexpectedly -- check server logs." }));
+      if (!res.ok) {
+        setError(body.error ?? "Confirmation failed");
+        return;
+      }
+      router.push("/admin/login");
+    } finally {
+      setSubmitting(false);
     }
-    router.push("/admin/login");
   }
 
   return (

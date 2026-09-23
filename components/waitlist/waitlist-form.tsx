@@ -15,18 +15,23 @@ export function WaitlistForm() {
     e.preventDefault();
     setSubmitting(true);
     setError(null);
-    const res = await fetch("/api/waitlist", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
-    setSubmitting(false);
-    if (!res.ok) {
-      const body = await res.json().catch(() => ({}));
-      setError(body.error ?? "Something went wrong -- try again.");
-      return;
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        setError(body.error ?? "Something went wrong -- try again.");
+        return;
+      }
+      setDone(true);
+    } catch {
+      setError("Something went wrong -- try again.");
+    } finally {
+      setSubmitting(false);
     }
-    setDone(true);
   }
 
   if (done) {
