@@ -497,3 +497,13 @@ model WebhookEvent {
 
   @@unique([provider, providerEventId])
 }
+
+// Coming Soon page email capture (spec: pre-launch waitlist while
+// production is gated behind COMING_SOON_MODE -- see middleware.ts).
+// Upserted on signup so a repeat submission of the same email is a
+// silent no-op rather than a unique-constraint error.
+model WaitlistSignup {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}

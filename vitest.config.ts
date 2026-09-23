@@ -118,6 +118,13 @@ export default defineConfig({
         // a real queue.
         "lib/queue/connection.ts",
         "lib/queue/fulfilment-queue.ts",
+        // Prisma upsert + Resend send, same rationale as lib/cart/cart.ts
+        // above -- verified against a real database (Resend call guarded
+        // by RESEND_API_KEY being unset in dev/test, see the module's own
+        // comment). The pure, testable piece (the rate-limit check) is
+        // exported and unit tested directly, same pattern as
+        // lib/admin-auth/rate-limit.ts.
+        "lib/waitlist/signup.ts",
       ],
       thresholds: {
         lines: 80,

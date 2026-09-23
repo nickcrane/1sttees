@@ -84,6 +84,15 @@ const envSchema = z.object({
   RESEND_API_KEY: z.string().optional(),
   SENTRY_DSN: z.url().optional(),
 
+  // Gates the whole public storefront behind /coming-soon via
+  // middleware.ts (admin stays reachable) -- read directly off
+  // process.env there instead of this singleton, since middleware.ts
+  // runs on the Edge runtime and this module isn't Edge-safe (see its
+  // own dotenv comment above). Kept here too so app code (e.g. the
+  // coming-soon page itself, if it ever needs to know) has one place to
+  // read it from consistently.
+  COMING_SOON_MODE: z.enum(["true", "false"]).default("false"),
+
   // Catalog discovery pipeline (docs/product-flow.md) -- classification
   // (Stage 2) and listing generation (Stage 4) both call Claude for
   // structured output. Optional for now so the app still boots without it;
