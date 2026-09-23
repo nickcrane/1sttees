@@ -1,9 +1,19 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ComingSoonContent } from "@/components/waitlist/coming-soon-content";
 import { leadPriceMinor, listPublishedProducts } from "@/lib/catalog/products";
 import { formatMinor } from "@/lib/money";
+import { env } from "@/lib/env";
 
 export default async function Home() {
+  // The home route itself, not a redirect target -- see this page's own
+  // note in ComingSoonContent's comment, and middleware.ts, which exempts
+  // "/" from its redirect-everything-away behaviour specifically so this
+  // renders here directly instead of bouncing through an extra hop.
+  if (env.COMING_SOON_MODE === "true") {
+    return <ComingSoonContent />;
+  }
+
   const products = await listPublishedProducts();
   const featured = products[0];
   const featuredPriceMinor = featured ? leadPriceMinor(featured) : null;

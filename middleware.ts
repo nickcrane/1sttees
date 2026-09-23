@@ -15,10 +15,17 @@ const { auth } = NextAuth(edgeAuthConfig);
 const PUBLIC_ADMIN_PATHS = new Set(["/admin/login", "/admin/setup", "/api/admin/setup", "/api/admin/setup/confirm"]);
 
 // Stays reachable even when COMING_SOON_MODE gates the rest of the
-// public site -- the holding page's own infrastructure (page + its API
-// route) plus the two files crawlers/webhooks poll directly regardless
-// of whether the storefront itself is live.
-const COMING_SOON_EXEMPT_PATHS = new Set(["/coming-soon", "/api/waitlist", "/robots.txt", "/sitemap.xml"]);
+// public site. "/" is exempt because it *is* the destination everything
+// else redirects to -- app/(storefront)/page.tsx renders the holding
+// page there directly rather than this middleware bouncing visitors
+// through a separate /coming-soon URL, so the home page itself never
+// shows a redirect in the address bar. /coming-soon stays reachable too,
+// as a stable, always-on preview URL independent of the flag (handy for
+// linking pre-launch, and lets tests/e2e/coming-soon.spec.ts exercise
+// the page without needing COMING_SOON_MODE set). /api/waitlist,
+// /robots.txt and /sitemap.xml are the remaining infrastructure crawlers
+// and the form itself need regardless of whether the storefront is live.
+const COMING_SOON_EXEMPT_PATHS = new Set(["/", "/coming-soon", "/api/waitlist", "/robots.txt", "/sitemap.xml"]);
 
 export default auth((req) => {
   const { pathname } = req.nextUrl;
@@ -42,7 +49,7 @@ export default auth((req) => {
   // (same reason edge-config.ts exists as a separate NextAuth config).
   const comingSoonMode = process.env.COMING_SOON_MODE === "true";
   if (comingSoonMode && !pathname.startsWith("/api/webhooks") && !COMING_SOON_EXEMPT_PATHS.has(pathname)) {
-    return NextResponse.redirect(new URL("/coming-soon", req.nextUrl.origin));
+    return NextResponse.redirect(new URL("/", req.nextUrl.origin));
   }
 });
 
