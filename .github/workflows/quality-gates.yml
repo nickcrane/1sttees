@@ -18,6 +18,13 @@ on:
 env:
   DATABASE_URL: postgresql://1stees:1stees@localhost:5432/1stees
   REDIS_URL: redis://localhost:6379
+  # lib/env.ts requires this (Phase 3 makes the cart a hard dependency --
+  # see its own comment). `pnpm build` imports lib/env.ts transitively via
+  # the App Router's route tree, so it fails validation without this even
+  # though the build step never actually sets a cart cookie. Same fake,
+  # test-only value vitest.config.ts already uses for the unit test run,
+  # reused here for consistency rather than inventing a second one.
+  CART_COOKIE_SECRET: test-only-cart-cookie-secret-not-a-real-value-x # gitleaks:allow -- fake, test-only, not a real secret
 
 jobs:
   quality-gates:
