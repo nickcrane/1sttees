@@ -178,6 +178,33 @@ Do this once per environment (`test`, then `production`):
   -- see the workflow's own comment for why), then waits for your approval
   if the `live` Environment reviewer is configured, then deploys.
 
+## Editing an env var after the fact -- and why that alone isn't a deploy
+
+Railway's dashboard has its own "Deploy" button that appears after you edit
+a variable directly there (Project Settings -> Shared Variables, or a
+service's own Variables tab). **That button does not pull fresh code from
+GitHub -- it only rebuilds whatever code was already uploaded by the last
+real `railway up`, with the new variable values layered in.** Confirmed
+live: several env-var-only fixes (`TOKEN_ENCRYPTION_KEY`,
+`ALIEXPRESS_CALLBACK_URL`) were each "deployed" this way on production, and
+each one silently kept redeploying a commit from *before* the Coming Soon
+feature existed -- `COMING_SOON_MODE=true` had zero visible effect for
+hours because the code checking that variable simply wasn't in the running
+build (`/coming-soon` 404'd on production the whole time). Nothing was
+wrong with the pipeline itself -- `deploy-test.yml`/`deploy-live.yml`
+always upload the current `ref`'s code every time *they* run; the gap is
+specifically Railway's own dashboard-triggered redeploy path, which is a
+config-only refresh, not a code one.
+
+**Rule of thumb:** editing a variable in Railway's dashboard and clicking
+its own "Deploy" button is fine when only the variable needs to change.
+The moment you also need current code (which, in practice, is most of the
+time -- it's easy to lose track of whether production's last real deploy
+predates a recent commit), follow it with an actual pipeline run: push to
+`main` (auto-deploys `test`) or run "Deploy to live" from the Actions tab.
+When in doubt, just run "Deploy to live" -- it's cheap, re-validates
+everything, and guarantees code and config are both current together.
+
 ## Rollback
 
 Railway keeps a deploy history per service. Fastest rollback: Railway

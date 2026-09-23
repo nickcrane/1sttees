@@ -751,6 +751,30 @@ to Cloudflare for its apex CNAME-flattening support instead; declined
 for now as unnecessary extra vendor/complexity for a single domain at
 this scale. Full record-by-record detail in `docs/deployment.md`.
 
+### Coming Soon holding page and a real deploy-path gap it exposed (2026-09-23)
+
+Built `/coming-soon` (email-capture waitlist, own `WaitlistSignup` table,
+optional Resend confirmation) and `COMING_SOON_MODE`, a flag middleware.ts
+reads to gate the whole public storefront -- admin stays reachable, and
+the home route itself renders the holding page directly (no redirect
+hop) rather than bouncing to a separate URL. Full design writeup in
+`docs/deployment.md`.
+
+**Found a real gap in how this pipeline gets used, not in the pipeline
+itself**, while debugging why `COMING_SOON_MODE=true` had no visible
+effect on production for hours: Railway's own dashboard "Deploy" button
+(shown after editing a variable there) only rebuilds whatever code was
+already uploaded by the last real `railway up` -- it does not pull fresh
+code from GitHub. Several env-var-only fixes had been "deployed" to
+production this way, each one silently redeploying a commit from
+*before* the Coming Soon feature existed. `deploy-test.yml`/
+`deploy-live.yml` themselves were never at fault -- they upload the
+current `ref` every time they actually run. The gap is specific to using
+Railway's dashboard as a shortcut for config-only changes and assuming
+that also refreshes code. Documented as a rule of thumb in
+`docs/deployment.md` rather than changed in the workflows, since the
+workflows were already doing the right thing.
+
 ### Verified live
 
 The full pipeline, not just the YAML: a real push to `main` through CI,
