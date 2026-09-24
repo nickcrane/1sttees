@@ -65,7 +65,7 @@ export default function AdminSetupPage() {
         setError(body.error ?? "Confirmation failed");
         return;
       }
-      router.push("/admin/login");
+      router.push("/login");
     } finally {
       setSubmitting(false);
     }

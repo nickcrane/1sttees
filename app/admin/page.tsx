@@ -42,19 +42,19 @@ export default async function AdminDashboardPage() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <Link href="/admin/products/candidates" className="text-sm underline">
+        <Link href="/products/candidates" className="text-sm underline">
           Candidates{candidateCount > 0 && ` (${candidateCount})`} &rarr;
         </Link>
-        <Link href="/admin/products/review" className="text-sm underline">
+        <Link href="/products/review" className="text-sm underline">
           Review queue{reviewCount > 0 && ` (${reviewCount})`} &rarr;
         </Link>
-        <Link href="/admin/products/catalogue" className="text-sm underline">
+        <Link href="/products/catalogue" className="text-sm underline">
           Catalogue &rarr;
         </Link>
-        <Link href="/admin/products/keywords" className="text-sm underline">
+        <Link href="/products/keywords" className="text-sm underline">
           Discovery keywords &rarr;
         </Link>
-        <Link href="/admin/orders" className="text-sm underline">
+        <Link href="/orders" className="text-sm underline">
           Orders &rarr;
         </Link>
       </div>

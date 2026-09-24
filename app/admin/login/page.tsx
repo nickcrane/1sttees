@@ -36,7 +36,7 @@ function AdminLoginForm() {
       setError("Sign-in failed. Check your email, password, and authenticator code.");
       return;
     }
-    router.push(searchParams.get("from") || "/admin");
+    router.push(searchParams.get("from") || "/");
   }
 
   return (

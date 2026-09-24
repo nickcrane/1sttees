@@ -37,19 +37,19 @@ export default async function AdminCataloguePage() {
     <main className="mx-auto flex max-w-4xl flex-col gap-8 p-8">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Catalogue</h1>
-        <Link href="/admin" className="text-sm underline">
+        <Link href="/" className="text-sm underline">
           Back to admin
         </Link>
       </div>
       <nav className="flex gap-4 text-sm">
-        <Link href="/admin/products/candidates" className="text-muted-foreground underline">
+        <Link href="/products/candidates" className="text-muted-foreground underline">
           Candidates
         </Link>
-        <Link href="/admin/products/review" className="text-muted-foreground underline">
+        <Link href="/products/review" className="text-muted-foreground underline">
           Review queue
         </Link>
         <span className="font-medium">Catalogue</span>
-        <Link href="/admin/products/keywords" className="text-muted-foreground underline">
+        <Link href="/products/keywords" className="text-muted-foreground underline">
           Keywords
         </Link>
       </nav>

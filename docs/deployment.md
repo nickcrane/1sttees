@@ -248,6 +248,43 @@ Railway checks on its own interval (took several minutes in practice) --
 so don't assume a domain is broken just because it still shows "Waiting
 for DNS update" right after adding the records.
 
+## Admin subdomain
+
+Admin features are served on their own subdomain rather than
+`<domain>/admin` -- `middleware.ts` rewrites the subdomain's clean paths
+("/orders") onto the real `/admin/*` route tree, and redirects anyone
+who still hits `/admin/*` on the main domain over to the equivalent
+subdomain URL. This needs, per environment:
+
+1. **A third Railway custom domain on the `web` service** (Settings ->
+   Networking -> Custom Domain), same flow as `test`/`production`'s
+   domains above:
+   - `test`: `admin.test.1sttees.golf`
+   - `production`: `admin.1sttees.golf`
+2. **The CNAME + TXT records it generates**, added at GoDaddy -- same
+   pattern as the existing `test.1sttees.golf`/`www.1sttees.golf`
+   records. `admin.1sttees.golf` is an ordinary labeled subdomain, not
+   the bare apex, so it isn't subject to the apex CNAME restriction
+   noted above.
+3. **`ADMIN_HOSTNAME` set on that environment's `web` service only**
+   (Settings -> Variables) -- the exact hostname from step 1, e.g.
+   `ADMIN_HOSTNAME=admin.test.1sttees.golf`. Not needed on `worker`,
+   which never handles an HTTP request or runs `middleware.ts`. Until
+   this is set, `/admin/*` keeps working directly on that environment's
+   main domain (fails open, same as local dev without it) -- nothing
+   breaks by doing this one environment at a time.
+4. **Local dev needs none of this** -- `admin.localhost:PORT` is
+   recognised automatically (modern browsers resolve `*.localhost` to
+   `127.0.0.1` with no `/etc/hosts` edit), and plain `localhost:PORT/admin`
+   still works too as long as `ADMIN_HOSTNAME` stays unset locally.
+
+Once `ADMIN_HOSTNAME` is set on an environment, every admin link/redirect
+in that environment resolves to the clean subdomain path automatically
+(no other config or code change per environment) -- e.g. `Approve` on
+Candidates still points at the same file route, just reached via
+`admin.test.1sttees.golf/products/candidates` instead of
+`test.1sttees.golf/admin/products/candidates`.
+
 ## Verified live
 
 Confirmed end-to-end against this actual pipeline, not just that the

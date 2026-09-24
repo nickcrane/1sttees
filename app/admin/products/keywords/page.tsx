@@ -20,18 +20,18 @@ export default async function AdminKeywordsPage() {
     <main className="mx-auto flex max-w-4xl flex-col gap-8 p-8">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Discovery keywords</h1>
-        <Link href="/admin" className="text-sm underline">
+        <Link href="/" className="text-sm underline">
           Back to admin
         </Link>
       </div>
       <nav className="flex gap-4 text-sm">
-        <Link href="/admin/products/candidates" className="text-muted-foreground underline">
+        <Link href="/products/candidates" className="text-muted-foreground underline">
           Candidates
         </Link>
-        <Link href="/admin/products/review" className="text-muted-foreground underline">
+        <Link href="/products/review" className="text-muted-foreground underline">
           Review queue
         </Link>
-        <Link href="/admin/products/catalogue" className="text-muted-foreground underline">
+        <Link href="/products/catalogue" className="text-muted-foreground underline">
           Catalogue
         </Link>
         <span className="font-medium">Keywords</span>
