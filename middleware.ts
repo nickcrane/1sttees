@@ -89,16 +89,6 @@ export default auth((req) => {
   // Host/X-Forwarded-Host never carries an explicit port over HTTPS.
   const incomingPortSuffix = hostHeader.includes(":") ? hostHeader.slice(hostHeader.indexOf(":")) : "";
 
-  if (process.env.DEBUG_MIDDLEWARE_HEADERS === "true") {
-    const res = NextResponse.next();
-    res.headers.set("x-debug-host", req.headers.get("host") ?? "");
-    res.headers.set("x-debug-xfh", req.headers.get("x-forwarded-host") ?? "");
-    res.headers.set("x-debug-xfp", req.headers.get("x-forwarded-port") ?? "");
-    res.headers.set("x-debug-forwarded", req.headers.get("forwarded") ?? "");
-    res.headers.set("x-debug-nexturl-port", req.nextUrl.port);
-    return res;
-  }
-
   // The subdomain is now the only supported way into any admin page --
   // reject /admin/* browsed on the storefront's own host by bouncing to
   // the equivalent clean URL on the admin host instead of a confusing
