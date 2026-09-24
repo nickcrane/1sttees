@@ -1,0 +1,189 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:10#100PCS-70mm",
+            "offer_sale_price": "6.12",
+            "sku_id": "12000060219958388",
+            "limit_strategy": "create_order_fail",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "15.70",
+            "buy_amount_limit_set_by_promotion": "1",
+            "offer_bulk_sale_price": "6.12",
+            "sku_available_stock": 29,
+            "id": "14:10#100PCS-70mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sed0d018d04034b24b380816c9ee782b6B.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "100PCS-70mm",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200002984#100PCS-83mm",
+            "offer_sale_price": "6.90",
+            "sku_id": "12000060219958389",
+            "limit_strategy": "create_order_fail",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "17.26",
+            "buy_amount_limit_set_by_promotion": "1",
+            "offer_bulk_sale_price": "6.90",
+            "sku_available_stock": 30,
+            "id": "14:200002984#100PCS-83mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Burgundy",
+                  "sku_image": "https://ae01.alicdn.com/kf/S95dd7dea265548659c7f6c64fcd415fcn.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "100PCS-83mm",
+                  "property_value_id": 200002984,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#100PCS-42mm",
+            "offer_sale_price": "4.79",
+            "sku_id": "12000060219958386",
+            "limit_strategy": "create_order_fail",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "13.31",
+            "buy_amount_limit_set_by_promotion": "1",
+            "offer_bulk_sale_price": "4.79",
+            "sku_available_stock": 29,
+            "id": "14:29#100PCS-42mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S0c6b2890e0ea4bbdb1db5606461f0d57Z.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "100PCS-42mm",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:366#100PCS-54mm",
+            "offer_sale_price": "4.90",
+            "sku_id": "12000060219958387",
+            "limit_strategy": "create_order_fail",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "13.61",
+            "buy_amount_limit_set_by_promotion": "1",
+            "offer_bulk_sale_price": "4.90",
+            "sku_available_stock": 30,
+            "id": "14:366#100PCS-54mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sc1cf43e7e4fd4ad08cfae5e2cfe3e7b4N.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "100PCS-54mm",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "image_urls": "https://ae01.alicdn.com/kf/S060a0668509f41619cfa2592c5af6cfbn.jpg;https://ae01.alicdn.com/kf/Sb8f38d2721084329b63a70491eb7f5cd1.jpg;https://ae01.alicdn.com/kf/Sc1cf43e7e4fd4ad08cfae5e2cfe3e7b4N.jpg;https://ae01.alicdn.com/kf/Sed0d018d04034b24b380816c9ee782b6B.jpg;https://ae01.alicdn.com/kf/S95dd7dea265548659c7f6c64fcd415fcn.jpg;https://ae01.alicdn.com/kf/S0c6b2890e0ea4bbdb1db5606461f0d57Z.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 13,
+        "package_height": 6,
+        "package_length": 17,
+        "gross_weight": "0.18",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005013079328110,
+        "sub_product_id": "{\"US\":3256812893013358}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S060a0668509f41619cfa2592c5af6cfbn.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sb8f38d2721084329b63a70491eb7f5cd1.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sc1cf43e7e4fd4ad08cfae5e2cfe3e7b4N.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sed0d018d04034b24b380816c9ee782b6B.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S95dd7dea265548659c7f6c64fcd415fcn.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S0c6b2890e0ea4bbdb1db5606461f0d57Z.jpg\",\"style\":{\"width\":1000,\"height\":1000}}}]}",
+        "subject": "100 Pcs Natural Wood Golf Tees Mixed Color Assorted Sizes Bulk Tee Pegs Eco Friendly Hardwood Golf Accessories",
+        "evaluation_count": "0",
+        "sales_count": "2",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "0.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005013079328110,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><img cke-id=\"img70\" referrerpolicy=\"no-referrer\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S060a0668509f41619cfa2592c5af6cfbn.jpg\" /><img cke-id=\"img71\" referrerpolicy=\"no-referrer\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sb8f38d2721084329b63a70491eb7f5cd1.jpg\" /><img cke-id=\"img72\" referrerpolicy=\"no-referrer\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sc1cf43e7e4fd4ad08cfae5e2cfe3e7b4N.jpg\" /><img cke-id=\"img73\" referrerpolicy=\"no-referrer\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sed0d018d04034b24b380816c9ee782b6B.jpg\" /><img cke-id=\"img74\" referrerpolicy=\"no-referrer\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S95dd7dea265548659c7f6c64fcd415fcn.jpg\" /><img cke-id=\"img75\" referrerpolicy=\"no-referrer\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S0c6b2890e0ea4bbdb1db5606461f0d57Z.jpg\" /></div></div>\r\n"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 124,
+            "attr_name": "Material",
+            "attr_value": "Plastic"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1105772708,
+        "shipping_speed_rating": "4.6",
+        "communication_rating": "4.8",
+        "store_name": "YQ30-10 MegaTradeZone Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "0bb49d8517902370440148569",
+    "_trace_id_": "2140d36217902370440121455e0ec4"
+  }
+}

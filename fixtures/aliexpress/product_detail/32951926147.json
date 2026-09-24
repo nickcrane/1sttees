@@ -1,0 +1,174 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:10#83mm",
+            "offer_sale_price": "8.39",
+            "sku_id": "66250095644",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "8.39",
+            "offer_bulk_sale_price": "8.39",
+            "sku_available_stock": 894,
+            "id": "14:10#83mm",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "83mm",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#70mm",
+            "offer_sale_price": "8.39",
+            "sku_id": "66250095643",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "8.39",
+            "offer_bulk_sale_price": "8.39",
+            "sku_available_stock": 949,
+            "id": "14:29#70mm",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:173#54mm",
+            "offer_sale_price": "8.39",
+            "sku_id": "12000031580489463",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "8.39",
+            "offer_bulk_sale_price": "8.39",
+            "sku_available_stock": 991,
+            "id": "14:173#54mm",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Blue",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm",
+                  "property_value_id": 173,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/S0adad7685a2e4c4db9b027d6ef669f3f7.jpg",
+              "ali_member_id": 201737060,
+              "media_id": 5000508214419,
+              "media_url": "https://video.aliexpress-media.com/play/5000508214419.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/HTB1f9s1XyHrK1Rjy0Flq6AsaFXat.jpg;https://ae01.alicdn.com/kf/HTB12F.2Xs_vK1RkSmRyq6xwupXaD.jpg;https://ae01.alicdn.com/kf/HTB1jS.1XzzuK1RjSspeq6ziHVXaq.jpg;https://ae01.alicdn.com/kf/S34cc9bb7d925470d8986b94b8e0a0e2dm.jpg;https://ae01.alicdn.com/kf/S385dfcd9796e47eab25091d7032710c10.jpg;https://ae01.alicdn.com/kf/Seec0a7d784f44d2bb48e7ce5706300cfO.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 15,
+        "package_height": 5,
+        "package_length": 25,
+        "gross_weight": "0.200",
+        "package_type": true,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 2,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 32951926147,
+        "sub_product_id": "{\"US\":2251832765611395}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Wooden Golf Tees\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Size:  70mm,80mm\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Package: 50pieces One pack\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/HTB1vG33XyzxK1RjSspjq6AS.pXan.jpg\",\"style\":{\"width\":800,\"height\":800}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S98590f163831414eabf98b588d257dabE.jpg\",\"style\":{\"width\":750,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S385dfcd9796e47eab25091d7032710c10.jpg\",\"style\":{\"width\":800,\"height\":800}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S34cc9bb7d925470d8986b94b8e0a0e2dm.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/HTB1Mg1GlNjaK1RjSZFAq6zdLFXaR.jpg\",\"style\":{\"width\":800,\"height\":800}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/HTB15wk5XsrrK1Rjy1zeq6xalFXaR.jpg\",\"style\":{\"width\":800,\"height\":1096}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Seec0a7d784f44d2bb48e7ce5706300cfO.jpg\",\"style\":{\"width\":800,\"height\":800}}}]}",
+        "subject": "Step Down Golf Tees Wooden 50pcs One Pack",
+        "evaluation_count": "0",
+        "sales_count": "1",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "0.0",
+        "separated_listing": false,
+        "currency_code": "USD",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 32951926147,
+        "detail": "<p><span style=\"font-size:28px\"><strong>Wooden Golf Tees</strong></span></p><p><span style=\"font-size:22px\">Size:  70mm,80mm</span></p><p><span style=\"font-size:22px\">Package: 50pieces One pack</span></p><p><img src=\"https://ae01.alicdn.com/kf/HTB1vG33XyzxK1RjSspjq6AS.pXan.jpg\" slate-data-type=\"image\"/></p><p><br/></p><p><img src=\"https://ae01.alicdn.com/kf/S98590f163831414eabf98b588d257dabE.jpg\" slate-data-type=\"image\"/></p><p><br/></p><p><img src=\"https://ae01.alicdn.com/kf/S385dfcd9796e47eab25091d7032710c10.jpg\" slate-data-type=\"image\"/></p><p><br/><br/></p><p><img src=\"https://ae01.alicdn.com/kf/S34cc9bb7d925470d8986b94b8e0a0e2dm.jpg\" slate-data-type=\"image\"/></p><p><img width=\"800\" height=\"800\" src=\"https://ae01.alicdn.com/kf/HTB1Mg1GlNjaK1RjSZFAq6zdLFXaR.jpg\" slate-data-type=\"image\"/></p><p><img src=\"https://ae01.alicdn.com/kf/HTB15wk5XsrrK1Rjy1zeq6xalFXaR.jpg\" slate-data-type=\"image\"/></p><p><img src=\"https://ae01.alicdn.com/kf/Seec0a7d784f44d2bb48e7ce5706300cfO.jpg\" slate-data-type=\"image\"/></p><p><br/><br/><br/><br/></p>"
+      },
+      "has_whole_sale": true,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 204209106,
+            "attr_name": "Brand Name",
+            "attr_value": "KINWORKS"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 350383,
+            "attr_name": "Material",
+            "attr_value": "Wood"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "KW-GT012"
+          },
+          {
+            "attr_name_id": 19127,
+            "attr_value_id": -1,
+            "attr_name": "Variety",
+            "attr_value": "Step down tee"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1990095,
+        "store_name": "Kinworks Sports Store",
+        "store_country_code": "CN"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "d742e9b117902369949698143",
+    "_trace_id_": "2140d36217902369949687451e0ec4"
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:10#70mm 50 Pcs",
+            "offer_sale_price": "3.28",
+            "sku_id": "12000049608781126",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.28",
+            "offer_bulk_sale_price": "3.28",
+            "sku_available_stock": 9990,
+            "id": "14:10#70mm 50 Pcs",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/S555416a73a0f468fb84f26e8e7734dcdZ.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm 50 Pcs",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200002984#83mm 50 Pcs",
+            "offer_sale_price": "3.60",
+            "sku_id": "12000049608781127",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.60",
+            "offer_bulk_sale_price": "3.60",
+            "sku_available_stock": 9997,
+            "id": "14:200002984#83mm 50 Pcs",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Burgundy",
+                  "sku_image": "https://ae01.alicdn.com/kf/Saa6f77c5db6d41778b1889714a342ecdm.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "83mm 50 Pcs",
+                  "property_value_id": 200002984,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#42mm 50 Pcs",
+            "offer_sale_price": "2.59",
+            "sku_id": "12000049608781124",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "2.59",
+            "offer_bulk_sale_price": "2.59",
+            "sku_available_stock": 9992,
+            "id": "14:29#42mm 50 Pcs",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S68fb0b1275aa47d3bc2159933602fbf0a.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "42mm 50 Pcs",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:366#54mm 50 Pcs",
+            "offer_sale_price": "2.80",
+            "sku_id": "12000049608781125",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "2.80",
+            "offer_bulk_sale_price": "2.80",
+            "sku_available_stock": 9989,
+            "id": "14:366#54mm 50 Pcs",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/S388e3fbe08b54dd4a54ea1992d728ca9d.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm 50 Pcs",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:175#70mm 100 Pcs",
+            "offer_sale_price": "4.62",
+            "sku_id": "12000049608781130",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.62",
+            "offer_bulk_sale_price": "4.62",
+            "sku_available_stock": 9991,
+            "id": "14:175#70mm 100 Pcs",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "green",
+                  "sku_image": "https://ae01.alicdn.com/kf/S0ae8b524df9c4121939482c977fb826c5.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm 100 Pcs",
+                  "property_value_id": 175,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:173#83mm 100 Pcs",
+            "offer_sale_price": "5.22",
+            "sku_id": "12000049608781131",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "5.22",
+            "offer_bulk_sale_price": "5.22",
+            "sku_available_stock": 9994,
+            "id": "14:173#83mm 100 Pcs",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Blue",
+                  "sku_image": "https://ae01.alicdn.com/kf/S1b218900d5ed4b209c5b4f8b0071efb8f.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "83mm 100 Pcs",
+                  "property_value_id": 173,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:496#42mm 100 Pcs",
+            "offer_sale_price": "3.32",
+            "sku_id": "12000049608781128",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.32",
+            "offer_bulk_sale_price": "3.32",
+            "sku_available_stock": 9,
+            "id": "14:496#42mm 100 Pcs",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "PURPLE",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sffd9fd0faa6d4d07a44c8e37337967619.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "42mm 100 Pcs",
+                  "property_value_id": 496,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200006151#54mm 100 Pcs",
+            "offer_sale_price": "3.83",
+            "sku_id": "12000049608781129",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.83",
+            "offer_bulk_sale_price": "3.83",
+            "sku_available_stock": 9998,
+            "id": "14:200006151#54mm 100 Pcs",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Light Grey",
+                  "sku_image": "https://ae01.alicdn.com/kf/S8f4a1d677b00492a9d50efbe8e27f4f3J.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm 100 Pcs",
+                  "property_value_id": 200006151,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/Se506cc6544e0460a98e978d79bce4967J.jpg",
+              "ali_member_id": 205789453,
+              "media_id": 5000268452857,
+              "media_url": "https://video.aliexpress-media.com/play/5000268452857.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/Sd60443770a68494e97b87765cbf03452N.jpg;https://ae01.alicdn.com/kf/Sc2d09f12347f473eaaad4c512eb81b272.jpg;https://ae01.alicdn.com/kf/Sa34622fb77f94d3a859539633cd78777M.jpg;https://ae01.alicdn.com/kf/Sba0e1bf1834841d387c1f35b27fc26e9d.jpg;https://ae01.alicdn.com/kf/S36cd45f38d2145249b4953da3159ced20.jpg;https://ae01.alicdn.com/kf/Saab6c9823d8d4b6bb8d6cb0f34e9dcc1i.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 28,
+        "package_height": 6,
+        "package_length": 20,
+        "gross_weight": "0.050",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005009605446505,
+        "sub_product_id": "{\"US\":3256809419131753}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"50 Pcs 100 Pcs Pack Golf Multicolour Wood Tee Step Down 42mm 54mm 70mm 83 mm Length Golf Ball Tees Golf Accessories Drop Ship\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":16,\"fontWeight\":\"bold\",\"align\":\"left\",\"color\":\"#000000\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"【1】： make of high quality wood Tee\\n\\n【2】：Durable and lightweight wood tees can be used for a long time\\n\\n【3】：Easy to place the golf ball on the tee and stable for you hit the driver\\n\\n【4】：Bright color helps you easy to find in the grass after tee off\\n\\n【Color 】：random\\n【Material】: wood\\n【Size】：42mm 54mm 70mm 83mm\\n \\n【Package Include】:\\n \\n1 Set 50 pcs golf tees or\\n1 Set 100 pcs golf tees\\n\\n【Notes】:\\n1.Please allow 1-3mm differs due to manual measurement.\\n2.Due to the different display and different light, the picture may not show the actual color of the item.Thanks for your understanding.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S73ed804137d14d9a941759ae127e6abbr.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S6a50c6cc147141b790c5352ac5605bc4z.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S8d20f7b036014c91acf3975e1564725d3.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S617659931f62499888b2a4d8b61634aaZ.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S5a2a5f4dd66f45f18ae6fa17b7dc1672R.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S3966815279f64dde9329cf52f8eb47a4c.jpg\",\"style\":{},\"targetUrl\":\"\"}}]}",
+        "subject": "50 Pcs 100 Pcs Pack Golf Multicolour Wood Tee Step Down 42mm 54mm 70mm 83 mm Length Golf Ball Tees Golf Accessories Drop Ship",
+        "evaluation_count": "6",
+        "sales_count": "37",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "4.8",
+        "separated_listing": false,
+        "currency_code": "USD",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005009605446505,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><div class=\"detailmodule_text-image\"> \n <p style=\"font-family:OpenSans;font-size:20px;font-weight:900;line-height:28px;white-space:pre-wrap;color:rgb(0, 0, 0);margin-bottom:12px;\" class=\"detail-desc-decorate-title\">50 Pcs 100 Pcs Pack Golf Multicolour Wood Tee Step Down 42mm 54mm 70mm 83 mm Length Golf Ball Tees Golf Accessories Drop Ship</p> \n <p style=\"font-family:OpenSans;font-size:14px;font-weight:300;line-height:20px;white-space:pre-wrap;color:rgb(0, 0, 0);margin-bottom:12px;\" class=\"detail-desc-decorate-content\"><span style=\"font-size:16px;font-family:tahoma, geneva, sans-serif;\">【1】： make of high quality wood Tee<br /><br />【2】：Durable and lightweight wood tees can be used for a long time<br /><br />【3】：Easy to place the golf ball on the tee and stable for you hit the driver<br /><br />【4】：Bright color helps you easy to find in the grass after tee off<br /><br />【Color 】：random<br />【Material】: wood<br />【Size】：42mm 54mm 70mm 83mm<br /> <br />【Package Include】:<br /> <br /></span><span style=\"color:rgba(254,146,0,255);font-size:16px;font-family:tahoma, geneva, sans-serif;\"><strong>1 Set 50 pcs golf tees or<br />1 Set 100 pcs golf tees</strong></span><span style=\"font-size:16px;font-family:tahoma, geneva, sans-serif;\"><br /><br />【Notes】:<br />1.Please allow 1-3mm differs due to manual measurement.<br />2.Due to the different display and different light, the picture may not show the actual color of the item.Thanks for your understanding.</span></p> \n <div> \n  <img class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S73ed804137d14d9a941759ae127e6abbr.jpg\" slate-data-type=\"image\" data-src=\"https://ae01.alicdn.com/kf/S73ed804137d14d9a941759ae127e6abbr.jpg\" /> \n  <img class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S6a50c6cc147141b790c5352ac5605bc4z.jpg\" slate-data-type=\"image\" data-src=\"https://ae01.alicdn.com/kf/S6a50c6cc147141b790c5352ac5605bc4z.jpg\" /> \n  <img class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S8d20f7b036014c91acf3975e1564725d3.jpg\" slate-data-type=\"image\" data-src=\"https://ae01.alicdn.com/kf/S8d20f7b036014c91acf3975e1564725d3.jpg\" /> \n  <img class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S617659931f62499888b2a4d8b61634aaZ.jpg\" slate-data-type=\"image\" data-src=\"https://ae01.alicdn.com/kf/S617659931f62499888b2a4d8b61634aaZ.jpg\" /> \n  <img class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S5a2a5f4dd66f45f18ae6fa17b7dc1672R.jpg\" slate-data-type=\"image\" data-src=\"https://ae01.alicdn.com/kf/S5a2a5f4dd66f45f18ae6fa17b7dc1672R.jpg\" /> \n  <img class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S3966815279f64dde9329cf52f8eb47a4c.jpg\" slate-data-type=\"image\" data-src=\"https://ae01.alicdn.com/kf/S3966815279f64dde9329cf52f8eb47a4c.jpg\" /> \n </div> \n</div><br /></div></div>\r\n"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 6964189260,
+            "attr_name": "Brand Name",
+            "attr_value": "Efunist"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "HZK-QD005-42mm-50"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 350383,
+            "attr_name": "Material",
+            "attr_value": "Wood"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 19127,
+            "attr_value_id": 200011477,
+            "attr_name": "Variety",
+            "attr_value": "Crown Tee"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          },
+          {
+            "attr_name_id": -2,
+            "attr_name": "semi_Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1240500,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.8",
+        "store_name": "VIPMall Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "21016c2317902370129835628",
+    "_trace_id_": "2140d36217902370129818175e0ec4"
+  }
+}

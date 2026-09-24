@@ -1,0 +1,205 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:10#100pcs 83mm",
+            "offer_sale_price": "4.62",
+            "sku_id": "12000037527955883",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.62",
+            "offer_bulk_sale_price": "4.62",
+            "sku_available_stock": 4,
+            "id": "14:10#100pcs 83mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/S7e3d8b03982045dc98f1c08244d09e58H.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "100pcs 83mm",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:366#100pcs 70mm",
+            "offer_sale_price": "4.15",
+            "sku_id": "12000037527955882",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.15",
+            "offer_bulk_sale_price": "4.15",
+            "sku_available_stock": 5,
+            "id": "14:366#100pcs 70mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/S39a679e1e9c445889246a9f41a7ece25H.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "100pcs 70mm",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#100pcs 54mm",
+            "offer_sale_price": "3.60",
+            "sku_id": "12000037527955881",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.60",
+            "offer_bulk_sale_price": "3.60",
+            "sku_available_stock": 9,
+            "id": "14:29#100pcs 54mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/Saec47e0559354afaaba1afeeda7c6cd7s.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "100pcs 54mm",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/S4436bc8119fc451998a2bd67f6fa42ffq.jpg",
+              "ali_member_id": 252531015,
+              "media_id": 4000182952509,
+              "media_url": "https://video.aliexpress-media.com/play/4000182952509.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/S62608cb8ac124bc78f8595e51e13180e0.jpg;https://ae01.alicdn.com/kf/S3defaaa5a8c74eae91900a9e5f1d5e45w.jpg;https://ae01.alicdn.com/kf/Saa3290ed51e3415cb476321b1be55476n.jpg;https://ae01.alicdn.com/kf/S55c9416d8ad64aaf8e2c14304902070br.jpg;https://ae01.alicdn.com/kf/S1e3c78d59a124979b576aec1adb04437s.jpg;https://ae01.alicdn.com/kf/S5f3b77c8a8cd428aaaa9b93682511dbcO.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 13,
+        "package_height": 4,
+        "package_length": 13,
+        "gross_weight": "0.110",
+        "package_type": false,
+        "product_unit": 100000014
+      },
+      "logistics_info_dto": {
+        "delivery_time": 5,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005006525360508,
+        "sub_product_id": "{\"US\":3256806339045756}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Golf Bamboo Golf Tees 54mm 70mm 83mm Pack of 100 Premium Eco Friendly Sustainable Durable Bamboo Golf Tees Golf Accessories\\r\\nPACK OF 100: Contains 100 premium bamboo golf tees, fantastic value for money\\r\\nSIZE: 83mm/70mm/54mm\\r\\nECO-FRIENDLY: Made from sustainable bamboo, these tees are a green choice for environmentally conscious golfers.\\r\\nVERSATILITY: Whether you're on the tee box with a driver or a fairway wood, TH Golf's Premium Bamboo Tees offer versatility for all your clubs.\\r\\nDURABILITY: Our tees are built to last, so you can focus on your swing without worrying about constantly replacing them.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sa825407a994d45e8b0b092bc163c185f6.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sbdee9b98c5cc4cff9526a1037b7960f4f.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sbebed52c3af64da899cffa007256fcfb4.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sf541de1488c844a093a822288f15074bd.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S7bd8bf0384c94164bfbfc608c10e005f4.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S5b491c8b99214ab5b6859996fba4c66eS.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S526be33a3b074e5bb69a6725bb1de105E.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S8bfa168bc4fa4132b4fdef7646a14acdd.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sa03fd2a8a92b4dcf88d716cbc8267812g.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Se64b1d1f06ad4d40a240ac0c193e698f0.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S03d4fb2b313a495da34e6fb462e416cc1.jpg\",\"style\":{},\"targetUrl\":\"\"}}]}",
+        "subject": "Golf Bamboo Golf Tees 54mm 70mm 83mm Pack of 100 Premium Eco Friendly Sustainable Durable Bamboo Golf Tees Golf Accessories",
+        "evaluation_count": "6",
+        "sales_count": "67",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "4.3",
+        "separated_listing": false,
+        "currency_code": "USD",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005006525360508,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><p><kse:widget data-widget-type=\"customText\" id=\"20415342\" type=\"relation\"></kse:widget></p><p><br/></p><p><span style=\"font-size:20px;font-family:Georgia\"><strong>Golf Bamboo Golf Tees 54mm 70mm 83mm Pack of 100 Premium Eco Friendly Sustainable Durable Bamboo Golf Tees Golf Accessories</strong></span></p><p><span style=\"font-size:18px;font-family:Georgia\">PACK OF 100: Contains 100 premium bamboo golf tees, fantastic value for money</span><br/><span style=\"font-size:18px;font-family:Georgia\">SIZE: 83mm/70mm/54mm</span><br/><span style=\"font-size:18px;font-family:Georgia\">ECO-FRIENDLY: Made from sustainable bamboo, these tees are a green choice for environmentally conscious golfers.</span><br/><span style=\"font-size:18px;font-family:Georgia\">VERSATILITY: Whether you&#x27;re on the tee box with a driver or a fairway wood, TH Golf&#x27;s Premium Bamboo Tees offer versatility for all your clubs.</span><br/><span style=\"font-size:18px;font-family:Georgia\">DURABILITY: Our tees are built to last, so you can focus on your swing without worrying about constantly replacing them.</span></p><p><br/></p><p><br/></p><div><p><br/></p><div><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sa825407a994d45e8b0b092bc163c185f6.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sbdee9b98c5cc4cff9526a1037b7960f4f.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sbebed52c3af64da899cffa007256fcfb4.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sf541de1488c844a093a822288f15074bd.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S7bd8bf0384c94164bfbfc608c10e005f4.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S5b491c8b99214ab5b6859996fba4c66eS.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S526be33a3b074e5bb69a6725bb1de105E.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S8bfa168bc4fa4132b4fdef7646a14acdd.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sa03fd2a8a92b4dcf88d716cbc8267812g.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Se64b1d1f06ad4d40a240ac0c193e698f0.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S03d4fb2b313a495da34e6fb462e416cc1.jpg\" slate-data-type=\"image\"/></p></div><div><br/></div><p><br/></p></div><p><br/></p><p><br/></p><p><kse:widget data-widget-type=\"customText\" id=\"3805473\" type=\"custom\"></kse:widget></p><div><br/> <br/></div><p><br/></p></div></div><p><br/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 13568675988,
+            "attr_name": "Brand Name",
+            "attr_value": "GVOVLVF"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 124,
+            "attr_name": "Material",
+            "attr_value": "Plastic"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "M2QD"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_value_id": -1,
+            "attr_name": "color1",
+            "attr_value": "primary color 83"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_value_id": -1,
+            "attr_name": "Unit Type",
+            "attr_value": "Pack"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_value_id": -1,
+            "attr_name": "Package Weight",
+            "attr_value": "0.1kg (0.22lb.)"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_value_id": -1,
+            "attr_name": "Package Size",
+            "attr_value": "12cm x 8cm x 5cm (4.72in x 3.15in x 1.97in)"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          },
+          {
+            "attr_name_id": -2,
+            "attr_name": "semi_Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 912131101,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.7",
+        "store_name": "Global Sporting Goods Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2140c5a217902370510175277",
+    "_trace_id_": "2140d36217902370510162160e0ec4"
+  }
+}

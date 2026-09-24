@@ -1,0 +1,188 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:200002984#Yellow",
+            "offer_sale_price": "1.69",
+            "sku_id": "12000059808856611",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "2.49",
+            "offer_bulk_sale_price": "1.69",
+            "sku_available_stock": 9999,
+            "id": "14:200002984#Yellow",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Burgundy",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sbf8890e0977a49c8874e3aec5876093e9.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Yellow",
+                  "property_value_id": 200002984,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:10#Green",
+            "offer_sale_price": "1.25",
+            "sku_id": "12000059808856610",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "1.84",
+            "offer_bulk_sale_price": "1.25",
+            "sku_available_stock": 9999,
+            "id": "14:10#Green",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/S974e9b09e88743298a6ce88389777e9bh.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Green",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:366#Pink",
+            "offer_sale_price": "1.22",
+            "sku_id": "12000059808856609",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "1.80",
+            "offer_bulk_sale_price": "1.22",
+            "sku_available_stock": 9999,
+            "id": "14:366#Pink",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/S6d093d90533e44c3bd2375fb4cfed676y.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Pink",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#Blue",
+            "offer_sale_price": "1.30",
+            "sku_id": "12000059808856608",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "1.91",
+            "offer_bulk_sale_price": "1.30",
+            "sku_available_stock": 9999,
+            "id": "14:29#Blue",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S6cdbec7ae81c4b8482c083c2fbf71bc5u.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Blue",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/S80bbed65c14845259a39d9b7c1bffc11f.jpg",
+              "ali_member_id": 6002724306,
+              "media_id": 5000595384133,
+              "media_url": "https://video.aliexpress-media.com/play/5000595384133.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/S95b8c162ee494c6da892a5369d64c472e.jpg;https://ae01.alicdn.com/kf/Sdff9a6eacd0341ccbe1bb72379f51fb3F.jpg;https://ae01.alicdn.com/kf/S1ea6f82043614086816d1536dcd98c4dF.png;https://ae01.alicdn.com/kf/S124c66ff81074fceb7cc1d361b8e9a6aO.jpg;https://ae01.alicdn.com/kf/S40202a309d1e4090aebf5585bc624ba0G.jpg;https://ae01.alicdn.com/kf/S99f67039404c4f19993748ea8d1187acK.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 10,
+        "package_height": 5,
+        "package_length": 10,
+        "gross_weight": "0.025",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005012936912865,
+        "sub_product_id": "{\"US\":3256812750598113}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":16,\"fontWeight\":\"bold\",\"align\":\"left\",\"color\":\"#000000\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Product name: Funny Golf Tees\\r\\nMaterial: ABS\\r\\nLength: 83mm(3.27in)\\r\\nColor:as picture shown\\r\\nPacking List:1set Golf Tees\\n\\nnotes:\\r\\n1.please allow 1-2cm(0.39-0.79in) measuring deviation due to manual measurement.\\r\\n2.due to various monitors and lighting conditions, colors may be slightly different from listed photos.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S40202a309d1e4090aebf5585bc624ba0G.jpg\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S99f67039404c4f19993748ea8d1187acK.jpg\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sa996d1cba76a4f6cba00dd9970797407A.jpg\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S07ab90d8e28e430d88af2c3ddaf02cf4o.jpg\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sd6d7174c79dc45baa8be52d9555fc98dI.jpg\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S124c66ff81074fceb7cc1d361b8e9a6aO.jpg\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S517e112bfd394d1fb1928c4775ade466C.jpg\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S645e835afdb846b5b80756abd255522eC.jpg\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S7f89e125ed1b4489a176737a175a4e8fe.jpg\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S1ea6f82043614086816d1536dcd98c4dF.png\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S6af2dd04e4ab4c52bfba902368659ab97.jpg\",\"style\":{}}}]}",
+        "subject": "Plastic Cartoon Golf Rubber Tees Recyclable Replacement Fisherman's Bear Golf Tee Portable Durable Golf Novelty Shape Tees",
+        "evaluation_count": "0",
+        "sales_count": "0",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "0.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005012936912865,
+        "detail": "<div class=\"detailmodule_text\"><p class=\"detail-desc-decorate-title\" style=\"text-overflow: ellipsis;font-family: 'OpenSans';color:'#000';word-wrap: break-word;white-space: pre-wrap;font-weight: 900;font-size: 20px;line-height: 28px;color: #000;margin-bottom: 12px;\"></p><p class=\"detail-desc-decorate-content\" style=\"text-overflow: ellipsis;font-family: 'OpenSans';color:'#000';word-wrap: break-word;white-space: pre-wrap;font-weight: 300;font-size: 14px;line-height: 20px;color: #000;margin-bottom: 12px;\">Product name: Funny Golf Tees<br>Material: ABS<br>Length: 83mm(3.27in)<br>Color:as picture shown<br>Packing List:1set Golf Tees\n\nnotes:<br>1.please allow 1-2cm(0.39-0.79in) measuring deviation due to manual measurement.<br>2.due to various monitors and lighting conditions, colors may be slightly different from listed photos.</p></div>\r\n<div class=\"detailmodule_image\"><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S40202a309d1e4090aebf5585bc624ba0G.jpg\"  class=\"detail-desc-decorate-image\" ><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S99f67039404c4f19993748ea8d1187acK.jpg\"  class=\"detail-desc-decorate-image\" ><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sa996d1cba76a4f6cba00dd9970797407A.jpg\"  class=\"detail-desc-decorate-image\" ><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S07ab90d8e28e430d88af2c3ddaf02cf4o.jpg\"  class=\"detail-desc-decorate-image\" ><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sd6d7174c79dc45baa8be52d9555fc98dI.jpg\"  class=\"detail-desc-decorate-image\" ><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S124c66ff81074fceb7cc1d361b8e9a6aO.jpg\"  class=\"detail-desc-decorate-image\" ><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S517e112bfd394d1fb1928c4775ade466C.jpg\"  class=\"detail-desc-decorate-image\" ><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S645e835afdb846b5b80756abd255522eC.jpg\"  class=\"detail-desc-decorate-image\" ><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S7f89e125ed1b4489a176737a175a4e8fe.jpg\"  class=\"detail-desc-decorate-image\" ><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S1ea6f82043614086816d1536dcd98c4dF.png\"  class=\"detail-desc-decorate-image\" ></div>\r\n<div class=\"detailmodule_image\"><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S6af2dd04e4ab4c52bfba902368659ab97.jpg\"  class=\"detail-desc-decorate-image\" ></div>\r\n"
+      },
+      "has_whole_sale": true,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 124,
+            "attr_name": "Material",
+            "attr_value": "Plastic"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1104982377,
+        "shipping_speed_rating": "4.6",
+        "communication_rating": "4.5",
+        "store_name": "ANQUAN Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.5"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2101694617902370540247922",
+    "_trace_id_": "2140d36217902370540222322e0ec4"
+  }
+}

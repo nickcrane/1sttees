@@ -1,0 +1,288 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:1630#85MM;200441262:172#20PCS",
+            "offer_sale_price": "8.42",
+            "sku_id": "12000047575940109",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "14.03",
+            "offer_bulk_sale_price": "8.42",
+            "sku_available_stock": 97,
+            "id": "14:1630#85MM;200441262:172#20PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_image": "https://ae01.alicdn.com/kf/S5aeb628797a845a8ae6c34492c7bc6640.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "85MM",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_definition_name": "20PCS",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:760#70MM;200441262:1452#100PCS",
+            "offer_sale_price": "19.89",
+            "sku_id": "12000047575940108",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "33.15",
+            "offer_bulk_sale_price": "19.89",
+            "sku_available_stock": 97,
+            "id": "14:760#70MM;200441262:1452#100PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Pine",
+                  "sku_image": "https://ae01.alicdn.com/kf/S77c26c1958984af98dabad82cfc80274W.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70MM",
+                  "property_value_id": 760,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_definition_name": "100PCS",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630#85MM;200441262:1452#100PCS",
+            "offer_sale_price": "20.79",
+            "sku_id": "12000047575940111",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "34.65",
+            "offer_bulk_sale_price": "20.79",
+            "sku_available_stock": 96,
+            "id": "14:1630#85MM;200441262:1452#100PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_image": "https://ae01.alicdn.com/kf/S5aeb628797a845a8ae6c34492c7bc6640.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "85MM",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_definition_name": "100PCS",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630#85MM;200441262:1181#50PCS",
+            "offer_sale_price": "13.09",
+            "sku_id": "12000047575940110",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "21.82",
+            "offer_bulk_sale_price": "13.09",
+            "sku_available_stock": 98,
+            "id": "14:1630#85MM;200441262:1181#50PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_image": "https://ae01.alicdn.com/kf/S5aeb628797a845a8ae6c34492c7bc6640.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "85MM",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_definition_name": "50PCS",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:760#70MM;200441262:1181#50PCS",
+            "offer_sale_price": "12.19",
+            "sku_id": "12000047575940107",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "20.32",
+            "offer_bulk_sale_price": "12.19",
+            "sku_available_stock": 98,
+            "id": "14:760#70MM;200441262:1181#50PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Pine",
+                  "sku_image": "https://ae01.alicdn.com/kf/S77c26c1958984af98dabad82cfc80274W.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70MM",
+                  "property_value_id": 760,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_definition_name": "50PCS",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:760#70MM;200441262:172#20PCS",
+            "offer_sale_price": "7.99",
+            "sku_id": "12000047575940106",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "13.32",
+            "offer_bulk_sale_price": "7.99",
+            "sku_available_stock": 99,
+            "id": "14:760#70MM;200441262:172#20PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Pine",
+                  "sku_image": "https://ae01.alicdn.com/kf/S77c26c1958984af98dabad82cfc80274W.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70MM",
+                  "property_value_id": 760,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_definition_name": "20PCS",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/S8fda30b1cd9d4d23a79caa8529dcfc3dh.jpg",
+              "ali_member_id": 2676507003,
+              "media_id": 5000502274006,
+              "media_url": "https://video.aliexpress-media.com/play/5000502274006.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/S50d96467a7594e2ebff40dd7a357cf05n.jpg;https://ae01.alicdn.com/kf/S534d669434434dbfa0355e4e1add2eaf3.jpg;https://ae01.alicdn.com/kf/Sabaaca1b96e344abb9cb1d2733e711ff1.jpg;https://ae01.alicdn.com/kf/S3091d56357894e75a7753a332968c49de.jpg;https://ae01.alicdn.com/kf/S9f9c5ebc981242c484991a2c19f0d567e.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 10,
+        "package_height": 10,
+        "package_length": 20,
+        "gross_weight": "0.500",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 8,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005006394749637,
+        "sub_product_id": "{\"US\":3256806208434885}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Dear friend, free personalization. Please leave your text when placing an order, or contact customer service to inform us of the customization content\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":16,\"fontWeight\":\"bold\",\"align\":\"left\",\"color\":\"#000000\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Personalized Wooden Golf Tee\\nMaterial: Wood\\nSize: 70MM / 85MM\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S534d669434434dbfa0355e4e1add2eaf3.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sc6b310bf07044051aeb72c13492029abJ.jpg\",\"style\":{\"width\":750,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S9f9c5ebc981242c484991a2c19f0d567e.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S3091d56357894e75a7753a332968c49de.jpg\",\"style\":{\"width\":1000,\"height\":1000}}}]}",
+        "subject": "70MM / 85MM Personalized Engraved Golf Tee Customized Wooden Ball Stud Wedding Gift Favors Father's Day Gift",
+        "evaluation_count": "1",
+        "sales_count": "8",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "5.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 200297146,
+        "product_id": 1005006394749637,
+        "detail": "<div class=\"detailmodule_text\"><p style=\"font-family:OpenSans;font-size:20px;font-weight:900;line-height:28px;white-space:pre-wrap;color:rgb(0, 0, 0);margin-bottom:12px\" class=\"detail-desc-decorate-title\">Dear friend, free personalization. Please leave your text when placing an order, or contact customer service to inform us of the customization content</p><p style=\"font-family:OpenSans;font-size:14px;font-weight:300;line-height:20px;white-space:pre-wrap;color:rgb(0, 0, 0);margin-bottom:12px\" class=\"detail-desc-decorate-content\">Personalized Wooden Golf Tee<br/>Material: Wood<br/>Size: 70MM / 85MM</p></div><div class=\"detailmodule_image\"><img class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S534d669434434dbfa0355e4e1add2eaf3.jpg\" slate-data-type=\"image\"/><img class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/Sc6b310bf07044051aeb72c13492029abJ.jpg\" slate-data-type=\"image\"/><img class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S9f9c5ebc981242c484991a2c19f0d567e.jpg\" slate-data-type=\"image\"/><img class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S3091d56357894e75a7753a332968c49de.jpg\" slate-data-type=\"image\"/></div><p><br/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 400076804,
+            "attr_value_id": 23399554847,
+            "attr_name": "Is It Charged",
+            "attr_value": "No"
+          },
+          {
+            "attr_name_id": 1238,
+            "attr_value_id": 202966873,
+            "attr_name": "Product Type",
+            "attr_value": "Unfinished Wood"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 400061202,
+            "attr_value_id": 23710544761,
+            "attr_name": "Laser printer",
+            "attr_value": "N"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1102822235,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.8",
+        "store_name": "Personalized Love Cabin Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.8"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "0bb49d8517902370169821565",
+    "_trace_id_": "2140d36217902370169818385e0ec4"
+  }
+}

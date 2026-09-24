@@ -1,0 +1,117 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:29#83mm-50pcs",
+            "offer_sale_price": "2.59",
+            "sku_id": "12000047563113145",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "5.51",
+            "offer_bulk_sale_price": "2.59",
+            "sku_available_stock": 33,
+            "id": "14:29#83mm-50pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "83mm-50pcs",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "image_urls": "https://ae01.alicdn.com/kf/S6a0730d37747466287aef1aa2aead702u.jpg;https://ae01.alicdn.com/kf/Sfc9d3858573642e3ade07834c4712729n.jpg;https://ae01.alicdn.com/kf/Sbf77993312084f33973b04e2a116a547A.jpg;https://ae01.alicdn.com/kf/S3dfc4c9937c548578d6214b615e23aa12.jpg;https://ae01.alicdn.com/kf/S08a26cf8842644ca9d051a1582570aa9R.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 11,
+        "package_height": 3,
+        "package_length": 11,
+        "gross_weight": "0.064",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005009008703393,
+        "sub_product_id": "{\"US\":3256808822388641}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\"}",
+        "subject": "50pcs Golf Tees Durable Wooden Seats Stabilizes Ball On The Course to Maintain a Perfect Tee Level Improve Accuracy D7",
+        "evaluation_count": "95",
+        "sales_count": "800+",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "4.8",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005009008703393,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><div id=\"offer-template-0\">Brand: PGM<br/>name; Golf log scale TEE<br/>Color: White<br/>Specifications：50pcs<br/>Size: 83mm<br/>Material: wood<br/></div><div style=\"width:790px\"><div style=\"font-family:ali-webfont;font-size:0px;white-space:break-spaces;padding:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;padding-right:10px;width:395px;box-sizing:border-box\" class=\"rich-text-component\"><br/></div><div><img style=\"display:block;width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae01.alicdn.com/kf/S5585d12c8c0e48cf82e2500f583e96b4S.jpg\" useMap=\"#_sdmap_1\" slate-data-type=\"image\"/> <img style=\"display:block;width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae01.alicdn.com/kf/S153fb9aab31d47b9936093a09b0ee5fa4.jpg\" useMap=\"#_sdmap_2\" slate-data-type=\"image\"/> <img style=\"display:block;width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae01.alicdn.com/kf/S52e5cfdc61ac4d22915741dd55a5d4d54.jpg\" useMap=\"#_sdmap_3\" slate-data-type=\"image\"/> <img style=\"display:block;width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae01.alicdn.com/kf/S1e0f08ed193548f28860c42aca86e10bA.jpg\" useMap=\"#_sdmap_4\" slate-data-type=\"image\"/> <img style=\"display:block;width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae01.alicdn.com/kf/S4e05086eca6a4733a87739d60b0b2b55t.jpg\" useMap=\"#_sdmap_5\" slate-data-type=\"image\"/> <img style=\"display:block;width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae01.alicdn.com/kf/S0cd4380ba8e74ceb98b0e84bbf976ddfs.jpg\" useMap=\"#_sdmap_6\" slate-data-type=\"image\"/> <img style=\"display:block;width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae01.alicdn.com/kf/Sfe1468dccdff4bba8f0a4e2e983237467.jpg\" useMap=\"#_sdmap_7\" slate-data-type=\"image\"/> <img style=\"display:block;width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae01.alicdn.com/kf/S5f7a3e2f7f0945059f33353803a4bccer.jpg\" useMap=\"#_sdmap_8\" slate-data-type=\"image\"/> <img style=\"display:block;width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae01.alicdn.com/kf/Sa371402767d140efa8d4825e63e5d464D.jpg\" useMap=\"#_sdmap_9\" slate-data-type=\"image\"/></div></div></div></div><p><br/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 350383,
+            "attr_name": "Material",
+            "attr_value": "Wood"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "D7"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1102770627,
+        "shipping_speed_rating": "4.7",
+        "communication_rating": "4.7",
+        "store_name": "PGM Factory Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2101119a17902369939706826",
+    "_trace_id_": "2140d36217902369939687342e0ec4"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:366#38mm-50pcs",
+            "offer_sale_price": "1.80",
+            "sku_id": "12000041590282690",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sl_related_skuId": 12000039995199060,
+            "sku_price": "3.74",
+            "offer_bulk_sale_price": "1.80",
+            "sku_available_stock": 38,
+            "id": "14:366#38mm-50pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/S6891d761faec4b7dabbc4ae8802e142dr.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "38mm-50pcs",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#83mm-50pcs",
+            "offer_sale_price": "2.01",
+            "sku_id": "12000041590282691",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sl_related_skuId": 12000039995199060,
+            "sku_price": "4.19",
+            "offer_bulk_sale_price": "2.01",
+            "sku_available_stock": 43,
+            "id": "14:29#83mm-50pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S57eed9a27cf74f10b6714ab8f89cfeb2O.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "83mm-50pcs",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "image_urls": "https://ae01.alicdn.com/kf/Sc72600dca6d74cb1bcfd6a16bbb087618.jpg;https://ae01.alicdn.com/kf/S05cd17be92bd4f719b17dded229492a6h.jpg;https://ae01.alicdn.com/kf/S82965ab271f340feb758d5304e3d268fR.jpg;https://ae01.alicdn.com/kf/Sa1f5740ba778490e93da2225c968f338j.jpg;https://ae01.alicdn.com/kf/S2fda39a907384efdb57c84ed4da8a08b7.jpg;https://ae01.alicdn.com/kf/S4bcab3e3900b49f89a7954ed4b2c2bb0N.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 12,
+        "package_height": 3,
+        "package_length": 14,
+        "gross_weight": "0.039",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005007635887976,
+        "sub_product_id": "{\"US\":3256807449573224}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Brand: PGM\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Model: TE003-Y\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Name: Golf Bamboo Tees\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Quantity: 50 pieces\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Dimensions: 83mm, 38mm\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Material: Bamboo\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"characteristic\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"1. The depth can be controlled, and the depth of soil insertion can be adjusted according to habits\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"2. Stable ball release, enhanced stability design of the ball holder, and smooth hitting\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"3. Practical and environmentally friendly, biodegradable bamboo ball TEE\",\"style\":{}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sd3b8e4d8e8ce4c2f9d4b9d3574098a22u.jpg\",\"style\":{\"width\":1200,\"height\":1200},\"targetUrl\":\"null\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S505eb20b47a74549a8a802435658a913w.jpg\",\"style\":{\"width\":1200,\"height\":1200},\"targetUrl\":\"null\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Se1a9a352dc8a436c99f5b83a9554cfd79.jpg\",\"style\":{\"width\":1000,\"height\":1000},\"targetUrl\":\"null\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sc96e2199e74f43efb275dbb48c10677aq.jpg\",\"style\":{\"width\":1200,\"height\":1200},\"targetUrl\":\"null\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S3f4410adb5004b13b531c1e3b64b26f2T.jpg\",\"style\":{\"width\":1200,\"height\":1005},\"targetUrl\":\"null\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sd5e8e21ead9149e692c217bb2563808dt.jpg\",\"style\":{\"width\":1200,\"height\":1200},\"targetUrl\":\"null\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S3d55dfba19f645828298c0fe8d526919k.jpg\",\"style\":{\"width\":1200,\"height\":1200},\"targetUrl\":\"null\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S446cd122a6494a16a72cc985b20a49331.jpg\",\"style\":{\"width\":1200,\"height\":1200},\"targetUrl\":\"null\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S11ba750287d24d0997279cf9a0f1f3c06.jpg\",\"style\":{\"width\":1200,\"height\":1200},\"targetUrl\":\"null\"}}]}",
+        "subject": "50pcs Bamboo Golf Tees More Durable and Stable TE003-Y",
+        "evaluation_count": "305",
+        "sales_count": "1000+",
+        "sl_related_product_id": 1005007263389700,
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "4.9",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": true,
+        "category_id": 100005884,
+        "product_id": 1005007635887976,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><div id=\"offer-template-0\"><div style=\"position:relative\"><span>Brand: PGM</span></div><div style=\"position:relative\"><span>Model: TE003-Y</span></div><div style=\"position:relative\"><span>Name: Golf Bamboo Tees</span></div><div style=\"position:relative\"><span>Quantity: 50 pieces</span></div><div style=\"position:relative\"><span>Dimensions: 83mm, 38mm</span></div><div style=\"position:relative\"><span>Material: Bamboo</span></div><div style=\"position:relative\"><span>characteristic</span></div><div style=\"position:relative\"><span>1. The depth can be controlled, and the depth of soil insertion can be adjusted according to habits</span></div><div style=\"position:relative\"><span>2. Stable ball release, enhanced stability design of the ball holder, and smooth hitting</span></div><div style=\"position:relative\"><span>3. Practical and environmentally friendly, biodegradable bamboo ball TEE</span></div><div><br/><br/><img src=\"https://ae01.alicdn.com/kf/Sd3b8e4d8e8ce4c2f9d4b9d3574098a22u.jpg\" slate-data-type=\"image\"/><br/><br/><img src=\"https://ae01.alicdn.com/kf/S505eb20b47a74549a8a802435658a913w.jpg\" slate-data-type=\"image\"/><br/><br/><img src=\"https://ae01.alicdn.com/kf/Se1a9a352dc8a436c99f5b83a9554cfd79.jpg\" slate-data-type=\"image\"/><br/><br/><img src=\"https://ae01.alicdn.com/kf/Sc96e2199e74f43efb275dbb48c10677aq.jpg\" slate-data-type=\"image\"/><br/><br/><img src=\"https://ae01.alicdn.com/kf/S3f4410adb5004b13b531c1e3b64b26f2T.jpg\" slate-data-type=\"image\"/><br/><br/><img src=\"https://ae01.alicdn.com/kf/Sd5e8e21ead9149e692c217bb2563808dt.jpg\" slate-data-type=\"image\"/><br/><br/><img src=\"https://ae01.alicdn.com/kf/S3d55dfba19f645828298c0fe8d526919k.jpg\" slate-data-type=\"image\"/><br/><br/><img src=\"https://ae01.alicdn.com/kf/S446cd122a6494a16a72cc985b20a49331.jpg\" slate-data-type=\"image\"/><br/><br/><img src=\"https://ae01.alicdn.com/kf/S11ba750287d24d0997279cf9a0f1f3c06.jpg\" slate-data-type=\"image\"/></div></div></div></div><p><br/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 200136100,
+            "attr_name": "Brand Name",
+            "attr_value": "pgm"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 353085,
+            "attr_name": "Material",
+            "attr_value": "Bamboo"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "TE003-Y"
+          },
+          {
+            "attr_name_id": 19127,
+            "attr_value_id": 200011477,
+            "attr_name": "Variety",
+            "attr_value": "Crown Tee"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1103573332,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.8",
+        "store_name": "Stone's Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "5.0"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "212e398317902370320113578",
+    "_trace_id_": "2140d36217902370320028990e0ec4"
+  }
+}

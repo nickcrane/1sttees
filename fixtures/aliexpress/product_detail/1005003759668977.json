@@ -1,0 +1,3240 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:1181",
+            "offer_sale_price": "28.89",
+            "sku_id": "12000027072023856",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "28.89",
+            "offer_bulk_sale_price": "28.89",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:1181",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "3-4cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x20mm 10pcs",
+                  "property_value_id": 202965863,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:1452",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023857",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 993,
+            "id": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:1452",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "3-4cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x20mm 10pcs",
+                  "property_value_id": 202965863,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:2696",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023858",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 995,
+            "id": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:2696",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "0.6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2696,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "3-4cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x20mm 10pcs",
+                  "property_value_id": 202965863,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:2789",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023859",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:2789",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1.5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2789,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "3-4cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x20mm 10pcs",
+                  "property_value_id": 202965863,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:3264077",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023860",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 989,
+            "id": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:3264077",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3264077,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "3-4cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x20mm 10pcs",
+                  "property_value_id": 202965863,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:3629053",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023861",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 994,
+            "id": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:3629053",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3629053,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "3-4cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x20mm 10pcs",
+                  "property_value_id": 202965863,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:7635387",
+            "offer_sale_price": "38.49",
+            "sku_id": "12000027072023862",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "38.49",
+            "offer_bulk_sale_price": "38.49",
+            "sku_available_stock": 986,
+            "id": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:7635387",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "3mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 7635387,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "3-4cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x20mm 10pcs",
+                  "property_value_id": 202965863,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:201457469",
+            "offer_sale_price": "48.19",
+            "sku_id": "12000027072023863",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "48.19",
+            "offer_bulk_sale_price": "48.19",
+            "sku_available_stock": 995,
+            "id": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:201457469",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 201457469,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "3-4cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x20mm 10pcs",
+                  "property_value_id": 202965863,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:2696",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023840",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:2696",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "0.6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2696,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "18-19cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x5mm 10pcs",
+                  "property_value_id": 202968833,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:2789",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023841",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:2789",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1.5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2789,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "18-19cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x5mm 10pcs",
+                  "property_value_id": 202968833,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:3264077",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023842",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:3264077",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3264077,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "18-19cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x5mm 10pcs",
+                  "property_value_id": 202968833,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:3629053",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023843",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:3629053",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3629053,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "18-19cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x5mm 10pcs",
+                  "property_value_id": 202968833,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:7635387",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023844",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:7635387",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "3mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 7635387,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "18-19cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x5mm 10pcs",
+                  "property_value_id": 202968833,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:201457469",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023845",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:201457469",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 201457469,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "18-19cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x5mm 10pcs",
+                  "property_value_id": 202968833,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:172",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023846",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:172",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "19-20cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x7mm 10pcs",
+                  "property_value_id": 202968834,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:1181",
+            "offer_sale_price": "23.09",
+            "sku_id": "12000027072023847",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "23.09",
+            "offer_bulk_sale_price": "23.09",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:1181",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "19-20cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x7mm 10pcs",
+                  "property_value_id": 202968834,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:1452",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023848",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:1452",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "19-20cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x7mm 10pcs",
+                  "property_value_id": 202968834,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:2696",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023849",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:2696",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "0.6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2696,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "19-20cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x7mm 10pcs",
+                  "property_value_id": 202968834,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:2789",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023850",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:2789",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1.5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2789,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "19-20cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x7mm 10pcs",
+                  "property_value_id": 202968834,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:3264077",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023851",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:3264077",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3264077,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "19-20cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x7mm 10pcs",
+                  "property_value_id": 202968834,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:3629053",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023852",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:3629053",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3629053,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "19-20cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x7mm 10pcs",
+                  "property_value_id": 202968834,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:7635387",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023853",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:7635387",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "3mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 7635387,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "19-20cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x7mm 10pcs",
+                  "property_value_id": 202968834,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:201457469",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023854",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968834#size 450x7mm 10pcs;200441262:201457469",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 201457469,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "19-20cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x7mm 10pcs",
+                  "property_value_id": 202968834,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:172",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023855",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 968,
+            "id": "14:1630;200437265:202965863#size 450x20mm 10pcs;200441262:172",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "3-4cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x20mm 10pcs",
+                  "property_value_id": 202965863,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:3264077",
+            "offer_sale_price": "18.29",
+            "sku_id": "12000027072023824",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "18.29",
+            "offer_bulk_sale_price": "18.29",
+            "sku_available_stock": 993,
+            "id": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:3264077",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3264077,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "15-16cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x7mm 10pcs",
+                  "property_value_id": 202968831,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:3629053",
+            "offer_sale_price": "29.89",
+            "sku_id": "12000027072023825",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "29.89",
+            "offer_bulk_sale_price": "29.89",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:3629053",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3629053,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "15-16cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x7mm 10pcs",
+                  "property_value_id": 202968831,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:7635387",
+            "offer_sale_price": "23.09",
+            "sku_id": "12000027072023826",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "23.09",
+            "offer_bulk_sale_price": "23.09",
+            "sku_available_stock": 996,
+            "id": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:7635387",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "3mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 7635387,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "15-16cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x7mm 10pcs",
+                  "property_value_id": 202968831,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:201457469",
+            "offer_sale_price": "26.99",
+            "sku_id": "12000027072023827",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "26.99",
+            "offer_bulk_sale_price": "26.99",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:201457469",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 201457469,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "15-16cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x7mm 10pcs",
+                  "property_value_id": 202968831,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:172",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023828",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 995,
+            "id": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:172",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "16-17cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x10mm 10pcs",
+                  "property_value_id": 202968832,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:1181",
+            "offer_sale_price": "24.09",
+            "sku_id": "12000027072023829",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "24.09",
+            "offer_bulk_sale_price": "24.09",
+            "sku_available_stock": 995,
+            "id": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:1181",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "16-17cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x10mm 10pcs",
+                  "property_value_id": 202968832,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:1452",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023830",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 994,
+            "id": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:1452",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "16-17cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x10mm 10pcs",
+                  "property_value_id": 202968832,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:2696",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023831",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:2696",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "0.6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2696,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "16-17cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x10mm 10pcs",
+                  "property_value_id": 202968832,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:2789",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023832",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 996,
+            "id": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:2789",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1.5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2789,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "16-17cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x10mm 10pcs",
+                  "property_value_id": 202968832,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:3264077",
+            "offer_sale_price": "23.09",
+            "sku_id": "12000027072023833",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "23.09",
+            "offer_bulk_sale_price": "23.09",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:3264077",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3264077,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "16-17cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x10mm 10pcs",
+                  "property_value_id": 202968832,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:3629053",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023834",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:3629053",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3629053,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "16-17cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x10mm 10pcs",
+                  "property_value_id": 202968832,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:7635387",
+            "offer_sale_price": "28.89",
+            "sku_id": "12000027072023835",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "28.89",
+            "offer_bulk_sale_price": "28.89",
+            "sku_available_stock": 995,
+            "id": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:7635387",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "3mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 7635387,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "16-17cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x10mm 10pcs",
+                  "property_value_id": 202968832,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:201457469",
+            "offer_sale_price": "33.69",
+            "sku_id": "12000027072023836",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "33.69",
+            "offer_bulk_sale_price": "33.69",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202968832#size 450x10mm 10pcs;200441262:201457469",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 201457469,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "16-17cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x10mm 10pcs",
+                  "property_value_id": 202968832,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:172",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023837",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 996,
+            "id": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:172",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "18-19cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x5mm 10pcs",
+                  "property_value_id": 202968833,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:1181",
+            "offer_sale_price": "19.29",
+            "sku_id": "12000027072023838",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "19.29",
+            "offer_bulk_sale_price": "19.29",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:1181",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "18-19cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x5mm 10pcs",
+                  "property_value_id": 202968833,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:1452",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023839",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202968833#size 450x5mm 10pcs;200441262:1452",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "18-19cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 450x5mm 10pcs",
+                  "property_value_id": 202968833,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:7635387",
+            "offer_sale_price": "19.29",
+            "sku_id": "12000027072023808",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "19.29",
+            "offer_bulk_sale_price": "19.29",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:7635387",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "3mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 7635387,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "13-14cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x5mm 10pcs",
+                  "property_value_id": 202968829,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:201457469",
+            "offer_sale_price": "23.09",
+            "sku_id": "12000027072023809",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "23.09",
+            "offer_bulk_sale_price": "23.09",
+            "sku_available_stock": 996,
+            "id": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:201457469",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 201457469,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "13-14cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x5mm 10pcs",
+                  "property_value_id": 202968829,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:172",
+            "offer_sale_price": "29.89",
+            "sku_id": "12000027072023810",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "29.89",
+            "offer_bulk_sale_price": "29.89",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:172",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "14-15cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x6mm 10pcs",
+                  "property_value_id": 202968830,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:1181",
+            "offer_sale_price": "19.29",
+            "sku_id": "12000027072023811",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "19.29",
+            "offer_bulk_sale_price": "19.29",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:1181",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "14-15cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x6mm 10pcs",
+                  "property_value_id": 202968830,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:1452",
+            "offer_sale_price": "23.09",
+            "sku_id": "12000027072023812",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "23.09",
+            "offer_bulk_sale_price": "23.09",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:1452",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "14-15cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x6mm 10pcs",
+                  "property_value_id": 202968830,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:2696",
+            "offer_sale_price": "15.39",
+            "sku_id": "12000027072023813",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "15.39",
+            "offer_bulk_sale_price": "15.39",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:2696",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "0.6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2696,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "14-15cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x6mm 10pcs",
+                  "property_value_id": 202968830,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:2789",
+            "offer_sale_price": "18.29",
+            "sku_id": "12000027072023814",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "18.29",
+            "offer_bulk_sale_price": "18.29",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:2789",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1.5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2789,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "14-15cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x6mm 10pcs",
+                  "property_value_id": 202968830,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:3264077",
+            "offer_sale_price": "17.39",
+            "sku_id": "12000027072023815",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "17.39",
+            "offer_bulk_sale_price": "17.39",
+            "sku_available_stock": 995,
+            "id": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:3264077",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3264077,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "14-15cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x6mm 10pcs",
+                  "property_value_id": 202968830,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:3629053",
+            "offer_sale_price": "27.89",
+            "sku_id": "12000027072023816",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.89",
+            "offer_bulk_sale_price": "27.89",
+            "sku_available_stock": 995,
+            "id": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:3629053",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3629053,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "14-15cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x6mm 10pcs",
+                  "property_value_id": 202968830,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:7635387",
+            "offer_sale_price": "21.19",
+            "sku_id": "12000027072023817",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "21.19",
+            "offer_bulk_sale_price": "21.19",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:7635387",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "3mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 7635387,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "14-15cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x6mm 10pcs",
+                  "property_value_id": 202968830,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:201457469",
+            "offer_sale_price": "25.09",
+            "sku_id": "12000027072023818",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "25.09",
+            "offer_bulk_sale_price": "25.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968830#size 500x6mm 10pcs;200441262:201457469",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 201457469,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "14-15cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x6mm 10pcs",
+                  "property_value_id": 202968830,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:172",
+            "offer_sale_price": "30.79",
+            "sku_id": "12000027072023819",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "30.79",
+            "offer_bulk_sale_price": "30.79",
+            "sku_available_stock": 996,
+            "id": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:172",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "15-16cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x7mm 10pcs",
+                  "property_value_id": 202968831,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:1181",
+            "offer_sale_price": "20.29",
+            "sku_id": "12000027072023820",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "20.29",
+            "offer_bulk_sale_price": "20.29",
+            "sku_available_stock": 992,
+            "id": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:1181",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "15-16cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x7mm 10pcs",
+                  "property_value_id": 202968831,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:1452",
+            "offer_sale_price": "25.09",
+            "sku_id": "12000027072023821",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "25.09",
+            "offer_bulk_sale_price": "25.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:1452",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "15-16cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x7mm 10pcs",
+                  "property_value_id": 202968831,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:2696",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023822",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:2696",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "0.6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2696,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "15-16cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x7mm 10pcs",
+                  "property_value_id": 202968831,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:2789",
+            "offer_sale_price": "19.29",
+            "sku_id": "12000027072023823",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "19.29",
+            "offer_bulk_sale_price": "19.29",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968831#size 500x7mm 10pcs;200441262:2789",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1.5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2789,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "15-16cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x7mm 10pcs",
+                  "property_value_id": 202968831,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:172",
+            "offer_sale_price": "25.09",
+            "sku_id": "12000027072023792",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "25.09",
+            "offer_bulk_sale_price": "25.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:172",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "12-13cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x4mm 10pcs",
+                  "property_value_id": 202968828,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:1181",
+            "offer_sale_price": "17.39",
+            "sku_id": "12000027072023793",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "17.39",
+            "offer_bulk_sale_price": "17.39",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:1181",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "12-13cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x4mm 10pcs",
+                  "property_value_id": 202968828,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:1452",
+            "offer_sale_price": "19.29",
+            "sku_id": "12000027072023794",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "19.29",
+            "offer_bulk_sale_price": "19.29",
+            "sku_available_stock": 990,
+            "id": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:1452",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "12-13cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x4mm 10pcs",
+                  "property_value_id": 202968828,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:2696",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023795",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:2696",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "0.6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2696,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "12-13cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x4mm 10pcs",
+                  "property_value_id": 202968828,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:2789",
+            "offer_sale_price": "16.39",
+            "sku_id": "12000027072023796",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "16.39",
+            "offer_bulk_sale_price": "16.39",
+            "sku_available_stock": 993,
+            "id": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:2789",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1.5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2789,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "12-13cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x4mm 10pcs",
+                  "property_value_id": 202968828,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:3264077",
+            "offer_sale_price": "15.39",
+            "sku_id": "12000027072023797",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "15.39",
+            "offer_bulk_sale_price": "15.39",
+            "sku_available_stock": 987,
+            "id": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:3264077",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3264077,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "12-13cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x4mm 10pcs",
+                  "property_value_id": 202968828,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:3629053",
+            "offer_sale_price": "23.09",
+            "sku_id": "12000027072023798",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "23.09",
+            "offer_bulk_sale_price": "23.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:3629053",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3629053,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "12-13cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x4mm 10pcs",
+                  "property_value_id": 202968828,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:7635387",
+            "offer_sale_price": "18.29",
+            "sku_id": "12000027072023799",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "18.29",
+            "offer_bulk_sale_price": "18.29",
+            "sku_available_stock": 996,
+            "id": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:7635387",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "3mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 7635387,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "12-13cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x4mm 10pcs",
+                  "property_value_id": 202968828,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:201457469",
+            "offer_sale_price": "21.19",
+            "sku_id": "12000027072023800",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "21.19",
+            "offer_bulk_sale_price": "21.19",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968828#size 500x4mm 10pcs;200441262:201457469",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 201457469,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "12-13cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x4mm 10pcs",
+                  "property_value_id": 202968828,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:172",
+            "offer_sale_price": "26.99",
+            "sku_id": "12000027072023801",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "26.99",
+            "offer_bulk_sale_price": "26.99",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:172",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "13-14cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x5mm 10pcs",
+                  "property_value_id": 202968829,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:1181",
+            "offer_sale_price": "18.29",
+            "sku_id": "12000027072023802",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "18.29",
+            "offer_bulk_sale_price": "18.29",
+            "sku_available_stock": 992,
+            "id": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:1181",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "13-14cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x5mm 10pcs",
+                  "property_value_id": 202968829,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:1452",
+            "offer_sale_price": "21.19",
+            "sku_id": "12000027072023803",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "21.19",
+            "offer_bulk_sale_price": "21.19",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:1452",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "13-14cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x5mm 10pcs",
+                  "property_value_id": 202968829,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:2696",
+            "offer_sale_price": "14.49",
+            "sku_id": "12000027072023804",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "14.49",
+            "offer_bulk_sale_price": "14.49",
+            "sku_available_stock": 995,
+            "id": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:2696",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "0.6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2696,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "13-14cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x5mm 10pcs",
+                  "property_value_id": 202968829,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:2789",
+            "offer_sale_price": "17.39",
+            "sku_id": "12000027072023805",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "17.39",
+            "offer_bulk_sale_price": "17.39",
+            "sku_available_stock": 974,
+            "id": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:2789",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1.5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2789,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "13-14cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x5mm 10pcs",
+                  "property_value_id": 202968829,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:3264077",
+            "offer_sale_price": "16.39",
+            "sku_id": "12000027072023806",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "16.39",
+            "offer_bulk_sale_price": "16.39",
+            "sku_available_stock": 986,
+            "id": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:3264077",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3264077,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "13-14cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x5mm 10pcs",
+                  "property_value_id": 202968829,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:3629053",
+            "offer_sale_price": "25.09",
+            "sku_id": "12000027072023807",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "25.09",
+            "offer_bulk_sale_price": "25.09",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968829#size 500x5mm 10pcs;200441262:3629053",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3629053,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "13-14cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x5mm 10pcs",
+                  "property_value_id": 202968829,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:1452",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023776",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:1452",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "10-11cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x2mm 10pcs",
+                  "property_value_id": 202968826,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:2696",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023777",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:2696",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "0.6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2696,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "10-11cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x2mm 10pcs",
+                  "property_value_id": 202968826,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:2789",
+            "offer_sale_price": "14.49",
+            "sku_id": "12000027072023778",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "14.49",
+            "offer_bulk_sale_price": "14.49",
+            "sku_available_stock": 996,
+            "id": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:2789",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1.5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2789,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "10-11cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x2mm 10pcs",
+                  "property_value_id": 202968826,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:3264077",
+            "offer_sale_price": "13.49",
+            "sku_id": "12000027072023779",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "13.49",
+            "offer_bulk_sale_price": "13.49",
+            "sku_available_stock": 982,
+            "id": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:3264077",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3264077,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "10-11cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x2mm 10pcs",
+                  "property_value_id": 202968826,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:3629053",
+            "offer_sale_price": "19.29",
+            "sku_id": "12000027072023780",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "19.29",
+            "offer_bulk_sale_price": "19.29",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:3629053",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3629053,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "10-11cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x2mm 10pcs",
+                  "property_value_id": 202968826,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:7635387",
+            "offer_sale_price": "16.39",
+            "sku_id": "12000027072023781",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "16.39",
+            "offer_bulk_sale_price": "16.39",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:7635387",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "3mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 7635387,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "10-11cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x2mm 10pcs",
+                  "property_value_id": 202968826,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:201457469",
+            "offer_sale_price": "18.29",
+            "sku_id": "12000027072023782",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "18.29",
+            "offer_bulk_sale_price": "18.29",
+            "sku_available_stock": 997,
+            "id": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:201457469",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 201457469,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "10-11cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x2mm 10pcs",
+                  "property_value_id": 202968826,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:172",
+            "offer_sale_price": "21.19",
+            "sku_id": "12000027072023783",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "21.19",
+            "offer_bulk_sale_price": "21.19",
+            "sku_available_stock": 995,
+            "id": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:172",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "11-12cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x3mm 10pcs",
+                  "property_value_id": 202968827,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:1181",
+            "offer_sale_price": "16.39",
+            "sku_id": "12000027072023784",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "16.39",
+            "offer_bulk_sale_price": "16.39",
+            "sku_available_stock": 996,
+            "id": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:1181",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "11-12cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x3mm 10pcs",
+                  "property_value_id": 202968827,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:1452",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023785",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:1452",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "4mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1452,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "11-12cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x3mm 10pcs",
+                  "property_value_id": 202968827,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:2696",
+            "offer_sale_price": "27.09",
+            "sku_id": "12000027072023786",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "27.09",
+            "offer_bulk_sale_price": "27.09",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:2696",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "0.6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2696,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "11-12cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x3mm 10pcs",
+                  "property_value_id": 202968827,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:2789",
+            "offer_sale_price": "15.39",
+            "sku_id": "12000027072023787",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "15.39",
+            "offer_bulk_sale_price": "15.39",
+            "sku_available_stock": 992,
+            "id": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:2789",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1.5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 2789,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "11-12cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x3mm 10pcs",
+                  "property_value_id": 202968827,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:3264077",
+            "offer_sale_price": "14.49",
+            "sku_id": "12000027072023788",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "14.49",
+            "offer_bulk_sale_price": "14.49",
+            "sku_available_stock": 985,
+            "id": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:3264077",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "1mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3264077,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "11-12cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x3mm 10pcs",
+                  "property_value_id": 202968827,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:3629053",
+            "offer_sale_price": "21.19",
+            "sku_id": "12000027072023789",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "21.19",
+            "offer_bulk_sale_price": "21.19",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:3629053",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "6mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 3629053,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "11-12cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x3mm 10pcs",
+                  "property_value_id": 202968827,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:7635387",
+            "offer_sale_price": "17.39",
+            "sku_id": "12000027072023790",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "17.39",
+            "offer_bulk_sale_price": "17.39",
+            "sku_available_stock": 981,
+            "id": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:7635387",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "3mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 7635387,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "11-12cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x3mm 10pcs",
+                  "property_value_id": 202968827,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:201457469",
+            "offer_sale_price": "19.29",
+            "sku_id": "12000027072023791",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "19.29",
+            "offer_bulk_sale_price": "19.29",
+            "sku_available_stock": 998,
+            "id": "14:1630;200437265:202968827#size 500x3mm 10pcs;200441262:201457469",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "5mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 201457469,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "11-12cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x3mm 10pcs",
+                  "property_value_id": 202968827,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:172",
+            "offer_sale_price": "20.29",
+            "sku_id": "12000027072023774",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "20.29",
+            "offer_bulk_sale_price": "20.29",
+            "sku_available_stock": 999,
+            "id": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:172",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "7mm",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 172,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "10-11cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x2mm 10pcs",
+                  "property_value_id": 202968826,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:1181",
+            "offer_sale_price": "15.39",
+            "sku_id": "12000027072023775",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "15.39",
+            "offer_bulk_sale_price": "15.39",
+            "sku_available_stock": 992,
+            "id": "14:1630;200437265:202968826#size 500x2mm 10pcs;200441262:1181",
+            "sku_bulk_order": 2,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Teak",
+                  "sku_property_name": "Color",
+                  "property_value_id": 1630,
+                  "sku_property_id": 14
+                },
+                {
+                  "sku_property_value": "2MM",
+                  "sku_property_name": "Wood Thickness",
+                  "property_value_id": 1181,
+                  "sku_property_id": 200441262
+                },
+                {
+                  "sku_property_value": "10-11cm",
+                  "sku_property_name": "Wood Diameter",
+                  "property_value_definition_name": "size 500x2mm 10pcs",
+                  "property_value_id": 202968826,
+                  "sku_property_id": 200437265
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "image_urls": "https://ae01.alicdn.com/kf/S6ef0018552b746718818c3d2d667a3efi.jpg;https://ae01.alicdn.com/kf/S0adc171564ca4d73ab24952580c98daag.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 10,
+        "package_height": 10,
+        "package_length": 10,
+        "gross_weight": "0.500",
+        "package_type": true,
+        "product_unit": 100000014
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005003759668977,
+        "sub_product_id": "{\"US\":3256803573354225}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Length 50cm, it's better to order more for small sizes to avoid bending problem. Welcome contact us to custom.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S2ef4db4b17494f568ea21e044833b488P.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S646534668cbb4a238c7de10af3ffa06fF.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S28d76587edcc4e4183905569331a996cV.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S5980f46fee8448dca471b1fc7456a4347.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S9739011b9d574dc2b2acbeb598ba77b7j.jpg\",\"style\":{},\"targetUrl\":\"\"}}]}",
+        "subject": "Custom Natural Genuine Teak Wood Bar DIY Material 45cm 50cm x 2/3/4/5/6/7/10/20mm 0.6-7mm Thick",
+        "evaluation_count": "5",
+        "sales_count": "70",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "4.2",
+        "separated_listing": false,
+        "currency_code": "USD",
+        "sl_product": false,
+        "category_id": 200297146,
+        "product_id": 1005003759668977,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><p><span style=\"font-size:26px\">Length 50cm, it&#x27;s better to order more for small sizes to avoid bending problem. Welcome contact us to custom.</span></p><p><br/></p><p><img src=\"https://ae01.alicdn.com/kf/S2ef4db4b17494f568ea21e044833b488P.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S646534668cbb4a238c7de10af3ffa06fF.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S28d76587edcc4e4183905569331a996cV.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S5980f46fee8448dca471b1fc7456a4347.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S9739011b9d574dc2b2acbeb598ba77b7j.jpg\" slate-data-type=\"image\"/></p><br/><p><br/></p></div></div><br/>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 1238,
+            "attr_value_id": 202966874,
+            "attr_name": "Product Type",
+            "attr_value": "Wood DIY Package"
+          },
+          {
+            "attr_name_id": 400076804,
+            "attr_value_id": 23399554847,
+            "attr_name": "Is It Charged",
+            "attr_value": "No"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1764728,
+        "shipping_speed_rating": "4.5",
+        "communication_rating": "4.5",
+        "store_name": "MiMi Hotsell International Co.,Ltd",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.5"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2140fd5217902370470164791",
+    "_trace_id_": "2140d36217902370470141746e0ec4"
+  }
+}

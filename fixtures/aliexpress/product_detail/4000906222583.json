@@ -1,0 +1,210 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:29#Red 100 pcs 70mm",
+            "offer_sale_price": "7.49",
+            "sku_id": "10000010485385021",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "7.49",
+            "offer_bulk_sale_price": "7.49",
+            "sku_available_stock": 985,
+            "id": "14:29#Red 100 pcs 70mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S3f85fc9417ff40ddb93f01c3af47f5aaL.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Red 100 pcs 70mm",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:366#Red 100 pcs 83mm",
+            "offer_sale_price": "7.89",
+            "sku_id": "10000010485385022",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "7.89",
+            "offer_bulk_sale_price": "7.89",
+            "sku_available_stock": 984,
+            "id": "14:366#Red 100 pcs 83mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/S85c0261854e643dbb17f95cc830b8df8M.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Red 100 pcs 83mm",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:10#White 100 pcs 70mm",
+            "offer_sale_price": "7.21",
+            "sku_id": "10000010485385023",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "7.21",
+            "offer_bulk_sale_price": "7.21",
+            "sku_available_stock": 964,
+            "id": "14:10#White 100 pcs 70mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sedd0d7219d314d73a64855abf6076b0ak.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "White 100 pcs 70mm",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200002984#White 100 pcs 83mm",
+            "offer_sale_price": "7.91",
+            "sku_id": "10000010485385024",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "7.91",
+            "offer_bulk_sale_price": "7.91",
+            "sku_available_stock": 967,
+            "id": "14:200002984#White 100 pcs 83mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Burgundy",
+                  "sku_image": "https://ae01.alicdn.com/kf/S1053a2e8dec14b6eb28c64744529df19q.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "White 100 pcs 83mm",
+                  "property_value_id": 200002984,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/Scc865bcfe1de423a9a76d909c14b22d8Q.jpg",
+              "ali_member_id": 226939877,
+              "media_id": 1100178916560,
+              "media_url": "https://video.aliexpress-media.com/play/1100178916560.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/Sd269f502a0a6450ab5883537bcec9832N.jpg;https://ae01.alicdn.com/kf/Sab8ec40699514260bd2ea6dc086c1ae84.jpg;https://ae01.alicdn.com/kf/Sf665de17ecf9484e945956953a9d1181p.jpg;https://ae01.alicdn.com/kf/S405d4a7bcbcd4bd0a631b5c6e73b66c4a.jpg;https://ae01.alicdn.com/kf/S63a905f07b2f43ce89e60e64b5fe36566.jpg;https://ae01.alicdn.com/kf/Sf7dfb2c314bf49d9a8c2f9689f6cfbd17.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 16,
+        "package_height": 6,
+        "package_length": 18,
+        "gross_weight": "0.130",
+        "package_type": true,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 5,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 4000906222583,
+        "sub_product_id": "{\"US\":2255800719907831}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Lightweight, High Strength Bamboo which is 7x stronger than Wooden Tees\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"High Quality, Long Lasting\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Natural Color, no paint or plastic that will get on your club face\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"100pcs count\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/H3b28e2437de54120abd5a38a6d4d13b8P.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/H8145d78cba2541a0939b649d88313f1dR.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/Hef5b5eaa0a294c16bb008fe2a77693c8B.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/Hc68e296b5a544d5db1ac61928ae4b138h.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/H8a38a61fabb4443e8ab0681248f40f92l.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/Hb053e4b78bed4fd79bdb2b79d832bfd8y.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/Hca86a8f998924a4a937194e953431af4H.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/Hd358dff421e44b8e99714804fb9244a6O.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/H583ed86ca105497e8b6a7d846be28352O.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/H485a13488983472f85094fd789926045p.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/H570d7e86496c43e3b100814fb58d8b17T.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"http://ae01.alicdn.com/kf/H56eb2911b59b4da19801d3ec649605e3s.jpg\",\"style\":{},\"targetUrl\":\"\"}}]}",
+        "subject": "100pcs/Bag Bamboo Golf Tees White Red With Black Stripe Mark Scale 70mm 83mm Golf Accessories 2 Size New Colorful Golf Ball Tee",
+        "evaluation_count": "2",
+        "sales_count": "8",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "5.0",
+        "separated_listing": false,
+        "currency_code": "USD",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 4000906222583,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><div class=\"detailmodule_dynamic\"></div><div><kse:widget data-widget-type=\"customText\" id=\"32844205\" type=\"custom\"></kse:widget></div><ul><li><p><span style=\"color:rgb(0, 0, 0);font-size:18px;font-family:Georgia\"><span style=\"font-size:18px;font-family:Georgia\">Lightweight, High Strength Bamboo which is 7x stronger than Wooden Tees</span></span></p></li><li><p><span style=\"color:rgb(0, 0, 0);font-size:18px;font-family:Georgia\"><span style=\"font-size:18px;font-family:Georgia\">High Quality, Long Lasting</span></span></p></li><li><p><span style=\"color:rgb(0, 0, 0);font-size:18px;font-family:Georgia\"><span style=\"font-size:18px;font-family:Georgia\">Natural Color, no paint or plastic that will get on your club face</span></span></p></li><li><p><span style=\"color:rgb(0, 0, 0);font-size:18px;font-family:Georgia\"><span style=\"font-size:18px;font-family:Georgia\">100pcs count</span></span></p></li></ul><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/H3b28e2437de54120abd5a38a6d4d13b8P.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/H8145d78cba2541a0939b649d88313f1dR.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/Hef5b5eaa0a294c16bb008fe2a77693c8B.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/Hc68e296b5a544d5db1ac61928ae4b138h.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/H8a38a61fabb4443e8ab0681248f40f92l.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/Hb053e4b78bed4fd79bdb2b79d832bfd8y.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/Hca86a8f998924a4a937194e953431af4H.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/Hd358dff421e44b8e99714804fb9244a6O.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/H583ed86ca105497e8b6a7d846be28352O.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/H485a13488983472f85094fd789926045p.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/H570d7e86496c43e3b100814fb58d8b17T.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:800px\" width=\"800px\" src=\"http://ae01.alicdn.com/kf/H56eb2911b59b4da19801d3ec649605e3s.jpg\" slate-data-type=\"image\"/></p><div class=\"detailmodule_dynamic\"><kse:widget data-widget-type=\"customText\" id=\"22827238\" type=\"custom\"></kse:widget></div><p><br/></p></div></div><br/>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 13568675988,
+            "attr_name": "Brand Name",
+            "attr_value": "GVOVLVF"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "M1QD"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 353085,
+            "attr_name": "Material",
+            "attr_value": "Bamboo"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 19127,
+            "attr_value_id": -1,
+            "attr_name": "Variety",
+            "attr_value": "Bamboo Tees"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          },
+          {
+            "attr_name_id": -2,
+            "attr_name": "semi_Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 2826093,
+        "shipping_speed_rating": "4.7",
+        "communication_rating": "4.7",
+        "store_name": "McSport Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2101694617902370340032926",
+    "_trace_id_": "2140d36217902370340011059e0ec4"
+  }
+}

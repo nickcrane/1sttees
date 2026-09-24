@@ -1,0 +1,198 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:200002984#83mm",
+            "offer_sale_price": "5.40",
+            "sku_id": "12000058894716071",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "5.40",
+            "offer_bulk_sale_price": "5.40",
+            "sku_available_stock": 499,
+            "id": "14:200002984#83mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Burgundy",
+                  "sku_image": "https://ae01.alicdn.com/kf/S8924f47305cc4fe9a8ec79151591664du.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "83mm",
+                  "property_value_id": 200002984,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:10#70mm",
+            "offer_sale_price": "5.30",
+            "sku_id": "12000058894716070",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "5.30",
+            "offer_bulk_sale_price": "5.30",
+            "sku_available_stock": 4,
+            "id": "14:10#70mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/S9be432f34dac4d2a923a8a56cf1c510eV.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:366#54mm",
+            "offer_sale_price": "5.40",
+            "sku_id": "12000058894716069",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "5.40",
+            "offer_bulk_sale_price": "5.40",
+            "sku_available_stock": 499,
+            "id": "14:366#54mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sadbb51c831224aaaae1c0c9e729b95c69.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#42mm",
+            "offer_sale_price": "5.00",
+            "sku_id": "12000058894716068",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "5.00",
+            "offer_bulk_sale_price": "5.00",
+            "sku_available_stock": 3,
+            "id": "14:29#42mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S1396bc67fb8e47d0a95210c0246dd620V.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "42mm",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://video.aliexpress-media.com/cover/5000549210362.jpg",
+              "ali_member_id": 2673074575,
+              "media_id": 5000549210362,
+              "media_url": "https://video.aliexpress-media.com/play/5000549210362.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/S96327353000b4f6bba83b39cce051601t.jpg;https://ae01.alicdn.com/kf/S5f25d79f533a421992b3e644a6042ba2R.jpg;https://ae01.alicdn.com/kf/S5b29188821fd49369cb45eedd52a0f66Y.jpg;https://ae01.alicdn.com/kf/S35674201a4c84f11a8345d5f9d2724ebT.jpg;https://ae01.alicdn.com/kf/Scfeb64e675e34386ba88f5f1361c48317.jpg;https://ae01.alicdn.com/kf/Saa582ab86ced425f95c6c5b860b311c9G.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 10,
+        "package_height": 10,
+        "package_length": 10,
+        "gross_weight": "0.120",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005012621701475,
+        "sub_product_id": "{\"US\":3256812435386723}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"【Enviro-Friendly】 100% Natural Hardwood. Precision milled from selected hard woods for consistent performance, wood golf tees material is environmentally non-toxic, be helpful for you and your family health. Golf tees are stronger wood tees, ensuring your favorite golf course and equipment stays in tip-top shape.\\r\\n\\r\\n【Low-Resistance Tip for Less Friction】 A high (long) tee encourages a shallow approach and maximizes the launch angle. Shallow cup reduces surface contact. Fly tees promote additional distance and accuracy. Perfect for irons, hybrids & low profile woods.The most necessary golfing tees for your golfing.\\r\\n\\r\\n【Standard Size】 Golf tees measures 3-1/4 inch, 2-3/4 inch or 2-1/8 inch long and the head measures 0.44 inches in diameter. The sizes conform with USA regular sizes, necessary for all day practice. Perfect for most 3, 4 and 5 woods and moderate volume drivers.\\r\\n\\r\\n【Multiple Colors & Value Pack】 Mix of colours and a good height, without any print, these color golf tees can be easily spotted after your hit for the bright colors. With 100 pieces per pack, it will be a long time before you run out. Never be afraid to lose one, this golf tees bulk pack allows you to always have a golf tee in hand when you need it.\\r\\n\\r\\n【100% Satisfaction】 Each of golf tees has passed strict inspection before they leave the factory, every detail has been handled carefully. Customer satisfaction is our primary priority. If you have any questions, issues or concerns please email to our after-sale team and we would be more than happy to assist. assist.\",\"style\":{\"fontSize\":16,\"fontWeight\":\"normal\",\"align\":\"left\",\"color\":\"#434649\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S7d6cab327edf49f5ad1892f06d6e0bf70.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S74d052cb827c4c52be796eae49214fb0l.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S36b54c1c2997412198366fac6a72ef37j.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sa84975711c944ae586f383826173f947j.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sf4e70897e9ae406d895f1d6fe7033ce66.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S5633f8d3ed9b46e9af7224ff47794622H.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S11ce5321530c4a46a915c65bb8e3a32ek.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sf72343be00bc4927af30e5820816c130K.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S6ff87d30461746088948ec067872473dj.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Se07670c8dd0e4106ab51ecd9cbaad91fH.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S60a34f7b27c1425b90227438bc69e8d8G.jpg\",\"style\":{\"width\":706,\"height\":603,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S961ab9fada63455e9de332e551588ad6n.jpg\",\"style\":{\"width\":1500,\"height\":1500,\"paddingBottom\":10}}}]}",
+        "subject": "Golf Tees Professional Natural Wood Golf Tees Pack of 100, Golfing Tees Multiple Colors Size 3-1/4\", 2-3/4\", 2-1/8\", 1-1/2\"",
+        "evaluation_count": "12",
+        "sales_count": "12",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "5.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005012621701475,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><p style=\"text-align:left;margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" align=\"left\"><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sd9f220db68ad4333b269850e3316731fU.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S23b5541b474c4cd2952f4cc422ef5fc6b.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Se47c1f942e7e45e7910e6a06cf2228864.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S1c12472a3ea34a698927a257e054994dd.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Scf0b1e0c614e4c668eeee8ca4831f185P.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S3773a8fda6f44d6187bb75c1f9d56d14q.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S82260ad9796345819ae6f4343f4d1c82z.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S0ec91b1afc264624beb628fd5f055fddq.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S7ad7e804788b4701a76cad191ff1c032m.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sa00925038ae84b23bbe2dc50cf2b249dN.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S14e5d075b80046f58c65c512d9c2eedad.jpg?width=706&amp;height=603&amp;hash=1309\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S94505779b2d74bf99c0109a8ef56a3ac6.jpg?width=1500&amp;height=1500&amp;hash=3000\" slate-data-type=\"image\"/></p></div></div><br/>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 202248930,
+            "attr_name": "Brand Name",
+            "attr_value": "FZCSPEED"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 350383,
+            "attr_name": "Material",
+            "attr_value": "Wood"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          },
+          {
+            "attr_name_id": -2,
+            "attr_name": "semi_Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1104761405,
+        "shipping_speed_rating": "5.0",
+        "communication_rating": "5.0",
+        "store_name": "Shop1104761405 Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "5.0"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "21015bde17902369959707099",
+    "_trace_id_": "2140d36217902369959697481e0ec4"
+  }
+}

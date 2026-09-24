@@ -1,0 +1,136 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:29#50pcs one pack",
+            "offer_sale_price": "2.65",
+            "sku_id": "12000037752877496",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "6.30",
+            "offer_bulk_sale_price": "2.65",
+            "sku_available_stock": 22,
+            "id": "14:29#50pcs one pack",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S1c550eec03bf4386854e77df1f62c850V.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "50pcs one pack",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/S473e3e28687e4dc586f0d1a0204b661aM.jpg",
+              "ali_member_id": 2675160657,
+              "media_id": 5000556072095,
+              "media_url": "https://video.aliexpress-media.com/play/5000556072095.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/S6f8f4d6037ad42cabaffa792a17a7d72C.jpg;https://ae01.alicdn.com/kf/S66dc74a1c84742dfb7cbba3530353d85b.jpg;https://ae01.alicdn.com/kf/Sbba89c4f3b2a47b9aa760a9d312905d8D.jpg;https://ae01.alicdn.com/kf/S4d4270e401084d288c8aabcd6359c2686.jpg;https://ae01.alicdn.com/kf/S1c550eec03bf4386854e77df1f62c850V.jpg;https://ae01.alicdn.com/kf/S335c493ecba64f56bc31ad23111942a7c.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 10,
+        "package_height": 3,
+        "package_length": 10,
+        "gross_weight": "0.073",
+        "package_type": true,
+        "product_unit": 100000014
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005006593278496,
+        "sub_product_id": "{\"US\":3256806406963744}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"50Pcs GVOVLVF Golf Tees Durable Degree Scale Tees 83mm Friendly Biodegradable Material Reduce Friction Side Spin More Stable\\r\\nSize: 83mm long/3.27\\\"\\r\\nMaterial: Bamboo\\r\\nPackage Includes:\\r\\n50 x Golf Tees\\r\\nFeature:\\r\\nDurable, with digital scale, reusable, environmental protection, price concessions, reliable quality.\\r\\nPlay a protective role for the club head, to minimize damage to the club head, reduce friction.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S465ef606bbee4b1ead8485a97e558597M.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S0624305fe8394f0eb802ab009cc7b3d3l.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sc367f61784334788885a6bc02ad6ef6aF.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sf89aecc18d3844909dbb2b8d29c7c14a5.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Se656f70854494f9d9c0abd3052dbeb68p.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sab0390a0de614da7992e40af8089f7b68.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S83b8236fe361437ab622e58aaa751940T.jpg\",\"style\":{},\"targetUrl\":\"\"}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S8ab2e95229ad441391dc0c38499fff2ax.jpg\",\"style\":{},\"targetUrl\":\"\"}}]}",
+        "subject": "50pcs GVOVLVF Bamboo Golf Degree Scale Tees 83mm Long Tees Golf Strong Sustainable Biodegradable Adjustable Depth White",
+        "evaluation_count": "41",
+        "sales_count": "187",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "4.9",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005006593278496,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><p><br/></p><p><span style=\"font-size:20px;font-family:Georgia\"><strong>50Pcs GVOVLVF Golf Tees Durable Degree Scale Tees 83mm Friendly Biodegradable Material Reduce Friction Side Spin More Stable</strong></span></p><p><span style=\"font-size:18px;font-family:Georgia\">Size: 83mm long/3.27&quot; <br/>Material: Bamboo</span></p><p><span style=\"font-size:18px;font-family:Georgia\">Package Includes:<br/>50 x Golf Tees<br/><br/>Feature: <br/>Durable, with digital scale, reusable, environmental protection, price concessions, reliable quality. <br/>Play a protective role for the club head, to minimize damage to the club head, reduce friction.</span></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae01.alicdn.com/kf/S465ef606bbee4b1ead8485a97e558597M.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae01.alicdn.com/kf/S0624305fe8394f0eb802ab009cc7b3d3l.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae01.alicdn.com/kf/Sc367f61784334788885a6bc02ad6ef6aF.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae01.alicdn.com/kf/Sf89aecc18d3844909dbb2b8d29c7c14a5.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae01.alicdn.com/kf/Se656f70854494f9d9c0abd3052dbeb68p.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae01.alicdn.com/kf/Sab0390a0de614da7992e40af8089f7b68.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae01.alicdn.com/kf/S83b8236fe361437ab622e58aaa751940T.jpg\" slate-data-type=\"image\"/></p><p><img style=\"width:825px\" width=\"825px\" src=\"https://ae01.alicdn.com/kf/S8ab2e95229ad441391dc0c38499fff2ax.jpg\" slate-data-type=\"image\"/></p><div><br/> <br/></div><p><br/></p></div></div><p><br/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 13568675988,
+            "attr_name": "Brand Name",
+            "attr_value": "GVOVLVF"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 353085,
+            "attr_name": "Material",
+            "attr_value": "Bamboo"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "M3QD"
+          },
+          {
+            "attr_name_id": 19127,
+            "attr_value_id": 200011480,
+            "attr_name": "Variety",
+            "attr_value": "Tee Set"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1102993209,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.7",
+        "store_name": "GVOVLVF Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2101521417902370530238776",
+    "_trace_id_": "2140d36217902370530222266e0ec4"
+  }
+}

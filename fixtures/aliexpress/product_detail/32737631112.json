@@ -1,0 +1,108 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "",
+            "offer_sale_price": "0.82",
+            "sku_id": "61491260555",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "0.82",
+            "offer_bulk_sale_price": "0.82",
+            "sku_available_stock": 1179,
+            "id": "",
+            "sku_bulk_order": 10
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "image_urls": "https://ae01.alicdn.com/kf/H1c1c011bcc684ffcbc5be9bebc6f77dfX.jpg;https://ae01.alicdn.com/kf/S95df181cd17f4b4782d4e94737429d4cf.jpg;https://ae01.alicdn.com/kf/S4dc823b48f7444b4bbf125634a825a74N.jpg;https://ae01.alicdn.com/kf/Sede4834aecfc41368db6ea0b97445918b.jpg;https://ae01.alicdn.com/kf/H3eef65f8dc254f6ca82c975c7352fa30f.jpg;https://ae01.alicdn.com/kf/Sd5b5ae5a94f1478291006df9894a3813j.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 15,
+        "package_height": 10,
+        "package_length": 25,
+        "gross_weight": "0.070",
+        "package_type": true,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 32737631112,
+        "sub_product_id": "{\"US\":2251832551316360}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Golf Tees 70mm Cushion Golf Tee Golf Accessories \",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\" Length: 70mm  \",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\" Color: Mixed color \",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/He2bb5c8c649d4cd49c8dedb7a5d5112bb.jpg\",\"style\":{\"width\":730,\"height\":730}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S58053d601cd54931b79d43821e935b4dc.jpg\",\"style\":{\"width\":724,\"height\":546,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sf19acc6e11d54a3ebc309d45e91ec6190.jpg\",\"style\":{\"width\":733,\"height\":504,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S1c93d4f06dde4f96ad98b93fc0c3532fE.jpg\",\"style\":{\"width\":730,\"height\":455,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sa612bf8a07cf449a81fc45a5825f5f8aj.jpg\",\"style\":{\"width\":730,\"height\":446,\"paddingBottom\":10}}}]}",
+        "subject": "(50pcs) Wooden Golf Tees 70mm Cushion Golf Tee Golf Accessories",
+        "evaluation_count": "1",
+        "sales_count": "17",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "5.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 32737631112,
+        "detail": "<div class=\"detailmodule_text\"><p style=\"font-family:OpenSans;font-size:14px;font-weight:300;line-height:20px;white-space:pre-wrap;color:rgb(0, 0, 0);margin-bottom:12px\" class=\"detail-desc-decorate-content\">Golf Tees 70mm Cushion Golf Tee Golf Accessories</p></div><div class=\"detailmodule_text\"><p style=\"font-family:OpenSans;font-size:14px;font-weight:300;line-height:20px;white-space:pre-wrap;color:rgb(0, 0, 0);margin-bottom:12px\" class=\"detail-desc-decorate-content\">Length: 70mm</p></div><div class=\"detailmodule_text\"><p style=\"font-family:OpenSans;font-size:14px;font-weight:300;line-height:20px;white-space:pre-wrap;color:rgb(0, 0, 0);margin-bottom:12px\" class=\"detail-desc-decorate-content\">Color: Mixed color</p></div><div class=\"detailmodule_image\"><img class=\"detail-desc-decorate-image\" width=\"800\" height=\"800\" src=\"https://ae01.alicdn.com/kf/He2bb5c8c649d4cd49c8dedb7a5d5112bb.jpg\" slate-data-type=\"image\"/><img style=\"margin-bottom:10px\" class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S58053d601cd54931b79d43821e935b4dc.jpg\" slate-data-type=\"image\"/><img style=\"margin-bottom:10px\" class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/Sf19acc6e11d54a3ebc309d45e91ec6190.jpg\" slate-data-type=\"image\"/><img style=\"margin-bottom:10px\" class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/S1c93d4f06dde4f96ad98b93fc0c3532fE.jpg\" slate-data-type=\"image\"/><img style=\"margin-bottom:10px\" class=\"detail-desc-decorate-image\" src=\"https://ae01.alicdn.com/kf/Sa612bf8a07cf449a81fc45a5825f5f8aj.jpg\" slate-data-type=\"image\"/></div><p><br/></p>"
+      },
+      "has_whole_sale": true,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 353085,
+            "attr_name": "Material",
+            "attr_value": "Bamboo"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "N/A"
+          },
+          {
+            "attr_name_id": 19127,
+            "attr_value_id": 200011477,
+            "attr_name": "Variety",
+            "attr_value": "Crown Tee"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 523993,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.8",
+        "store_name": "Xbees Coconut Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.8"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "210142ba17902370079768527",
+    "_trace_id_": "2140d36217902370079757994e0ec4"
+  }
+}

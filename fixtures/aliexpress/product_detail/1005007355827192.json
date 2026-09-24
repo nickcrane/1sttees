@@ -1,0 +1,430 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:10#54mm bamboo tees",
+            "offer_sale_price": "3.39",
+            "sku_id": "12000040401727772",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.39",
+            "offer_bulk_sale_price": "3.39",
+            "sku_available_stock": 11,
+            "id": "14:10#54mm bamboo tees",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sb6b9bd5b4d98463ebd84635db1f1a524h.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm bamboo tees",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200002984#70mm wooden tees",
+            "offer_sale_price": "4.09",
+            "sku_id": "12000040401727773",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.09",
+            "offer_bulk_sale_price": "4.09",
+            "sku_available_stock": 4,
+            "id": "14:200002984#70mm wooden tees",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Burgundy",
+                  "sku_image": "https://ae01.alicdn.com/kf/S5c21599fea5f4a4a9f621b0f2a5d07f6e.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm wooden tees",
+                  "property_value_id": 200002984,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:496#83mm bamboo tees",
+            "offer_sale_price": "4.73",
+            "sku_id": "12000040401727774",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.73",
+            "offer_bulk_sale_price": "4.73",
+            "sku_available_stock": 9,
+            "id": "14:496#83mm bamboo tees",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "PURPLE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S045c1b2e39dd453c984e11debdf8cdc8t.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "83mm bamboo tees",
+                  "property_value_id": 496,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:175#42mm wooden tees",
+            "offer_sale_price": "2.89",
+            "sku_id": "12000040401727775",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "2.89",
+            "offer_bulk_sale_price": "2.89",
+            "sku_available_stock": 1,
+            "id": "14:175#42mm wooden tees",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "green",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sb95b0c4713f6444e9c0ba47f6d78ad43v.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "42mm wooden tees",
+                  "property_value_id": 175,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#42mm bamboo tees",
+            "offer_sale_price": "2.93",
+            "sku_id": "12000040401727770",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "2.93",
+            "offer_bulk_sale_price": "2.93",
+            "sku_available_stock": 11,
+            "id": "14:29#42mm bamboo tees",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S6797aebb9b054c218317944c24542250x.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "42mm bamboo tees",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:366#70mm bamboo tees",
+            "offer_sale_price": "4.02",
+            "sku_id": "12000040401727771",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.02",
+            "offer_bulk_sale_price": "4.02",
+            "sku_available_stock": 4,
+            "id": "14:366#70mm bamboo tees",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sf251e41c884a4e679c6c1b8d761587bb7.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm bamboo tees",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200005536#70mm Limited Height",
+            "offer_sale_price": "9.89",
+            "sku_id": "12000050583290789",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "9.89",
+            "offer_bulk_sale_price": "9.89",
+            "sku_available_stock": 9994,
+            "id": "14:200005536#70mm Limited Height",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Orange",
+                  "sku_image": "https://ae01.alicdn.com/kf/S39925a9971c24efbbcf594dbaf48ee3fU.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm Limited Height",
+                  "property_value_id": 200005536,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:173#54mm wooden tees",
+            "offer_sale_price": "3.32",
+            "sku_id": "12000040401727776",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.32",
+            "offer_bulk_sale_price": "3.32",
+            "sku_available_stock": 9995,
+            "id": "14:173#54mm wooden tees",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Blue",
+                  "sku_image": "https://ae01.alicdn.com/kf/S2342ee4f170b428ab146d3daf6f4b5bas.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm wooden tees",
+                  "property_value_id": 173,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200006151#42mm colored wooden",
+            "offer_sale_price": "3.24",
+            "sku_id": "12000050583290784",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.24",
+            "offer_bulk_sale_price": "3.24",
+            "sku_available_stock": 9994,
+            "id": "14:200006151#42mm colored wooden",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Light Grey",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sb1c7211f6eb148cab618e75cb1f9285eF.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "42mm colored wooden",
+                  "property_value_id": 200006151,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200006152#83mm wooden tees",
+            "offer_sale_price": "4.49",
+            "sku_id": "12000040401727777",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.49",
+            "offer_bulk_sale_price": "4.49",
+            "sku_available_stock": 5,
+            "id": "14:200006152#83mm wooden tees",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "light green",
+                  "sku_image": "https://ae01.alicdn.com/kf/S19f5cec9f1a24a7fb9766e3f811069c4q.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "83mm wooden tees",
+                  "property_value_id": 200006152,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1063#54mm colored wooden",
+            "offer_sale_price": "3.59",
+            "sku_id": "12000050583290785",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.59",
+            "offer_bulk_sale_price": "3.59",
+            "sku_available_stock": 9961,
+            "id": "14:1063#54mm colored wooden",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Navy Blue",
+                  "sku_image": "https://ae01.alicdn.com/kf/S33eceea6703a4f3faefd94160b8c5c4al.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm colored wooden",
+                  "property_value_id": 1063,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:193#70mm colored wooden",
+            "offer_sale_price": "4.39",
+            "sku_id": "12000050583290786",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.39",
+            "offer_bulk_sale_price": "4.39",
+            "sku_available_stock": 9969,
+            "id": "14:193#70mm colored wooden",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "black",
+                  "sku_image": "https://ae01.alicdn.com/kf/S2c13a4013c704619b5285a0e066e348aP.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm colored wooden",
+                  "property_value_id": 193,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200006153#83mm colored wooden",
+            "offer_sale_price": "4.63",
+            "sku_id": "12000050583290787",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.63",
+            "offer_bulk_sale_price": "4.63",
+            "sku_available_stock": 9971,
+            "id": "14:200006153#83mm colored wooden",
+            "sku_bulk_order": 10,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": " Light Yellow",
+                  "sku_image": "https://ae01.alicdn.com/kf/S9113f11d9c4a4e6a8e962cfb2392c6c4a.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "83mm colored wooden",
+                  "property_value_id": 200006153,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/S59f295688dd84c95977c2fd1a8f8adf9G.jpg",
+              "ali_member_id": 243041426,
+              "media_id": 5000206268932,
+              "media_url": "https://video.aliexpress-media.com/play/5000206268932.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/S0a9f298defdc44a1b233449e53a2e0cf7.jpg;https://ae01.alicdn.com/kf/S004573e7910e40a98e4f83f94b4b4ebft.jpg;https://ae01.alicdn.com/kf/S67f49a3196c64acb9f057bef728afb74v.jpg;https://ae01.alicdn.com/kf/S9d0e8b6cd1354169b5397888d6d718a4w.jpg;https://ae01.alicdn.com/kf/Sac5f353980844598ac502f0da9a2f6d7t.jpg;https://ae01.alicdn.com/kf/Sb30cc9f34c7342ae9e30f9a22d1dd4ffp.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 5,
+        "package_height": 5,
+        "package_length": 10,
+        "gross_weight": "0.090",
+        "package_type": true,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 5,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005007355827192,
+        "sub_product_id": "{\"US\":3256807169512440}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"🏌️ Bamboo / Wooden / Plastic Golf Tees – 12 Options for Every Swing\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"*100 pcs per pack | 42mm / 54mm / 70mm / 83mm | Choose your material & color*\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"✨ Why Choose Our Golf Tees?\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ High‑Quality Material\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Crafted from premium bamboo, wood, or durable plastic – each tee is built to last and provide consistent performance.\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ 4 Essential Sizes\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"42mm (1.65\\\"), 54mm (2.1\\\"), 70mm (2.8\\\"), 83mm (3.3\\\") – perfect for irons, fairway woods, drivers, and practice mats.\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ 100 Pcs Value Pack\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Each pack contains 100 tees – great for individual golfers, small groups, or keeping a fresh supply in your bag.\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ Multiple Style Choices\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Natural Bamboo / Wood – eco‑friendly, biodegradable\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Colored Wooden – bright & easy to spot on the course\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Plastic Tee – extra durable for heavy use\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Limited Height – fixed low height for consistent iron practice\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Cup‑Top Tee – wider top for better ball stability\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ Ideal for Practice Mat & Driving Range\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Works perfectly on mats, turf, or grass – helps you train realistically and improve your swing.\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ Origin : Mainland China\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"Available SKUs – Mobile View\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":16,\"fontWeight\":\"bold\",\"align\":\"left\",\"color\":\"#000000\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"*Each pack = 100 pcs (same material & size)*\\n\\n━━━━━━━━━━━━━━━━━━━━━━\\n\\n🎋 Bamboo (Natural)\\n• 42mm bamboo tees\\n• 54mm bamboo tees\\n• 70mm bamboo tees\\n• 83mm bamboo tees\\n\\n━━━━━━━━━━━━━━━━━━━━━━\\n\\n🪵 Wood (Natural)\\n• 42mm wooden tees\\n• 54mm wooden tees\\n• 70mm wooden tees\\n• 83mm wooden tees\\n\\n━━━━━━━━━━━━━━━━━━━━━━\\n\\n🎨 Colored Wood (Painted)\\n• 42mm colored wooden\\n• 54mm colored wooden\\n• 70mm colored wooden\\n• 83mm colored wooden\\n\\n━━━━━━━━━━━━━━━━━━━━━━\\n\\n🧴 Plastic (70mm)\\n• 70mm Plastic Tee (Standard)\\n• 70mm Limited Height\\n• 70mm Cup‑Top Tee\\n\\n━━━━━━━━━━━━━━━━━━━━━━\\n\\n👉 Select the material, size, and style you need\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"🎯 Special Features Explained\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"🔹 Colored Wooden Tees – Bright, fun colors make them easy to find after your drive.\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"🔹 Plastic Tee (70mm) – Extremely durable, resists breaking on mats or hard ground.\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"🔹 Limited Height (70mm) – Fixed low height, ideal for practicing irons & hybrids without adjusting tee depth.\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"🔹 Cup‑Top Tee (70mm) – Concave top holds the ball more securely, reduces side spin for straighter shots.\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"📏 Size Guide – Mobile View\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":16,\"fontWeight\":\"bold\",\"align\":\"left\",\"color\":\"#000000\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"🔹 42mm (1.65\\\")\\n→ Irons, hybrids, low‑profile woods\\n\\n🔹 54mm (2.1\\\")\\n→ Fairway woods, driving irons\\n\\n🔹 70mm (2.8\\\")\\n→ Standard drivers, practice mats\\n\\n🔹 83mm (3.3\\\")\\n→ Max height drivers, oversized clubheads\",\"style\":{}}},{\"type\":\"text\",\"data\":{\"content\":\"🎁 Package Included\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":16,\"fontWeight\":\"bold\",\"align\":\"left\",\"color\":\"#000000\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"100 x Golf Tees (based on your selected SKU)\\n\\nMaterial: Bamboo / Wood / Colored Wood / Plastic (as chosen)\\n\\nColor: Natural wood color or assorted bright colors for colored wooden tees\\n\\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n\\n📝 Notes\\nColor variation – Photos are taken with professional equipment. Due to lighting and screen differences, actual color may vary slightly. This is not a quality issue.\\n\\nManual measurement – There may be a 0.1 inch (±2.5mm) tolerance. Please allow for minor size differences.\\n\\nBiodegradable – Bamboo & wooden tees are eco‑friendly. Plastic tees are reusable but not biodegradable.\\n\\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n\\n🚀 Ready to Upgrade Your Tee Game?\\nSelect your preferred SKU above – whether you need durable bamboo, classic wood, bright colored wood, or heavy‑duty plastic tees, we’ve got you covered. Perfect for daily practice, driving ranges, or stocking your golf bag.\\n\\nAdd to cart now and swing with confidence! 🏌️‍♂️\\n\\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n*100 Pcs Golf Tees – Bamboo / Wood / Colored / Plastic – 42mm / 54mm / 70mm / 83mm – Choose Your Style*\\n\\n\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S34aff2930ab74cce9c87af9fc081078eD.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S2a2915352c434c44a20d99c80ccea5bcE.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S96b62c8ae70c42e8943ae2922b1e7cb4a.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sc5a4f69510344ed699da09e3d38d6e166.jpg\",\"style\":{\"width\":1000,\"height\":1000}}}]}",
+        "subject": "Pack 100 Pcs Golf Tees 4 Sizes Wooden Bamboo Golf Ball Holder Wholesale Golf Accessories Custom Golf Tee Practice Drop Ship",
+        "evaluation_count": "232",
+        "sales_count": "1000+",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "4.8",
+        "separated_listing": false,
+        "currency_code": "USD",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005007355827192,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><div class=\"detailmodule_text\"><div style=\"font-family:&quot;font-size:14px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(34, 34, 34);margin:0px;padding:0px;box-sizing:content-box;padding:0px;margin:0px;text-align:start;text-align:start;text-align:start;&quot;;text-align:start\" class=\"ai-description\" align=\"start\"><div style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px;padding:0px;padding-bottom:0px;padding-top:0px;padding-left:0px;padding-right:0px;box-sizing:content-box\" class=\"origin-part box-sizing\"><h2 style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:22px;font-weight:700;letter-spacing:normal;line-height:32px;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:32px 0px 16px;margin-bottom:16px;margin-top:32px;margin-left:0px;margin-right:0px\" align=\"start\"><kse:widget data-widget-type=\"customText\" id=\"1005000029223603\" type=\"relation\"></kse:widget></h2><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:22px;font-weight:700;letter-spacing:normal;line-height:32px;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:32px 0px 16px;margin-bottom:16px;margin-top:32px;margin-left:0px;margin-right:0px\" align=\"start\"><span>🏌️ </span><strong><span>Bamboo / Wooden / Plastic Golf Tees – 12 Options for Every Swing</span></strong></p><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\">*<span>100 pcs per pack | 42mm / 54mm / 70mm / 83mm | Choose your material &amp; color</span>*</p><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p><h3 style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:20px;font-weight:700;letter-spacing:normal;line-height:30px;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:32px 0px 16px;margin-bottom:16px;margin-top:32px;margin-left:0px;margin-right:0px\" align=\"start\"><span>✨ Why Choose Our Golf Tees?</span></h3><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>✅ </span><strong><span>High‑Quality Material</span></strong><br/><span>Crafted from premium </span><strong><span>bamboo</span></strong><span>, </span><strong><span>wood</span></strong><span>, or </span><strong><span>durable plastic</span></strong><span> – each tee is built to last and provide consistent performance.</span></p><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>✅ </span><strong><span>4 Essential Sizes</span></strong><br/><span>42mm (1.65&quot;), 54mm (2.1&quot;), 70mm (2.8&quot;), 83mm (3.3&quot;) – perfect for irons, fairway woods, drivers, and practice mats.</span></p><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>✅ </span><strong><span>100 Pcs Value Pack</span></strong><br/><span>Each pack contains </span><strong><span>100 tees</span></strong><span> – great for individual golfers, small groups, or keeping a fresh supply in your bag.</span></p><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>✅ </span><strong><span>Multiple Style Choices</span></strong></p><ul style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px;padding-left:18px\" align=\"start\"><li><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><strong><span>Natural Bamboo / Wood</span></strong><span> – eco‑friendly, biodegradable</span></p></li><li style=\"margin-top:6px\"><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><strong><span>Colored Wooden</span></strong><span> – bright &amp; easy to spot on the course</span></p></li><li style=\"margin-top:6px\"><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><strong><span>Plastic Tee</span></strong><span> – extra durable for heavy use</span></p></li><li style=\"margin-top:6px\"><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><strong><span>Limited Height</span></strong><span> – fixed low height for consistent iron practice</span></p></li><li style=\"margin-top:6px\"><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><strong><span>Cup‑Top Tee</span></strong><span> – wider top for better ball stability</span></p></li></ul><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>✅ </span><strong><span>Ideal for Practice Mat &amp; Driving Range</span></strong><br/><span>Works perfectly on mats, turf, or grass – helps you train realistically and improve your swing.</span></p><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>✅ </span><strong><span>Origin</span></strong><span> : Mainland China</span></p><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p><h3 style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:20px;font-weight:700;letter-spacing:normal;line-height:30px;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:32px 0px 16px;margin-bottom:16px;margin-top:32px;margin-left:0px;margin-right:0px\" align=\"start\"><span>📦 Available SKUs – Pick the One That Fits Your Game</span></h3><div style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin-left:calc(100% - 1250.5px);padding-left:calc(-100% + 1250.5px);padding-right:54px;width:calc(100% + 444.5px);position:relative;z-index:0\" class=\"ds-scroll-area ds-scroll-area--show-on-focus-within _1210dd7 c03cafe9\" align=\"start\"><div style=\"display:block;width:1196.5px;height:0px;left:0px;position:sticky;right:0px;top:0px;z-index:1000\" class=\"ds-scroll-area__gutters\"><div style=\"padding:2px 0px;padding-bottom:2px;padding-top:2px;padding-left:0px;padding-right:0px;display:block;height:10px;left:0px;position:absolute;right:0px;top:719px\" class=\"ds-scroll-area__horizontal-gutter\"></div><div style=\"padding:0px 2px;padding-bottom:0px;padding-top:0px;padding-left:2px;padding-right:2px;width:10px;bottom:-725px;position:absolute;right:0px;top:8px\" class=\"ds-scroll-area__vertical-gutter\"></div></div><table style=\"border-collapse:collapse;width:max-content\"><tbody><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;text-align:left;padding:10px 16px 10px 0px\" align=\"left\"><p><span>Material</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;text-align:left;padding:10px 16px\" align=\"left\"><p><span>Size</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;text-align:left;padding:10px 16px\" align=\"left\"><p><span>Special Feature</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;text-align:left;padding:10px 16px\" align=\"left\"><p><span>SKU Name</span></p></td></tr></tbody><tbody><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Bamboo</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>42mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Natural</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>42mm bamboo tees</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Bamboo</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>54mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Natural</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>54mm bamboo tees</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Bamboo</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>70mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Natural</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>70mm bamboo tees</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Bamboo</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>83mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Natural</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>83mm bamboo tees</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Wood</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>42mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Natural</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>42mm wooden tees</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Wood</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>54mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Natural</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>54mm wooden tees</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Wood</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>70mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Natural</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>70mm wooden tees</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Wood</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>83mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Natural</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>83mm wooden tees</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Colored Wood</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>42mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Painted</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>42mm colored wooden</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Colored Wood</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>54mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Painted</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>54mm colored wooden</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Colored Wood</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>70mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Painted</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>70mm colored wooden</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Colored Wood</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>83mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Painted</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>83mm colored wooden</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Plastic</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>70mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Standard</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>70mm Plastic Tee</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Plastic</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>70mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Limited Height</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>70mm Limited Height</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>Plastic</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>70mm</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px;min-width:100px\"><p><span>Cup‑Top</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>70mm Cup‑Top Tee</span></p></td></tr></tbody></table></div><blockquote style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);border-left:1.6px solid rgb(173, 178, 184);margin:16px 0px 0px;margin-bottom:0px;margin-top:16px;margin-left:0px;margin-right:0px;padding-left:14px\" align=\"start\"><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\">*<span>Each SKU = 100 pcs of the same material &amp; size.</span>*</p></blockquote><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p><h3 style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:20px;font-weight:700;letter-spacing:normal;line-height:30px;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:32px 0px 16px;margin-bottom:16px;margin-top:32px;margin-left:0px;margin-right:0px\" align=\"start\"><span>🎯 Special Features Explained</span></h3><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>🔹 </span><strong><span>Colored Wooden Tees</span></strong><span> – Bright, fun colors make them easy to find after your drive.</span><br/><span>🔹 </span><strong><span>Plastic Tee (70mm)</span></strong><span> – Extremely durable, resists breaking on mats or hard ground.</span><br/><span>🔹 </span><strong><span>Limited Height (70mm)</span></strong><span> – Fixed low height, ideal for practicing irons &amp; hybrids without adjusting tee depth.</span><br/><span>🔹 </span><strong><span>Cup‑Top Tee (70mm)</span></strong><span> – Concave top holds the ball more securely, reduces side spin for straighter shots.</span></p><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p><h3 style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:20px;font-weight:700;letter-spacing:normal;line-height:30px;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:32px 0px 16px;margin-bottom:16px;margin-top:32px;margin-left:0px;margin-right:0px\" align=\"start\"><span>📏 Size Guide – Which Length Should You Choose?</span></h3><div style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);position:relative;z-index:0\" class=\"ds-scroll-area ds-scroll-area--show-on-focus-within _1210dd7 c03cafe9\" align=\"start\"><div style=\"display:block;width:752px;height:0px;left:0px;position:sticky;right:0px;top:0px;z-index:1000\" class=\"ds-scroll-area__gutters\"><div style=\"padding:2px 0px;padding-bottom:2px;padding-top:2px;padding-left:0px;padding-right:0px;display:block;height:10px;left:0px;position:absolute;right:0px;top:215px\" class=\"ds-scroll-area__horizontal-gutter\"></div><div style=\"padding:0px 2px;padding-bottom:0px;padding-top:0px;padding-left:2px;padding-right:2px;width:10px;bottom:-221px;position:absolute;right:0px;top:8px\" class=\"ds-scroll-area__vertical-gutter\"></div></div><table style=\"border-collapse:collapse;width:752px\"><tbody><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;text-align:left;padding:10px 16px 10px 0px\" align=\"left\"><p><span>Length (mm/inch)</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;text-align:left;padding:10px 16px\" align=\"left\"><p><span>Best For</span></p></td></tr></tbody><tbody><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>42mm (1.65&quot;)</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>Irons, hybrids, low‑profile woods</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>54mm (2.1&quot;)</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>Fairway woods, driving irons</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>70mm (2.8&quot;)</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>Standard drivers, practice mats</span></p></td></tr><tr><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 16px 10px 0px;min-width:100px\"><p><span>83mm (3.3&quot;)</span></p></td><td style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:15px;padding:10px 0px 10px 16px;min-width:100px\"><p><span>Max height drivers, oversized clubheads</span></p></td></tr></tbody></table></div><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p><h3 style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:20px;font-weight:700;letter-spacing:normal;line-height:30px;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:32px 0px 16px;margin-bottom:16px;margin-top:32px;margin-left:0px;margin-right:0px\" align=\"start\"><span>🎁 Package Included</span></h3><ul style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px;padding-left:18px\" align=\"start\"><li><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><strong><span>100 x Golf Tees</span></strong><span> (based on your selected SKU)</span></p></li><li style=\"margin-top:6px\"><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><span>Material: Bamboo / Wood / Colored Wood / Plastic (as chosen)</span></p></li><li style=\"margin-top:6px\"><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><span>Color: Natural wood color or assorted bright colors for colored wooden tees</span></p></li></ul><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p><h3 style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:20px;font-weight:700;letter-spacing:normal;line-height:30px;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:32px 0px 16px;margin-bottom:16px;margin-top:32px;margin-left:0px;margin-right:0px\" align=\"start\"><span>📝 Notes</span></h3><ol style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px;padding-left:18px\" align=\"start\"><li><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><strong><span>Color variation</span></strong><span> – Photos are taken with professional equipment. Due to lighting and screen differences, actual color may vary slightly. This is not a quality issue.</span></p></li><li style=\"margin-top:6px\"><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><strong><span>Manual measurement</span></strong><span> – There may be a 0.1 inch (±2.5mm) tolerance. Please allow for minor size differences.</span></p></li><li style=\"margin-top:6px\"><p style=\"margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\"><strong><span>Biodegradable</span></strong><span> – Bamboo &amp; wooden tees are eco‑friendly. Plastic tees are reusable but not biodegradable.</span></p></li></ol><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p><h3 style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:20px;font-weight:700;letter-spacing:normal;line-height:30px;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:32px 0px 16px;margin-bottom:16px;margin-top:32px;margin-left:0px;margin-right:0px\" align=\"start\"><span>🚀 Ready to Upgrade Your Tee Game?</span></h3><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><strong><span>Select your preferred SKU above</span></strong><span> – whether you need durable bamboo, classic wood, bright colored wood, or heavy‑duty plastic tees, we’ve got you covered. Perfect for daily practice, driving ranges, or stocking your golf bag.</span></p><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><strong><span>Add to cart now and swing with confidence!</span></strong><span> 🏌️‍♂️</span></p><p style=\"font-family:quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:16px;font-weight:400;letter-spacing:normal;text-align:start;white-space:normal;color:rgb(15, 17, 21);background-color:rgb(255, 255, 255);margin:16px 0px;margin-bottom:16px;margin-top:16px;margin-left:0px;margin-right:0px\" class=\"ds-markdown-paragraph\" align=\"start\"><span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span><br/>*<span>100 Pcs Golf Tees – Bamboo / Wood / Colored / Plastic – 42mm / 54mm / 70mm / 83mm – Choose Your Style</span>*</p><div><br/></div></div></div></div><div class=\"detailmodule_text-image\"><div><img style=\"margin-bottom:10px\" class=\"detail-desc-decorate-image\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S34aff2930ab74cce9c87af9fc081078eD.jpg\" slate-data-type=\"image\"/></div></div><div class=\"detailmodule_text-image\"><p style=\"font-family:OpenSans;font-size:20px;font-weight:900;line-height:28px;white-space:pre-wrap;color:rgb(0, 0, 0);margin-bottom:12px\" class=\"detail-desc-decorate-title\">Bamboo tees</p><div><img style=\"margin-bottom:10px\" class=\"detail-desc-decorate-image\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S2a2915352c434c44a20d99c80ccea5bcE.jpg\" slate-data-type=\"image\"/></div></div><div class=\"detailmodule_text-image\"><p style=\"font-family:OpenSans;font-size:20px;font-weight:900;line-height:28px;white-space:pre-wrap;color:rgb(0, 0, 0);margin-bottom:12px\" class=\"detail-desc-decorate-title\">Wooden Tees</p><div><img style=\"margin-bottom:10px\" class=\"detail-desc-decorate-image\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S96b62c8ae70c42e8943ae2922b1e7cb4a.jpg\" slate-data-type=\"image\"/></div></div><div class=\"detailmodule_text-image\"><p style=\"font-family:OpenSans;font-size:20px;font-weight:900;line-height:28px;white-space:pre-wrap;color:rgb(0, 0, 0);margin-bottom:12px\" class=\"detail-desc-decorate-title\">How to use</p><div><img style=\"margin-bottom:10px\" class=\"detail-desc-decorate-image\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sc5a4f69510344ed699da09e3d38d6e166.jpg\" slate-data-type=\"image\"/></div></div><p><br/></p></div></div><p><kse:widget data-widget-type=\"customText\" id=\"1005000029239603\" type=\"custom\"></kse:widget><kse:widget data-widget-type=\"customText\" id=\"1005000029241601\" type=\"custom\"></kse:widget><br/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 6964189260,
+            "attr_name": "Brand Name",
+            "attr_value": "Efunist"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 353085,
+            "attr_name": "Material",
+            "attr_value": "Bamboo"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "HZQD0002"
+          },
+          {
+            "attr_name_id": 19127,
+            "attr_value_id": 200011477,
+            "attr_name": "Variety",
+            "attr_value": "Crown Tee"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          },
+          {
+            "attr_name_id": -2,
+            "attr_name": "semi_Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 5870096,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.8",
+        "store_name": "HZ Sporting Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "212e398317902369999733193",
+    "_trace_id_": "2140d36217902369999727720e0ec4"
+  }
+}

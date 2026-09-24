@@ -1,0 +1,313 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:366#54mm 10pcs",
+            "offer_sale_price": "1.90",
+            "sku_id": "12000059367564372",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "1.90",
+            "offer_bulk_sale_price": "1.90",
+            "sku_available_stock": 499,
+            "id": "14:366#54mm 10pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sdbbc02a540a74612b4a0872e34e8fae7Z.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm 10pcs",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:173#70mm 10pcs",
+            "offer_sale_price": "1.90",
+            "sku_id": "12000059367564373",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "1.90",
+            "offer_bulk_sale_price": "1.90",
+            "sku_available_stock": 499,
+            "id": "14:173#70mm 10pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Blue",
+                  "sku_image": "https://ae01.alicdn.com/kf/S3c7e2723b05443488f9246f63ddf2c03F.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm 10pcs",
+                  "property_value_id": 173,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200005536#42mm 20pcs",
+            "offer_sale_price": "3.21",
+            "sku_id": "12000059367564374",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.21",
+            "offer_bulk_sale_price": "3.21",
+            "sku_available_stock": 499,
+            "id": "14:200005536#42mm 20pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Orange",
+                  "sku_image": "https://ae01.alicdn.com/kf/S3f754a106e3a48b3a7f6f756eadcfb42O.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "42mm 20pcs",
+                  "property_value_id": 200005536,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:100013777#54mm 20pcs",
+            "offer_sale_price": "3.21",
+            "sku_id": "12000059367564375",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.21",
+            "offer_bulk_sale_price": "3.21",
+            "sku_available_stock": 499,
+            "id": "14:100013777#54mm 20pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Pink",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sdbbc02a540a74612b4a0872e34e8fae7Z.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm 20pcs",
+                  "property_value_id": 100013777,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#42mm 5pcs",
+            "offer_sale_price": "1.42",
+            "sku_id": "12000059367564368",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "1.42",
+            "offer_bulk_sale_price": "1.42",
+            "sku_available_stock": 499,
+            "id": "14:29#42mm 5pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S3f754a106e3a48b3a7f6f756eadcfb42O.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "42mm 5pcs",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:175#54mm 5pcs",
+            "offer_sale_price": "1.42",
+            "sku_id": "12000059367564369",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "1.42",
+            "offer_bulk_sale_price": "1.42",
+            "sku_available_stock": 499,
+            "id": "14:175#54mm 5pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "green",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sdbbc02a540a74612b4a0872e34e8fae7Z.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm 5pcs",
+                  "property_value_id": 175,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200004891#70mm 5pcs",
+            "offer_sale_price": "1.42",
+            "sku_id": "12000059367564370",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "1.42",
+            "offer_bulk_sale_price": "1.42",
+            "sku_available_stock": 499,
+            "id": "14:200004891#70mm 5pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Lavender",
+                  "sku_image": "https://ae01.alicdn.com/kf/S3c7e2723b05443488f9246f63ddf2c03F.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm 5pcs",
+                  "property_value_id": 200004891,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200006156#42mm 10pcs",
+            "offer_sale_price": "1.90",
+            "sku_id": "12000059367564371",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "1.90",
+            "offer_bulk_sale_price": "1.90",
+            "sku_available_stock": 499,
+            "id": "14:200006156#42mm 10pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "plum",
+                  "sku_image": "https://ae01.alicdn.com/kf/S3f754a106e3a48b3a7f6f756eadcfb42O.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "42mm 10pcs",
+                  "property_value_id": 200006156,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:10#70mm 20pcs",
+            "offer_sale_price": "3.21",
+            "sku_id": "12000059367564376",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.21",
+            "offer_bulk_sale_price": "3.21",
+            "sku_available_stock": 499,
+            "id": "14:10#70mm 20pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/S3c7e2723b05443488f9246f63ddf2c03F.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm 20pcs",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/S22c897ddbd6a49f8b659a7f55a8bbaf5U.jpg",
+              "ali_member_id": 6000828050,
+              "media_id": 5000571394710,
+              "media_url": "https://video.aliexpress-media.com/play/5000571394710.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/S93cd9ed5d46b4e1f99c23b90b5f25b9be.jpg;https://ae01.alicdn.com/kf/S3f754a106e3a48b3a7f6f756eadcfb42O.jpg;https://ae01.alicdn.com/kf/S95580f35bf3941e98d55dd2cb752eb5cr.jpg;https://ae01.alicdn.com/kf/Sb7344f06be894952b9fa9de04c53291fY.jpg;https://ae01.alicdn.com/kf/Sdbbc02a540a74612b4a0872e34e8fae7Z.jpg;https://ae01.alicdn.com/kf/S3c7e2723b05443488f9246f63ddf2c03F.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 10,
+        "package_height": 10,
+        "package_length": 20,
+        "gross_weight": "0.060",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005012783921539,
+        "sub_product_id": "{\"US\":3256812597606787}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Brand: PGM\\nMaterial: wood\\nGolf TEE Golf Tee Golf Holder\\n(Wood Tee) Specifications:\\n42mm【0.8g】; 54mm【0.9g】\\n70mm【0.9g】\",\"style\":{\"fontSize\":16,\"fontWeight\":\"normal\",\"align\":\"left\",\"color\":\"#434649\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Product Advantages\",\"style\":{\"fontSize\":16,\"fontWeight\":\"bold\",\"align\":\"left\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Strong Bamboo Construction: Crafted from high-strength bamboo, these tees deliver reliable performance and help you achieve consistent shots every time you play.\\r\\n\\r\\nProtect Your Clubs: The smooth finish and natural tensile strength of bamboo minimize club marks, ensuring a clean, damage-free impact with every swing.\\r\\n\\r\\nEnhanced Accuracy and Distance: Engineered to reduce friction and side spin, these tees help optimize your shot distance and accuracy for longer, straighter drives.\\r\\n\\r\\nBright colors:Make it more fun,The color golf tees can be easily spotted after you hit.\",\"style\":{\"fontSize\":16,\"fontWeight\":\"normal\",\"align\":\"left\",\"color\":\"#434649\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sb7344f06be894952b9fa9de04c53291fY.jpg\",\"style\":{\"width\":1000,\"height\":1000,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S3f754a106e3a48b3a7f6f756eadcfb42O.jpg\",\"style\":{\"width\":1000,\"height\":1000,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sdbbc02a540a74612b4a0872e34e8fae7Z.jpg\",\"style\":{\"width\":1000,\"height\":1000,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S3c7e2723b05443488f9246f63ddf2c03F.jpg\",\"style\":{\"width\":1000,\"height\":1000,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S3064bd6a062540eb94baf9626eda74d2k.jpg\",\"style\":{\"width\":1000,\"height\":1000,\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S95580f35bf3941e98d55dd2cb752eb5cr.jpg\",\"style\":{\"width\":1000,\"height\":1000,\"paddingBottom\":10}}}]}",
+        "subject": "PGM Golf TEE Wooden Durable TEE Ball T Ball Holder Golf Accessories 42mm/54mm/70mm Enhanced Accuracy More Stable Reduce Friction",
+        "evaluation_count": "0",
+        "sales_count": "0",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "0.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005012783921539,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><p style=\"font-size:16px;font-weight:normal;text-align:left;color:rgb(67, 70, 73)\" class=\"word-break white-space mt-10\" align=\"left\">Brand: PGM<br/>Material: wood<br/>Golf TEE Golf Tee Golf Holder<br/>(Wood Tee) Specifications:<br/>42mm【0.8g】; 54mm【0.9g】<br/>70mm【0.9g】</p><p style=\"font-size:16px;font-weight:bold;text-align:left\" class=\"word-break white-space mt-10\" align=\"left\">Product Advantages</p><p style=\"font-size:16px;font-weight:normal;text-align:left;color:rgb(67, 70, 73)\" class=\"word-break white-space mt-10\" align=\"left\">Strong Bamboo Construction: Crafted from high-strength bamboo, these tees deliver reliable performance and help you achieve consistent shots every time you play.<br/><br/>Protect Your Clubs: The smooth finish and natural tensile strength of bamboo minimize club marks, ensuring a clean, damage-free impact with every swing.<br/><br/>Enhanced Accuracy and Distance: Engineered to reduce friction and side spin, these tees help optimize your shot distance and accuracy for longer, straighter drives.<br/><br/>Bright colors:Make it more fun,The color golf tees can be easily spotted after you hit.</p><div><img style=\"width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sb7344f06be894952b9fa9de04c53291fY.jpg\" slate-data-type=\"image\"/> <img style=\"width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S3f754a106e3a48b3a7f6f756eadcfb42O.jpg\" slate-data-type=\"image\"/> <img style=\"width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sdbbc02a540a74612b4a0872e34e8fae7Z.jpg\" slate-data-type=\"image\"/> <img style=\"width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S3c7e2723b05443488f9246f63ddf2c03F.jpg\" slate-data-type=\"image\"/> <img style=\"width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S3064bd6a062540eb94baf9626eda74d2k.jpg\" slate-data-type=\"image\"/> <img style=\"width:100%;height:auto\" width=\"100%\" height=\"auto\" src=\"https://ae-pic-a1.aliexpress-media.com/kf/S95580f35bf3941e98d55dd2cb752eb5cr.jpg\" slate-data-type=\"image\"/></div></div></div><p><br/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 202248930,
+            "attr_name": "Brand Name",
+            "attr_value": "FZCSPEED"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 350383,
+            "attr_name": "Material",
+            "attr_value": "Wood"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          },
+          {
+            "attr_name_id": -2,
+            "attr_name": "semi_Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1104133297,
+        "shipping_speed_rating": "5.0",
+        "communication_rating": "5.0",
+        "store_name": "Shop1104133297 Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "5.0"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "210137bd17902370149852576",
+    "_trace_id_": "2140d36217902370149838286e0ec4"
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:366#Mixed 38mm",
+            "offer_sale_price": "1.89",
+            "sku_id": "12000058240136449",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.76",
+            "offer_bulk_sale_price": "1.89",
+            "sku_available_stock": 6,
+            "id": "14:366#Mixed 38mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/S9c3c897639cb42b4a4ea1ff167973d58P.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Mixed 38mm",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:10#Mixed 70mm",
+            "offer_sale_price": "2.35",
+            "sku_id": "12000058240136450",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.70",
+            "offer_bulk_sale_price": "2.35",
+            "sku_available_stock": 0,
+            "id": "14:10#Mixed 70mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/Seb5fedcd776c44a6942ed1f83251801bh.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Mixed 70mm",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#Mixed 83mm",
+            "offer_sale_price": "2.42",
+            "sku_id": "12000058240136451",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.84",
+            "offer_bulk_sale_price": "2.42",
+            "sku_available_stock": 8,
+            "id": "14:29#Mixed 83mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/Seb5fedcd776c44a6942ed1f83251801bh.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Mixed 83mm",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:496#Purple 38mm",
+            "offer_sale_price": "1.91",
+            "sku_id": "12000059870307042",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.83",
+            "offer_bulk_sale_price": "1.91",
+            "sku_available_stock": 0,
+            "id": "14:496#Purple 38mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "PURPLE",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sd6cf61fd5dbc4e00b348018804831a608.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Purple 38mm",
+                  "property_value_id": 496,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/S8422a3c143f642c29ffd06101044d63eM.jpg",
+              "ali_member_id": 6004053889,
+              "media_id": 5000522140169,
+              "media_url": "https://video.aliexpress-media.com/play/5000522140169.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/S9c3c897639cb42b4a4ea1ff167973d58P.jpg;https://ae01.alicdn.com/kf/S097daca5a6514d48bb71316156bcea83h.jpg;https://ae01.alicdn.com/kf/S4f646f82891347618da63b2d473070aad.jpg;https://ae01.alicdn.com/kf/Safcb94de10b144dcbe8327091ed7ae14y.jpg;https://ae01.alicdn.com/kf/S18c45cd53c44442397a21c8a6ffa8bbfG.jpg;https://ae01.alicdn.com/kf/Sdba9f2e494e8409bb092c944c08d12aaE.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 20,
+        "package_height": 1,
+        "package_length": 29,
+        "gross_weight": "0.042",
+        "package_type": false,
+        "product_unit": 100000014
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005012377463137,
+        "sub_product_id": "{\"US\":3256812191148385}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S9c3c897639cb42b4a4ea1ff167973d58P.jpg\",\"style\":{\"width\":1600,\"height\":1600}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S097daca5a6514d48bb71316156bcea83h.jpg\",\"style\":{\"width\":679,\"height\":679}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S4f646f82891347618da63b2d473070aad.jpg\",\"style\":{\"width\":679,\"height\":679}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Safcb94de10b144dcbe8327091ed7ae14y.jpg\",\"style\":{\"width\":679,\"height\":679}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S18c45cd53c44442397a21c8a6ffa8bbfG.jpg\",\"style\":{\"width\":679,\"height\":679}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sdba9f2e494e8409bb092c944c08d12aaE.jpg\",\"style\":{\"width\":679,\"height\":679}}}]}",
+        "subject": "Golf Tees Bamboo Wooden Painted Value 30 Pack, Durable 3 1/4 2 3/4 1 1/2 Inch Long Short Tee, Cool Style for High Visibility",
+        "evaluation_count": "6",
+        "sales_count": "71",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "4.3",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005012377463137,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><p><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S9c3c897639cb42b4a4ea1ff167973d58P.jpg\" slate-data-type=\"image\"><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S097daca5a6514d48bb71316156bcea83h.jpg\" slate-data-type=\"image\"><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S4f646f82891347618da63b2d473070aad.jpg\" slate-data-type=\"image\"><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Safcb94de10b144dcbe8327091ed7ae14y.jpg\" slate-data-type=\"image\"><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S18c45cd53c44442397a21c8a6ffa8bbfG.jpg\" slate-data-type=\"image\"><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sdba9f2e494e8409bb092c944c08d12aaE.jpg\" slate-data-type=\"image\"></p><div>\n <br>\n</div><br></div></div>\r\n"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 1982267063,
+            "attr_name": "Brand Name",
+            "attr_value": "Amy Sport"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 353085,
+            "attr_name": "Material",
+            "attr_value": "Bamboo"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1105226273,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.8",
+        "store_name": "Golfisse Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2140c5a217902370259936925",
+    "_trace_id_": "2140d36217902370259918731e0ec4"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:175#Style-4",
+            "offer_sale_price": "2.09",
+            "sku_id": "12000059391529115",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.36",
+            "offer_bulk_sale_price": "2.09",
+            "sku_available_stock": 4,
+            "id": "14:175#Style-4",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "green",
+                  "sku_image": "https://ae01.alicdn.com/kf/S570821b0c4be4507a4beb2647458751eP.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Style-4",
+                  "property_value_id": 175,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:173#Style-3",
+            "offer_sale_price": "2.13",
+            "sku_id": "12000059391529114",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.43",
+            "offer_bulk_sale_price": "2.13",
+            "sku_available_stock": 29,
+            "id": "14:173#Style-3",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Blue",
+                  "sku_image": "https://ae01.alicdn.com/kf/Safb42127aad24cc78e7668f0db120c963.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Style-3",
+                  "property_value_id": 173,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#Style-2",
+            "offer_sale_price": "1.99",
+            "sku_id": "12000059391529113",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.15",
+            "offer_bulk_sale_price": "1.99",
+            "sku_available_stock": 4982,
+            "id": "14:29#Style-2",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S573ed945f8e147a8a9b326a09fe3a3c5m.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Style-2",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:10#Style-1",
+            "offer_sale_price": "1.89",
+            "sku_id": "12000059391529112",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "3.94",
+            "offer_bulk_sale_price": "1.89",
+            "sku_available_stock": 4991,
+            "id": "14:10#Style-1",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/S27c23b6927884b1e901ce53567d4573dx.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Style-1",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "image_urls": "https://ae01.alicdn.com/kf/Sae85db253d344c399e5657054da8e6083.jpg;https://ae01.alicdn.com/kf/S7ca51138eb844b829f4961a0ba475e8ft.jpg;https://ae01.alicdn.com/kf/S171988235dd4483c9bf13b6b2c50edadl.jpg;https://ae01.alicdn.com/kf/S4c10d447c51f4f029ca63fb8aa12ea50N.jpg;https://ae01.alicdn.com/kf/S1b5da1165c704f95b3f23e3cc5070541X.jpg;https://ae01.alicdn.com/kf/S2d4d5455a79548f5af5b96053090100ck.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 13,
+        "package_height": 5,
+        "package_length": 15,
+        "gross_weight": "0.077",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005012807233040,
+        "sub_product_id": "{\"US\":3256812620918288}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Product Description:\\n\\nThis 50PCS bamboo golf tee set includes 4 different sizes for various golf practice and course needs. Made of natural bamboo with a smooth finish, cup top, and pointed tip for easy tee-up use.\\n\\nMaterial: Bamboo\\n\\nPackage: 50PCS\\n\\nSizes: 83mm/3.27in, 70mm/2.76in, 54mm/2.13in, 42mm/1.65in\\n\\nBullet Points:\\n\\n50PCS Value Pack – Includes enough bamboo golf tees for daily practice, driving range, and course use.\\n\\n4 Sizes Available – Comes with 83mm, 70mm, 54mm, and 42mm tee sizes to meet different playing needs.\\n\\nNatural Bamboo Material – Made from bamboo with a light wood texture and smooth surface.\\n\\nEasy to Tee Up – Flared cup top helps support the golf ball for convenient setup.\\n\\nPointed Tip Design – Tapered bottom makes it easy to insert into grass or turf.\\n\\nNote:\\n\\nSize is measured manually, so slight measurement differences are normal. Due to different monitor settings, the actual product color may vary slightly from the pictures.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sae85db253d344c399e5657054da8e6083.jpg\",\"style\":{\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S7ca51138eb844b829f4961a0ba475e8ft.jpg\",\"style\":{\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S171988235dd4483c9bf13b6b2c50edadl.jpg\",\"style\":{\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S4c10d447c51f4f029ca63fb8aa12ea50N.jpg\",\"style\":{\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S1b5da1165c704f95b3f23e3cc5070541X.jpg\",\"style\":{\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sc92ce73da72e4d34ad7aebbfb842d1b7e.jpg\",\"style\":{\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S2d4d5455a79548f5af5b96053090100ck.jpg\",\"style\":{\"paddingBottom\":10}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sf62a28ece1034abe8e48a9b7244afbce9.jpg\",\"style\":{\"paddingBottom\":10}}}]}",
+        "subject": "50PCS Bamboo Golf Tees, Natural Wooden Golf Tees with 4 Sizes for Practice & Course Use",
+        "evaluation_count": "5",
+        "sales_count": "83",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "5.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 202228645,
+        "product_id": 1005012807233040,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><p>Product Description:</p><br><p>This 50PCS bamboo golf tee set includes 4 different sizes for various golf practice and course needs. Made of natural bamboo with a smooth finish, cup top, and pointed tip for easy tee-up use.</p><br><p>Material: Bamboo</p><br><p>Package: 50PCS</p><br><p>Sizes: 83mm/3.27in, 70mm/2.76in, 54mm/2.13in, 42mm/1.65in</p><br><p>Bullet Points:</p><br><p>50PCS Value Pack – Includes enough bamboo golf tees for daily practice, driving range, and course use.</p><br><p>4 Sizes Available – Comes with 83mm, 70mm, 54mm, and 42mm tee sizes to meet different playing needs.</p><br><p>Natural Bamboo Material – Made from bamboo with a light wood texture and smooth surface.</p><br><p>Easy to Tee Up – Flared cup top helps support the golf ball for convenient setup.</p><br><p>Pointed Tip Design – Tapered bottom makes it easy to insert into grass or turf.</p><br><p>Note:</p><br><p>Size is measured manually, so slight measurement differences are normal. Due to different monitor settings, the actual product color may vary slightly from the pictures.</p><br><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sae85db253d344c399e5657054da8e6083.jpg\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S7ca51138eb844b829f4961a0ba475e8ft.jpg\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S171988235dd4483c9bf13b6b2c50edadl.jpg\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S4c10d447c51f4f029ca63fb8aa12ea50N.jpg\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S1b5da1165c704f95b3f23e3cc5070541X.jpg\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sc92ce73da72e4d34ad7aebbfb842d1b7e.jpg\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S2d4d5455a79548f5af5b96053090100ck.jpg\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sf62a28ece1034abe8e48a9b7244afbce9.jpg\"/></div></div>\r\n"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1103769051,
+        "shipping_speed_rating": "4.7",
+        "communication_rating": "4.6",
+        "store_name": "Shop1103769051 Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.4"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2101521417902370460177053",
+    "_trace_id_": "2140d36217902370460161700e0ec4"
+  }
+}

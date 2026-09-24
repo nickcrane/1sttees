@@ -1,0 +1,250 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:173#51mm",
+            "offer_sale_price": "6.99",
+            "sku_id": "12000056019589515",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "7.19",
+            "offer_bulk_sale_price": "6.99",
+            "sku_available_stock": 4,
+            "id": "14:173#51mm",
+            "sku_bulk_order": 3,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Blue",
+                  "sku_image": "https://ae01.alicdn.com/kf/S32aef3d7262c4fe8a347a0079efe244bE.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "51mm",
+                  "property_value_id": 173,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:175#45mm",
+            "offer_sale_price": "6.89",
+            "sku_id": "12000056019589514",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "6.89",
+            "offer_bulk_sale_price": "6.89",
+            "sku_available_stock": 0,
+            "id": "14:175#45mm",
+            "sku_bulk_order": 3,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "green",
+                  "sku_image": "https://ae01.alicdn.com/kf/S9644b3a3b3154fc49fc006d5ff02194fm.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "45mm",
+                  "property_value_id": 175,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:366#38mm",
+            "offer_sale_price": "6.39",
+            "sku_id": "12000056019589513",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "6.57",
+            "offer_bulk_sale_price": "6.39",
+            "sku_available_stock": 455,
+            "id": "14:366#38mm",
+            "sku_bulk_order": 3,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/S32022341fa5a41899b5b7f8e0e4a374eK.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "38mm",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#32mm",
+            "offer_sale_price": "6.20",
+            "sku_id": "12000056019589512",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "6.38",
+            "offer_bulk_sale_price": "6.20",
+            "sku_available_stock": 455,
+            "id": "14:29#32mm",
+            "sku_bulk_order": 3,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S28c29ca3a9b3415e98db57d678d71945f.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "32mm",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:1063#70mm",
+            "offer_sale_price": "7.99",
+            "sku_id": "12000056019589517",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "8.22",
+            "offer_bulk_sale_price": "7.99",
+            "sku_available_stock": 455,
+            "id": "14:1063#70mm",
+            "sku_bulk_order": 3,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Navy Blue",
+                  "sku_image": "https://ae01.alicdn.com/kf/S0882b3564e1241c4821112beee9acd96V.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm",
+                  "property_value_id": 1063,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:10#56mm",
+            "offer_sale_price": "7.79",
+            "sku_id": "12000056019589516",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "8.01",
+            "offer_bulk_sale_price": "7.79",
+            "sku_available_stock": 455,
+            "id": "14:10#56mm",
+            "sku_bulk_order": 3,
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/S82c048a8025c470ea6536c0ea653c77fM.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "56mm",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/Se1a5fe986cb24e0b9b118ec7d0f6c2f2C.jpg",
+              "ali_member_id": 2673122574,
+              "media_id": 5000489822523,
+              "media_url": "https://video.aliexpress-media.com/play/5000489822523.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/S8d8f676d68314d49a49e361846a86777f.png;https://ae01.alicdn.com/kf/S0b78a89e375d47d79d52104fc0596a60k.png;https://ae01.alicdn.com/kf/Sc8b15072824e44419050d141351650e3B.png;https://ae01.alicdn.com/kf/S4c97f697516646c5b39f6df9d13a4e04i.png;https://ae01.alicdn.com/kf/Sc522b7c7288a4579b39f6309caec9dbe9.png;https://ae01.alicdn.com/kf/Sff32a1fdb9844baebf61b4351ba22bc6g.png"
+      },
+      "package_info_dto": {
+        "package_width": 5,
+        "package_height": 10,
+        "package_length": 10,
+        "gross_weight": "0.160",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005011598102124,
+        "sub_product_id": "{\"US\":3256811411787372}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"media\",\"data\":{\"mediaId\":5000505618679,\"previewImage\":\"https://ae-pic-a1.aliexpress-media.com/kf/Se1a5fe986cb24e0b9b118ec7d0f6c2f2C.jpg\",\"src\":\"https://video.aliexpress-media.com/play/u/2673122574/v/5000505618679\",\"style\":{\"width\":720,\"height\":720}}},{\"type\":\"text\",\"data\":{\"content\":\"Description:\\n【Product Name】: Golf Positioning Nails, Bamboo Nails\\n【Product Specifications】: 32/38/45/51/56/70mm\\n【Product Color】: Natural (Original Wood Bamboo Color)\\n【Product Material】: Bamboo\\n\\nFeatures:\\n1. Premium Natural Bamboo Material – Eco Friendly, Durable, and Comfortable\\nMade from carefully selected and polished natural bamboo, each tee showcases the distinct, natural grain of bamboo, giving it a unique texture. The eco friendly, biodegradable material is long lasting, resisting breakage or deformation, and delivers a consistently reliable tee off experience.\\n\\n2. Six Standard Sizes to Match Different Swing Heights and Course Conditions\\nAvailable in six precise sizes: 32mm, 38mm, 45mm, 51mm, 56mm, and 70mm. You can choose the tee height that best suits your swing style, club type, and turf conditions to optimize launch angle and improve your driving performance.\\n\\n3. Four Claw Wide Cup Top Design for Stable Ball Placement\\nFeaturing a unique four claw design with a wide cup shaped top that securely cradles the golf ball, preventing it from rolling or wobbling before impact. This provides exceptional stability, ensuring every drive starts from a precisely positioned ball.\\n\\n4. Adjustable Insertion Depth for Precise Ball Height Control\\nThanks to the sturdy nature of bamboo, the tee offers depth controllable functionality. You can precisely adjust how deeply the tee is inserted into the ground based on personal preference and course conditions, allowing flexible ball height tuning to optimize your strike angle.\\n\\n5. Fine Hand Polished Finish – Smooth and Safe to Use\\nEvery tee is meticulously hand finished to a smooth surface free of rough edges. This not only makes the tee easy to insert and remove from the ground but, more importantly, protects your valuable golf balls and clubfaces from scratches, ensuring a safe and worry free experience.\\n\\nPacking list：\\n50*Golf Positioning Nails\\n\\n\",\"style\":{\"fontSize\":16,\"fontWeight\":\"normal\",\"align\":\"left\",\"color\":\"#434649\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sa9dd51cc747340cfa4b2eb29d2714501G.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S6563c905d92e4a8899052d3b6b4c8366p.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S134b704947634a5999894cc326e4c524U.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S5d387d9a715a4f59b04f55a7ec8d68b5V.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S45f1ba1cd34444f883172a4572cabcb9i.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S74649cdfe3a24b01acc9bfc2dc619c0bI.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S828b2d58948640e4a148638b7cc73add4.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sb7bd827878c245aa807c0fc8f29c6b19p.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S2a5876fa52814808a513764cce4da51aL.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Secdada8207074148a7d35c5c9b10ececz.jpg\",\"style\":{\"width\":1000,\"height\":1000}}}]}",
+        "subject": "Golf Tees Bamboo Tees 50Pcs Friendly Biodegradable 32/38/45/51/56/70mm Wide Cup Base Adjustable Depth More Durable and Stable",
+        "evaluation_count": "19",
+        "sales_count": "76",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "5.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005011598102124,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><div><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">Description:</span><br/><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">【Product Name】: Golf Positioning Nails, Bamboo Nails</span><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">【Product Specifications】: 32/38/45/51/56/70mm</span><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">【Product Color】: Natural (Original Wood Bamboo Color)</span><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">【Product Material】: Bamboo</span><br/><br/><br/><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">Features:</span><br/><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">1. Premium Natural Bamboo Material – Eco Friendly, Durable, and Comfortable</span><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">Made from carefully selected and polished natural bamboo, each tee showcases the distinct, natural grain of bamboo, giving it a unique texture. The eco friendly, biodegradable material is long lasting, resisting breakage or deformation, and delivers a consistently reliable tee off experience.</span><br/><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">2. Six Standard Sizes to Match Different Swing Heights and Course Conditions</span><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">Available in six precise sizes: 32mm, 38mm, 45mm, 51mm, 56mm, and 70mm. You can choose the tee height that best suits your swing style, club type, and turf conditions to optimize launch angle and improve your driving performance.</span><br/><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">3. Four Claw Wide Cup Top Design for Stable Ball Placement</span><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">Featuring a unique four claw design with a wide cup shaped top that securely cradles the golf ball, preventing it from rolling or wobbling before impact. This provides exceptional stability, ensuring every drive starts from a precisely positioned ball.</span><br/><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">4. Adjustable Insertion Depth for Precise Ball Height Control</span><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">Thanks to the sturdy nature of bamboo, the tee offers depth controllable functionality. You can precisely adjust how deeply the tee is inserted into the ground based on personal preference and course conditions, allowing flexible ball height tuning to optimize your strike angle.</span><br/><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">5. Fine Hand Polished Finish – Smooth and Safe to Use</span><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">Every tee is meticulously hand finished to a smooth surface free of rough edges. This not only makes the tee easy to insert and remove from the ground but, more importantly, protects your valuable golf balls and clubfaces from scratches, ensuring a safe and worry free experience.</span><br/><br/><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">Packing list：</span><br/><br/><span style=\"background-color:rgb(255, 255, 255);color:rgb(17, 17, 17);font-size:18px;font-family:Arial, Helvetica, sans-serif\">50*Golf Positioning Nails</span><br/></div><p style=\"text-align:left;margin:0px;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px\" align=\"left\"><img src=\"https://ae01.alicdn.com/kf/Sa9dd51cc747340cfa4b2eb29d2714501G.jpg?width=1000&amp;height=1000&amp;hash=2000\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S6563c905d92e4a8899052d3b6b4c8366p.jpg?width=1000&amp;height=1000&amp;hash=2000\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S134b704947634a5999894cc326e4c524U.jpg?width=1000&amp;height=1000&amp;hash=2000\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S5d387d9a715a4f59b04f55a7ec8d68b5V.jpg?width=1000&amp;height=1000&amp;hash=2000\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S45f1ba1cd34444f883172a4572cabcb9i.jpg?width=1000&amp;height=1000&amp;hash=2000\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S74649cdfe3a24b01acc9bfc2dc619c0bI.jpg?width=1000&amp;height=1000&amp;hash=2000\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S828b2d58948640e4a148638b7cc73add4.jpg?width=1000&amp;height=1000&amp;hash=2000\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Sb7bd827878c245aa807c0fc8f29c6b19p.jpg?width=1000&amp;height=1000&amp;hash=2000\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S2a5876fa52814808a513764cce4da51aL.jpg?width=1000&amp;height=1000&amp;hash=2000\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Secdada8207074148a7d35c5c9b10ececz.jpg?width=1000&amp;height=1000&amp;hash=2000\" slate-data-type=\"image\"/></p></div></div><p><br/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 202248930,
+            "attr_name": "Brand Name",
+            "attr_value": "FZCSPEED"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 353085,
+            "attr_name": "Material",
+            "attr_value": "Bamboo"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          },
+          {
+            "attr_name_id": -2,
+            "attr_name": "semi_Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1104785257,
+        "shipping_speed_rating": "5.0",
+        "communication_rating": "5.0",
+        "store_name": "Shop1104785257 Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.9"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2140faf117902370490171101",
+    "_trace_id_": "2140d36217902370490161999e0ec4"
+  }
+}

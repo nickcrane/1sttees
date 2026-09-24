@@ -1,0 +1,145 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:29#50pcs",
+            "offer_sale_price": "2.55",
+            "sku_id": "12000048330997834",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "5.32",
+            "offer_bulk_sale_price": "2.55",
+            "sku_available_stock": 4,
+            "id": "14:29#50pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "50pcs",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:10#100pcs",
+            "offer_sale_price": "4.49",
+            "sku_id": "12000048330997835",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "9.16",
+            "offer_bulk_sale_price": "4.49",
+            "sku_available_stock": 4,
+            "id": "14:10#100pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "100pcs",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/Sc2e2ec281d1a4ccba4dccdd32b4fb2e79.jpg",
+              "ali_member_id": 6001773869,
+              "media_id": 5000484034268,
+              "media_url": "https://video.aliexpress-media.com/play/5000484034268.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/Saa83670bad6f4d4a956bc411c30ce15bq.jpg;https://ae01.alicdn.com/kf/S559cd027f4df4bc0af81f6193916b123o.jpg;https://ae01.alicdn.com/kf/Se87471abd67749b9bf9292aa5a8b1bd79.jpg;https://ae01.alicdn.com/kf/Se6daf7a05b734fc18228e7b904f94a93X.jpg;https://ae01.alicdn.com/kf/Sf25c90f20412496a83f21d1ac77494c4T.jpg;https://ae01.alicdn.com/kf/Scc92002c3404403688d8553681f7ea5fb.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 14,
+        "package_height": 3,
+        "package_length": 18,
+        "gross_weight": "0.066",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005009212801785,
+        "sub_product_id": "{\"US\":3256809026487033}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Durable Bamboo Material\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\" Crafted from durable bamboo, these golf tees offer longevity and resistance to wear and tear.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Side Spin\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\" The side spin feature of these tees improves accuracy and consistency in shots.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Biodegradable\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\" Made from biodegradable material, these tees are eco-friendly and reduce environmental impact.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Multiple Quantity Options\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\" Available in packs of 50 and 100, these tees cater to both casual players and professionals.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Reduce Friction\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\" Designed to minimize friction, these tees enhance ball stability and performance.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Se6daf7a05b734fc18228e7b904f94a93X.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S559cd027f4df4bc0af81f6193916b123o.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Scc92002c3404403688d8553681f7ea5fb.jpg\",\"style\":{\"width\":1487,\"height\":1497}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Se87471abd67749b9bf9292aa5a8b1bd79.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sf25c90f20412496a83f21d1ac77494c4T.jpg\",\"style\":{\"width\":1052,\"height\":1330}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S5876d429f177488b902ea1ff0c47ee9aQ.jpg\",\"style\":{\"width\":1500,\"height\":1483}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S829d147cbe9e4963b43a5e857f436a37f.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sc5a03676da9c4e3ca2009970f9274856g.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Se15eb55c47764c69b6b9c7d2e784b6210.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Scbc5702532024e8c83dadc0227dc71869.jpg\",\"style\":{\"width\":1369,\"height\":1242}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S30f32c31ca7243c8b06d2ced7b0598eeR.jpg\",\"style\":{\"width\":1500,\"height\":1500}}}]}",
+        "subject": "Golf Tees Durable Bamboo Tees 50Pcs/100Pcs 100Pcs 3-1/4\" Friendly Biodegradable Material Reduce Friction Side Spin More Stable",
+        "evaluation_count": "13",
+        "sales_count": "104",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "4.8",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005009212801785,
+        "detail": "<p><strong>Durable Bamboo Material</strong></p><p>Crafted from durable bamboo, these golf tees offer longevity and resistance to wear and tear.</p><p><strong>Side Spin</strong></p><p>The side spin feature of these tees improves accuracy and consistency in shots.</p><p><strong>Biodegradable</strong></p><p>Made from biodegradable material, these tees are eco-friendly and reduce environmental impact.</p><p><strong>Multiple Quantity Options</strong></p><p>Available in packs of 50 and 100, these tees cater to both casual players and professionals.</p><p><strong>Reduce Friction</strong></p><p>Designed to minimize friction, these tees enhance ball stability and performance.</p><p><img src=\"https://ae01.alicdn.com/kf/Se6daf7a05b734fc18228e7b904f94a93X.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S559cd027f4df4bc0af81f6193916b123o.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Scc92002c3404403688d8553681f7ea5fb.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Se87471abd67749b9bf9292aa5a8b1bd79.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Sf25c90f20412496a83f21d1ac77494c4T.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S5876d429f177488b902ea1ff0c47ee9aQ.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S829d147cbe9e4963b43a5e857f436a37f.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Sc5a03676da9c4e3ca2009970f9274856g.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Se15eb55c47764c69b6b9c7d2e784b6210.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Scbc5702532024e8c83dadc0227dc71869.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S30f32c31ca7243c8b06d2ced7b0598eeR.jpg\" slate-data-type=\"image\"/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 198484162,
+            "attr_name": "Brand Name",
+            "attr_value": "GREARTH"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 353085,
+            "attr_name": "Material",
+            "attr_value": "Bamboo"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1104614048,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.7",
+        "store_name": "Grearth Golf Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "210126a717902370480167637",
+    "_trace_id_": "2140d36217902370480151807e0ec4"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:29#100pcs",
+            "offer_sale_price": "3.16",
+            "sku_id": "12000057822750053",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "6.58",
+            "offer_bulk_sale_price": "3.16",
+            "sku_available_stock": 33,
+            "id": "14:29#100pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sc5c70c549f1a47848f4d6ee9c5f80fb8m.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "100pcs",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:366#50pcs",
+            "offer_sale_price": "2.50",
+            "sku_id": "12000057822750054",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "5.10",
+            "offer_bulk_sale_price": "2.50",
+            "sku_available_stock": 5,
+            "id": "14:366#50pcs",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sc5c70c549f1a47848f4d6ee9c5f80fb8m.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "50pcs",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/S8a2de21fe80e4b8c908a5ea4d00c7ab0v.jpg",
+              "ali_member_id": 6001773869,
+              "media_id": 5000496788687,
+              "media_url": "https://video.aliexpress-media.com/play/5000496788687.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/Sc5c70c549f1a47848f4d6ee9c5f80fb8m.jpg;https://ae01.alicdn.com/kf/Seb1e962fa8e748559d87250575e203bfG.jpg;https://ae01.alicdn.com/kf/S0e29a8bafb4a4468ac593bdabe92e147r.jpg;https://ae01.alicdn.com/kf/S7275a245267f435cb14d5e05cadf71ceJ.jpg;https://ae01.alicdn.com/kf/Sda1d64c150ce4260a867d94bf679be55w.jpg;https://ae01.alicdn.com/kf/S1a3d8a9e28ea4b2c9f1c007f4a110278G.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 12,
+        "package_height": 6,
+        "package_length": 13,
+        "gross_weight": "0.123",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005012227826675,
+        "sub_product_id": "{\"US\":3256812041511923}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Optimal Height\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"With a height of 70mm, these tees provide the ideal launch angle for golf balls, enhancing your game.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Generous Quantity\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"The pack includes 100/50 tees, offering ample supply for multiple rounds of golf without running out.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Versatile Use\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"These versatile tees are suitable for all types of golf balls, making them a practical addition to any golfer's equipment.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"High-Quality Material\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Crafted from premium wood, these golf tees ensure durability and longevity, perfect for repeated use on the golf course.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sc5c70c549f1a47848f4d6ee9c5f80fb8m.jpg\",\"style\":{\"width\":500,\"height\":500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S1a3d8a9e28ea4b2c9f1c007f4a110278G.jpg\",\"style\":{\"width\":500,\"height\":500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sda1d64c150ce4260a867d94bf679be55w.jpg\",\"style\":{\"width\":500,\"height\":500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S7275a245267f435cb14d5e05cadf71ceJ.jpg\",\"style\":{\"width\":500,\"height\":500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Seb1e962fa8e748559d87250575e203bfG.jpg\",\"style\":{\"width\":500,\"height\":500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S0e29a8bafb4a4468ac593bdabe92e147r.jpg\",\"style\":{\"width\":500,\"height\":500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S1a44b53f9559416c8b169d5d7b0ff976e.jpg\",\"style\":{\"width\":4284,\"height\":4284}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sce8017fe1b144f988c90fcbd440e691bk.jpg\",\"style\":{\"width\":4284,\"height\":4284}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S8ad1708dfeeb4354bbb26064ee347bddq.jpg\",\"style\":{\"width\":4284,\"height\":4284}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S92015af37b1d4286994141d2ed833ddd7.jpg\",\"style\":{\"width\":4284,\"height\":4284}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S7e0144558aa2487db20267fa935e2c25S.jpg\",\"style\":{\"width\":4284,\"height\":4284}}}]}",
+        "subject": "Golf White Wooden Tees Golf Ball Tees 70mm Height Pack of 100/50",
+        "evaluation_count": "10",
+        "sales_count": "155",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "5.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005012227826675,
+        "detail": "<p><strong>Optimal Height</strong></p><p>With a height of 70mm, these tees provide the ideal launch angle for golf balls, enhancing your game.</p><p><strong>Generous Quantity</strong></p><p>The pack includes 100/50 tees, offering ample supply for multiple rounds of golf without running out.</p><p><strong>Versatile Use</strong></p><p>These versatile tees are suitable for all types of golf balls, making them a practical addition to any golfer&#x27;s equipment.</p><p><strong>High-Quality Material</strong></p><p>Crafted from premium wood, these golf tees ensure durability and longevity, perfect for repeated use on the golf course.</p><br/><p><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sc5c70c549f1a47848f4d6ee9c5f80fb8m.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S1a3d8a9e28ea4b2c9f1c007f4a110278G.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sda1d64c150ce4260a867d94bf679be55w.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S7275a245267f435cb14d5e05cadf71ceJ.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Seb1e962fa8e748559d87250575e203bfG.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S0e29a8bafb4a4468ac593bdabe92e147r.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S1a44b53f9559416c8b169d5d7b0ff976e.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sce8017fe1b144f988c90fcbd440e691bk.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S8ad1708dfeeb4354bbb26064ee347bddq.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S92015af37b1d4286994141d2ed833ddd7.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S7e0144558aa2487db20267fa935e2c25S.jpg\" slate-data-type=\"image\"/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 198484162,
+            "attr_name": "Brand Name",
+            "attr_value": "GREARTH"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 350383,
+            "attr_name": "Material",
+            "attr_value": "Wood"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1104614048,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.7",
+        "store_name": "Grearth Golf Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2140fd5217902369989728345",
+    "_trace_id_": "2140d36217902369989717671e0ec4"
+  }
+}

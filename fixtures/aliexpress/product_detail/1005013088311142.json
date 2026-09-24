@@ -1,0 +1,102 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "",
+            "offer_sale_price": "9.19",
+            "sku_id": "12000060267084648",
+            "limit_strategy": "create_order_fail",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "25.53",
+            "buy_amount_limit_set_by_promotion": "1",
+            "offer_bulk_sale_price": "9.19",
+            "sku_available_stock": 29,
+            "id": ""
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "image_urls": "https://ae01.alicdn.com/kf/Se8516b132c20453f803c328552b5da85F.png;https://ae01.alicdn.com/kf/Se2da8aedea814f8f98eeb57b9c388920D.jpg;https://ae01.alicdn.com/kf/S8d7ce5d07275455ea8641a86de265f36F.jpg;https://ae01.alicdn.com/kf/Se31f96f453b44811a202f0975adae352C.jpg;https://ae01.alicdn.com/kf/S4745dc0268c746e794839e20f3691f00L.jpg;https://ae01.alicdn.com/kf/S7bbcde4d0cc64f31bb193e2b73494f942.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 12,
+        "package_height": 6,
+        "package_length": 17,
+        "gross_weight": "0.180",
+        "package_type": true,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005013088311142,
+        "sub_product_id": "{\"US\":3256812901996390}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Se8516b132c20453f803c328552b5da85F.png\",\"style\":{\"width\":1080,\"height\":1080}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S4745dc0268c746e794839e20f3691f00L.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S7bbcde4d0cc64f31bb193e2b73494f942.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Se31f96f453b44811a202f0975adae352C.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/Sc6eb3178ce5e439baa4c68ef5e1107d01.jpg\",\"style\":{\"width\":1500,\"height\":1500}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae-pic-a1.aliexpress-media.com/kf/S8d7ce5d07275455ea8641a86de265f36F.jpg\",\"style\":{\"width\":1500,\"height\":1500}}}]}",
+        "subject": "50PC Golf Tees Plastic, Unbreakable Golf Tee 3 1/4\" with Big Cup & 8 Prongs, Reduces Friction & Side Spin",
+        "evaluation_count": "0",
+        "sales_count": "1",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "0.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005013088311142,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><p><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Se8516b132c20453f803c328552b5da85F.png\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S4745dc0268c746e794839e20f3691f00L.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S7bbcde4d0cc64f31bb193e2b73494f942.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Se31f96f453b44811a202f0975adae352C.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/Sc6eb3178ce5e439baa4c68ef5e1107d01.jpg\" slate-data-type=\"image\"/><img src=\"https://ae-pic-a1.aliexpress-media.com/kf/S8d7ce5d07275455ea8641a86de265f36F.jpg\" slate-data-type=\"image\"/></p></div></div>\r\n"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 124,
+            "attr_name": "Material",
+            "attr_value": "Plastic"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1104933176,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.7",
+        "store_name": "Shop1104933176 Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "210171a817902370590313737",
+    "_trace_id_": "2140d36217902370590292567e0ec4"
+  }
+}

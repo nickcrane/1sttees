@@ -1,0 +1,245 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:200006151#Red 70mm 100PCS",
+            "offer_sale_price": "5.89",
+            "sku_id": "12000057250340642",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "12.27",
+            "offer_bulk_sale_price": "5.89",
+            "sku_available_stock": 49994,
+            "id": "14:200006151#Red 70mm 100PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Light Grey",
+                  "sku_image": "https://ae01.alicdn.com/kf/S58153246985f4e80ad07bfb8b459dae46.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Red 70mm 100PCS",
+                  "property_value_id": 200006151,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:496#Red 83mm 100PCS",
+            "offer_sale_price": "6.20",
+            "sku_id": "12000057250340641",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "12.91",
+            "offer_bulk_sale_price": "6.20",
+            "sku_available_stock": 49998,
+            "id": "14:496#Red 83mm 100PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "PURPLE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S7b102848115d42fa85824c8dbb81f0854.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Red 83mm 100PCS",
+                  "property_value_id": 496,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200002984#Yellow 83mm 100PCS",
+            "offer_sale_price": "6.14",
+            "sku_id": "12000057250340640",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "12.79",
+            "offer_bulk_sale_price": "6.14",
+            "sku_available_stock": 49999,
+            "id": "14:200002984#Yellow 83mm 100PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Burgundy",
+                  "sku_image": "https://ae01.alicdn.com/kf/S7b102848115d42fa85824c8dbb81f0854.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Yellow 83mm 100PCS",
+                  "property_value_id": 200002984,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:10#Yellow 70mm 100PCS",
+            "offer_sale_price": "5.79",
+            "sku_id": "12000057250340639",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "12.06",
+            "offer_bulk_sale_price": "5.79",
+            "sku_available_stock": 49996,
+            "id": "14:10#Yellow 70mm 100PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sfdbfc7f67e014bfda65c7ab7eec4d649h.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "Yellow 70mm 100PCS",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:366#White 83mm 100PCS",
+            "offer_sale_price": "6.09",
+            "sku_id": "12000057250340638",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "12.69",
+            "offer_bulk_sale_price": "6.09",
+            "sku_available_stock": 49982,
+            "id": "14:366#White 83mm 100PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/Se1dcd5de0172495d8aad0b803c061866i.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "White 83mm 100PCS",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:29#White 70mm 100PCS",
+            "offer_sale_price": "5.82",
+            "sku_id": "12000057250340637",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "12.13",
+            "offer_bulk_sale_price": "5.82",
+            "sku_available_stock": 49998,
+            "id": "14:29#White 70mm 100PCS",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "WHITE",
+                  "sku_image": "https://ae01.alicdn.com/kf/S80851e49f8dc4ff488cb41479bb2fe30s.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "White 70mm 100PCS",
+                  "property_value_id": 29,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/Sec18d7fa056645b4a7320dd09f0afa402.jpg",
+              "ali_member_id": 6001697022,
+              "media_id": 5000511838129,
+              "media_url": "https://video.aliexpress-media.com/play/5000511838129.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/S4ee4174ec7bd4d3792c73d5d622f64dec.jpg;https://ae01.alicdn.com/kf/Sf8d9b36b22e04d47bece7c013a37787af.jpg;https://ae01.alicdn.com/kf/S1965e4e2dd814f01985c701fb6a8e0621.jpg;https://ae01.alicdn.com/kf/S78e1a1c1f411453eb674bb792ea8dce25.jpg;https://ae01.alicdn.com/kf/Se97900df118e4278ad6149facef53d5e8.jpg;https://ae01.alicdn.com/kf/S80851e49f8dc4ff488cb41479bb2fe30s.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 12,
+        "package_height": 5,
+        "package_length": 12,
+        "gross_weight": "0.124",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005011999810107,
+        "sub_product_id": "{\"US\":3256811813495355}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Product Highlights\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ Eco-Friendly Material – Made of 100% natural bamboo, biodegradable and sustainable, safer for the environment than plastic or wooden tees.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ 5X Stronger Than Wood – Reinforced bamboo structure resists cracking and splintering, ensuring long-lasting performance.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ Smooth Swing & Consistent Height – Precision-designed for minimal friction and optimal ball flight, enhancing your accuracy.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ 100pcs Value Pack – Ample quantity for practice, tournaments, or sharing with friends. Never run out on the course!\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"✅ Universal Compatibility – Fits all standard golf clubs (drivers, irons, etc.) and conforms to USGA/R&A rules.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Specifications\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Material: Natural bamboo\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Quantity: 100 tees per pack\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Color: Red, Yellow, White\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Size:70mm/83mm\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Perfect For:\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Golf enthusiasts seeking eco-friendly gear\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Coaches and training facilities\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Tournament players needing reliable tees\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Gift for golfers (birthdays, holidays, Father’s Day)\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"♻️ Go Green & Play Better – Upgrade Your Game with Bamboo Tees Today!\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S4ee4174ec7bd4d3792c73d5d622f64dec.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S73bf736646b04618822c65f5a1643fa5l.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Se97900df118e4278ad6149facef53d5e8.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S1965e4e2dd814f01985c701fb6a8e0621.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S78e1a1c1f411453eb674bb792ea8dce25.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S58153246985f4e80ad07bfb8b459dae46.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sfdbfc7f67e014bfda65c7ab7eec4d649h.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S80851e49f8dc4ff488cb41479bb2fe30s.jpg\",\"style\":{\"width\":1000,\"height\":1000}}}]}",
+        "subject": "100pcs Bamboo Golf Tees - Eco-Friendly Professional Golf Tee Set Durable & Smooth Swing, Perfect for Golf Training & Competition",
+        "evaluation_count": "1",
+        "sales_count": "28",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "5.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005011999810107,
+        "detail": "<p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Product Highlights</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">✅ Eco-Friendly Material – Made of 100% natural bamboo, biodegradable and sustainable, safer for the environment than plastic or wooden tees.</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">✅ 5X Stronger Than Wood – Reinforced bamboo structure resists cracking and splintering, ensuring long-lasting performance.</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">✅ Smooth Swing &amp; Consistent Height – Precision-designed for minimal friction and optimal ball flight, enhancing your accuracy.</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">✅ 100pcs Value Pack – Ample quantity for practice, tournaments, or sharing with friends.  Never run out on the course!</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">✅ Universal Compatibility – Fits all standard golf clubs (drivers, irons, etc.) and conforms to USGA/R&amp;A rules.</span></p><p><br/><br/></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Specifications</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Material: Natural bamboo</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Quantity: 100 tees per pack</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Color: Red, Yellow, White</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Size:70mm/83mm</span></p><p><br/><br/></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Perfect For:</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Golf enthusiasts seeking eco-friendly gear</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Coaches and training facilities</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Tournament players needing reliable tees</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">Gift for golfers (birthdays, holidays, Father’s Day)</span></p><p><span style=\"font-size:18px;font-family:arial, helvetica, sans-serif\">♻️ Go Green &amp; Play Better – Upgrade Your Game with Bamboo Tees Today!</span><img src=\"https://ae01.alicdn.com/kf/S4ee4174ec7bd4d3792c73d5d622f64dec.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S73bf736646b04618822c65f5a1643fa5l.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Se97900df118e4278ad6149facef53d5e8.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S1965e4e2dd814f01985c701fb6a8e0621.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S78e1a1c1f411453eb674bb792ea8dce25.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S58153246985f4e80ad07bfb8b459dae46.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Sfdbfc7f67e014bfda65c7ab7eec4d649h.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S80851e49f8dc4ff488cb41479bb2fe30s.jpg\" slate-data-type=\"image\"/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 353085,
+            "attr_name": "Material",
+            "attr_value": "Bamboo"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "LXT528"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1104552957,
+        "shipping_speed_rating": "4.7",
+        "communication_rating": "4.7",
+        "store_name": "Kaiersn Golf Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2154147317902370580287890",
+    "_trace_id_": "2140d36217902370580272539e0ec4"
+  }
+}

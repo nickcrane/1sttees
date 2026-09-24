@@ -1,0 +1,239 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:366",
+            "offer_sale_price": "2.42",
+            "sku_id": "12000050848840513",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.95",
+            "offer_bulk_sale_price": "2.42",
+            "sku_available_stock": 4966,
+            "id": "14:366",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "YELLOW",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sa783c2d7b4dc413d9e68bcf750cda0d0o.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_id": 366,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:10",
+            "offer_sale_price": "2.41",
+            "sku_id": "12000050848840514",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.92",
+            "offer_bulk_sale_price": "2.41",
+            "sku_available_stock": 4964,
+            "id": "14:10",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Red",
+                  "sku_image": "https://ae01.alicdn.com/kf/S547988a229504f8e9bee1d6e2ca07a591.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_id": 10,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:173",
+            "offer_sale_price": "2.44",
+            "sku_id": "12000050848840515",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.99",
+            "offer_bulk_sale_price": "2.44",
+            "sku_available_stock": 4980,
+            "id": "14:173",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Blue",
+                  "sku_image": "https://ae01.alicdn.com/kf/S6c8cbee8af974dc0872807436f8908deY.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_id": 173,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:100013777",
+            "offer_sale_price": "2.42",
+            "sku_id": "12000050848840516",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.95",
+            "offer_bulk_sale_price": "2.42",
+            "sku_available_stock": 990,
+            "id": "14:100013777",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Pink",
+                  "sku_image": "https://ae01.alicdn.com/kf/Scebb3654dd064e22bcab211c85b2c3daS.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_id": 100013777,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200003699",
+            "offer_sale_price": "2.36",
+            "sku_id": "12000050848840517",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.83",
+            "offer_bulk_sale_price": "2.36",
+            "sku_available_stock": 8,
+            "id": "14:200003699",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "MULTI",
+                  "sku_image": "https://ae01.alicdn.com/kf/Sdcc2b5fe5a4143b8a2ead1fe8deb24f92.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_id": 200003699,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200005536",
+            "offer_sale_price": "2.43",
+            "sku_id": "12000050848840518",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "4.96",
+            "offer_bulk_sale_price": "2.43",
+            "sku_available_stock": 4962,
+            "id": "14:200005536",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Orange",
+                  "sku_image": "https://ae01.alicdn.com/kf/S76b95407abdc48fca3aa3666f87c8320w.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_id": 200005536,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "ae_video_dtos": {
+          "ae_video_d_t_o": [
+            {
+              "media_status": "approved",
+              "media_type": "video",
+              "poster_url": "https://ae-pic-a1.aliexpress-media.com/kf/Sbe5057bf7878464c8c4c42d1cbfbd89eh.jpg",
+              "ali_member_id": 6000607565,
+              "media_id": 5000331522070,
+              "media_url": "https://video.aliexpress-media.com/play/5000331522070.mp4"
+            }
+          ]
+        },
+        "image_urls": "https://ae01.alicdn.com/kf/Sdcc2b5fe5a4143b8a2ead1fe8deb24f92.jpg;https://ae01.alicdn.com/kf/S0ab48bfd5d4d44478223ca0485c09cebT.jpg;https://ae01.alicdn.com/kf/S7bda284a0acf493fbe3782a6d4bc39a2o.jpg;https://ae01.alicdn.com/kf/S0250e9d7f7d24dcd8cf71c6665607a3cy.jpg;https://ae01.alicdn.com/kf/S8dad0201094246e8aca5a85f708cc3048.jpg;https://ae01.alicdn.com/kf/S8abcb8a47c4745989fc2c5b65b9d192a9.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 17,
+        "package_height": 2,
+        "package_length": 17,
+        "gross_weight": "0.031",
+        "package_type": true,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005009993325314,
+        "sub_product_id": "{\"US\":3256809807010562}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"DescriptionPerfect Size: Each tee measures 3.24 inches (83m), an ideal size for a wide range of golf balls, ensuring versatility for both practice and competitive play.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Multicolor : Comes in a vibrant multicolor pack that not only adds a touch of style to your game but also helps in easy visibility on the golf course.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Low Friction Design: The smooth surface reduces friction upon impact, providing a cleaner contact and improved ball flight for better game performance.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"Premium Durability: Made from high-quality materials, these tees boast enhanced durability and resistance to wear, suitable for repeated use in all weather conditions.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"text\",\"data\":{\"content\":\"360° Flexibility: Caiton golf tees are designed with unique 360° flexibility to adjust and bend without breaking, allowing optimal setup and consistency in your game.\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S0ab48bfd5d4d44478223ca0485c09cebT.jpg\",\"style\":{\"width\":3000,\"height\":3000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/Sdcc2b5fe5a4143b8a2ead1fe8deb24f92.jpg\",\"style\":{\"width\":3000,\"height\":3000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S7bda284a0acf493fbe3782a6d4bc39a2o.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S0250e9d7f7d24dcd8cf71c6665607a3cy.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S8dad0201094246e8aca5a85f708cc3048.jpg\",\"style\":{\"width\":1000,\"height\":1000}}},{\"type\":\"image\",\"data\":{\"url\":\"https://ae01.alicdn.com/kf/S8abcb8a47c4745989fc2c5b65b9d192a9.jpg\",\"style\":{\"width\":1000,\"height\":1000}}}]}",
+        "subject": "5pcs 360° Flexible Rubber Golf Tees, 3.27in/83mm, Durable, Low Friction, Vibrant Multicolor - Ideal for Everyday Golfers",
+        "evaluation_count": "203",
+        "sales_count": "900+",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "4.8",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005009993325314,
+        "detail": "<p><span style=\"font-size:18px\">DescriptionPerfect Size: Each tee measures 3.24 inches (83m), an ideal size for a wide range of golf balls, ensuring versatility for both practice and competitive play.</span></p><p><span style=\"font-size:18px\">Multicolor : Comes in a vibrant multicolor pack that not only adds a touch of style to your game but also helps in easy visibility on the golf course.</span></p><p><span style=\"font-size:18px\">Low Friction Design: The smooth surface reduces friction upon impact, providing a cleaner contact and improved ball flight for better game performance.</span></p><p><span style=\"font-size:18px\">Premium Durability: Made from high-quality materials, these tees boast enhanced durability and resistance to wear, suitable for repeated use in all weather conditions.</span></p><p><span style=\"font-size:18px\">360° Flexibility: Caiton golf tees are designed with unique 360° flexibility to adjust and bend without breaking, allowing optimal setup and consistency in your game.</span></p><p><img src=\"https://ae01.alicdn.com/kf/S0ab48bfd5d4d44478223ca0485c09cebT.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/Sdcc2b5fe5a4143b8a2ead1fe8deb24f92.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S7bda284a0acf493fbe3782a6d4bc39a2o.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S0250e9d7f7d24dcd8cf71c6665607a3cy.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S8dad0201094246e8aca5a85f708cc3048.jpg\" slate-data-type=\"image\"/><img src=\"https://ae01.alicdn.com/kf/S8abcb8a47c4745989fc2c5b65b9d192a9.jpg\" slate-data-type=\"image\"/><br/></p>"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 123,
+            "attr_name": "Material",
+            "attr_value": "Rubber"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": 3,
+            "attr_value_id": -1,
+            "attr_name": "Model Number",
+            "attr_value": "TP89"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1104068650,
+        "shipping_speed_rating": "4.8",
+        "communication_rating": "4.8",
+        "store_name": "JSSport Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.7"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "2140c5a217902370620347911",
+    "_trace_id_": "2140d36217902370620332675e0ec4"
+  }
+}

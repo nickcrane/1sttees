@@ -1,0 +1,158 @@
+{
+  "aliexpress_ds_product_get_response": {
+    "result": {
+      "ae_item_sku_info_dtos": {
+        "ae_item_sku_info_d_t_o": [
+          {
+            "sku_attr": "14:1063#83mm",
+            "offer_sale_price": "4.39",
+            "sku_id": "12000041018621770",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "8.74",
+            "offer_bulk_sale_price": "4.39",
+            "sku_available_stock": 0,
+            "id": "14:1063#83mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "Navy Blue",
+                  "sku_image": "https://ae01.alicdn.com/kf/S5ae87dd3e13e48cabe577b13d27e67699.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "83mm",
+                  "property_value_id": 1063,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:200003699#70mm",
+            "offer_sale_price": "3.90",
+            "sku_id": "12000041018621769",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "7.79",
+            "offer_bulk_sale_price": "3.90",
+            "sku_available_stock": 8,
+            "id": "14:200003699#70mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "MULTI",
+                  "sku_image": "https://ae01.alicdn.com/kf/Se39b0b13f4cb4152a7b270f0562dd08c3.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "70mm",
+                  "property_value_id": 200003699,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          },
+          {
+            "sku_attr": "14:193#54mm",
+            "offer_sale_price": "3.47",
+            "sku_id": "12000041018621768",
+            "price_include_tax": true,
+            "currency_code": "GBP",
+            "sku_price": "6.94",
+            "offer_bulk_sale_price": "3.47",
+            "sku_available_stock": 10,
+            "id": "14:193#54mm",
+            "ae_sku_property_dtos": {
+              "ae_sku_property_d_t_o": [
+                {
+                  "sku_property_value": "black",
+                  "sku_image": "https://ae01.alicdn.com/kf/S5f691bfeac374330abce6fb68e8ea8447.jpg",
+                  "sku_property_name": "Color",
+                  "property_value_definition_name": "54mm",
+                  "property_value_id": 193,
+                  "sku_property_id": 14
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ae_multimedia_info_dto": {
+        "image_urls": "https://ae01.alicdn.com/kf/S0b46986b4cf149bcb8ec02c4e83b0e08E.jpg;https://ae01.alicdn.com/kf/S430e76fd05b14049b8f0b400146b0b68K.jpg;https://ae01.alicdn.com/kf/Se1a8d1fa219c4542b18e02749978d884H.jpg;https://ae01.alicdn.com/kf/S70b6bc42e6654fb499e3015fe588ad9cq.jpg;https://ae01.alicdn.com/kf/Sfb066e854d014464889a4c2f388aaf474.jpg;https://ae01.alicdn.com/kf/S926bf6b404b94e60801b028f714d6db5M.jpg"
+      },
+      "package_info_dto": {
+        "package_width": 16,
+        "package_height": 3,
+        "package_length": 19,
+        "gross_weight": "0.143",
+        "package_type": false,
+        "product_unit": 100000015
+      },
+      "logistics_info_dto": {
+        "delivery_time": 7,
+        "ship_to_country": "GB"
+      },
+      "product_id_converter_result": {
+        "main_product_id": 1005007494950861,
+        "sub_product_id": "{\"US\":3256807308636109}"
+      },
+      "ae_item_base_info_dto": {
+        "mobile_detail": "{\"version\":\"2.0.0\",\"moduleList\":[{\"type\":\"text\",\"data\":{\"content\":\"Features:\\nPremium Quality Wooden : Set of 100 durable tees for a stable and low-friction golfing experience indoors or outdoors.\\nSuperior Design for Sports Training: Crafted with high stability and practical craftsmanship, these tees are essential for golf enthusiasts.\\nIdeal Gift for Golf Lovers: Surprise your favorite golfer with this set of 100 professional tees, the perfect birthday gift for any golf enthusiast.\\nEnhance Your Game: These professional tees are designed to improve your golfing experience, providing the stability and support you need.\\nDurable and Long-Lasting: Made from good-quality materials, these tees are built to withstand frequent use and maintain their shape over time.\\nSpecifications:\\nMaterial: Wood\\nHeight: 5.4cm/7cm/8.3cm\\nNotes:\\nPlease allow slightly errors due to manual measurement and different monitors.\\n\",\"style\":{\"paddingLeft\":16,\"paddingRight\":16,\"paddingTop\":10,\"paddingBottom\":10,\"fontSize\":14,\"fontWeight\":\"regular\",\"align\":\"left\",\"color\":\"#666666\",\"fontFamily\":\"OpenSans\",\"backgroundColor\":\"#FFFFFF\"}}}]}",
+        "subject": "100pcs Wooden  Practical Design Serviceable Craftsmanship Tee Essential Accessory for Golf",
+        "evaluation_count": "1",
+        "sales_count": "6",
+        "product_status_type": "onSelling",
+        "avg_evaluation_rating": "5.0",
+        "separated_listing": false,
+        "currency_code": "CNY",
+        "sl_product": false,
+        "category_id": 100005884,
+        "product_id": 1005007494950861,
+        "detail": "<div class=\"detailmodule_html\"><div class=\"detail-desc-decorate-richtext\"><p>Features:<br/></p><p>Premium Quality Wooden : Set of 100 durable tees for a stable and low-friction golfing experience indoors or outdoors.</p><p>Superior Design for Sports Training: Crafted with high stability and practical craftsmanship, these tees are essential for golf enthusiasts.</p><p>Ideal Gift for Golf Lovers: Surprise your favorite golfer with this set of 100 professional tees, the perfect birthday gift for any golf enthusiast.</p><p>Enhance Your Game: These professional tees are designed to improve your golfing experience, providing the stability and support you need.</p><p>Durable and Long-Lasting: Made from good-quality materials, these tees are built to withstand frequent use and maintain their shape over time.</p><p><br/></p><p style=\"text-wrap: wrap;\">Specifications:</p><p style=\"text-wrap: wrap;\">Material:&nbsp;<span style=\"text-wrap: wrap;\">Wood</span></p><p style=\"text-wrap: wrap;\"><span style=\"text-wrap: wrap;\">Height: 5.4cm/7cm/8.3cm</span></p><p style=\"text-wrap: wrap;\"><br/></p><p style=\"text-wrap: wrap;\">Notes:<br/>Please allow slightly errors due to manual measurement and different monitors.</p><p><br/></p></div></div>\r\n"
+      },
+      "has_whole_sale": false,
+      "ae_item_properties": {
+        "ae_item_property": [
+          {
+            "attr_name_id": 2,
+            "attr_value_id": 201512802,
+            "attr_name": "Brand Name",
+            "attr_value": "NONE"
+          },
+          {
+            "attr_name_id": 10,
+            "attr_value_id": 353085,
+            "attr_name": "Material",
+            "attr_value": "Bamboo"
+          },
+          {
+            "attr_name_id": 400000603,
+            "attr_value_id": 23399591357,
+            "attr_name": "High-concerned chemical",
+            "attr_value": "none"
+          },
+          {
+            "attr_name_id": 219,
+            "attr_value_id": 9441741844,
+            "attr_name": "Origin",
+            "attr_value": "Mainland China"
+          },
+          {
+            "attr_name_id": -1,
+            "attr_name": "Choice",
+            "attr_value": "yes"
+          }
+        ]
+      },
+      "ae_store_info": {
+        "store_id": 1103940055,
+        "shipping_speed_rating": "4.7",
+        "communication_rating": "4.6",
+        "store_name": "Top One 1 Store",
+        "store_country_code": "CN",
+        "item_as_described_rating": "4.5"
+      }
+    },
+    "rsp_code": 200,
+    "rsp_msg": "Call succeeds",
+    "request_id": "21016c2317902370159856415",
+    "_trace_id_": "2140d36217902370159838326e0ec4"
+  }
+}
