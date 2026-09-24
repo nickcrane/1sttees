@@ -24,15 +24,23 @@ const STATUS_VARIANT: Record<string, "default" | "secondary" | "destructive" | "
   CANCELLED: "outline",
 };
 
+// Snapshotted at order time (OrderItem.titleSnapshot/variantTitleSnapshot),
+// not read live off ProductVariant/Product -- an order placed against a
+// product that's since been retired or renamed must still show what the
+// customer actually bought, not today's catalogue state.
+const ITEMS_SELECT = { select: { id: true, titleSnapshot: true, variantTitleSnapshot: true, quantity: true } };
+
 export default async function AdminOrdersPage() {
   const [attentionOrders, recentOrders] = await Promise.all([
     prisma.order.findMany({
       where: { status: { in: ATTENTION_STATUSES } },
       orderBy: { createdAt: "desc" },
+      include: { items: ITEMS_SELECT },
     }),
     prisma.order.findMany({
       orderBy: { createdAt: "desc" },
       take: 50,
+      include: { items: ITEMS_SELECT },
     }),
   ]);
 
@@ -63,6 +71,13 @@ export default async function AdminOrdersPage() {
                   <p>
                     {order.email} &middot; {formatMinor(order.totalMinor, order.currency)}
                   </p>
+                  <ul className="flex flex-col text-xs text-muted-foreground">
+                    {order.items.map((item) => (
+                      <li key={item.id}>
+                        {item.quantity}&times; {item.titleSnapshot} &mdash; {item.variantTitleSnapshot}
+                      </li>
+                    ))}
+                  </ul>
                   {order.status === "NEEDS_MANUAL_REVIEW" && order.fulfilmentError && (
                     <p className="text-destructive">{order.fulfilmentError}</p>
                   )}
@@ -87,6 +102,9 @@ export default async function AdminOrdersPage() {
               <div>
                 <p className="font-medium">{order.orderNumber}</p>
                 <p className="text-muted-foreground">{order.email}</p>
+                <p className="text-xs text-muted-foreground">
+                  {order.items.map((item) => `${item.quantity}× ${item.titleSnapshot}`).join(", ")}
+                </p>
               </div>
               <div className="flex items-center gap-3">
                 <span>{formatMinor(order.totalMinor, order.currency)}</span>
