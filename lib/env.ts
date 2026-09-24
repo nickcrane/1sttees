@@ -50,6 +50,11 @@ const envSchema = z.object({
   ALIEXPRESS_MAX_RETRIES: z.coerce.number().int().nonnegative().default(5),
   ALIEXPRESS_BACKOFF_BASE_MS: z.coerce.number().int().positive().default(1000),
   ALIEXPRESS_BACKOFF_MAX_MS: z.coerce.number().int().positive().default(60000),
+  // Stage 1 discovery: how many text.search pages to walk per keyword.
+  // Default 3 (60 products/keyword vs 20) -- even a single one of these
+  // keywords has returned a totalCount in the thousands, so page 1 alone
+  // was leaving most of the catalog unseen.
+  ALIEXPRESS_DISCOVERY_PAGES_PER_KEYWORD: z.coerce.number().int().positive().default(3),
 
   STRIPE_SECRET_KEY: z.string().optional(),
   STRIPE_PUBLISHABLE_KEY: z.string().optional(),

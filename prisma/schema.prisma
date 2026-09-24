@@ -74,6 +74,18 @@ model SupplierVariant {
   @@unique([supplierProductId, aeSkuId])
 }
 
+// Stage 1's seed list (lib/catalog/discovery.ts), admin-managed from
+// /admin/products/keywords rather than a hardcoded array -- `active`
+// lets an admin retire a keyword without losing the history of which
+// SupplierProducts it originally found (discoverySource references the
+// keyword text, not this row).
+model DiscoverySeedKeyword {
+  id        String   @id @default(cuid())
+  keyword   String   @unique
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
 // -- Merchandised storefront listing (independent of supplier data) ----
 
 // The discovery-pipeline lifecycle (docs/product-flow.md), replacing the

@@ -1,21 +1,15 @@
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { logger } from "@/lib/logger";
+import { env } from "@/lib/env";
 import { AliExpressClient } from "@/lib/aliexpress/client";
 import { toMinorUnits } from "./slug";
 
-// Stage 1 seed list, per docs/product-flow.md -- there's no material filter
-// in the DS API, so "wooden and bamboo" is inferred later (Stage 2's
-// classifier); this just casts a wide net. Add to this list as gaps in
-// coverage appear (the doc calls this out explicitly).
-export const DISCOVERY_SEED_KEYWORDS = [
-  "bamboo golf tees",
-  "wooden golf tees",
-  "wood golf tee 70mm",
-  "bamboo tee 83mm",
-  "natural wood tees bulk",
-  "golf tees biodegradable",
-];
+// Fixed page size rather than reading env.ALIEXPRESS_DISCOVERY_PAGES_PER_KEYWORD's
+// sibling -- fixture files are recorded per (keyword, pageNo) at this size
+// (see fixtureNameFor in lib/aliexpress/client.ts), so changing it would
+// silently invalidate every recorded fixture.
+const PAGE_SIZE = 20;
 
 export interface DiscoveryRunSummary {
   keywordsSearched: number;
@@ -37,35 +31,48 @@ export interface DiscoveryRunSummary {
  * shouldn't cost the rest their nightly refresh.
  */
 export async function runDiscovery(client: AliExpressClient = new AliExpressClient()): Promise<DiscoveryRunSummary> {
+  const seedKeywords = await prisma.discoverySeedKeyword.findMany({
+    where: { active: true },
+    orderBy: { createdAt: "asc" },
+  });
+  const maxPages = env.ALIEXPRESS_DISCOVERY_PAGES_PER_KEYWORD;
   const seenProductIds = new Set<string>();
   let productsUpserted = 0;
   let productsFailed = 0;
 
-  for (const keyword of DISCOVERY_SEED_KEYWORDS) {
-    let products;
-    try {
-      ({ products } = await client.searchProducts({ keywords: keyword }));
-    } catch (error) {
-      logger.warn({ keyword, error }, "discovery: keyword search failed, skipping");
-      continue;
-    }
-
-    for (const product of products) {
-      if (seenProductIds.has(product.productId)) continue;
-      seenProductIds.add(product.productId);
-
+  for (const { keyword } of seedKeywords) {
+    for (let pageNo = 1; pageNo <= maxPages; pageNo++) {
+      let products, totalCount;
       try {
-        await upsertSupplierProduct(client, product.productId, keyword);
-        productsUpserted++;
+        ({ products, totalCount } = await client.searchProducts({ keywords: keyword, pageNo, pageSize: PAGE_SIZE }));
       } catch (error) {
-        productsFailed++;
-        logger.warn({ productId: product.productId, keyword, error }, "discovery: failed to fetch/store product, skipping");
+        // Covers both a genuine gateway failure and fixture mode running
+        // out of recorded pages (a missing page N fixture throws) -- either
+        // way, keep whatever earlier pages already found rather than
+        // discarding this keyword's results entirely.
+        logger.warn({ keyword, pageNo, error }, "discovery: keyword search failed, stopping pagination for this keyword");
+        break;
       }
+
+      for (const product of products) {
+        if (seenProductIds.has(product.productId)) continue;
+        seenProductIds.add(product.productId);
+
+        try {
+          await upsertSupplierProduct(client, product.productId, keyword);
+          productsUpserted++;
+        } catch (error) {
+          productsFailed++;
+          logger.warn({ productId: product.productId, keyword, error }, "discovery: failed to fetch/store product, skipping");
+        }
+      }
+
+      if (products.length < PAGE_SIZE || pageNo * PAGE_SIZE >= totalCount) break;
     }
   }
 
   const summary: DiscoveryRunSummary = {
-    keywordsSearched: DISCOVERY_SEED_KEYWORDS.length,
+    keywordsSearched: seedKeywords.length,
     productsFound: seenProductIds.size,
     productsUpserted,
     productsFailed,

@@ -31,6 +31,9 @@ export default async function AdminReviewQueuePage() {
         <Link href="/admin/products/catalogue" className="text-muted-foreground underline">
           Catalogue
         </Link>
+        <Link href="/admin/products/keywords" className="text-muted-foreground underline">
+          Keywords
+        </Link>
       </nav>
 
       <p className="text-sm text-muted-foreground">

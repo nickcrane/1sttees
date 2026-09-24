@@ -49,6 +49,9 @@ export default async function AdminCataloguePage() {
           Review queue
         </Link>
         <span className="font-medium">Catalogue</span>
+        <Link href="/admin/products/keywords" className="text-muted-foreground underline">
+          Keywords
+        </Link>
       </nav>
 
       <p className="text-sm text-muted-foreground">

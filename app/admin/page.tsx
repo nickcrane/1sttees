@@ -51,6 +51,9 @@ export default async function AdminDashboardPage() {
         <Link href="/admin/products/catalogue" className="text-sm underline">
           Catalogue &rarr;
         </Link>
+        <Link href="/admin/products/keywords" className="text-sm underline">
+          Discovery keywords &rarr;
+        </Link>
         <Link href="/admin/orders" className="text-sm underline">
           Orders &rarr;
         </Link>
