@@ -52,6 +52,13 @@
   --color-on-primary-container: var(--on-primary-container);
   --color-secondary-container: var(--secondary-container);
   --color-on-secondary-container: var(--on-secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-foreground: var(--tertiary-foreground);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive-container: var(--destructive-container);
+  --color-on-destructive-container: var(--on-destructive-container);
 
   /* Material 3 shape scale (M3 spec: none/xs/sm/md/lg/xl/full). Components
      pick the step that matches their size, not one global --radius. */
@@ -99,82 +106,101 @@
 }
 
 :root {
-  /* Seed hue ~145 (a bamboo/fairway green) drives every neutral too --
-     M3 surfaces are subtly hue-tinted, not pure gray, which is what
-     actually reads as "Material" rather than just "rounded corners". */
-  --background: oklch(0.985 0.006 145);
-  --foreground: oklch(0.19 0.014 145);
-  --card: oklch(0.97 0.009 145);
-  --card-foreground: oklch(0.19 0.014 145);
-  --popover: oklch(0.99 0.004 145);
-  --popover-foreground: oklch(0.19 0.014 145);
-  --primary: oklch(0.45 0.13 145);
-  --primary-foreground: oklch(0.99 0.004 145);
-  --primary-container: oklch(0.92 0.045 145);
-  --on-primary-container: oklch(0.24 0.06 145);
-  --secondary: oklch(0.55 0.075 85);
-  --secondary-foreground: oklch(0.99 0.004 85);
-  --secondary-container: oklch(0.92 0.035 85);
-  --on-secondary-container: oklch(0.3 0.05 85);
-  --muted: oklch(0.94 0.012 145);
-  --muted-foreground: oklch(0.46 0.02 145);
-  --accent: oklch(0.92 0.045 145);
-  --accent-foreground: oklch(0.24 0.06 145);
-  --destructive: oklch(0.55 0.22 25);
-  --border: oklch(0.87 0.015 145);
-  --input: oklch(0.87 0.015 145);
-  --ring: oklch(0.45 0.13 145 / 0.55);
-  --chart-1: oklch(0.45 0.13 145);
-  --chart-2: oklch(0.55 0.075 85);
-  --chart-3: oklch(0.6 0.1 200);
-  --chart-4: oklch(0.65 0.15 40);
-  --chart-5: oklch(0.5 0.1 300);
-  --sidebar: oklch(0.97 0.009 145);
-  --sidebar-foreground: oklch(0.19 0.014 145);
-  --sidebar-primary: oklch(0.45 0.13 145);
-  --sidebar-primary-foreground: oklch(0.99 0.004 145);
-  --sidebar-accent: oklch(0.92 0.045 145);
-  --sidebar-accent-foreground: oklch(0.24 0.06 145);
-  --sidebar-border: oklch(0.87 0.015 145);
-  --sidebar-ring: oklch(0.45 0.13 145 / 0.55);
+  /* Replaces the earlier bamboo/fairway-green seed with a client-supplied
+     M3 palette (blue primary, dark-neutral secondary, green tertiary, red
+     error) -- hex kept as given rather than converted to oklch, so these
+     stay byte-identical to the source values. --ring is the one role that
+     needs an alpha channel (M3's ColorScheme has no dedicated "ring"/focus
+     role of its own, so this project reuses primary at reduced opacity,
+     same as the palette this replaces) -- expressed as rgb()'s space
+     syntax since hex has no slash-alpha form. */
+  --background: #f8f9fa;
+  --foreground: #202124;
+  --card: #ffffff;
+  --card-foreground: #202124;
+  --popover: #ffffff;
+  --popover-foreground: #202124;
+  --primary: #4285f4;
+  --primary-foreground: #ffffff;
+  --primary-container: #d8e2ff;
+  --on-primary-container: #001a41;
+  --secondary: #202124;
+  --secondary-foreground: #ffffff;
+  --secondary-container: #e2e2e9;
+  --on-secondary-container: #1a1b20;
+  --tertiary: #34a853;
+  --tertiary-foreground: #ffffff;
+  --tertiary-container: #b4f4b5;
+  --on-tertiary-container: #002204;
+  --muted: #e2e2e9;
+  --muted-foreground: #45464f;
+  --accent: #d8e2ff;
+  --accent-foreground: #001a41;
+  --destructive: #ea4335;
+  --destructive-foreground: #ffffff;
+  --destructive-container: #ffdad6;
+  --on-destructive-container: #410002;
+  --border: #757780;
+  --input: #757780;
+  --ring: rgb(66 133 244 / 0.55);
+  --chart-1: #4285f4;
+  --chart-2: #202124;
+  --chart-3: #34a853;
+  --chart-4: #ea4335;
+  --chart-5: #b4f4b5;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #202124;
+  --sidebar-primary: #4285f4;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #d8e2ff;
+  --sidebar-accent-foreground: #001a41;
+  --sidebar-border: #757780;
+  --sidebar-ring: rgb(66 133 244 / 0.55);
 }
 
 .dark {
-  --background: oklch(0.16 0.012 145);
-  --foreground: oklch(0.93 0.01 145);
-  --card: oklch(0.21 0.015 145);
-  --card-foreground: oklch(0.93 0.01 145);
-  --popover: oklch(0.23 0.015 145);
-  --popover-foreground: oklch(0.93 0.01 145);
-  --primary: oklch(0.78 0.12 145);
-  --primary-foreground: oklch(0.17 0.03 145);
-  --primary-container: oklch(0.32 0.06 145);
-  --on-primary-container: oklch(0.9 0.05 145);
-  --secondary: oklch(0.75 0.08 85);
-  --secondary-foreground: oklch(0.17 0.03 85);
-  --secondary-container: oklch(0.34 0.045 85);
-  --on-secondary-container: oklch(0.88 0.04 85);
-  --muted: oklch(0.27 0.015 145);
-  --muted-foreground: oklch(0.72 0.015 145);
-  --accent: oklch(0.32 0.06 145);
-  --accent-foreground: oklch(0.9 0.05 145);
-  --destructive: oklch(0.7 0.19 22);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.78 0.12 145 / 0.6);
-  --chart-1: oklch(0.78 0.12 145);
-  --chart-2: oklch(0.75 0.08 85);
-  --chart-3: oklch(0.7 0.1 200);
-  --chart-4: oklch(0.72 0.15 40);
-  --chart-5: oklch(0.65 0.1 300);
-  --sidebar: oklch(0.21 0.015 145);
-  --sidebar-foreground: oklch(0.93 0.01 145);
-  --sidebar-primary: oklch(0.78 0.12 145);
-  --sidebar-primary-foreground: oklch(0.17 0.03 145);
-  --sidebar-accent: oklch(0.32 0.06 145);
-  --sidebar-accent-foreground: oklch(0.9 0.05 145);
-  --sidebar-border: oklch(1 0 0 / 12%);
-  --sidebar-ring: oklch(0.78 0.12 145 / 0.6);
+  --background: #1a1b20;
+  --foreground: #e4e2e6;
+  --card: #121318;
+  --card-foreground: #e4e2e6;
+  --popover: #121318;
+  --popover-foreground: #e4e2e6;
+  --primary: #adc6ff;
+  --primary-foreground: #002e69;
+  --primary-container: #25447b;
+  --on-primary-container: #d8e2ff;
+  --secondary: #c6c6cd;
+  --secondary-foreground: #2f3036;
+  --secondary-container: #45464f;
+  --on-secondary-container: #e2e2e9;
+  --tertiary: #99d79a;
+  --tertiary-foreground: #00390b;
+  --tertiary-container: #1b5120;
+  --on-tertiary-container: #b4f4b5;
+  --muted: #45464f;
+  --muted-foreground: #c6c6cd;
+  --accent: #25447b;
+  --accent-foreground: #d8e2ff;
+  --destructive: #ffb4ab;
+  --destructive-foreground: #690005;
+  --destructive-container: #93000a;
+  --on-destructive-container: #ffdad6;
+  --border: #8f9099;
+  --input: #8f9099;
+  --ring: rgb(173 198 255 / 0.6);
+  --chart-1: #adc6ff;
+  --chart-2: #c6c6cd;
+  --chart-3: #99d79a;
+  --chart-4: #ffb4ab;
+  --chart-5: #1b5120;
+  --sidebar: #121318;
+  --sidebar-foreground: #e4e2e6;
+  --sidebar-primary: #adc6ff;
+  --sidebar-primary-foreground: #002e69;
+  --sidebar-accent: #25447b;
+  --sidebar-accent-foreground: #d8e2ff;
+  --sidebar-border: #8f9099;
+  --sidebar-ring: rgb(173 198 255 / 0.6);
 }
 
 @layer base {
