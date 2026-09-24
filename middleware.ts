@@ -113,9 +113,19 @@ export default auth((req) => {
   }
 
   const realPathname = onAdminHost ? toRealAdminPath(pathname) : pathname;
-  const isAdminRoute = realPathname.startsWith("/admin") || isAdminApiPath(realPathname);
+  // /api/auth/admin/* (NextAuth's own handler) deliberately excluded from
+  // the gate below -- confirmed live: treating it the same as /api/admin
+  // broke sign-in entirely. Its csrf/session/signin/callback endpoints
+  // must stay reachable *without* a session (that's how one gets
+  // created); gating them made next-auth/react's client fetches get
+  // redirected to the login page's HTML instead of getting back JSON,
+  // surfacing as "Unexpected token '<'" ClientFetchError in the browser.
+  // The pre-subdomain-routing version of this file never gated this path
+  // either -- NextAuth's handler manages its own internal auth logic.
+  const isGatedAdminRoute = realPathname.startsWith("/admin") || realPathname.startsWith("/api/admin");
+  const isNextAuthAdminRoute = realPathname.startsWith("/api/auth/admin");
 
-  if (isAdminRoute) {
+  if (isGatedAdminRoute) {
     const isPublicAdminPath = PUBLIC_ADMIN_PATHS.has(realPathname);
     if (!isPublicAdminPath && !req.auth) {
       if (realPathname.startsWith("/api/admin")) {
@@ -129,6 +139,9 @@ export default auth((req) => {
       loginUrl.searchParams.set("from", pathname);
       return NextResponse.redirect(loginUrl);
     }
+  }
+
+  if (isGatedAdminRoute || isNextAuthAdminRoute) {
     if (realPathname !== pathname) {
       const url = req.nextUrl.clone();
       url.pathname = realPathname;
