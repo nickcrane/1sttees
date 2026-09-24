@@ -85,6 +85,9 @@ export default auth((req) => {
   const hostname = hostHeader.split(":")[0] ?? "";
   const onAdminHost = isAdminHost(hostname);
   const requestOrigin = `${req.nextUrl.protocol}//${hostHeader}`;
+  // Only ever non-empty in local dev (":3000") -- a real custom domain's
+  // Host/X-Forwarded-Host never carries an explicit port over HTTPS.
+  const incomingPortSuffix = hostHeader.includes(":") ? hostHeader.slice(hostHeader.indexOf(":")) : "";
 
   // The subdomain is now the only supported way into any admin page --
   // reject /admin/* browsed on the storefront's own host by bouncing to
@@ -93,12 +96,15 @@ export default auth((req) => {
   // ever navigates to them directly.
   if (!onAdminHost && pathname.startsWith("/admin") && !isAdminApiPath(pathname)) {
     if (ADMIN_HOSTNAME) {
-      // Port left alone -- req.nextUrl.clone() already carries the right
-      // one (the dev server's own :3000 in dev, none in production where
-      // the custom domain serves over the protocol's default port).
-      const url = req.nextUrl.clone();
-      url.hostname = ADMIN_HOSTNAME;
-      url.pathname = toVisibleAdminPath(pathname);
+      // Built from ADMIN_HOSTNAME + incomingPortSuffix, not
+      // req.nextUrl.clone() -- confirmed live on Railway: nextUrl's port
+      // is the container's *internal* one (8080), which isn't part of
+      // the actual client-facing URL at all, so cloning it and swapping
+      // just the hostname produced admin.test.1sttees.golf:8080.
+      const url = new URL(
+        `${toVisibleAdminPath(pathname)}${req.nextUrl.search}`,
+        `${req.nextUrl.protocol}//${ADMIN_HOSTNAME}${incomingPortSuffix}`
+      );
       return NextResponse.redirect(url);
       // No ADMIN_HOSTNAME configured for this environment (e.g. CI) --
       // falls through and keeps serving /admin/* on this host directly,
