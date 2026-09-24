@@ -69,8 +69,11 @@ export async function approveProductAction(formData: FormData): Promise<void> {
 }
 
 export async function rejectProductAction(formData: FormData): Promise<void> {
-  const reason = String(formData.get("reason") ?? "").trim();
-  await applyTransition("reject", productIdFrom(formData), reason ? { rejectReason: reason } : {});
+  // No reason collected from the admin -- lib/catalog/reject-feedback.ts
+  // builds the classifier's feedback signal from the rejected product's
+  // own metadata (title, material guess, supplier sku_attrs) plus the
+  // fact of the reject itself, not a typed explanation.
+  await applyTransition("reject", productIdFrom(formData));
   revalidatePath("/admin/products/candidates");
   revalidatePath("/admin/products/review");
 }

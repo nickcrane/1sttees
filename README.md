@@ -43,6 +43,39 @@ Railway (`test` + `production` environments) via GitHub Actions -- push to
 `workflow_dispatch`. Full setup and rationale in
 [docs/deployment.md](docs/deployment.md).
 
+## Catalog pipeline
+
+Four stages: discover via the AliExpress DS API, classify/normalise via a
+structured-output Claude call, admin curation (Candidates/Review/Catalogue),
+then a second Claude pass writes the storefront listing. Full design in
+[docs/product-flow.md](docs/product-flow.md).
+
+**Reject feedback loop.** Clicking Reject in Candidates or Review queue
+asks for no explanation. Instead, every classify run
+(`classifyDiscoveredProducts()` in `lib/catalog/classify.ts`) pulls recent
+REJECTED products' own metadata -- title, the classifier's own past
+material guess, the supplier's raw `sku_attrs` -- via
+`lib/catalog/reject-feedback.ts`, and uses it two ways:
+
+- Up to 8 of them are appended to the classifier's system prompt as
+  few-shot examples, with this instruction: *"An admin rejected each of
+  these real products (no written reason given -- use your own judgment
+  on what they have in common and why they weren't suitable)."* The model
+  gets the same kind of raw data it already reasons over for every other
+  product, tagged as rejected, and draws its own conclusions rather than
+  being handed a canned rule.
+- Separately, title words that appear in >= 2 rejected titles and zero
+  accepted ones are mined as `flaggedTerms`. If a new product's title
+  matches one, an otherwise-CANDIDATE decision is downgraded to REVIEW
+  (never straight to REJECTED) with a note explaining why -- a cheap,
+  fast-path second opinion on top of the LLM call, not a replacement for
+  an admin's final say.
+
+REJECTED only ever happens via an explicit admin action -- the classifier
+itself routes to CANDIDATE or REVIEW, never REJECTED
+(`lib/catalog/classify-decision.ts`) -- so every example fed back is
+genuine admin signal, not the model reinforcing its own earlier guess.
+
 ## Project layout
 
 ```
