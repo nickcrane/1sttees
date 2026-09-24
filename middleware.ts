@@ -75,8 +75,13 @@ export default auth((req) => {
   // `Host: admin.localhost:3000` -- silently routing every admin-
   // subdomain request as if it were the main site instead of rewriting/
   // redirecting it. The Host header reflects the real value in both dev
-  // and prod.
-  const hostHeader = req.headers.get("host") ?? req.nextUrl.host;
+  // and prod. `X-Forwarded-Host` takes priority over `Host` -- confirmed
+  // live on Railway: its edge proxy (`server: railway-hikari`) rewrites
+  // `Host` to something internal before the request reaches this app, so
+  // a request that genuinely arrived at admin.test.1sttees.golf was
+  // silently evaluating as the main site instead of the admin host.
+  // `X-Forwarded-Host` carries the real value the client actually used.
+  const hostHeader = req.headers.get("x-forwarded-host") ?? req.headers.get("host") ?? req.nextUrl.host;
   const hostname = hostHeader.split(":")[0] ?? "";
   const onAdminHost = isAdminHost(hostname);
   const requestOrigin = `${req.nextUrl.protocol}//${hostHeader}`;
